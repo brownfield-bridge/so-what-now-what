@@ -11,11 +11,11 @@ This repo houses the downloadable artefacts that ship with each issue: paste-and
 ├── README.md
 ├── LICENSE                       # CC-BY 4.0
 ├── issues/
-│   └── 00-synthesizer/           # Issue 0: The Synthesizer (Sun 7 June 2026)
+│   └── 00-synthesizer/           # Issue 0: The Synthesizer (Sun 14 June 2026)
 │       ├── README.md             # what ships with this issue
 │       ├── prompt.md             # paste-and-run prompt
 │       ├── one-pager.png         # visual framework (added before drop)
-│       └── starter-template/     # Make / n8n workflow files
+│       └── starter-template/     # Google Apps Script workflow files
 ├── skills/                       # cumulative SKILL.md library (populated as Canon Verdict / Native Systems issues ship)
 └── scaffolds/                    # anchor-issue project scaffolds (populated ~4 times per year)
 ```

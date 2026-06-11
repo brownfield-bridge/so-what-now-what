@@ -1,13 +1,13 @@
 # Issue 0 — The Synthesizer
 
-Drops Sunday 7 June 2026 morning at [so-what-now-what.beehiiv.com](https://so-what-now-what.beehiiv.com).
+Drops Sunday 14 June 2026 morning at [so-what-now-what.beehiiv.com](https://so-what-now-what.beehiiv.com).
 
 ## What ships in this folder
 
 - `README.md` (this file): what's inside and how to use it
 - `prompt.md`: the paste-and-run So-What / Now-What synthesizer prompt
 - `one-pager.png`: the framework visual (Filter → Score → Synthesize → Activate). Added before the issue drops.
-- `starter-template/`: a Make / n8n workflow that wires the prompt to a signal feed and ships a brief to your inbox every Sunday evening
+- `starter-template/`: a Google Apps Script workflow that wires the prompt to a signal feed and ships a brief to your inbox every Sunday evening
 
 ## How to use
 
