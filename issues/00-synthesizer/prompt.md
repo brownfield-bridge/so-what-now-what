@@ -1,6 +1,6 @@
 # The So-What / Now-What Synthesizer
 
-A paste-and-run prompt for decision-makers who judge more than they forecast.
+A paste-and-run prompt for decision-makers, from this week's noise to your next move.
 
 Ships with Issue 0 of *So What, Now What*. Read the issue for the framework, the worked example, and the agency frame: [so-what-now-what.beehiiv.com](https://so-what-now-what.beehiiv.com).
 
