@@ -1,6 +1,6 @@
 # So What, Now What: Artefacts
 
-The companion repository for *So What, Now What*, a weekly synthesizer for executives who decide more than they read.
+The companion repository for *So What, Now What*, a weekly synthesizer for decision-makers who judge more than they forecast.
 
 This repo houses the downloadable artefacts that ship with each issue: paste-and-run prompts, framework one-pagers, starter templates, and installable skills.
 
@@ -14,7 +14,9 @@ This repo houses the downloadable artefacts that ship with each issue: paste-and
 │   └── 00-synthesizer/           # Issue 0: The Synthesizer (Sun 14 June 2026)
 │       ├── README.md             # what ships with this issue
 │       ├── prompt.md             # paste-and-run prompt
-│       ├── one-pager.png         # visual framework (added before drop)
+│       ├── one-pager.png         # visual framework
+│       ├── cowork-recipe/        # hands-off, no code
+│       ├── claude-code-recipe/   # full control, command line
 │       └── starter-template/     # Google Apps Script workflow files
 ├── skills/                       # cumulative SKILL.md library (populated as Canon Verdict / Native Systems issues ship)
 └── scaffolds/                    # anchor-issue project scaffolds (populated ~4 times per year)

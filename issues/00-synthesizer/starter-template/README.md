@@ -24,9 +24,14 @@ Recommended for readers who:
 
 Cost: roughly $0.05 to $0.10 per weekly run with Claude Sonnet. Switch to Haiku for under $0.01.
 
-## Alternative platforms (coming later)
+## Prefer no code, or full control?
 
-Make.com scenario and n8n workflow versions are on the roadmap for readers who prefer those tools. They will land in a future issue's artefact pack. Apps Script does the same job today with less setup.
+This Apps Script version is the RSS-and-Google path. Two sibling recipes do the same job differently:
+
+- `../cowork-recipe/` runs the synthesizer with no code and no API key. It reads your mailbox and the web directly, so there is no feed list to assemble. The lowest-friction path if you do not want to touch a script.
+- `../claude-code-recipe/` keeps your relevance window in a version-controlled file and writes the brief to disk, wired into cron. The path if you want full control from a terminal.
+
+Make.com and n8n versions remain possible for readers already living in those tools, but the three recipes here cover most needs without them.
 
 ## License
 

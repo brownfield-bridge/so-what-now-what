@@ -6,21 +6,22 @@ Drops Sunday 14 June 2026 morning at [so-what-now-what.beehiiv.com](https://so-w
 
 - `README.md` (this file): what's inside and how to use it
 - `prompt.md`: the paste-and-run So-What / Now-What synthesizer prompt
-- `one-pager.png`: the framework visual (Filter → Score → Synthesize → Activate). Added before the issue drops.
-- `starter-template/`: a Google Apps Script workflow that wires the prompt to a signal feed and ships a brief to your inbox every Sunday evening
+- `one-pager.png`: the framework visual (Filter, Score, Synthesize, Activate)
+- `cowork-recipe/`: the hands-off version with no code. You describe the job once, connect your mailbox, and the brief arrives every Monday.
+- `claude-code-recipe/`: the full-control version. Your relevance window in a file you own, the brief written to disk, wired into cron.
+- `starter-template/`: a Google Apps Script workflow that wires the prompt to an RSS feed list and ships a brief to your inbox every Sunday evening.
 
-## How to use
+## Four rungs, same discipline
 
-1. Read the issue (link above) for the framework, the worked example, and the agency frame.
-2. Open `prompt.md`. Replace the relevance-window placeholders with your own: 3 to 5 watch areas, your role, your decision horizon.
-3. Paste into Claude, GPT, or Gemini along with this week's signals (10 to 30 items: headlines, summaries, links).
-4. The output is your first weekly brief: 3-line summary, table of brief-worthy signals with So Whats and Now Whats, and a Monitor list.
-5. Optional: configure `starter-template/` to run the prompt automatically Sunday evening and email you the brief by 7am Monday.
+The framework is one prompt. How automatically it runs is up to you. Each rung does the same job; they differ only in how much of the gathering you hand off and how much control you keep.
 
-## What you should get wrong first
+1. **Paste-and-run** (`prompt.md`). You run it when you remember to. Works in any frontier model, nothing to set up. Start here.
+2. **Apps Script** (`starter-template/`). Scheduled, RSS-based, emails you the brief. Needs a Google account and an Anthropic API key.
+3. **Cowork, no code** (`cowork-recipe/`). Reads your mailbox and the web, runs every Sunday, no key and no feed list to assemble. The rung most readers want.
+4. **Claude Code** (`claude-code-recipe/`). Full control from the command line. Your relevance window under git, the brief written to disk, wired into cron. The operator's path.
 
-The first three briefs will read flat. That's not the synthesizer failing. That's you discovering your filter is too generous. Tighten the watch areas. A mediocre brief is the synthesizer telling you the filter is wrong.
+Start at rung 1. Move down only when the discipline has earned a place in your week. The thinking the synthesizer asks of you, your relevance window, is identical at every rung; the rungs differ only in how much of the gathering you hand off.
 
 ## License
 
-CC-BY 4.0. Use it, adapt it, ship it. Attribution appreciated.
+All artefacts are CC-BY 4.0. Use them, adapt them, ship them. Attribution appreciated.
