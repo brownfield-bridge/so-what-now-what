@@ -1,6 +1,6 @@
 # So What, Now What: Artefacts
 
-The companion repository for *So What, Now What*, a weekly synthesizer for decision-makers who judge more than they forecast.
+The companion repository for *So What, Now What*, a weekly synthesizer for decision-makers, from this week's noise to your next move.
 
 This repo houses the downloadable artefacts that ship with each issue: paste-and-run prompts, framework one-pagers, starter templates, and installable skills.
 
