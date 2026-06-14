@@ -1,6 +1,6 @@
 # So What, Now What: Artefacts
 
-The companion repository for *So What, Now What*, a weekly synthesizer for decision-makers, from this week's noise to your next move.
+The companion repository for *So What, Now What*, a newsletter for decision-makers. From AI to value.
 
 This repo houses the downloadable artefacts that ship with each issue: paste-and-run prompts, framework one-pagers, starter templates, and installable skills.
 
@@ -36,4 +36,4 @@ All artefacts are CC-BY 4.0. Use them, adapt them, ship them. Attribution apprec
 
 ## Subscribe
 
-The publication itself ships at [so-what-now-what.beehiiv.com](https://so-what-now-what.beehiiv.com). Free. Weekly. Independent.
+The publication itself ships at so-what-now-what.beehiiv.com. Free. Independent.
