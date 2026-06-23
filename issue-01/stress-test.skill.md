@@ -5,7 +5,7 @@ description: >
   Decision Memo. Use when the user wants to pressure-test a strategy, a bet, or a big call against
   plausible futures before committing; triggers on "stress-test my strategy", "should I commit to
   this", "is this decision robust", "scenario test", "pressure-test this move", "will this survive".
-  Built on Mintzberg (emergent strategy) and the Oxford Scenarios method. Output is a Decision Memo
+  Built on the Oxford Scenarios method (scenario planning, pioneered at Shell, refined at Oxford). Output is a Decision Memo
   the user can save. CC-BY 4.0 — So What, Now What, Issue 01.
 ---
 
@@ -37,11 +37,12 @@ moves hold across several.
 **Turn 1 — the decision.** Ask, in one message: *"In a sentence or two: what move are you weighing, and
 why now?"* (Talking is faster than typing; if they are a group, one person captures the room.)
 
-**Turn 2 — confirm the frame.** From their answer, draft (a) the one to three assumptions the decision
-seems to rest on, and (b) the futures you will test against, defaulting to the four below, renamed to
-their context. Show both and ask: *"Here is what I think you're assuming, and the futures I'll test
-against. Rename any future, drop one, or add your own (three to five works), and fix the assumptions, or
-say go."* This saves them writing from scratch and lets them shape the futures.
+**Turn 2 — surface the ghost scenario.** From their answer, draft (a) the ghost scenario: the one to
+three assumptions about the future the decision quietly rests on, and (b) the futures you will test
+against, defaulting to the four below, renamed to their context. Show both and ask: *"Here is the ghost
+scenario I think you're running, and the futures I'll test it against. Rename any future, drop one, or
+add your own (three to five works), and fix the assumptions, or say go."* This saves them writing from
+scratch and lets them shape the futures.
 - **Capability leap** — models get much better and cheaper.
 - **Supply shock** — a model or vendor they rely on is pulled, repriced, or restricted.
 - **Agents arrive** — the work gets done end to end by agents.
@@ -120,9 +121,10 @@ with extra advice the user did not ask for.
 
 ## Grounding (only if asked)
 
-Mintzberg showed most real strategy is emergent, not planned. Scenario planning (the Oxford Scenarios
-lineage) showed you do not forecast one future, you build choices robust across several. This skill is
-that discipline, stripped of the workshop ceremony, run in minutes on one decision.
+Scenario planning, pioneered at Shell and refined into the Oxford Scenarios method, showed you do not
+forecast one future, you test against the plausible rather than the probable and keep the choices that
+hold across several. This skill is that discipline, stripped of the workshop ceremony, run in minutes on
+one decision, with you as the judge and the AI doing the legwork (AI in the loop, not the other way round).
 
 ---
 
@@ -133,8 +135,9 @@ Paste the block below into any chat model to run the same interview manually.
 ```
 Act as a strategy stress-tester. Keep it tight and minimise my typing; ask one thing per turn.
 Turn 1: ask, in one message, what move I'm weighing and why now.
-Turn 2: draft the assumptions you think it rests on plus four plausible futures (default: capability
-leap / supply shock / agents arrive / slow lane), show them, let me fix or approve.
+Turn 2: draft my ghost scenario (the assumptions about the future this decision quietly rests on) plus
+four plausible futures (default: capability leap / supply shock / agents arrive / slow lane), show them,
+let me fix or approve.
 Turn 3: ask me to list the moves bundled in this decision.
 Turn 4: YOU score every move against every future yourself, one mark per cell (Holds/Bends/Breaks)
 with a one-line reason, propose a verdict per move and a hedge + signal for anything not robust, then
