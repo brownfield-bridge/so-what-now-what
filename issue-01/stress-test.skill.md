@@ -68,14 +68,14 @@ recompute the verdicts; do not re-run the whole interview.
 
 ## Scoring (one mark per cell, then classify)
 
-Mark each cell as exactly one of **Holds**, **Bends**, or **Breaks**. No hybrids like "Holds/Bends" or "Breaks/Bends": if you are torn, choose the worse outcome and explain why in one line. The classification turns on whether the move ever **breaks**, not only on how often it holds. A move that bends everywhere still survives; it is not a "reconsider."
+Mark each cell as exactly one of **Holds**, **Bends**, or **Breaks**. No hybrids like "Holds/Bends" or "Breaks/Bends": if you are torn, choose the worse outcome and explain why in one line. A move **survives** a future if it Holds or Bends there; it fails if it Breaks. Classify each move by how many futures it survives.
 
-- **Robust** — Holds in every future, never bends or breaks. Do it now.
-- **Fragile** — never breaks, but bends in one or more futures (it survives everywhere yet needs adapting), OR breaks in exactly one future. Hedge, stage, or delay; name the hedge and the one signal to watch.
-- **One-future bet** — breaks in several futures and holds cleanly in only one. Name the bet out loud and set a trigger.
-- **Reconsider** — breaks in most futures (all, or all but one). The assumption underneath is the real risk; revisit it before committing.
+- **Robust** — Holds in every future (survives everywhere, no adapting needed). Do it now.
+- **Fragile** — survives more than one future but is not robust: it Breaks in one or two, or it only Bends (needs adapting) somewhere. Hedge, stage, or delay; name the hedge and the one signal to watch.
+- **One-future bet** — survives in only one future, breaks in the rest. Name the bet out loud and set a trigger.
+- **Reconsider** — survives in no future (Breaks everywhere). The assumption underneath is the real risk; revisit it before committing.
 
-These rules work for any number of futures, not just four. Show the tally next to each verdict (e.g. "Holds 4/4" or "Breaks 1/4"). Every move the user listed gets its own row, labelled Move 1, Move 2, and so on; do not silently drop one.
+These rules work for any number of futures, not just four (with four: holds in all = robust; breaks in one or two = fragile; survives in only one = one-future bet; survives in none = reconsider). Show the tally next to each verdict (e.g. "Holds 4/4" or "Breaks 1/4"). Every move the user listed gets its own row, labelled Move 1, Move 2, and so on; do not silently drop one.
 
 ## The output: a Decision Memo
 
@@ -141,9 +141,9 @@ let me fix or approve.
 Turn 3: ask me to list the moves bundled in this decision.
 Turn 4: YOU score every move against every future yourself, one mark per cell (Holds/Bends/Breaks)
 with a one-line reason, propose a verdict per move and a hedge + signal for anything not robust, then
-show the matrix and ask me to correct cells. Verdicts: Robust = holds in all four; Fragile = never
-breaks but bends somewhere, or breaks in exactly one; One-future bet = breaks in two or more, works
-cleanly in one; Reconsider = breaks in three or four.
+show the matrix and ask me to correct cells. Verdicts: Robust = holds in all four; Fragile = breaks in one or two, or never breaks but bends
+somewhere; One-future bet = survives in only one (breaks in the other three); Reconsider = breaks in
+all four.
 Turn 5: apply my fixes, then ask whether I want the result as a PDF, Word doc, or slides, and produce a
 clean Decision Memo (decision, assumptions, a clean Holds/Bends/Breaks table with verdicts, and a "What
 to do Monday" list). Be a critical friend, not nice. Remind me what I share stays in my own session.
