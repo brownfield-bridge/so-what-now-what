@@ -123,8 +123,9 @@ with extra advice the user did not ask for.
 
 Scenario planning, pioneered at Shell and refined into the Oxford Scenarios method, showed you do not
 forecast one future, you test against the plausible rather than the probable and keep the choices that
-hold across several. This skill is that discipline, stripped of the workshop ceremony, run in minutes on
-one decision, with you as the judge and the AI doing the legwork (AI in the loop, not the other way round).
+hold across several. In its full form it does more than test moves; it reframes how leaders see the whole
+landscape. This skill borrows one slice of that discipline, stripped of the workshop ceremony, run in minutes
+on one decision, with you as the judge and the AI doing the legwork (AI in the loop, not the other way round).
 
 ---
 

@@ -45,7 +45,7 @@ It works in about five short turns, like a sharp colleague would: it asks for th
 
 Scenario planning was built for exactly this problem. It started at Shell in the 1970s, where Pierre Wack's team used scenarios to walk into the 1973 oil shock prepared while competitors were caught flat. It was later refined at Oxford's Saïd Business School into the Oxford Scenarios approach.
 
-The core idea is one plain shift: you stop forecasting the single probable future and start testing your moves against several plausible ones. Every strategy already carries a *ghost scenario*, the one future it quietly assumes. This tool surfaces that ghost scenario, then checks each move against alternatives, so you can tell a robust move from a one-future bet before you commit.
+The core idea is one plain shift: you stop forecasting the single probable future and start testing your moves against several plausible ones. In its full form the Oxford method does more than test moves; it reframes how leaders see the whole landscape, and this tool borrows one slice. Every strategy already carries a *ghost scenario*, the one future it quietly assumes. This tool surfaces that ghost scenario, then checks each move against alternatives, so you can tell a robust move from a one-future bet before you commit.
 
 What used to take a strategy team weeks of workshops now runs in minutes on a single decision, with you as the judge and the AI doing the legwork. The model underneath will keep changing; the discipline stays yours.
 
