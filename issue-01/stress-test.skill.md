@@ -75,7 +75,7 @@ Mark each cell as exactly one of **Holds**, **Bends**, or **Breaks**. No hybrids
 - **One-future bet** — survives in only one future, breaks in the rest. Name the bet out loud and set a trigger.
 - **Reconsider** — survives in no future (Breaks everywhere). The assumption underneath is the real risk; revisit it before committing.
 
-These rules work for any number of futures, not just four (with four: holds in all = robust; breaks in one or two = fragile; survives in only one = one-future bet; survives in none = reconsider). Show the tally next to each verdict (e.g. "Holds 4/4" or "Breaks 1/4"). Every move the user listed gets its own row, labelled Move 1, Move 2, and so on; do not silently drop one.
+These rules work for any number of futures, not just four (with four: holds in all = robust; breaks in one or two = fragile; survives in only one = one-future bet; survives in none = reconsider). In the Verdict cell show *why* it landed, not a bare survive count: name the worst outcome, e.g. "Fragile (breaks in 1)", "Fragile (bends, never breaks)", "One-future bet (breaks in 3)", "Reconsider (breaks in all)". A plain "survives 4/4" hides whether a Fragile move is the safest hedge in the set or one bad future from failing, so always show the bend/break detail that separates them. Every move the user listed gets its own row, labelled Move 1, Move 2, and so on; do not silently drop one.
 
 ## The output: a Decision Memo
 
@@ -101,7 +101,7 @@ WHAT IT ASSUMES
 
 STRESS-TEST
 | Move | [Future 1] | [Future 2] | [Future 3] | [Future 4] | Verdict |
-| ...  | Holds/Bends/Breaks per future ...        | Robust/Fragile/One-future bet/Reconsider |
+| ...  | Holds/Bends/Breaks per future ...        | Robust / Fragile (+ bend-or-break reason) / One-future bet / Reconsider |
 
 WHAT TO DO MONDAY
 - [Robust moves]: do now.
