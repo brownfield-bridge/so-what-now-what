@@ -46,7 +46,7 @@ The asset was never the model, which everyone rents from the same few suppliers.
 
 - PageIndex (VectifyAI), the open-source vectorless, reasoning-based retrieval project: [github.com/VectifyAI/PageIndex](https://github.com/VectifyAI/PageIndex). MIT licence. Its Mafin 2.5 system reports 98.7% on FinanceBench, far ahead of vector-RAG baselines.
 - The "skills standardize AI use in firms" framing is Ethan Mollick's (June 2026).
-- The enterprise example (a university finance team built a treasury skill that reasons over its own records and recovered $100,000 in mis-routed payments) is the Cornell case, June 2026.
+- The enterprise example (a university finance team built a treasury skill that reasons over its own records and recovered $100,000 in unidentified payments) is the Cornell case, June 2026.
 
 ---
 

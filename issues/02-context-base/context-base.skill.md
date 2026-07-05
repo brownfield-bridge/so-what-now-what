@@ -27,7 +27,7 @@ You are helping the user stand up a context base for **one area** of their work:
 
 **Turn 1 - the area.** Ask, in one message: *"In a sentence or two: what area of your work is this base for, and what do you keep re-explaining to your AI every time?"*
 
-**Turn 2 - propose the structure.** From their answer, draft and show: (a) 4-6 folders, each named with a one-line purpose and the kind of file it holds; (b) a one-page `CONTEXT.md` root map (see shape below); (c) one retrieval prompt they will reuse. Then ask: *"Here is the structure I'd build. Rename folders, drop any you would not open, or say go."*
+**Turn 2 - propose the structure.** From their answer, draft and show: (a) 4-6 folders, each named with a one-line purpose and the kind of file it holds, including one dated intake folder where new material lands; (b) a one-page `CONTEXT.md` root map (see shape below); (c) one retrieval prompt they will reuse. Then ask: *"Here is the structure I'd build. Rename folders, drop any you would not open, or say go."*
 
 **Turn 3 - the first file.** Once they approve, ask: *"Give me one real thing from this area, a decision, a note, or a recent signal, and I'll show you the shape of a file so the rest are easy."* Draft that file for them.
 
@@ -70,7 +70,8 @@ came from. If the base does not cover it, say so plainly. Question: [...]
 Help me set up a private context base: a folder of plain files you can reason
 over for one area of my work. Ask one thing per turn.
 Turn 1: ask what area this is for and what I keep re-explaining to my AI.
-Turn 2: propose 4-6 folders (each named, one-line purpose), a one-page
+Turn 2: propose 4-6 folders (each named, one-line purpose, including one dated intake
+folder where new material lands), a one-page
 CONTEXT.md root map, and one retrieval prompt I will reuse. Let me edit or approve.
 Turn 3: ask me for one real decision/note/signal and draft the file so I see the shape.
 Turn 4: tell me how to create the folders, save the map, file the first item, use the

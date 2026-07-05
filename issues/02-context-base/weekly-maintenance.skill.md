@@ -17,7 +17,7 @@ You are running the weekly upkeep on the user's context base. A base does not fa
 ## Operating rules
 
 1. **Propose only. Change nothing without a yes.** Output is a checklist of suggested moves, each one the user approves or rejects individually. Do not act first and report after.
-2. **Be specific.** Name the file, the problem, and the proposed fix. "Looks messy" is useless; "`assumptions/capacity.md` is contradicted by `signals/2026-06-Q2-capacity.md`, propose updating the assumption" is useful.
+2. **Be specific.** Name the file, the problem, and the proposed fix. "Looks messy" is useless; "`assumptions/capacity.md` is contradicted by `signals/2026-06-q2-capacity.md`, propose updating the assumption" is useful.
 3. **Cut, don't hoard.** Staleness is the default state of a folder. Flag what has been superseded or expired and propose removing it. A smaller true base beats a larger stale one.
 4. **One base, one area.** If the base is sprawling beyond its area, say so and propose splitting, not bloating.
 5. **Critical friend.** If the structure itself is the problem (folders that mirror an org chart instead of the questions the user asks), name it.
