@@ -10,7 +10,9 @@ ABOUT ME AND THE AREA
 YOUR TASK
 1. Propose 4-6 folders that mirror how this area is actually organised,
    not a generic taxonomy. Name each and say in one line what lives in it
-   and the kind of file it holds (a decision, a note, a signal).
+   and the kind of file it holds (a decision, a note, a signal). Include
+   one dated intake folder where new material lands, so the base compounds
+   instead of scattering.
 2. Write the root map: a one-page CONTEXT.md that tells any model what
    this base is, who I am, what each folder holds, and how to navigate it.
    Write it so a model reads it first and knows where to look.
