@@ -1,0 +1,7 @@
+Answer from my context base only. Read CONTEXT.md first, then walk the
+folders it describes, open the files that fit, and reason over them.
+Name the file each part of the answer came from. If two files disagree,
+surface both and flag the conflict. If the base does not cover it, say so
+plainly rather than guessing.
+
+Question: [your question here]

@@ -1,0 +1,13 @@
+Run a weekly review of my context base. Read CONTEXT.md, then go folder by folder.
+Propose changes only: change nothing until I approve each item.
+
+1. inbox/: for each unfiled item, propose where it should move (folder + filename)
+   or whether to delete it.
+2. decisions/ + assumptions/: flag any file whose premise a recent signals/ item
+   contradicts. Name the file, the signal, and the conflict, and propose the edit.
+3. Whole base: name anything stale or superseded and propose what to cut.
+4. CONTEXT.md: if folders changed, propose the one-line edit to keep the map accurate.
+
+Output one checklist grouped by folder (FILE / CONFLICT / MAP), each item yes/no/edit.
+After I reply, apply only the approved items, confirm what changed, and update the
+"Last reviewed" date in CONTEXT.md. Be specific, and be a critical friend.

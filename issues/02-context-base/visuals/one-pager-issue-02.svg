@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF8F3"/><stop offset="1" stop-color="#F4EEE3"/></linearGradient></defs>
+<rect width="1200" height="1200" fill="url(#bg)"/>
+<rect x="0" y="0" width="1200" height="8" fill="#B5502A"/>
+<text x="600.0" y="92" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="30" font-weight="bold" letter-spacing="10" fill="#B5502A">SO WHAT, NOW WHAT</text>
+<text x="600.0" y="132" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" letter-spacing="6" fill="#8C8071">ISSUE 02  ·  THE CONTEXT BASE</text>
+<text x="600.0" y="212" text-anchor="middle" font-family="DejaVu Serif, Liberation Serif, serif" font-size="46" font-weight="bold" fill="#1A2940">The Context Base, in four moves</text>
+<text x="600.0" y="250" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="19" font-style="italic" fill="#8C8071">A private base your AI can reason over. Build it, do not buy it.</text>
+<rect x="60" y="286" width="230" height="384" rx="14" fill="#FFFFFF" stroke="#E7DCC9" stroke-width="1.5"/>
+<rect x="60" y="286" width="230" height="6" fill="#B5502A"/>
+<circle cx="100" cy="336" r="19" fill="#B5502A"/>
+<text x="100" y="344" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">1</text>
+<rect x="149.0" y="396" width="20" height="15" rx="2" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="159.0" y1="411" x2="159.0" y2="436" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="159.0" y1="422" x2="179.0" y2="422" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="159.0" y1="436" x2="179.0" y2="436" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="179.0" y="415" width="18" height="13" rx="2" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="179.0" y="429" width="18" height="13" rx="2" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="175.0" y="491" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="24" font-weight="bold" letter-spacing="1.5" fill="#CA6238">SHAPE</text>
+<text x="175.0" y="532" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">Folders that mirror</text>
+<text x="175.0" y="558" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">how the work is</text>
+<text x="175.0" y="584" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">organised: a tree</text>
+<text x="175.0" y="610" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">the model can walk.</text>
+<rect x="343" y="286" width="230" height="384" rx="14" fill="#FFFFFF" stroke="#E7DCC9" stroke-width="1.5"/>
+<rect x="343" y="286" width="230" height="6" fill="#B5502A"/>
+<circle cx="383" cy="336" r="19" fill="#B5502A"/>
+<text x="383" y="344" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">2</text>
+<rect x="438.0" y="394" width="40" height="48" rx="4" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="446.0" y1="406" x2="470.0" y2="406" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="446.0" y1="416" x2="470.0" y2="416" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="458.0" cy="431" r="6" fill="#B5502A"/>
+<text x="458.0" y="491" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="24" font-weight="bold" letter-spacing="1.5" fill="#CA6238">ANCHOR</text>
+<text x="458.0" y="532" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">One root file that</text>
+<text x="458.0" y="558" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">tells any model what</text>
+<text x="458.0" y="584" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">the base is and how</text>
+<text x="458.0" y="610" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">to navigate it.</text>
+<rect x="626" y="286" width="230" height="384" rx="14" fill="#FFFFFF" stroke="#E7DCC9" stroke-width="1.5"/>
+<rect x="626" y="286" width="230" height="6" fill="#B5502A"/>
+<circle cx="666" cy="336" r="19" fill="#B5502A"/>
+<text x="666" y="344" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">3</text>
+<line x1="741.0" y1="394" x2="741.0" y2="416" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M732.0,407 L741.0,417 L750.0,407" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M717.0,424 H729.0 L733.0,432 H749.0 L753.0,424 H765.0 V440 H717.0 Z" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="741.0" y="491" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="24" font-weight="bold" letter-spacing="1.5" fill="#CA6238">FEED</text>
+<text x="741.0" y="532" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">One named, dated</text>
+<text x="741.0" y="558" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">place where new</text>
+<text x="741.0" y="584" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">material lands. It</text>
+<text x="741.0" y="610" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">compounds, not scatters.</text>
+<rect x="909" y="286" width="230" height="384" rx="14" fill="#FFFFFF" stroke="#E7DCC9" stroke-width="1.5"/>
+<rect x="909" y="286" width="230" height="6" fill="#B5502A"/>
+<circle cx="949" cy="336" r="19" fill="#B5502A"/>
+<text x="949" y="344" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">4</text>
+<path d="M1044.0,412 A22,22 0 1 0 1046.0,428" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M1034.0,404 L1046.0,410 L1040.0,422" fill="none" stroke="#CA6238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1024.0" y="491" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="24" font-weight="bold" letter-spacing="1.5" fill="#CA6238">MAINTAIN</text>
+<text x="1024.0" y="532" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">A weekly pass to</text>
+<text x="1024.0" y="558" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">prune the stale,</text>
+<text x="1024.0" y="584" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">re-file the drift.</text>
+<text x="1024.0" y="610" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" fill="#33445C">This is the product.</text>
+<path d="M300.5,418 L326.5,418 M317.5,409 L328.5,418 L317.5,427" fill="none" stroke="#B5502A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M583.5,418 L609.5,418 M600.5,409 L611.5,418 L600.5,427" fill="none" stroke="#B5502A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M866.5,418 L892.5,418 M883.5,409 L894.5,418 L883.5,427" fill="none" stroke="#B5502A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="706" width="1080" height="168" rx="14" fill="#FFFFFF" stroke="#B5502A" stroke-width="1.5"/>
+<text x="600.0" y="744" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="19" font-weight="bold" letter-spacing="3" fill="#B5502A">BUILD  vs  BUY</text>
+<text x="600.0" y="768" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="15" fill="#8C8071">where building your own is genuinely enough</text>
+<text x="195.0" y="812" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" font-weight="bold" fill="#33445C">Scattered dump</text>
+<text x="195.0" y="834" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5" fill="#8C8071">nothing at stake</text>
+<line x1="330.0" y1="792" x2="330.0" y2="840" stroke="#E7DCC9" stroke-width="1"/>
+<text x="465.0" y="812" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" font-weight="bold" fill="#33445C">Prompt library</text>
+<text x="465.0" y="834" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5" fill="#8C8071">a system in feeling only</text>
+<rect x="610.0" y="784" width="250.0" height="62" rx="9" fill="#F7E7DC" stroke="#B5502A" stroke-width="1.5"/>
+<text x="735.0" y="812" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" font-weight="bold" fill="#B5502A">Build a context base</text>
+<text x="735.0" y="834" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5" fill="#8C8071">you, a team, a project</text>
+<text x="1005.0" y="812" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16.5" font-weight="bold" fill="#33445C">Buy the platform</text>
+<text x="1005.0" y="834" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5" fill="#8C8071">thousands of users, audited</text>
+<rect x="250.0" y="870" width="700" height="40" rx="20" fill="#B5502A"/>
+<text x="600.0" y="897" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">Build covers almost everyone. Buy is the genuine enterprise case.</text>
+<text x="600.0" y="982" text-anchor="middle" font-family="DejaVu Serif, Liberation Serif, serif" font-size="31" font-style="italic" fill="#1A2940">A context base is not a place to search.</text>
+<text x="600.0" y="1028" text-anchor="middle" font-family="DejaVu Serif, Liberation Serif, serif" font-size="31" font-style="italic" fill="#1A2940">It is a place to reason against.</text>
+<rect x="194.0" y="1064" width="812" height="48" rx="10" fill="#FFFFFF" stroke="#B5502A" stroke-width="1.5"/>
+<text x="600.0" y="1094" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="16" fill="#B5502A">Free kit on GitHub: the setup prompt, the scaffold, and the weekly upkeep skill.</text>
+<rect x="0" y="1193" width="1200" height="7" fill="#B5502A"/>
+<text x="600.0" y="1170" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="15" letter-spacing="1.5" fill="#8C8071">So What, Now What   ·   github.com/brownfield-bridge/so-what-now-what   ·   CC-BY 4.0</text>
+</svg>

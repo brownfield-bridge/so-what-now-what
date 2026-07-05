@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+<defs><linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF8F3"/><stop offset="1" stop-color="#F4EEE3"/></linearGradient></defs>
+<rect width="1200" height="820" fill="url(#bg2)"/>
+<rect x="0" y="0" width="1200" height="8" fill="#B5502A"/>
+<text x="60" y="78" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="17" letter-spacing="5" fill="#B5502A">SO WHAT, NOW WHAT  ·  ISSUE 02</text>
+<text x="60" y="126" font-family="DejaVu Serif, Liberation Serif, serif" font-size="38" font-weight="bold" fill="#1A2940">What a context base looks like</text>
+<text x="60" y="160" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-style="italic" fill="#8C8071">Plain files and folders. No vector database. A worked strategy base.</text>
+<rect x="60" y="196" width="560" height="540" rx="14" fill="#FFFFFF" stroke="#E7DCC9" stroke-width="1.5"/>
+<rect x="60" y="196" width="560" height="6" fill="#B5502A"/>
+<text x="94" y="248" font-family="DejaVu Sans Mono, monospace" font-size="20" font-weight="bold" fill="#1A2940">strategy-base/</text>
+<text x="128" y="290" font-family="DejaVu Sans Mono, monospace" font-size="19" font-weight="bold" fill="#B5502A">CONTEXT.md</text>
+<text x="176" y="332" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="14.5" font-style="italic" fill="#8C8071">the root map: read first</text>
+<text x="128" y="366" font-family="DejaVu Sans Mono, monospace" font-size="19" font-weight="bold" fill="#1A2940">decisions/</text>
+<text x="162" y="408" font-family="DejaVu Sans Mono, monospace" font-size="17" fill="#33445C">2025-09-exit-public-tender-practice.md</text>
+<text x="128" y="450" font-family="DejaVu Sans Mono, monospace" font-size="19" font-weight="bold" fill="#1A2940">assumptions/</text>
+<text x="162" y="492" font-family="DejaVu Sans Mono, monospace" font-size="17" fill="#33445C">capacity.md</text>
+<text x="128" y="534" font-family="DejaVu Sans Mono, monospace" font-size="19" font-weight="bold" fill="#1A2940">signals/</text>
+<text x="128" y="576" font-family="DejaVu Sans Mono, monospace" font-size="19" font-weight="bold" fill="#1A2940">market/</text>
+<text x="128" y="618" font-family="DejaVu Sans Mono, monospace" font-size="19" font-weight="bold" fill="#1A2940">inbox/</text>
+<text x="176" y="660" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="14.5" font-style="italic" fill="#8C8071">new material lands here</text>
+<rect x="656" y="196" width="484" height="540" rx="14" fill="#FFFFFF" stroke="#E7DCC9" stroke-width="1.5"/>
+<rect x="656" y="196" width="484" height="6" fill="#B5502A"/>
+<text x="686" y="246" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="bold" letter-spacing="2" fill="#B5502A">HOW IT ANSWERS</text>
+<text x="686" y="288" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="bold" fill="#1A2940">You ask:</text>
+<text x="686" y="321" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C">"What did we decide about</text>
+<text x="686" y="354" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C">tenders, and does it still hold?"</text>
+<text x="686" y="387" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C"></text>
+<text x="686" y="420" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="bold" fill="#1A2940">It walks the tree:</text>
+<text x="686" y="453" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="normal" fill="#B5502A">decisions/ -> assumptions/</text>
+<text x="686" y="486" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="normal" fill="#33445C">-> signals/, and answers</text>
+<text x="686" y="519" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C">from the files, naming</text>
+<text x="686" y="552" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C">which file each part</text>
+<text x="686" y="585" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C">came from.</text>
+<text x="686" y="618" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#33445C"></text>
+<text x="686" y="651" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#8C8071">No similarity search.</text>
+<text x="686" y="684" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#8C8071">Reasoning over structure.</text>
+<rect x="0" y="813" width="1200" height="7" fill="#B5502A"/>
+<text x="600.0" y="794" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="14" letter-spacing="1.5" fill="#8C8071">So What, Now What   ·   github.com/brownfield-bridge/so-what-now-what   ·   CC-BY 4.0</text>
+</svg>
