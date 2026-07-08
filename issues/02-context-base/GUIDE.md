@@ -2,6 +2,13 @@
 
 A complete walkthrough. About 30 minutes to a working base, then 20 minutes a week to keep it. No vector database, no platform, no code required.
 
+## What you'll get
+
+- A working base you can stand up in about 30 minutes
+- A way to ask real questions and get sourced, cited answers
+- A 20-minute weekly practice that keeps it honest
+- A clonable starter with a worked example inside
+
 ## What you need
 
 - An AI you already use: Claude, ChatGPT, Gemini, or Cowork.
@@ -52,6 +59,10 @@ If you would rather the review showed up on its own, see `scheduled-review.md`. 
 - `starter/` (a finished, worked example you clone)
 - `weekly-maintenance.skill.md` / `weekly-maintenance-prompt.txt` and `scheduled-review.md` (keep it)
 - `visuals/` (the one-pager and a sample of a base)
+
+## When not to build this
+
+If you already have thousands of users needing audited access control, buy the platform. If your material changes hourly and you want the search everyone else already runs, buy the platform. A context base is for one person, one team, or one project reasoning against private material at human tempo. Below that scale, build. Above it, buy.
 
 ## License
 
