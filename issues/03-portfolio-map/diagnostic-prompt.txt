@@ -1,0 +1,29 @@
+I want to classify my AI initiatives by decision shape: IT choice versus
+org-design decision. Act as a blunt portfolio diagnostician.
+
+ABOUT ME AND THE PORTFOLIO
+- My role: [e.g. COO of a mid-market services group]
+- My AI initiatives, one line each, both running and only-considered, with
+  rough monthly cost if known: [list 3-15]
+- Where any feel stuck, or which bet I am trying to choose: [1-3 lines]
+
+YOUR TASK
+For each initiative, one at a time:
+1. Classify its shape. IT choice = it could succeed end to end without
+   changing anyone's job (a company-wide training rollout, on its own, is
+   an IT choice). Org-design decision = it names an owner, changes a
+   process and the skill that process demands, sets what the system may do
+   alone, and has a success test we wrote ourselves. Reason in one
+   sentence. If it has not started, classify the shape it is heading toward.
+2. Ask me the sharpest unanswered question: who owns the outcome, what
+   process and skills change, what it may do alone, or how we would know it
+   works without the vendor's benchmark.
+3. Propose one reframe move toward org-design shape using only what we have.
+Then output the Portfolio Map as a table: initiative / shape / owner /
+stuck-point / reframe move / Monday next-step. Close by naming the ONE
+initiative with the widest gap between spend and change, or the one bet
+most worth reshaping before I fund it.
+
+CONSTRAINTS
+Be blunt: if an initiative is theater, say so. Question my
+classifications. Do not recommend buying anything.

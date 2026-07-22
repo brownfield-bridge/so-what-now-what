@@ -1,0 +1,3 @@
+Initiative,Status (live/weighing),Monthly cost (EUR),Business owner? (Y/N),Process + skill changes? (Y/N),Autonomy boundary set? (Y/N),Own success test? (Y/N),Change delivered (low/med/high),Shape,Stuck-point,Reframe move,Monday next-step
+"[e.g. Customer-service copilot]",live,,N,N,N,N,low,"[auto: IT choice / half-made / org-design / theater]","[one line: where it feels stuck]","[the one move that flips it toward org-design shape, using only what you have]","[the first concrete step]"
+"[a bet you are only weighing]",weighing,,N,N,N,N,n/a,"[heading toward...]","[why you are considering it]","[before you fund: decide owner, process + skill, boundary, success test]","[decide the owner before releasing budget]"

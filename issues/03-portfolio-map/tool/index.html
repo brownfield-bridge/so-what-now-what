@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Portfolio Map · So What, Now What</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas-top:#FBF8F3; --canvas-bot:#F4EEE3; --card:#FFFFFF;
+    --ink:#1A2940; --body:#33445C; --muted:#8C8071;
+    --ember:#B5502A; --ember-light:#CA6238; --ember-soft:#F7E7DC; --hairline:#E7DCC9;
+    --serif:'Lora',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    --mono:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--sans); color:var(--body); line-height:1.55;
+    background:linear-gradient(180deg,var(--canvas-top),var(--canvas-bot)) fixed;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px 80px}
+  .top-bar{height:8px;background:var(--ember)}
+  header.mast{text-align:center;padding:30px 0 18px;border-bottom:1px solid var(--hairline);margin-bottom:8px}
+  .mast .rule{width:34px;height:3px;background:var(--ember);border-radius:2px;margin:0 auto 12px}
+  .mast .wordmark{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:30px;letter-spacing:.2px}
+  .mast .strap{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px;margin-top:2px}
+  .eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--ember);font-weight:700;margin-top:14px}
+  h1.title{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:29px;text-align:center;margin:20px 0 6px;line-height:1.2}
+  .subtitle{text-align:center;color:var(--body);max-width:700px;margin:0 auto 6px;font-size:16.5px}
+  .howto{text-align:center;color:var(--muted);max-width:700px;margin:8px auto 0;font-size:14px}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin:38px 0 14px}
+  .section-head .r{width:30px;height:3px;background:var(--ember);border-radius:2px;position:relative;top:-5px;flex:0 0 auto}
+  .section-head h2{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:22px;margin:0}
+  .section-head .hint{color:var(--muted);font-size:13px;margin-left:auto}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 6px}
+  button{font-family:var(--sans);cursor:pointer;border-radius:8px;font-weight:600;font-size:14px;padding:9px 15px;border:1px solid var(--hairline);background:var(--card);color:var(--ink);transition:.15s}
+  button:hover{border-color:var(--ember);color:var(--ember)}
+  button.primary{background:var(--ember);border-color:var(--ember);color:#FFF4EC}
+  button.primary:hover{background:var(--ember-light);border-color:var(--ember-light);color:#fff}
+  button.ghost{background:transparent}
+  .spacer{flex:1 1 auto}
+  .rows{display:flex;flex-direction:column;gap:16px}
+  .init{background:var(--card);border:1px solid var(--hairline);border-left:4px solid var(--ember);border-radius:10px;padding:18px 20px;box-shadow:0 6px 10px rgba(42,36,24,.05)}
+  .init.candidate{border-left-style:dashed;border-left-color:var(--ember-light)}
+  .init .line1{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .init input[type=text],.init input[type=number],.init textarea,.init select{
+    font-family:var(--sans);font-size:14.5px;color:var(--ink);background:var(--canvas-top);
+    border:1px solid var(--hairline);border-radius:7px;padding:8px 10px}
+  .init input:focus,.init textarea:focus,.init select:focus{outline:none;border-color:var(--ember)}
+  .init .name{flex:1 1 240px;font-weight:600;font-size:15.5px}
+  .cost{width:140px}
+  .status{width:150px}
+  .init .qgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin-top:14px}
+  .q{display:flex;flex-direction:column;gap:4px}
+  .q label{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.2px}
+  .q .qtext{font-size:12.5px;color:var(--body)}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:12px;align-items:flex-end}
+  .meta-row .q textarea{width:100%;min-height:38px;resize:vertical}
+  .stuck{flex:1 1 320px}
+  .del{margin-left:auto;border-color:transparent;color:var(--muted);padding:6px 10px}
+  .del:hover{color:var(--ember);border-color:var(--hairline)}
+  .pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;padding:4px 11px;border-radius:999px;white-space:nowrap;text-transform:uppercase}
+  .pill.org{background:var(--ember);color:#FFF4EC}
+  .pill.half{background:var(--ember-soft);color:var(--ember)}
+  .pill.it{background:transparent;color:var(--muted);border:1px solid var(--hairline)}
+  .pill.theater{background:var(--ink);color:#FFF4EC}
+  .pill.theater .tick{color:var(--ember-light)}
+  .tag-cand{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--ember-light);border:1px solid var(--ember-light);border-radius:999px;padding:1px 8px;margin-left:8px}
+  .flagbanner{background:var(--ink);color:#FFF4EC;border-radius:10px;padding:18px 22px;margin:6px 0 2px;display:flex;gap:14px;align-items:flex-start}
+  .flagbanner .tk{color:var(--ember-light);font-size:20px;line-height:1;flex:0 0 auto}
+  .flagbanner b{color:#fff}
+  .flagbanner .fb-sub{font-family:var(--serif);font-style:italic;color:#E7DCC9;font-size:14px;margin-top:4px}
+  .fundbanner{background:var(--ember-soft);color:var(--ink);border:1px solid var(--ember-light);border-radius:10px;padding:14px 20px;margin:10px 0 2px;font-size:14px}
+  .fundbanner b{color:var(--ember)}
+  table.map{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--hairline);border-radius:10px;overflow:hidden;font-size:13.5px}
+  table.map th{background:var(--canvas-bot);color:var(--ink);text-align:left;font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;padding:11px 12px;border-bottom:2px solid var(--ember)}
+  table.map td{padding:11px 12px;border-bottom:1px solid var(--hairline);vertical-align:top;color:var(--body)}
+  table.map tr:nth-child(even) td{background:var(--canvas-top)}
+  table.map tr.flag td{background:var(--ember-soft)!important}
+  table.map .in{font-weight:600;color:var(--ink)}
+  .missing{color:var(--ember);font-weight:600}
+  .empty-note{color:var(--muted);font-style:italic}
+  .summary{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 16px}
+  .chip{background:var(--card);border:1px solid var(--hairline);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--body)}
+  .chip b{color:var(--ink)}
+  .chip .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;position:relative;top:1px}
+  .memo{background:var(--card);border:1px solid var(--hairline);border-radius:10px;padding:0;margin-top:10px;overflow:hidden}
+  .memo textarea{width:100%;border:0;padding:20px 22px;font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--ink);background:var(--canvas-top);resize:vertical;min-height:260px}
+  .foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:34px;border-top:1px solid var(--hairline);padding-top:18px}
+  .foot a{color:var(--ember);text-decoration:none;font-weight:600}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#FFF4EC;padding:11px 20px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50}
+  .toast.show{opacity:1}
+  details.rubric{margin-top:10px;background:var(--card);border:1px solid var(--hairline);border-radius:10px;padding:6px 18px}
+  details.rubric summary{cursor:pointer;font-weight:600;color:var(--ink);padding:8px 0;font-size:14px}
+  details.rubric p, details.rubric li{font-size:13.5px}
+  details.rubric code{font-family:var(--mono);background:var(--canvas-bot);padding:1px 5px;border-radius:4px;color:var(--ember)}
+  @media(max-width:720px){
+    .init .qgrid{grid-template-columns:1fr}
+    table.map{display:block;overflow-x:auto;white-space:nowrap}
+    h1.title,.mast .wordmark{font-size:24px}
+  }
+  @media print{
+    body{background:#fff}
+    .no-print{display:none!important}
+    .wrap{max-width:100%;padding:0}
+    .init,.toolbar,.howto,details.rubric{display:none!important}
+    header.mast{margin-bottom:0}
+    table.map{box-shadow:none}
+    .memo textarea{border:1px solid var(--hairline)}
+    .section-head{page-break-after:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="rule"></div>
+    <div class="wordmark">So What, Now What</div>
+    <div class="strap">From AI to value</div>
+    <div class="eyebrow">Issue 3 · AI Portfolio Map</div>
+  </header>
+
+  <h1 class="title">Your AI pilots are not necessarily wrong. Your org chart might be.</h1>
+  <p class="subtitle">List your AI initiatives, the live ones and the ones you are only weighing. Answer four questions about each. This tool sorts which are real decisions and which are purchases wearing a pilot's badge, then names the one to fix this week.</p>
+  <p class="howto no-print">The rows below are a worked example. Edit them, or clear and enter your own. It is not a readiness score; it classifies each initiative one at a time. Nothing is stored or sent anywhere; it all runs in your browser. When you are done, copy the memo or save the page as a PDF.</p>
+
+  <div class="section-head no-print">
+    <span class="r"></span><h2>Your portfolio</h2>
+    <span class="hint">Org-design decision = business owner + a process (and the skill it demands) that changes + an autonomy boundary + your own success test.</span>
+  </div>
+
+  <div class="toolbar no-print">
+    <button class="primary" onclick="addRow('live')">+ Add initiative</button>
+    <button class="ghost" onclick="addRow('candidate')">+ Add a bet you are weighing</button>
+    <button class="ghost" onclick="loadExample()">Reload worked example</button>
+    <button class="ghost" onclick="clearAll()">Clear &amp; start mine</button>
+    <span class="spacer"></span>
+  </div>
+
+  <div id="rows" class="rows no-print"></div>
+
+  <details class="rubric no-print">
+    <summary>How the classification works (the four questions)</summary>
+    <p>Each initiative is scored on four org-design conditions. The one that stays empty is the decision that was never made.</p>
+    <ol>
+      <li><b>Owner.</b> A <code>business owner</code> whose own number moves when this works, not a <code>systems</code> owner and not <code>nobody</code>.</li>
+      <li><b>Process (and skill) change.</b> A named way of working changes when it succeeds, and it demands a new skill someone actually builds. If nothing changes, it's a purchase.</li>
+      <li><b>Autonomy boundary.</b> You've decided what the system may do alone and what needs sign-off.</li>
+      <li><b>Own success test.</b> You judge it on a test you wrote, not the vendor's benchmark.</li>
+    </ol>
+    <p><b>All four → Org-design decision.</b> These produce operating change. <b>One to three → Decision half-made</b>; the missing column is your next move. <b>None, with no owner and no real use → IT choice (theater).</b> <b>None → IT choice</b>: fine as IT, just not a transformation.</p>
+    <p><b>Live vs. a bet you are weighing.</b> For a live initiative, the tool flags the widest gap between what it costs and what it has changed. For a bet you have not started, it classifies the shape it is heading toward on current plans, so you can reshape it <i>before</i> you fund it, not after.</p>
+    <p>The tool then flags the one initiative with the widest cost-versus-change gap. That is this week's work.</p>
+  </details>
+
+  <div class="section-head">
+    <span class="r"></span><h2>The map</h2>
+    <span class="hint no-print">Updates as you type.</span>
+  </div>
+
+  <div id="flag"></div>
+  <div id="fund"></div>
+  <div id="summary" class="summary"></div>
+  <div id="mapWrap" style="overflow-x:auto"></div>
+
+  <div class="section-head">
+    <span class="r"></span><h2>The memo</h2>
+    <span class="hint no-print">One page, ready to forward.</span>
+  </div>
+  <div class="toolbar no-print">
+    <button class="primary" onclick="copyMemo()">Copy memo</button>
+    <button class="ghost" onclick="window.print()">Save as PDF</button>
+    <button class="ghost" onclick="downloadMemo()">Download .md</button>
+  </div>
+  <div class="memo"><textarea id="memo" spellcheck="false" readonly></textarea></div>
+
+  <div class="foot">
+    So What, Now What · Issue 3 · <b>From AI to value</b><br>
+    The prompt, the map template, and the installable diagnostic skill are free at
+    <a href="https://github.com/brownfield-bridge/so-what-now-what" target="_blank" rel="noopener">github.com/brownfield-bridge/so-what-now-what</a> · CC-BY 4.0
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+/* ---------- state ---------- */
+let rows = [];
+
+const EXAMPLE = [
+  {name:"Customer-service copilot", status:"live", cost:4000, owner:"systems", process:false, autonomy:false, ownTest:false, change:"low",
+   stuck:"Live 8 months, satisfaction flat."},
+  {name:"Demand-forecast model", status:"live", cost:6000, owner:"business", process:true, autonomy:false, ownTest:true, change:"med",
+   stuck:"The planner quietly reruns everything by hand."},
+  {name:"AP invoice-matching agent", status:"live", cost:2500, owner:"systems", process:true, autonomy:false, ownTest:true, change:"med",
+   stuck:"Works, but exceptions still queue to the same clerk."},
+  {name:"Sales-proposal drafting", status:"live", cost:9000, owner:"none", process:false, autonomy:false, ownTest:false, change:"low",
+   stuck:"Licences bought company-wide, usage under 10%."},
+  {name:"“AI transformation program” (umbrella)", status:"live", cost:15000, owner:"none", process:false, autonomy:false, ownTest:false, change:"low",
+   stuck:"14 months, no job description changed."},
+  {name:"Contract-review assistant", status:"candidate", cost:3000, owner:"none", process:false, autonomy:false, ownTest:false, change:"low",
+   stuck:"Considering it. Budget earmarked, no owner yet."},
+];
+
+function blankRow(status){ return {name:"",status:status||"live",cost:null,owner:"none",process:false,autonomy:false,ownTest:false,change:"low",stuck:""}; }
+
+/* ---------- logic ---------- */
+function isCandidate(r){ return r.status==='candidate'; }
+function answeredCount(r){
+  return (r.owner==='business'?1:0)+(r.process?1:0)+(r.autonomy?1:0)+(r.ownTest?1:0);
+}
+function missingList(r){
+  const m=[];
+  if(r.owner!=='business') m.push('owner');
+  if(!r.process) m.push('process + skill');
+  if(!r.autonomy) m.push('autonomy boundary');
+  if(!r.ownTest) m.push('own success test');
+  return m;
+}
+function shapeOf(r){
+  const a=answeredCount(r);
+  if(a===4) return 'org';
+  if(!isCandidate(r) && a===0 && r.owner==='none' && r.change==='low') return 'theater';
+  if(a===0) return 'it';
+  return 'half';
+}
+const SHAPE_LABEL={org:'Org-design decision',half:'Decision half-made',it:'IT choice',theater:'IT choice · theater'};
+const CHANGE_SCORE={low:0.1,med:0.5,high:0.9};
+
+const REFRAME={
+  owner:"Name a business owner, the person whose own number moves when this works. No owner, no transformation.",
+  'process + skill':"Name the one process that changes when it works, and the new skill it demands. If nothing changes, it's a purchase, so decide whether to kill it or wire it into a workflow.",
+  'autonomy boundary':"Decide what it may do alone and what needs sign-off, then track the override rate instead of accuracy.",
+  'own success test':"Write three test tasks of your own and judge it on those, not on the vendor's benchmark."
+};
+function reframeFor(r){
+  if(isCandidate(r)){
+    const m=missingList(r);
+    if(m.length===0) return "Heading org-design shape. Fund it, and protect the owner, the skill plan, and your success test.";
+    return "Before you fund it: decide the "+m[0]+" now, so it starts as an org-design decision, not a pilot.";
+  }
+  if(shapeOf(r)==='theater') return "Kill it or commit it: give one team a named owner and a done-means standard for one quarter, or stop paying for it.";
+  const m=missingList(r);
+  if(m.length===0) return "Shaped right. Protect the owner and your success test, and widen the autonomy boundary as trust grows.";
+  return REFRAME[m[0]];
+}
+function gapScore(r,maxCost){
+  const spend = (r.cost && maxCost>0) ? r.cost/maxCost : 0.5;
+  const changeGap = 1 - (CHANGE_SCORE[r.change]??0.5);
+  return spend*changeGap;
+}
+function widestGapIndex(){
+  // live initiatives only: a not-yet-started bet has spent nothing and changed nothing
+  const liveCost = rows.filter(r=>!isCandidate(r)).map(r=>r.cost||0);
+  const maxCost = Math.max(0,...liveCost);
+  let bi=-1,bv=-1;
+  rows.forEach((r,i)=>{ if(isCandidate(r)) return; const g=gapScore(r,maxCost); if(g>bv){bv=g;bi=i;} });
+  return bi;
+}
+
+/* ---------- render input ---------- */
+function opt(sel,val,txt){return `<option value="${val}" ${sel===val?'selected':''}>${txt}</option>`;}
+function renderRows(){
+  const c=document.getElementById('rows');
+  c.innerHTML = rows.map((r,i)=>`
+    <div class="init ${isCandidate(r)?'candidate':''}">
+      <div class="line1">
+        <input class="name" type="text" placeholder="Initiative name" value="${esc(r.name)}" oninput="upd(${i},'name',this.value)">
+        <select class="status" onchange="updStatus(${i},this.value)">
+          ${opt(r.status,'live','Status: live')}
+          ${opt(r.status,'candidate','Status: weighing it')}
+        </select>
+        <input class="cost" type="number" min="0" placeholder="Monthly cost (opt.)" value="${r.cost??''}" oninput="upd(${i},'cost',this.value===''?null:+this.value)">
+        <button class="del" onclick="delRow(${i})" title="Remove">Remove</button>
+      </div>
+      <div class="qgrid">
+        <div class="q">
+          <label>1 · Who owns the outcome?</label>
+          <select onchange="upd(${i},'owner',this.value)">
+            ${opt(r.owner,'business','A business owner (their number moves)')}
+            ${opt(r.owner,'systems','A systems / IT owner')}
+            ${opt(r.owner,'none','Nobody in the business')}
+          </select>
+        </div>
+        <div class="q">
+          <label>2 · Does a process change, and demand a new skill?</label>
+          <select onchange="upd(${i},'process',this.value==='yes')">
+            ${opt(r.process?'yes':'no','yes','Yes, a way of working changes and a skill is built')}
+            ${opt(r.process?'yes':'no','no','No, everyone works as before')}
+          </select>
+        </div>
+        <div class="q">
+          <label>3 · Is the autonomy boundary set?</label>
+          <select onchange="upd(${i},'autonomy',this.value==='yes')">
+            ${opt(r.autonomy?'yes':'no','yes','Yes, we decided what it may do alone')}
+            ${opt(r.autonomy?'yes':'no','no','No, it is undefined')}
+          </select>
+        </div>
+        <div class="q">
+          <label>4 · Judged on your own success test?</label>
+          <select onchange="upd(${i},'ownTest',this.value==='yes')">
+            ${opt(r.ownTest?'yes':'no','yes','Yes, a test we wrote ourselves')}
+            ${opt(r.ownTest?'yes':'no','no','No, or the vendor’s benchmark')}
+          </select>
+        </div>
+      </div>
+      <div class="meta-row">
+        <div class="q stuck">
+          <label>${isCandidate(r)?'Why you are considering it / where it might stick (optional)':'Where it feels stuck (optional)'}</label>
+          <textarea oninput="upd(${i},'stuck',this.value)" placeholder="One line">${esc(r.stuck)}</textarea>
+        </div>
+        ${isCandidate(r) ? '' : `
+        <div class="q">
+          <label>Change delivered so far</label>
+          <select onchange="upd(${i},'change',this.value)">
+            ${opt(r.change,'low','Little / none')}
+            ${opt(r.change,'med','Some')}
+            ${opt(r.change,'high','Real operating change')}
+          </select>
+        </div>`}
+      </div>
+    </div>`).join('');
+}
+
+/* ---------- render results ---------- */
+function renderResults(){
+  const flagIdx = rows.length?widestGapIndex():-1;
+
+  const counts={org:0,half:0,it:0,theater:0};
+  rows.forEach(r=>counts[shapeOf(r)]++);
+  const nCand = rows.filter(isCandidate).length;
+  const dot=(c)=>`<span class="dot" style="background:${c}"></span>`;
+  document.getElementById('summary').innerHTML = rows.length? `
+    <span class="chip">${dot('#B5502A')}<b>${counts.org}</b> org-design</span>
+    <span class="chip">${dot('#CA6238')}<b>${counts.half}</b> half-made</span>
+    <span class="chip">${dot('#8C8071')}<b>${counts.it}</b> IT choice</span>
+    <span class="chip">${dot('#1A2940')}<b>${counts.theater}</b> theater</span>
+    <span class="chip"><b>${rows.length}</b> total${nCand?` · ${nCand} weighing`:''}</span>`:'';
+
+  const fb=document.getElementById('flag');
+  if(flagIdx>=0 && rows[flagIdx].name.trim()){
+    const r=rows[flagIdx];
+    fb.innerHTML=`<div class="flagbanner">
+      <span class="tk">▶</span>
+      <div><div>This week's work: <b>${esc(r.name)}</b></div>
+      <div class="fb-sub">Widest gap between what it costs and what it has changed. ${reframeFor(r)}</div></div>
+    </div>`;
+  } else fb.innerHTML='';
+
+  // "Before you fund" note for candidates heading IT-shaped / half-made
+  const fund=document.getElementById('fund');
+  const risky = rows.filter(r=>isCandidate(r) && r.name.trim() && shapeOf(r)!=='org');
+  if(risky.length){
+    fund.innerHTML=`<div class="fundbanner"><b>Before you fund:</b> ${risky.map(r=>esc(r.name)).join(', ')} ${risky.length>1?'are':'is'} heading toward a pilot on current plans. Decide the owner, the process and skill, the autonomy boundary, and your own success test before the money moves.</div>`;
+  } else fund.innerHTML='';
+
+  const body = rows.map((r,i)=>{
+    const s=shapeOf(r);
+    const pill = s==='theater'
+      ? `<span class="pill theater"><span class="tick">✕</span> Theater</span>`
+      : `<span class="pill ${s}">${SHAPE_LABEL[s]}</span>`;
+    const miss=missingList(r);
+    const missTxt = miss.length? `<span class="missing">${miss.join(', ')}</span>` : `<span class="empty-note">nothing, it's shaped right</span>`;
+    const ownerTxt = r.owner==='business'?'Business owner':(r.owner==='systems'?'Systems / IT':'Nobody');
+    const nameCell = (esc(r.name)||'<span class=empty-note>(unnamed)</span>') + (isCandidate(r)?' <span class="tag-cand">weighing</span>':'');
+    return `<tr class="${i===flagIdx?'flag':''}">
+      <td class="in">${nameCell}</td>
+      <td>${pill}</td>
+      <td>${ownerTxt}</td>
+      <td>${missTxt}</td>
+      <td>${reframeFor(r)}</td>
+      <td>${isCandidate(r)?'<span class=empty-note>before funding</span>':'<span class=empty-note>this week</span>'}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('mapWrap').innerHTML = rows.length? `
+    <table class="map"><thead><tr>
+      <th>Initiative</th><th>Shape</th><th>Owner</th><th>Missing decision</th><th>Reframe move</th><th>When</th>
+    </tr></thead><tbody>${body}</tbody></table>`
+    : `<p class="empty-note">Add an initiative to build your map.</p>`;
+
+  renderMemo(flagIdx);
+}
+
+function renderMemo(flagIdx){
+  const d=new Date();
+  const date=d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  const counts={org:0,half:0,it:0,theater:0};
+  rows.forEach(r=>counts[shapeOf(r)]++);
+  const cand = rows.filter(r=>isCandidate(r) && r.name.trim());
+  let out=[];
+  out.push("AI PORTFOLIO MAP  ·  "+date);
+  out.push("Prepared with So What, Now What (Issue 3). From AI to value.");
+  out.push("");
+  out.push("PORTFOLIO: "+rows.length+" initiative(s)"+(cand.length?(", of which "+cand.length+" not yet started"):"")+".");
+  out.push("Shape: "+counts.org+" org-design, "+counts.half+" half-made, "+counts.it+" IT choice, "+counts.theater+" theater.");
+  out.push("");
+  if(flagIdx>=0){
+    const r=rows[flagIdx];
+    out.push("THIS WEEK'S WORK:  "+(r.name||'(unnamed)'));
+    out.push("  Widest gap between spend and change (live initiatives).");
+    const miss=missingList(r);
+    out.push("  Missing decision: "+(miss.length?miss.join(', '):'none, shaped right'));
+    out.push("  Reframe: "+reframeFor(r));
+    out.push("  Three test tasks to write:");
+    out.push("    1. ____________________________________________");
+    out.push("    2. ____________________________________________");
+    out.push("    3. ____________________________________________");
+    out.push("");
+  }
+  if(cand.length){
+    out.push("BEFORE YOU FUND (bets you are weighing)");
+    out.push("--------------------------------------");
+    cand.forEach(r=>{
+      out.push("• "+(r.name||'(unnamed)')+"  [heading: "+SHAPE_LABEL[shapeOf(r)]+"]");
+      out.push("    "+reframeFor(r));
+    });
+    out.push("");
+  }
+  out.push("FULL MAP");
+  out.push("--------");
+  rows.forEach(r=>{
+    const s=SHAPE_LABEL[shapeOf(r)];
+    const miss=missingList(r);
+    out.push("• "+(r.name||'(unnamed)')+"  ["+s+(isCandidate(r)?' · weighing':'')+"]");
+    out.push("    owner: "+(r.owner==='business'?'business owner':r.owner==='systems'?'systems/IT':'nobody')
+             +(r.cost?("  ·  ~"+r.cost+"/mo"):""));
+    if(r.stuck) out.push("    note: "+r.stuck);
+    out.push("    missing: "+(miss.length?miss.join(', '):'nothing'));
+    out.push("    reframe: "+reframeFor(r));
+  });
+  out.push("");
+  out.push("The test: an AI decision is IT-shaped if it can succeed without changing anyone's job.");
+  out.push("It is org-design-shaped when it names an owner, changes a process and the skill it demands,");
+  out.push("sets an autonomy boundary, and is judged on a success test you wrote. IT-shaped decisions");
+  out.push("produce pilots. Org-design decisions produce operating change.");
+  out.push("");
+  out.push("Kit (CC-BY 4.0): github.com/brownfield-bridge/so-what-now-what  /issues/03-portfolio-map/");
+  document.getElementById('memo').value=out.join("\n");
+}
+
+/* ---------- events ---------- */
+function upd(i,k,v){ rows[i][k]=v; renderResults(); }
+function updStatus(i,v){ rows[i].status=v; renderRows(); renderResults(); }
+function addRow(status){ rows.push(blankRow(status)); renderRows(); renderResults(); }
+function delRow(i){ rows.splice(i,1); renderRows(); renderResults(); }
+function loadExample(){ rows=EXAMPLE.map(r=>Object.assign({},r)); renderRows(); renderResults(); toast("Worked example loaded"); }
+function clearAll(){ rows=[blankRow('live')]; renderRows(); renderResults(); toast("Cleared. Enter your own."); }
+
+function copyMemo(){
+  const t=document.getElementById('memo');
+  const text=t.value;
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast("Memo copied")).catch(()=>legacyCopy(t));
+  } else legacyCopy(t);
+}
+function legacyCopy(t){ t.removeAttribute('readonly'); t.select(); try{document.execCommand('copy');toast("Memo copied");}catch(e){toast("Select the memo and copy");} t.setAttribute('readonly','');}
+function downloadMemo(){
+  const blob=new Blob([document.getElementById('memo').value],{type:'text/markdown'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='ai-portfolio-map.md'; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000); toast("Downloaded");
+}
+let toastT;
+function toast(m){ const el=document.getElementById('toast'); el.textContent=m; el.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),1600); }
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+/* ---------- init ---------- */
+loadExample();
+</script>
+</body>
+</html>
