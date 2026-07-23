@@ -24,12 +24,12 @@ The same test runs *before* you spend. Ask the four questions of a bet you are o
 
 ## What's here
 
-- **[`tool/index.html`]** - the fastest way in. A self-contained web tool: enter your initiatives (the live ones and the ones you are only weighing), answer the four questions on each, and it classifies every one, names the missing decision, flags the single live initiative with the widest gap between spend and change, lists any not-yet-started bets under "Before you fund", and writes a forwardable memo. No install, nothing stored, nothing leaves your browser. Open the file, or run the hosted version linked at the top.
-- **[`diagnostic-prompt.txt`]** - the no-tool floor. Paste it into any AI, list your initiatives, and it runs the same interrogation in your own chat window.
-- **[`portfolio-diagnostic.skill.md`]** - the same diagnostic as an installable skill for Claude or Cowork, so you can re-run it and have it write the memo for you.
-- **[`examples/portfolio-map-worked-example.csv`]** - a full worked portfolio (five live initiatives, two of which turn out to be theater, plus one bet still being weighed), so you see the whole thing before you replace it with your own.
-- **[`examples/portfolio-map-template.csv`]** - the blank map with the columns and one example row, if you would rather work in a spreadsheet.
-- **[`README.md`]** - the method in plain words.
+- **[`tool/index.html`](tool/index.html)** - the fastest way in. A self-contained web tool: enter your initiatives (the live ones and the ones you are only weighing), answer the four questions on each, and it classifies every one, names the missing decision, flags the single live initiative with the widest gap between spend and change, lists any not-yet-started bets under "Before you fund", and writes a forwardable memo. No install, nothing stored, nothing leaves your browser. Open the file, or run the hosted version linked at the top.
+- **[`diagnostic-prompt.txt`](diagnostic-prompt.txt)** - the no-tool floor. Paste it into any AI, list your initiatives, and it runs the same interrogation in your own chat window.
+- **[`portfolio-diagnostic.skill.md`](portfolio-diagnostic.skill.md)** - the same diagnostic as an installable skill for Claude or Cowork, so you can re-run it and have it write the memo for you.
+- **[`examples/portfolio-map-worked-example.csv`](examples/portfolio-map-worked-example.csv)** - a full worked portfolio (five live initiatives, two of which turn out to be theater, plus one bet still being weighed), so you see the whole thing before you replace it with your own.
+- **[`examples/portfolio-map-template.csv`](examples/portfolio-map-template.csv)** - the blank map with the columns and one example row, if you would rather work in a spreadsheet.
+- **`README.md`** - the method in plain words.
 
 ## How to run it
 
