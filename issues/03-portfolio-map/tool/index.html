@@ -47,14 +47,18 @@
   .rows{display:flex;flex-direction:column;gap:16px}
   .init{background:var(--card);border:1px solid var(--hairline);border-left:4px solid var(--ember);border-radius:10px;padding:18px 20px;box-shadow:0 6px 10px rgba(42,36,24,.05)}
   .init.candidate{border-left-style:dashed;border-left-color:var(--ember-light)}
-  .init .line1{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .init .line1{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
   .init input[type=text],.init input[type=number],.init textarea,.init select{
     font-family:var(--sans);font-size:14.5px;color:var(--ink);background:var(--canvas-top);
     border:1px solid var(--hairline);border-radius:7px;padding:8px 10px}
   .init input:focus,.init textarea:focus,.init select:focus{outline:none;border-color:var(--ember)}
-  .init .name{flex:1 1 240px;font-weight:600;font-size:15.5px}
-  .cost{width:140px}
-  .status{width:150px}
+  .fld{display:flex;flex-direction:column;gap:4px}
+  .fld > label{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.2px}
+  .init .fld input,.init .fld select{width:100%}
+  .f-name{flex:1 1 240px}
+  .init .f-name input{font-weight:600;font-size:15.5px}
+  .f-status{width:150px}
+  .f-cost{width:140px}
   .init .qgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin-top:14px}
   .q{display:flex;flex-direction:column;gap:4px}
   .q label{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.2px}
@@ -271,13 +275,22 @@ function renderRows(){
   const c=document.getElementById('rows');
   c.innerHTML = rows.map((r,i)=>`
     <div class="init ${isCandidate(r)?'candidate':''}">
-      <div class="line1">
-        <input class="name" type="text" placeholder="Initiative name" value="${esc(r.name)}" oninput="upd(${i},'name',this.value)">
-        <select class="status" onchange="updStatus(${i},this.value)">
-          ${opt(r.status,'live','Status: live')}
-          ${opt(r.status,'candidate','Status: weighing it')}
-        </select>
-        <input class="cost" type="number" min="0" placeholder="Monthly cost (opt.)" value="${r.cost??''}" oninput="upd(${i},'cost',this.value===''?null:+this.value)">
+     <div class="line1">
+        <div class="fld f-name">
+          <label>Initiative</label>
+          <input type="text" placeholder="Initiative name" value="${esc(r.name)}" oninput="upd(${i},'name',this.value)">
+        </div>
+        <div class="fld f-status">
+          <label>Status</label>
+          <select onchange="updStatus(${i},this.value)">
+            ${opt(r.status,'live','Live')}
+            ${opt(r.status,'candidate','Weighing it')}
+          </select>
+        </div>
+        <div class="fld f-cost">
+          <label>Monthly cost (opt.)</label>
+          <input type="number" min="0" placeholder="e.g. 4000" value="${r.cost??''}" oninput="upd(${i},'cost',this.value===''?null:+this.value)">
+        </div>
         <button class="del" onclick="delRow(${i})" title="Remove">Remove</button>
       </div>
       <div class="qgrid">
