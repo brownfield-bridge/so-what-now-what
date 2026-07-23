@@ -1,5 +1,5 @@
 # The AI Portfolio Map
-
+**Run it now in your browser:** https://brownfield-bridge.github.io/so-what-now-what/issues/03-portfolio-map/tool/
 *Companion kit for* ***So What, Now What*** *- Issue 03: "Your AI pilots are not necessarily wrong. Your org chart might be."*
 
 Maybe you have a dozen AI initiatives running. Maybe two quiet experiments and pressure to show more. Maybe just a budget and a decision about where to place the first real bet. Whichever you are, the same trap applies: the tools get bought, the pilots report success, the invoices are paid, and the company still runs the way it ran two years ago. The cause is rarely the technology and rarely your people. It is the shape of the decisions: AI is being decided the way IT gets decided, and IT decisions do not transform the business. This kit gives you the test that separates the two shapes, and a map that runs your whole portfolio through it in about half an hour. It works on the initiatives you already run and the ones you have not yet started.
