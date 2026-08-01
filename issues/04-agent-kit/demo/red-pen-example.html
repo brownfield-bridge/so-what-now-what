@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Before you send this up</title><style>
+:root{--canvas:#FBF8F3;--card:#FFFFFF;--ink:#1A2940;--body:#33445C;--muted:#8C8071;--ember:#B5502A;--hair:#E7DCC9;--good:#2E6B4F;--ambertint:#F7E7DC}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(#FBF8F3,#F4EEE3);color:var(--body);font-family:Inter,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5;padding:34px 22px}
+.wrap{max-width:900px;margin:0 auto}.eyebrow{font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--ember);font-weight:700}
+h1{font-family:Georgia,serif;color:var(--ink);font-size:32px;margin:8px 0 3px}.sub{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.verdict{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 26px}
+.chip{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--ember);border-radius:10px;padding:12px 16px;flex:1;min-width:170px}
+.chip.gd{border-left-color:var(--good)}
+.chip .n{font-family:Georgia,serif;font-size:19px;color:var(--ink);font-weight:700;line-height:1.15}
+.chip .l{font-size:12px;color:var(--muted);margin-top:3px}
+.doc{background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:28px 30px;box-shadow:0 6px 18px rgba(42,36,24,.06)}
+.doc h2{font-family:Georgia,serif;color:var(--ink);font-size:16px;margin:18px 0 6px}.doc h2:first-child{margin-top:0}.doc p{margin:0 0 5px}
+.flag{background:var(--ambertint);border-bottom:2px solid var(--ember);padding:0 3px}
+.note{display:block;font-size:12.5px;color:var(--ember);margin:3px 0 12px;padding-left:14px;border-left:2px solid var(--ember)}.note b{color:var(--ink)}
+.pass{color:var(--good);font-weight:700}
+.contrast{display:flex;gap:14px;flex-wrap:wrap;margin:26px 0}
+.col{flex:1;min-width:250px;border-radius:10px;padding:16px 18px;font-size:13.5px}
+.naive{background:#F1EEE8;border:1px solid var(--hair);color:var(--muted)}.real{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--ember)}
+.col h3{margin:0 0 8px;font-size:12px;letter-spacing:2px;text-transform:uppercase}.naive h3{color:var(--muted)}.real h3{color:var(--ember)}
+.cfo{background:var(--ink);color:#FFF4EC;border-radius:12px;padding:22px 26px;margin:24px 0 6px}.cfo h3{font-family:Georgia,serif;margin:0 0 10px;font-size:17px;color:#fff}
+.cfo ul{margin:0;padding-left:20px;line-height:1.7}
+.foot{color:var(--muted);font-size:12.5px;margin-top:22px;text-align:center}
+</style></head><body><div class="wrap">
+<div class="eyebrow">So What, Now What · Issue 4 · your AI manager, self-checking</div>
+<h1>Before you send this up</h1>
+<div class="sub">Northwind Components — Monthly Business Review, June. The agent wrote it from your sources, then checked its own work.</div>
+
+<div class="verdict">
+  <div class="chip gd"><div class="n">Every figure ✓</div><div class="l">traced to source, arithmetic holds</div></div>
+  <div class="chip"><div class="n">1 read</div><div class="l">the data denies</div></div>
+  <div class="chip"><div class="n">1 forecast</div><div class="l">dressed as fact</div></div>
+  <div class="chip gd"><div class="n">2 min</div><div class="l">of your judgment to fix</div></div>
+</div>
+
+<div class="doc">
+  <h2>Revenue</h2>
+  <p>June $14.2m vs plan $14.8m, down 4.1%; shortfall in OEM. <span class="pass">✓ checks out</span></p>
+  <h2>Margin</h2>
+  <p>Gross margin 30.4% vs plan 33.0% (−2.6 pts), explained by input cost +6% and a heavier Line-C mix. <span class="pass">✓ checks out — figure and cause both trace</span></p>
+  <h2>Delivery</h2>
+  <p>On-time delivery 91.2% vs 94.0%; 3 of 5 late orders on supplier X. <span class="pass">✓ checks out</span></p>
+  <h2>Backlog</h2>
+  <p>Committed backlog $9.1m, up from $8.3m; book-to-bill 1.06. <span class="pass">✓ checks out</span></p>
+  <h2>The read</h2>
+  <p><span class="flag">"The revenue miss reflects softer OEM demand."</span>
+  <span class="note"><b>The numbers are right — the story is wrong.</b> Backlog rose $8.3m → $9.1m and book-to-bill is 1.06. Demand is not soft. Supported read: the miss is OEM <b>timing</b>, not lost demand. As written, this sends leadership chasing the wrong problem.</span></p>
+  <h2>Forward view</h2>
+  <p><span class="flag">"Margin will recover next quarter as costs normalise."</span>
+  <span class="note"><b>No basis in the sources.</b> Nothing in the folder fixes forward input costs. Your bar flags forward statements. Sign it on your name with a reason, or cut it.</span></p>
+</div>
+
+<div class="contrast">
+  <div class="col naive"><h3>What a quick read said</h3>"Reads clearly, the numbers all tie, the story flows. Looks solid to send."</div>
+  <div class="col real"><h3>What the check found</h3>Every number is right — but the read it hands leadership is contradicted by the backlog, and the forecast has no basis in the data. The danger was never a wrong figure. It was a confident wrong story.</div>
+</div>
+
+<div class="cfo"><h3>And the questions your CFO will ask that this can't yet answer</h3>
+<ul>
+  <li>If demand isn't soft, why did OEM miss — phasing, lost share, or price?</li>
+  <li>Of the 2.6-point margin miss, how much is input cost vs mix, and which is in our control?</li>
+  <li>You say margin recovers — on what basis, and how much input cost is contracted forward?</li>
+</ul></div>
+
+<div class="foot">The standard is yours. The decision is yours. The name on it is yours. This just makes sure you never sign the wrong <i>story</i> by accident.</div>
+</div></body></html>
