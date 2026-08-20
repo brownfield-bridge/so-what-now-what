@@ -25,7 +25,7 @@ License: CC BY 4.0. Use it, adapt it, ship it inside your own work. A credit bac
 
 ## How it works
 
-![Sources drop into one folder. The controller runs weekly, reads only the folder, and updates the register. Drafts wait for you.](assets/issue-5-flow.png)
+![Sources drop into one folder. The controller runs to a schedule, reads what you connected, and updates the register. Drafts wait for you, unsent.](assets/issue-5-flow.png)
 
 Each run, six things: **gathers** whatever is new · **extracts**, only where a person and a time are identifiable, citing the sentence every time · **splits by direction**, what you owe and what you are owed · **ages**, on last mention as well as on the dates that exist · **closes** as delivered, renegotiated or dropped · **drafts** one line, to them or from you, and leaves it where you already look.
 
