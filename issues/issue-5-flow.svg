@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1720 520" width="1720" height="520" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16181d"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+  </defs>
+
+  <rect width="1720" height="520" fill="#ffffff"/>
+
+  <!-- SOURCES -->
+  <text x="40" y="60" font-size="14" fill="#8a8f98" letter-spacing="2">SOURCES</text>
+  <g fill="#ffffff" stroke="#16181d" stroke-width="1.6">
+    <rect x="40" y="86" width="210" height="52" rx="3"/>
+    <rect x="40" y="150" width="210" height="52" rx="3"/>
+    <rect x="40" y="214" width="210" height="52" rx="3"/>
+    <rect x="40" y="278" width="210" height="52" rx="3"/>
+  </g>
+  <g font-size="17" fill="#16181d">
+    <text x="60" y="118">Meeting notes</text>
+    <text x="60" y="182">Mail and chat</text>
+    <text x="60" y="246">A photo of a page</text>
+    <text x="60" y="310">A line after a call</text>
+  </g>
+
+  <!-- converge -->
+  <g stroke="#16181d" stroke-width="1.6" fill="none">
+    <path d="M250 112 H296"/>
+    <path d="M250 176 H296"/>
+    <path d="M250 240 H296"/>
+    <path d="M250 304 H296"/>
+    <path d="M296 112 V304"/>
+    <path d="M296 208 H342" marker-end="url(#a)"/>
+  </g>
+
+  <!-- FOLDER -->
+  <rect x="350" y="150" width="230" height="116" rx="3" fill="#ffffff" stroke="#16181d" stroke-width="2.4"/>
+  <text x="465" y="196" font-size="21" font-weight="bold" fill="#16181d" text-anchor="middle">One folder</text>
+  <text x="465" y="226" font-size="15" fill="#5b6270" text-anchor="middle">If you can drop it in,</text>
+  <text x="465" y="246" font-size="15" fill="#5b6270" text-anchor="middle">it counts</text>
+
+  <line x1="580" y1="208" x2="642" y2="208" stroke="#16181d" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- CONTROLLER -->
+  <rect x="650" y="128" width="250" height="160" rx="3" fill="#ffffff" stroke="#1f4f8f" stroke-width="3"/>
+  <text x="775" y="176" font-size="21" font-weight="bold" fill="#1f4f8f" text-anchor="middle">The controller</text>
+  <text x="775" y="208" font-size="15" fill="#5b6270" text-anchor="middle">Runs to a schedule</text>
+  <text x="775" y="230" font-size="15" fill="#5b6270" text-anchor="middle">Reads what you connected</text>
+  <text x="775" y="260" font-size="15" fill="#5b6270" text-anchor="middle">Every row cites its source</text>
+
+  <line x1="900" y1="208" x2="962" y2="208" stroke="#16181d" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- REGISTER -->
+  <rect x="970" y="150" width="225" height="116" rx="3" fill="#ffffff" stroke="#16181d" stroke-width="2.4"/>
+  <text x="1082" y="196" font-size="21" font-weight="bold" fill="#16181d" text-anchor="middle">The register</text>
+  <text x="1082" y="226" font-size="15" fill="#5b6270" text-anchor="middle">One file. What you owe,</text>
+  <text x="1082" y="246" font-size="15" fill="#5b6270" text-anchor="middle">what you are owed</text>
+
+  <line x1="1195" y1="208" x2="1257" y2="208" stroke="#16181d" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- DRAFTS -->
+  <rect x="1265" y="150" width="160" height="116" rx="3" fill="#ffffff" stroke="#16181d" stroke-width="1.6"/>
+  <text x="1345" y="198" font-size="19" font-weight="bold" fill="#16181d" text-anchor="middle">Drafts</text>
+  <text x="1345" y="226" font-size="15" fill="#5b6270" text-anchor="middle">waiting</text>
+
+  <line x1="1425" y1="208" x2="1512" y2="208" stroke="#16181d" stroke-width="1.6" marker-end="url(#a)"/>
+  <text x="1468" y="194" font-size="13" fill="#8a5a20" text-anchor="middle">never sends</text>
+
+  <!-- YOU -->
+  <rect x="1520" y="150" width="130" height="116" rx="3" fill="#16181d" stroke="#16181d" stroke-width="2.4"/>
+  <text x="1585" y="198" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">You</text>
+  <text x="1585" y="226" font-size="14" fill="#c6ccd6" text-anchor="middle">read, decide,</text>
+  <text x="1585" y="246" font-size="14" fill="#c6ccd6" text-anchor="middle">send</text>
+
+  <!-- return loop -->
+  <path d="M1082 266 V332 H775 V292" fill="none" stroke="#8a8f98" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#ag)"/>
+  <text x="928" y="354" font-size="14" fill="#8a8f98" text-anchor="middle">last week's register carries forward</text>
+
+  <!-- STEP STRIP -->
+  <line x1="40" y1="404" x2="1650" y2="404" stroke="#dfe3e9" stroke-width="1"/>
+  <text x="40" y="436" font-size="13" fill="#8a8f98" letter-spacing="2">EACH RUN</text>
+  <g font-size="16" fill="#16181d">
+    <text x="180" y="436"><tspan font-weight="bold">1</tspan>  Gathers</text>
+    <text x="700" y="436"><tspan font-weight="bold">2</tspan>  Extracts, with a source for every row</text>
+    <text x="1180" y="436"><tspan font-weight="bold">3</tspan>  Splits by direction</text>
+    <text x="180" y="472"><tspan font-weight="bold">4</tspan>  Ages on last mention</text>
+    <text x="700" y="472"><tspan font-weight="bold">5</tspan>  Closes as delivered, renegotiated or dropped</text>
+    <text x="1180" y="472"><tspan font-weight="bold">6</tspan>  Drafts one line, to them or from you</text>
+  </g>
+</svg>

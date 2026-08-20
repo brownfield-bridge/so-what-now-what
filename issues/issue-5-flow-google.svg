@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1460 600" width="1460" height="600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16181d"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+  </defs>
+
+  <rect width="1460" height="600" fill="#ffffff"/>
+
+  <!-- column labels -->
+  <text x="40" y="44" font-size="14" fill="#8a8f98" letter-spacing="2">SOURCES</text>
+  <text x="820" y="44" font-size="14" fill="#8a8f98" letter-spacing="2">OUTPUTS</text>
+
+  <!-- SOURCES -->
+  <g fill="#ffffff" stroke="#16181d" stroke-width="1.6">
+    <rect x="40" y="104" width="240" height="68" rx="3"/>
+    <rect x="40" y="196" width="240" height="68" rx="3"/>
+    <rect x="40" y="288" width="240" height="68" rx="3"/>
+  </g>
+  <g fill="#16181d">
+    <text x="60" y="134" font-size="18" font-weight="bold">Gmail</text>
+    <text x="60" y="226" font-size="18" font-weight="bold">Google Drive</text>
+    <text x="60" y="318" font-size="18" font-weight="bold">Google Calendar</text>
+  </g>
+  <g fill="#5b6270" font-size="13">
+    <text x="60" y="156">where things get promised</text>
+    <text x="60" y="248">the folder: notes and photos</text>
+    <text x="60" y="340">meetings, and who was there</text>
+  </g>
+
+  <!-- converge -->
+  <g stroke="#16181d" stroke-width="1.6" fill="none">
+    <path d="M280 138 H330"/>
+    <path d="M280 230 H330"/>
+    <path d="M280 322 H330"/>
+    <path d="M330 138 V322"/>
+    <path d="M330 230 H386" marker-end="url(#a)"/>
+  </g>
+
+  <!-- COWORK -->
+  <rect x="394" y="135" width="330" height="190" rx="3" fill="#ffffff" stroke="#1f4f8f" stroke-width="3"/>
+  <text x="559" y="175" font-size="21" font-weight="bold" fill="#1f4f8f" text-anchor="middle">Claude Cowork</text>
+  <text x="559" y="198" font-size="14" fill="#5b6270" text-anchor="middle">connected to your own Google account</text>
+  <rect x="420" y="214" width="278" height="96" rx="3" fill="#ffffff" stroke="#1f4f8f" stroke-width="1.6"/>
+  <text x="559" y="246" font-size="18" font-weight="bold" fill="#16181d" text-anchor="middle">The controller</text>
+  <text x="559" y="270" font-size="14" fill="#5b6270" text-anchor="middle">one skill file, runs to a schedule</text>
+  <text x="559" y="292" font-size="14" fill="#5b6270" text-anchor="middle">reads what you connected</text>
+
+  <!-- fan out -->
+  <g stroke="#16181d" stroke-width="1.6" fill="none">
+    <path d="M724 230 H768"/>
+    <path d="M768 140 V376"/>
+    <path d="M768 140 H812" marker-end="url(#a)"/>
+    <path d="M768 260 H812" marker-end="url(#a)"/>
+    <path d="M768 376 H812" marker-end="url(#a)"/>
+  </g>
+
+  <!-- OUTPUT 1: the register -->
+  <rect x="820" y="88" width="340" height="104" rx="3" fill="#ffffff" stroke="#16181d" stroke-width="2.8"/>
+  <text x="990" y="124" font-size="21" font-weight="bold" fill="#16181d" text-anchor="middle">The register</text>
+  <text x="990" y="150" font-size="15" fill="#5b6270" text-anchor="middle">one file on your Drive</text>
+  <text x="990" y="172" font-size="14" fill="#5b6270" text-anchor="middle">the record: dated or not, and how it ended</text>
+
+  <!-- OUTPUT 2: drafts -->
+  <rect x="820" y="222" width="340" height="76" rx="3" fill="#ffffff" stroke="#16181d" stroke-width="1.6"/>
+  <text x="990" y="252" font-size="19" font-weight="bold" fill="#16181d" text-anchor="middle">Drafts in Gmail</text>
+  <text x="990" y="278" font-size="15" fill="#8a5a20" text-anchor="middle">addressed, unsent</text>
+
+  <!-- OUTPUT 3: tracker calendar -->
+  <rect x="820" y="320" width="340" height="112" rx="3" fill="#ffffff" stroke="#16181d" stroke-width="1.6"/>
+  <text x="990" y="352" font-size="19" font-weight="bold" fill="#16181d" text-anchor="middle">The Tracker calendar</text>
+  <text x="990" y="378" font-size="15" fill="#5b6270" text-anchor="middle">a calendar of its own, nobody else's</text>
+  <text x="990" y="400" font-size="14" fill="#5b6270" text-anchor="middle">only the rows that have a date,</text>
+  <text x="990" y="420" font-size="14" fill="#5b6270" text-anchor="middle">plus ten minutes on Monday</text>
+
+  <!-- return loop -->
+  <path d="M820 112 H650 V135" fill="none" stroke="#8a8f98" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#ag)"/>
+  <text x="772" y="104" font-size="13" fill="#8a8f98" text-anchor="middle">carries forward</text>
+
+  <!-- converge to you -->
+  <g stroke="#16181d" stroke-width="1.6" fill="none">
+    <path d="M1160 140 H1206"/>
+    <path d="M1160 260 H1206"/>
+    <path d="M1160 376 H1206"/>
+    <path d="M1206 140 V376"/>
+    <path d="M1206 230 H1246" marker-end="url(#a)"/>
+  </g>
+
+  <!-- YOU -->
+  <rect x="1250" y="170" width="150" height="120" rx="3" fill="#16181d" stroke="#16181d" stroke-width="2.4"/>
+  <text x="1325" y="218" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">You</text>
+  <text x="1325" y="246" font-size="14" fill="#c6ccd6" text-anchor="middle">read, decide, send</text>
+
+  <!-- FOOTER -->
+  <line x1="40" y1="470" x2="1400" y2="470" stroke="#dfe3e9" stroke-width="1"/>
+  <text x="40" y="500" font-size="13" fill="#8a8f98" letter-spacing="2">WHAT THIS VERSION CHANGES, AND WHAT IT DOES NOT</text>
+  <g font-size="15" fill="#16181d">
+    <text x="40" y="528">Two things still do not turn: every row cites the sentence it came from, and it never sends.</text>
+    <text x="40" y="552">A commitment with no date lives in the register, not the calendar. A calendar cannot hold "no date", and moving an event destroys the old one.</text>
+    <text x="40" y="576">Cowork is the example, and it runs under your account rather than on your machine. Any assistant that reads a folder, writes a file back and runs to a schedule will do.</text>
+  </g>
+</svg>
