@@ -17,7 +17,7 @@ License: CC BY 4.0. Use it, adapt it, ship it inside your own work. A credit bac
 ## What's here
 
 - **[`register.md`](register.md)** - **the object, and the point.** The columns, the rules, and a worked example filled in. This is what you end up owning. The agent can be replaced tomorrow; this file cannot be taken away from you.
-- **[`controller.skill.md`](controller.skill.md)** - the thing that keeps it current. A plain instruction file carrying the schedule, the folder, the capture threshold, the citation rule, the two directions, the silence bound, the three closings and the list of things it must never do. Install it as a skill, or paste it into any chat model. Nothing to edit.
+- **[`controller.skill.md`](controller.skill.md)** - the thing that keeps it current. A plain instruction file carrying the schedule, the folder, the capture threshold, the citation rule, the two directions, the relationship column, the silence bound, the three closings and the list of things it must never do. Install it as a skill, or paste it into any chat model. Nothing to edit.
 - **[`SETUP.md`](SETUP.md)** - start here to run it. Ten minutes to a first run, the five dials you set, and what to check before you trust it.
 - **[`EXAMPLE-run-output.md`](EXAMPLE-run-output.md)** - a full run against the demo folder: what it found, what it closed, **what it refused to turn into a row**, and the drafts left waiting. Read this before installing anything.
 - **[`folder/`](folder/)** - the working folder. Ships with one messy month of a fictional operations job. Delete it and drop in your own.

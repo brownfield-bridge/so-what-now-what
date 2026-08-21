@@ -113,6 +113,14 @@ Never smooth a commitment into what it should have said. "We'll get you somethin
 ### 3. Split by direction
 Two lists, always, kept separate in every output. **What the user owes** - everything else in their life already tracks this. **What the user is owed** - the list they have never had.
 
+### Carry the relationship
+
+Every row records what the other party is to the user: `report`, `peer`, `senior`, `customer`, `supplier`, `external`. Fill it **once per person, not per row**, and reuse it on every later row for that person.
+
+It is not a measure of importance and it is not a fact about the company. It is a proxy for **what it costs the user to chase that person**, and that cost, not importance, is what predicts whether a commitment survives. Important work with a system around it is already being looked after.
+
+When you list what the user is **owed**, put the expensive relationships first: `senior`, `customer`, `supplier`, `external`, then `peer`, then `report`. When you list what the user **owes**, put `senior` first. If you cannot tell what somebody is, write `unclear` and ask once, in the digest, rather than guessing.
+
 ### 4. Age, and watch the dates that exist
 Compute `quiet` for every open row at run time, from the date anybody last said anything about it. Then apply both triggers above. Dates are table stakes; silence is the finding. Do both.
 
