@@ -10,25 +10,29 @@ This repo houses the downloadable artefacts that ship with each issue: paste-and
 .
 ├── README.md
 ├── LICENSE                       # CC-BY 4.0
-├── issues/
-│   └── 00-synthesizer/           # Issue 0: The Synthesizer (Sun 14 June 2026)
-│       ├── README.md             # what ships with this issue
-│       ├── prompt.md             # paste-and-run prompt
-│       ├── one-pager.png         # visual framework
-│       ├── cowork-recipe/        # hands-off, no code
-│       ├── claude-code-recipe/   # full control, command line
-│       └── starter-template/     # Google Apps Script workflow files
-├── skills/                       # cumulative SKILL.md library (populated as Canon Verdict / Native Systems issues ship)
-└── scaffolds/                    # anchor-issue project scaffolds (populated ~4 times per year)
+├── issue-01/                     # Issue 1: The Strategy Stress-Test
+└── issues/
+    ├── 00-synthesizer/           # Issue 0: The Synthesizer
+    ├── 02-context-base/          # Issue 2: The Context Base
+    ├── 03-portfolio-map/         # Issue 3: The AI Portfolio Map
+    ├── 04-agent-kit/             # Issue 4: Build your own AI manager
+    ├── 05-commitment-register/   # Issue 5: The Commitment Register
+    └── 06-independence-test/     # Issue 6: The Independence Test
 ```
+
+Issue 1 sits at the top level rather than under `issues/`, for historical reasons. Its link
+has been in circulation since it shipped, so it stays where it is.
 
 ## Per-issue folder
 
-Each issue has its own folder under `issues/`. Browse the one for the issue you want, or clone the whole repo to keep your library updated.
+Each issue has its own folder with a README saying what ships with it and how to run it. Browse
+the one for the issue you want, or clone the whole repo to keep your library updated.
 
 ## Skills
 
-Each Canon Verdict and Native Systems format issue ships a `SKILL.md` that installs into Cowork or Claude Code and accumulates into a reader-side context library. Drop files from `skills/` into your local skills directory; they auto-trigger on the right questions.
+Several issues ship a `SKILL.md` alongside their other files. Drop one into your local skills
+directory for Cowork or Claude Code and it auto-triggers on the right questions. They live inside
+their own issue folder rather than in a central library, so you take only the ones you want.
 
 ## License
 
