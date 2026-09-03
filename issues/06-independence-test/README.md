@@ -83,8 +83,53 @@ Run `python3 independence_test.py --answers run-v3/cells.json` and you get it ba
   Raised by only one check        10  (48%)
 ```
 
-Plus the list of findings that exactly one check raised — the entire value of
-having run more than one, and precisely what a majority vote discards.
+That block is the diagnosis. The next one is the point of running it at all.
+
+## What you actually get
+
+Every paste block asks each check one more question about **its own** criticism,
+in the `if_true` field: *if this criticism is true, does the work's own
+recommendation still follow?* Three answers are allowed.
+
+| Answer | What it means |
+|---|---|
+| **CHANGES_THE_DECISION** | If true, the conclusion does not follow. Read these first. |
+| **WEAKENS_THE_EVIDENCE** | A supporting number is unreliable; the conclusion may still stand. |
+| **NEITHER** | True, and it does not move the decision. |
+
+Each check answers it about its own finding, as it writes it. That is deliberate.
+Hand the sorting to a separate model and you have added another reviewer with the
+same brain, which is the failure this whole method exists to measure.
+
+The tool then crosses that against the solo list and prints what falls in both:
+
+```
+  WHAT WOULD CHANGE THE DECISION    (each check's own call on its own
+                                     criticism, not a fourth model's)
+    Findings that change the decision     <count>
+      of those, raised by one check only  <count>
+    Findings that only weaken evidence    <count>
+
+    Read these first. One check found each, and each one means
+    the recommendation does not follow:
+      - [<the claim or number the check names>] <its one-sentence problem>
+      ...
+```
+
+**Shape only.** Everything in angle brackets stands in for whatever your own run
+returns. No numbers are shown because we do not have real ones for this block, and
+putting plausible ones there is the exact move this kit exists to argue against.
+Every other figure in this repo is measured. The reason this one is not follows below.
+
+**A finding that would change the decision and that exactly one check raised is
+the thing a majority vote deletes and the thing you would have shipped without.**
+That short list is what you are running this for. Most findings land in the middle
+row instead, which is normal, and it is what makes the first row worth finding.
+
+**One honest gap.** The run shipped in `run-v3/` was made before the `if_true`
+field existed, so scoring it prints *"Not available"* for this block rather than
+the list. Your own run will not: the field is in all ten blocks in `prompts.md`.
+Re-running ours is owed.
 
 ## Three things that decide whether the number is real
 
