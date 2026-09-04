@@ -1,0 +1,515 @@
+{
+ "n": 9,
+ "documents": 1,
+ "r_bar": 0.289,
+ "severity_reported": false,
+ "changes_the_decision": 0,
+ "changes_the_decision_solo": 0,
+ "weakens_the_evidence": 0,
+ "decisive_findings": [],
+ "decisive_solo_findings": [],
+ "verdict_unanimity": [
+  5,
+  9,
+  "MATERIAL_PROBLEMS"
+ ],
+ "n_eff": 2.72,
+ "n_eff_jackknife": [
+  2.53,
+  2.83
+ ],
+ "n_eff_by_document": {
+  "vendor-sheet.md": 2.72
+ },
+ "pairs": [
+  {
+   "pair": "A-neutral / A-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "A-neutral",
+    "A-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.083
+  },
+  {
+   "pair": "A-neutral / A-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "A-neutral",
+    "A-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.429,
+   "agreement": 0.321
+  },
+  {
+   "pair": "A-neutral / B-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "A-neutral",
+    "B-neutral"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.0,
+   "agreement": 0.0
+  },
+  {
+   "pair": "A-neutral / B-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-neutral",
+    "B-adversarial"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.0,
+   "agreement": 0.25
+  },
+  {
+   "pair": "A-neutral / B-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-neutral",
+    "B-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.0,
+   "agreement": 0.0
+  },
+  {
+   "pair": "A-neutral / C-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "A-neutral",
+    "C-neutral"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "A-neutral / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-neutral",
+    "C-adversarial"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "A-neutral / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-neutral",
+    "C-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.333
+  },
+  {
+   "pair": "A-adversarial / A-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "A-adversarial",
+    "A-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "A-adversarial / B-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-adversarial",
+    "B-neutral"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.333
+  },
+  {
+   "pair": "A-adversarial / B-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "A-adversarial",
+    "B-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.083
+  },
+  {
+   "pair": "A-adversarial / B-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-adversarial",
+    "B-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "A-adversarial / C-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-adversarial",
+    "C-neutral"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "A-adversarial / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "A-adversarial",
+    "C-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "A-adversarial / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-adversarial",
+    "C-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.0,
+   "agreement": 0.0
+  },
+  {
+   "pair": "A-inverted / B-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-inverted",
+    "B-neutral"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "A-inverted / B-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-inverted",
+    "B-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.429,
+   "agreement": 0.321
+  },
+  {
+   "pair": "A-inverted / B-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "A-inverted",
+    "B-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.333
+  },
+  {
+   "pair": "A-inverted / C-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-inverted",
+    "C-neutral"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "A-inverted / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "A-inverted",
+    "C-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "A-inverted / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "A-inverted",
+    "C-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "B-neutral / B-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "B-neutral",
+    "B-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.667,
+   "agreement": 0.5
+  },
+  {
+   "pair": "B-neutral / B-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "B-neutral",
+    "B-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "B-neutral / C-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "B-neutral",
+    "C-neutral"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "B-neutral / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "B-neutral",
+    "C-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.429,
+   "agreement": 0.321
+  },
+  {
+   "pair": "B-neutral / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "B-neutral",
+    "C-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.083
+  },
+  {
+   "pair": "B-adversarial / B-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "B-adversarial",
+    "B-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "B-adversarial / C-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "B-adversarial",
+    "C-neutral"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.0,
+   "agreement": 0.25
+  },
+  {
+   "pair": "B-adversarial / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "B-adversarial",
+    "C-adversarial"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.333
+  },
+  {
+   "pair": "B-adversarial / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "B-adversarial",
+    "C-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.111,
+   "agreement": 0.333
+  },
+  {
+   "pair": "B-inverted / C-neutral",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "B-inverted",
+    "C-neutral"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "B-inverted / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "both",
+   "ids": [
+    "B-inverted",
+    "C-adversarial"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.188
+  },
+  {
+   "pair": "B-inverted / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "model_axis",
+   "ids": [
+    "B-inverted",
+    "C-inverted"
+   ],
+   "verdict_match": 0.0,
+   "criticism_overlap": 0.429,
+   "agreement": 0.321
+  },
+  {
+   "pair": "C-neutral / C-adversarial",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "C-neutral",
+    "C-adversarial"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 1.0,
+   "agreement": 1.0
+  },
+  {
+   "pair": "C-neutral / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "C-neutral",
+    "C-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  },
+  {
+   "pair": "C-adversarial / C-inverted",
+   "doc": "vendor-sheet.md",
+   "varied": "framing_axis",
+   "ids": [
+    "C-adversarial",
+    "C-inverted"
+   ],
+   "verdict_match": 1.0,
+   "criticism_overlap": 0.25,
+   "agreement": 0.438
+  }
+ ],
+ "framing_axis_agreement": 0.427,
+ "framing_axis_pairs": 9,
+ "axis_difference_p": 0.052,
+ "model_axis_agreement": 0.23,
+ "model_axis_pairs": 9,
+ "noise_floor_agreement": 0.321,
+ "n_eff_at_noise_floor": 2.52,
+ "families_run": [
+  "claude",
+  "gemini",
+  "openai"
+ ],
+ "distinct_criticisms": 21,
+ "raised_by_one_config_only": 10,
+ "unique_issue_rate": 0.476,
+ "solo_findings": [
+  {
+   "target": "Section 3 - Cultural fit and partnership weighted at 15%, and Section 7 reliance on it",
+   "criticism": "The single largest driver of Vendor K's lead is a wholly subjective criterion scored by the same eight people who ran the demos, with no definition, no evidence base and no check on halo effects, yet weighted equal to total cost of ownership."
+  },
+  {
+   "target": "Section 5 - four positive references for Vendor K against one for Vendor M",
+   "criticism": "Vendor-supplied references are self-selected and the asymmetry means the reference evidence measures each vendor's willingness to produce referees, not comparative delivery performance."
+  },
+  {
+   "target": "Section 3 statement that the weighted scoring model was agreed after the July demonstrations",
+   "criticism": "Setting the criteria and weights once the panel had already formed impressions makes the model a rationalisation of a preference rather than a test of one, and no pre-registered weighting exists to check it against."
+  },
+  {
+   "target": "The eleven months runway asserted in Sections 1, 6 and 7 and used to justify deciding this month",
+   "criticism": "From the paper's own date of 24 August 2026 to end of support in June 2027 is at most ten months, and less once contract negotiation, mobilisation and the unscoped data migration are deducted, so the urgency argument is built on an overstated timeline."
+  },
+  {
+   "target": "The commercial comparison in section 4",
+   "criticism": "Comparing the quoted prices without explicitly confirming that both vendors are offering identical contract durations makes the total cost of ownership analysis invalid."
+  },
+  {
+   "target": "The references summary in Section 5",
+   "criticism": "The due diligence process was inequitable and incomplete because it compared four relevant references for Vendor K against only one poorly matched reference for Vendor M."
+  },
+  {
+   "target": "Section 5",
+   "criticism": "The evaluation team must conduct three additional reference checks for Vendor M to establish an equitable comparative baseline against Vendor K before concluding that Vendor M carries higher delivery risk."
+  },
+  {
+   "target": "the commercial comparison in section 4",
+   "criticism": "The paper recommends Vendor K despite a 530k higher stated vendor-plus-implementation cost without quantifying any financial benefit or avoided integration cost sufficient to justify that premium."
+  },
+  {
+   "target": "the reference evidence in section 5",
+   "criticism": "The unequal reference sample of four Vendor K customers versus one Vendor M customer prevents the reference evidence from supporting a fair comparative conclusion."
+  },
+  {
+   "target": "the Vendor M integration risk in section 6",
+   "criticism": "The paper does not quantify the cost, duration, feasibility, or operational impact of Vendor M's required ERP upgrade, so it has not shown that this disadvantage outweighs Vendor M's lower cost and higher implementation-risk score."
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+[
+{"config_id":"B-neutral","family":"gemini","framing":"neutral","verdict":"MATERIAL_PROBLEMS","criticisms":[
+{"target":"the Signals current date in the introductory section","criticism":"The text claims signals are current to 5 September 2026 which is chronologically impossible given the present date is 30 August 2026."},
+{"target":"the correlation reduction figures in the Why they agree and why swapping model does not fix it section","criticism":"The stated mathematical drop from 0.67 to 0.53 is a difference of 0.14 contradicting the text's assertion that the correlation falls by 0.13."}]},
+
+{"config_id":"C-neutral","family":"openai","framing":"neutral","verdict":"MATERIAL_PROBLEMS","criticisms":[
+{"target":"the effective-number calculation in sections 9 and 10","criticism":"The stated formula gives n_eff of 9 divided by 1 plus 8 times 0.67 which is about 1.55 not the reported 2.18 so the central numerical example is internally inconsistent."},
+{"target":"the claim that judges six through nine add 0.22 to effective independence","criticism":"Given the reported total of 2.18 and the stated five-judge 90 per cent contribution the remaining four judges would account for about 0.22 only if the first five contributed about 1.96 but the text provides no calculation establishing that figure."},
+{"target":"the statement that swapping model families reduces correlation from 0.67 to 0.53 and buys a fifth of the way there","criticism":"The text does not define the baseline and destination of the way there so the claimed one-fifth improvement cannot be derived from the reported correlations alone."}]}
+]
