@@ -3,9 +3,11 @@
 **You ran nine checks. How many opinions did you get?**
 
 When you ask a second AI to check the first one's work, you assume you are buying
-a second opinion. You are usually buying an echo. Nine frontier judges from seven
-different model families carry roughly **2.18 independent votes' worth** of
-information. A panel of humans reviewing the same work gets 4.0 to 5.8.
+a second opinion. You are usually buying an echo. Guneet Kohli measured it: nine
+frontier judges from seven different model families carry roughly **2.18 independent
+votes' worth** of information (arXiv 2605.29800). A panel of humans reviewing the same
+work gets 4.0 to 5.8. This kit is an implementation of his measure, with a second axis
+added and a way to run it on your own document.
 
 **Two things come out of this, and they answer different questions.**
 
@@ -256,6 +258,6 @@ CC BY 4.0 — *So What, Now What*, Issue 6.
 
 ---
 
-The measure here belongs to survey statistics and the findings it rests on are other people's; both are cited in the sources above. What is mine is the assembly, the run, and the reading of it.
+The measure here belongs to survey statistics, and putting it on a panel of AI judges is Guneet Kohli's move, not mine (arXiv 2605.29800). The findings this rests on are other people's and are cited in the sources. What is mine is the second axis of three framings, the repeated cell used as a noise floor, the decision-impact tag and the solo-findings rule built on it, running it on a decision document rather than a labelling task, and packaging it so it needs no API key. The run and the reading of it are mine too.
 
 Arguments and voice are mine. Claude is used as an editing and scaffolding tool. If others' concepts are used, they are referenced in the sources section.

@@ -1,6 +1,6 @@
 # One run, in full
 
-**Honesty label.** A real run, not an illustration. Nine checks plus one repeat, 30 August 2026, against a synthetic vendor recommendation memo. Three different AIs crossed with three framings: A = Claude, B = Gemini, C = ChatGPT. Every block went into a brand-new chat and carried a cell id which the model echoed back inside its JSON, so no answer could be mislabelled. Every figure below came out of the tool.
+**Honesty label.** A real run, not an illustration, of a published measure: the design effect applied to a panel of AI judges is Guneet Kohli's, arXiv 2605.29800. Nine checks plus one repeat, 30 August 2026, against a synthetic vendor recommendation memo. Three different AIs crossed with three framings: A = Claude, B = Gemini, C = ChatGPT. Every block went into a brand-new chat and carried a cell id which the model echoed back inside its JSON, so no answer could be mislabelled. Every figure below came out of the tool.
 
 **A note on the record.** The run was executed against the memo denominated in pounds; the published version is in euro. Nothing else changed and no figure depends on it. The ten answers in `run-v3/cells.json` are as returned, with currency symbols and dashes normalised in transcription and no wording altered.
 
@@ -81,6 +81,6 @@ The human baseline named ten problems. The panel found six of them squarely, two
 
 ---
 
-The measure here belongs to survey statistics and the findings it rests on are other people's; both are cited in the sources above. What is mine is the assembly, the run, and the reading of it.
+The measure here belongs to survey statistics, and putting it on a panel of AI judges is Guneet Kohli's move, not mine (arXiv 2605.29800). The findings this rests on are other people's and are cited in the sources. What is mine is the second axis of three framings, the repeated cell used as a noise floor, the decision-impact tag and the solo-findings rule built on it, running it on a decision document rather than a labelling task, and packaging it so it needs no API key. The run and the reading of it are mine too.
 
 Arguments and voice are mine. Claude is used as an editing and scaffolding tool. If others' concepts are used, they are referenced in the sources section.

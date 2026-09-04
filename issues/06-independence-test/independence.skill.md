@@ -105,8 +105,10 @@ this average: it is measuring your instrument, not your panel.
 | 2 to 3 | Two opinions. Better than one, not a panel. |
 | above 3 | A real spread. Unusual — keep whatever you did differently. |
 
-For scale: nine frontier judges from seven families, measured in May 2026, came
-to 2.18. A panel of humans on the same measure lands between 4.0 and 5.8.
+For scale: nine frontier judges from seven families, measured by Guneet Kohli in
+May 2026, came to 2.18 (arXiv 2605.29800). A panel of humans on the same measure
+lands between 4.0 and 5.8. The measure below is his; the crossing and the repeat
+cell are what this procedure adds.
 
 Then compute n_eff a second time using the copy's agreement with its twin in
 place of r̄. That is your **noise floor**: what you would have scored if every
@@ -231,6 +233,6 @@ CC BY 4.0 — *So What, Now What*, Issue 6.
 
 ---
 
-The measure here belongs to survey statistics and the findings it rests on are other people's; both are cited in the sources above. What is mine is the assembly, the run, and the reading of it.
+The measure here belongs to survey statistics, and putting it on a panel of AI judges is Guneet Kohli's move, not mine (arXiv 2605.29800). The findings this rests on are other people's and are cited in the sources. What is mine is the second axis of three framings, the repeated cell used as a noise floor, the decision-impact tag and the solo-findings rule built on it, running it on a decision document rather than a labelling task, and packaging it so it needs no API key. The run and the reading of it are mine too.
 
 Arguments and voice are mine. Claude is used as an editing and scaffolding tool. If others' concepts are used, they are referenced in the sources section.
