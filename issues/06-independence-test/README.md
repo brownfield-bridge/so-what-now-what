@@ -7,7 +7,18 @@ a second opinion. You are usually buying an echo. Nine frontier judges from seve
 different model families carry roughly **2.18 independent votes' worth** of
 information. A panel of humans reviewing the same work gets 4.0 to 5.8.
 
-This measures it on your own document.
+**Two things come out of this, and they answer different questions.**
+
+The **score** is about your checking, not about your document. Nine checks are worth about two
+opinions. We got 2.72 in August and 2.12 in September on the same document, which never changed a
+word. Learn that once and discount AI agreeing with AI from then on.
+
+The **findings** are about your document, and you get fresh ones every time. One check gives you
+five criticisms. Nine gave us twenty-one, and ten of those came from a single check. Those ten are
+what a majority vote deletes.
+
+**Run it once to stop trusting agreement. Keep running it because nine checks see four times what
+one check sees.**
 
 ## What it does that nothing else does
 
@@ -101,37 +112,52 @@ Each check answers it about its own finding, as it writes it. That is deliberate
 Hand the sorting to a separate model and you have added another reviewer with the
 same brain, which is the failure this whole method exists to measure.
 
-The tool then crosses that against the solo list and prints what falls in both:
+The tool then crosses that against the solo list and prints what falls in both. This is the
+real output of `run-v4/`, not an illustration:
 
 ```
   WHAT WOULD CHANGE THE DECISION    (each check's own call on its own
                                      criticism, not a fourth model's)
-    Findings that change the decision     <count>
-      of those, raised by one check only  <count>
-    Findings that only weaken evidence    <count>
+    Findings that change the decision     8
+      of those, raised by one check only  0
+    Findings that only weaken evidence    5
 
-    Read these first. One check found each, and each one means
-    the recommendation does not follow:
-      - [<the claim or number the check names>] <its one-sentence problem>
+    Read these first. Each means the recommendation does not follow:
+      - [The weighted totals of 78 and 74 in the section 3 scoring table] The
+        arithmetic is wrong: the stated weights and scores produce 77 for Vendor K
+        and 76 for Vendor M, so the real margin is one point, not four.
+      - [The claim that the margin 'is not attributable to any single criterion']
+        Removing the single subjective criterion 'Cultural fit and partnership'
+        reverses the ranking in Vendor M's favour.
       ...
 ```
 
-**Shape only.** Everything in angle brackets stands in for whatever your own run
-returns. No numbers are shown because we do not have real ones for this block, and
-putting plausible ones there is the exact move this kit exists to argue against.
-Every other figure in this repo is measured. The reason this one is not follows below.
+**Note the zero.** On that run every decisive finding was raised by more than one check, so the
+cross is empty and the tool says so rather than manufacturing a list. A document with three
+unmissable errors does not need nine checks to find them. Run it on a subtler one and the cross
+fills up: in `run-v3/`, ten of twenty-one problems came from a single check.
 
 **A finding that would change the decision and that exactly one check raised is
 the thing a majority vote deletes and the thing you would have shipped without.**
 That short list is what you are running this for. Most findings land in the middle
 row instead, which is normal, and it is what makes the first row worth finding.
 
-**One honest gap.** The run shipped in `run-v3/` was made before the `if_true`
-field existed, so scoring it prints *"Not available"* for this block rather than
-the list. Your own run will not: the field is in all ten blocks in `prompts.md`.
-Re-running ours is owed.
+**Three runs ship, and they disagree.** `run-v3/` is the run the newsletter cites; it predates the
+`if_true` field, so scoring it prints *"Not available"* for this block. `run-v4/` is the same
+document run again five days later, and it carries the field. It also came back markedly more
+converged: nine checks worth 2.12 opinions rather than 2.72, mean agreement 0.406 rather than 0.289.
+`run-v5/` then ruled out the obvious explanation: with memory off the repeat agreed with itself
+perfectly and three checks scored 1.63, lower still. The tool was consistent across all three. What
+it was measuring was not. Both run READMEs say what we can and cannot claim from that.
 
 ## Three things that decide whether the number is real
+
+**Turn memory off, or use a document the account has not seen.** Isolation is instructed inside
+every block, and an instruction only asks a model not to retrieve; the setting stops it. This bites
+hardest on a re-run: our own `run-v4/` put the same document through the same accounts five days
+after `run-v3/`, memory on, and the noise floor doubled from 0.321 to 0.75. A model that remembers
+last week's answer agrees with itself for a reason that is not independence, and your panel scores
+worse than it deserves.
 
 **The noise floor.** One of the nine cells is run twice, unchanged (`--no-replicate`
 turns it off). Without it you cannot tell disagreement from randomness, and a
@@ -200,6 +226,13 @@ instruction, so including it would confound the axis the second block measures.
                             (cells.json), the scored result, the sheet that produced it with the
                             document included, and the human review that was written and sealed
                             before any of it ran.
+    run-v4/                 The same document run again on 4 September, five days later, with the
+                            if_true field the older run predates. More converged: 2.12 opinions
+                            from nine checks, not 2.72. Its README does not explain that away.
+    run-v5/                 Four cells, 4 September, memory OFF: Claude incognito, Gemini and
+                            ChatGPT temporary chats. Run to test whether v4's convergence was the
+                            models recalling the document. It was not: with memory off the repeat
+                            agreed with itself PERFECTLY, 1.00. Three checks scored 1.63.
     run-2026-08-29-v1-void/ VOID, and kept on purpose. The first attempt put two prompts into the
                             same chat, so the second answer was the first one repeated. It is here
                             because the failure is the most likely one you will make, and because a
