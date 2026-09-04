@@ -1,6 +1,6 @@
 # One run, in full
 
-**Honesty label.** A real run, not an illustration. Nine checks plus one repeat, 30 August 2026, against a synthetic vendor recommendation memo. Three makers crossed with three framings: A = Claude, B = Gemini, C = ChatGPT. Every block went into a brand-new chat and carried a cell id which the model echoed back inside its JSON, so no answer could be mislabelled. Every figure below came out of the tool.
+**Honesty label.** A real run, not an illustration. Nine checks plus one repeat, 30 August 2026, against a synthetic vendor recommendation memo. Three different AIs crossed with three framings: A = Claude, B = Gemini, C = ChatGPT. Every block went into a brand-new chat and carried a cell id which the model echoed back inside its JSON, so no answer could be mislabelled. Every figure below came out of the tool.
 
 **A note on the record.** The run was executed against the memo denominated in pounds; the published version is in euro. Nothing else changed and no figure depends on it. The ten answers in `run-v3/cells.json` are as returned, with currency symbols and dashes normalised in transcription and no wording altered.
 
@@ -42,7 +42,7 @@ A recommendation to an investment committee: replace a field service platform, t
 
 Nine checks, 2.72 opinions. For scale, the published nine-judge panel came to 2.18 and a human panel on the same measure lands between 4.0 and 5.8.
 
-**The noise floor is the number to read second, and here it is brutal.** The same model, same framing, same document, asked twice, agreed with itself at 0.321, which is *more* than the 0.289 the whole nine-way panel managed. Ask one model the same thing nine times and the formula returns 2.52; nine checks across three makers and three framings returned 2.72. The crossing bought 0.20. Nine checks, three makers, three framings, and most of what looked like independence was a model being inconsistent with itself.
+**The noise floor is the number to read second, and here it is brutal.** The same model, same framing, same document, asked twice, agreed with itself at 0.321, which is *more* than the 0.289 the whole nine-way panel managed. Ask one model the same thing nine times and the formula returns 2.52; nine checks across three different AIs and three framings returned 2.72. The crossing bought 0.20. Nine checks, three different AIs, three framings, and most of what looked like independence was a model being inconsistent with itself.
 
 **And the two runs of the identical prompt returned different verdicts.** A-neutral said MATERIAL_PROBLEMS. A-neutral#2, same model, same words, fresh chat, said UNSOUND. Nobody who runs one check would ever see that.
 

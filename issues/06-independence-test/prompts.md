@@ -1,11 +1,11 @@
 # The independence test: the ten prompts
 
-**What this is.** Ten blocks to paste, one per fresh chat. Three model makers crossed with three
+**What this is.** Ten blocks to paste, one per fresh chat. Three different AIs crossed with three
 framings, plus one deliberate repeat. Between them they tell you how many genuinely independent
 opinions you got, as against how many checks you ran.
 
-**A = Claude, B = Gemini, C = ChatGPT.** Any three makers work. What matters is that they are three
-different makers and not one model asked three times.
+**A = Claude, B = Gemini, C = ChatGPT.** Any three work. What matters is that they are three
+different AIs and not one model asked three times.
 
 **Where the numbers go.** Save each answer as JSON, then run
 `python independence_test.py --answers answers.json --doc "your document"`.

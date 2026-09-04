@@ -37,7 +37,7 @@ had put them together in something you can run on a Sunday.
 the models for you, by design.
 
 **1. The ten blocks.** Open `prompts.md` and paste each block into a fresh chat,
-across three different makers. Nine checks plus one deliberate repeat. Every block
+across three different AIs. Nine checks plus one deliberate repeat. Every block
 carries its own cell id and its own isolation instruction, so you do not have to
 toggle memory settings ten times. If you would rather an assistant walked you
 through it, `independence.skill.md` is the same procedure written for that.

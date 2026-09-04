@@ -10,7 +10,7 @@ python3 ../independence_test.py --answers cells.json
 That returns **2.72** effective opinions from nine checks, mean agreement **0.289**, a noise floor of
 **0.321** (n_eff **2.52** if every check were the repeat), **21** distinct problems and **10** of them
 raised by a single check. The subset figures the newsletter quotes come from the same file: three
-makers asked one question each gives **2.12**, one maker asked three questions gives **1.92**.
+different AIs asked one question each gives **2.12**, one AI asked three questions gives **1.92**.
 
 ## What is here
 

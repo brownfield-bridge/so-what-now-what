@@ -52,10 +52,10 @@ every one. Saved memory is a correlation you did not intend and cannot see: two
 checks that both recall your last three documents are not two opinions. Where the
 product gives you a memory switch, use it as well. See the limits below.
 
-**2. Run nine checks: three makers crossed with three framings.**
+**2. Run nine checks: three different AIs crossed with three framings.**
 
-Not nine models. Switching maker alone buys you about a fifth of the correlation.
-Whether the maker axis or the framing axis buys more is **not settled**: the best
+Not nine models. Switching to a different AI alone buys you about a fifth of the correlation.
+Whether the AI axis or the framing axis buys more is **not settled**: the best
 published measurement puts framing ahead, but it was made on a different class of
 model, and a balanced run of this grid went the other way. That is exactly why the
 crossing has to be complete and why step 7 reports the two axes separately rather

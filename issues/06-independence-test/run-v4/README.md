@@ -1,6 +1,6 @@
 # Run v4, 4 September 2026 — the same document, five days later
 
-Same vendor sheet as `run-v3/`, same ten cells, same three makers. Run again for one reason: the
+Same vendor sheet as `run-v3/`, same ten cells, same three AIs. Run again for one reason: the
 answers in v3 were collected before the `if_true` field existed, so scoring them cannot show the
 part of the output that matters most. This run can.
 
