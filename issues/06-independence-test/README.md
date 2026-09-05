@@ -24,16 +24,22 @@ deletes.
 one check found in `run-v3/`.** In `run-v4/` the same comparison gave 2.6x and in `run-v5/` 1.8x, so
 read the multiplier as a range and not a constant.
 
-## What it does that nothing else does
+## The question this asks
 
-Evaluation frameworks — promptfoo, DeepEval, Langfuse, Braintrust — will run a
-multi-judge jury and take a majority vote. Some will calibrate the judges against
-human labels. **None of them audits whether the jury is one opinion wearing nine
-hats.** Meanwhile a product category has grown up selling multi-model *agreement*
-as a confidence score, which is the fallacy this tool exists to expose.
+Evaluation tooling is good at running a multi-judge jury and taking a vote, and
+the better parts of it will calibrate a judge against human labels. **That answers
+a different question from this one.** Calibration asks whether a judge matches the
+truth. This asks how many opinions are in the panel at all.
 
-The metric is in the literature. The plumbing is in the eval frameworks. Nobody
-had put them together in something you can run on a Sunday.
+Both are worth knowing and neither replaces the other. So the useful move is not to
+take my word for what any product does or does not do. **Ask your own tooling:** when
+it runs several judges, does it report how much they agreed *with each other*, and
+does it discount the result when they agree too much? If it does, use that and
+ignore this. If it does not, this is the number that is missing.
+
+What this kit is for is the case where nobody is asking the question at all. Agreement
+between models gets read as confidence, and it is the one reading the arithmetic will
+not support.
 
 ## How to run it
 

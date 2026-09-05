@@ -5,10 +5,11 @@ The Independence Test
 You asked several AI checks to review the same thing. They agreed.
 This tells you how much of that agreement was information, and how much was echo.
 
-It does one thing nothing off-the-shelf does: it audits the panel instead of
-running it. Eval frameworks (promptfoo, DeepEval, Langfuse, Braintrust) will
-happily run a jury and take a majority vote. None of them tell you whether the
-jury is one opinion wearing nine hats.
+This audits the panel rather than running it. Evaluation tooling is good at
+running a jury and taking a vote, and at checking a judge against human labels.
+That is a different question: whether a judge matches the truth. This one is
+how many opinions were in the panel at all. If your own tooling already reports
+how much the judges agreed with each other, use that instead.
 
 Two numbers come back.
 
