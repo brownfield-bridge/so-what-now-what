@@ -1,0 +1,929 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Repair or Replace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F1F3F1;
+  --card:#FFFFFF;
+  --sunk:#E7EAE8;
+  --ink:#141A18;
+  --ink-2:#55605C;
+  --ink-3:#7F8A86;
+  --rule:#D4DAD6;
+  --rule-2:#B4BDB9;
+  --plate:#1D2E31;
+  --plate-ink:#E9EFEC;
+  --plate-ink-2:#9DB0AE;
+  --good:#1C7A45;
+  --good-bg:#E2EFE7;
+  --warn:#8E6205;
+  --warn-bg:#F6EEDB;
+  --bad:#A93B2C;
+  --bad-bg:#F7E7E3;
+  --focus:#2F7F8C;
+  --shadow:0 1px 2px rgba(20,26,24,.07), 0 8px 24px -12px rgba(20,26,24,.18);
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1413;
+    --card:#191F1D;
+    --sunk:#141A19;
+    --ink:#E8EEEA;
+    --ink-2:#9BA7A2;
+    --ink-3:#78847F;
+    --rule:#2B3532;
+    --rule-2:#3C4744;
+    --plate:#222B29;
+    --plate-ink:#E8EEEA;
+    --plate-ink-2:#93A29E;
+    --good:#5FC486;
+    --good-bg:#15271D;
+    --warn:#DCAB43;
+    --warn-bg:#2A2415;
+    --bad:#E68172;
+    --bad-bg:#2D1B18;
+    --focus:#65B8C4;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1413;
+  --card:#191F1D;
+  --sunk:#141A19;
+  --ink:#E8EEEA;
+  --ink-2:#9BA7A2;
+  --ink-3:#78847F;
+  --rule:#2B3532;
+  --rule-2:#3C4744;
+  --plate:#222B29;
+  --plate-ink:#E8EEEA;
+  --plate-ink-2:#93A29E;
+  --good:#5FC486;
+  --good-bg:#15271D;
+  --warn:#DCAB43;
+  --warn-bg:#2A2415;
+  --bad:#E68172;
+  --bad-bg:#2D1B18;
+  --focus:#65B8C4;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1120px;margin:0 auto;padding-block:32px 56px;padding-inline:20px}
+
+/* ---------- header ---------- */
+.masthead{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:28px}
+.eyebrow{
+  font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+}
+.eyebrow b{color:var(--ink-2);font-weight:500}
+h1{
+  font-family:var(--f-display);font-weight:800;font-size:clamp(30px,6vw,46px);
+  line-height:1.02;letter-spacing:-.02em;margin:10px 0 8px;text-wrap:balance;
+}
+.deck{color:var(--ink-2);max-width:62ch;margin:0;font-size:15.5px}
+
+/* ---------- layout ---------- */
+.sheet{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:26px;align-items:start}
+@media (max-width:920px){.sheet{grid-template-columns:minmax(0,1fr)}}
+.col{display:flex;flex-direction:column;gap:20px;min-width:0}
+
+/* ---------- form blocks ---------- */
+.step{background:var(--card);border:1px solid var(--rule);box-shadow:var(--shadow)}
+.step > h2{
+  margin:0;padding:11px 16px;border-bottom:1px solid var(--rule);
+  font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-2);
+  display:flex;gap:10px;align-items:baseline;
+}
+.step > h2 .num{color:var(--ink-3);font-weight:400}
+.step-body{padding:16px;display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:430px){.row2{grid-template-columns:1fr}}
+
+.field{display:grid;gap:5px;min-width:0}
+label,.lbl{
+  font-family:var(--f-mono);font-size:10.5px;font-weight:500;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+.hint{font-size:12.5px;color:var(--ink-3);line-height:1.45}
+input,select{
+  font-family:var(--f-mono);font-size:15px;font-weight:500;color:var(--ink);
+  background:var(--sunk);border:1px solid var(--rule-2);border-radius:0;
+  padding:9px 11px;width:100%;min-width:0;
+  font-variant-numeric:tabular-nums;
+  appearance:none;
+}
+select{
+  font-family:var(--f-body);font-weight:400;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 17px) 50%,calc(100% - 11px) 50%;
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:34px;
+}
+input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--focus);outline-offset:1px;
+}
+.money{display:grid;grid-template-columns:auto 1fr;align-items:stretch}
+.money .sym{
+  display:flex;align-items:center;padding:0 10px;background:var(--card);
+  border:1px solid var(--rule-2);border-right:none;
+  font-family:var(--f-mono);font-size:13px;color:var(--ink-3);
+}
+
+.checks{display:grid;gap:9px}
+.check{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;cursor:pointer}
+.check input{width:17px;height:17px;margin:2px 0 0;accent-color:var(--focus);background:none;border:none;padding:0}
+.check .t{font-family:var(--f-body);font-size:14px;line-height:1.4;font-weight:400;letter-spacing:normal;text-transform:none;color:var(--ink)}
+.check .s{display:block;font-size:12.5px;color:var(--ink-3);margin-top:1px}
+
+details.fine{border-top:1px dashed var(--rule-2);padding-top:12px}
+details.fine summary{
+  cursor:pointer;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+details.fine[open] summary{margin-bottom:12px}
+details.fine .step-body{padding:0}
+
+/* ---------- verdict plate ---------- */
+.plate{border:1px solid var(--rule);background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+@media (min-width:921px){.plate{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px)}}
+.plate-band{
+  background:var(--plate);color:var(--plate-ink-2);padding:9px 16px;
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.plate-band b{color:var(--plate-ink);font-weight:500}
+
+.stamp{padding:20px 16px 18px;border-bottom:1px solid var(--rule);background:var(--tint,transparent)}
+.stamp .call{
+  font-family:var(--f-display);font-weight:800;font-size:clamp(28px,5.4vw,40px);
+  line-height:1;letter-spacing:-.02em;color:var(--tone,var(--ink));margin:0 0 9px;
+}
+.stamp .because{margin:0;font-size:14.5px;color:var(--ink);max-width:46ch}
+.no-motion .call{animation:none}
+@media (prefers-reduced-motion: no-preference){
+  .call.pulse{animation:stampin .28s cubic-bezier(.2,.8,.3,1)}
+}
+@keyframes stampin{from{opacity:0;transform:translateY(3px) scale(.985)}to{opacity:1;transform:none}}
+
+.alarm{
+  margin:0;padding:12px 16px;background:var(--bad-bg);border-bottom:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink);display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;
+}
+.alarm .k{
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--bad);font-weight:600;padding-top:2px;
+}
+
+.section{padding:16px;border-bottom:1px solid var(--rule)}
+.section:last-child{border-bottom:none}
+.section > .lbl{display:block;margin-bottom:12px}
+
+.meters{display:grid;gap:14px}
+.meter-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:5px}
+.meter-head .n{font-size:13.5px;font-weight:500}
+.meter-head .v{font-family:var(--f-mono);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.track{height:24px;background:var(--sunk);border:1px solid var(--rule)}
+.bar{
+  height:100%;width:0;min-width:24px;background:var(--ink-3);
+  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%);
+}
+@media (prefers-reduced-motion: no-preference){.bar{transition:width .4s cubic-bezier(.3,.8,.4,1),background-color .25s}}
+.bar.win{background:var(--good)}
+.scale-note{margin:10px 0 0;font-size:12px;color:var(--ink-3)}
+
+.breakeven{padding:13px 16px;background:var(--sunk);border-bottom:1px solid var(--rule)}
+.breakeven .lbl{display:block;margin-bottom:4px}
+.breakeven p{margin:0;font-size:14px}
+.breakeven .big{font-family:var(--f-mono);font-weight:600;font-variant-numeric:tabular-nums}
+
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.facts li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:13.5px;line-height:1.45}
+.facts .tag{
+  font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);padding-top:3px;white-space:nowrap;
+}
+.facts .tag.g{color:var(--good)}
+.facts .tag.w{color:var(--warn)}
+.facts .tag.b{color:var(--bad)}
+
+ol.next{margin:0;padding-left:18px;display:grid;gap:8px;font-size:13.5px}
+ol.next li{padding-left:2px}
+
+.act{display:flex;gap:10px;flex-wrap:wrap;padding:14px 16px;background:var(--sunk)}
+button{
+  font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--plate);color:var(--plate-ink);border:1px solid var(--plate);
+  padding:10px 15px;cursor:pointer;
+}
+button.ghost{background:transparent;color:var(--ink-2);border-color:var(--rule-2)}
+button:hover{opacity:.88}
+#copyNote{font-family:var(--f-mono);font-size:11px;color:var(--good);align-self:center;letter-spacing:.06em}
+
+/* working */
+details.work{background:var(--card);border:1px solid var(--rule);box-shadow:var(--shadow)}
+details.work > summary{
+  padding:11px 16px;cursor:pointer;
+  font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-2);
+}
+details.work[open] > summary{border-bottom:1px solid var(--rule)}
+.work-body{padding:16px;display:grid;gap:14px}
+table.calc{width:100%;border-collapse:collapse;font-size:13px}
+table.calc th,table.calc td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.calc th{
+  font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;
+}
+table.calc td.n{font-family:var(--f-mono);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.scroller{overflow-x:auto}
+
+.tips{background:var(--card);border:1px solid var(--rule);box-shadow:var(--shadow)}
+.tips h2{
+  margin:0;padding:11px 16px;border-bottom:1px solid var(--rule);
+  font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-2);
+}
+.tips .step-body{gap:11px}
+ul.checklist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ul.checklist li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:13.5px;line-height:1.45}
+ul.checklist li::before{
+  content:"\2610";color:var(--ink-3);font-size:15px;line-height:1.3;
+}
+
+footer{
+  margin-top:32px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:12.5px;color:var(--ink-3);max-width:70ch;
+}
+footer p{margin:0 0 8px}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow"><b>Out of warranty</b><span>&middot;</span><span>Household appliance assessment</span></div>
+    <h1>Repair it, or replace it?</h1>
+    <p class="deck">The guarantee has run out and you have a quote in your hand. This works out what each option really costs per year you get out of it &mdash; the repair bill spread over the life left in the machine, against a new one spread over its whole life, electricity included.</p>
+  </header>
+
+  <div class="sheet">
+
+    <!-- ============ LEFT: intake ============ -->
+    <div class="col">
+
+      <section class="step">
+        <h2><span class="num">01</span> The machine</h2>
+        <div class="step-body">
+          <div class="field">
+            <label for="type">What is it</label>
+            <select id="type"></select>
+            <span class="hint" id="typeHint"></span>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="age">How old, in years</label>
+              <input id="age" type="number" min="0" max="40" step="0.5" value="5" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="cur">Currency</label>
+              <select id="cur">
+                <option value="EUR">€ euro</option>
+                <option value="PLN">zł złoty</option>
+                <option value="GBP">£ pound</option>
+                <option value="USD">$ dollar</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="step">
+        <h2><span class="num">02</span> The two prices</h2>
+        <div class="step-body">
+          <div class="row2">
+            <div class="field">
+              <label for="repair">The repair quote</label>
+              <div class="money"><span class="sym" id="sym1">€</span><input id="repair" type="number" min="0" step="1" value="130" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="newprice">A comparable new one</label>
+              <div class="money"><span class="sym" id="sym2">€</span><input id="newprice" type="number" min="0" step="1" value="449" inputmode="decimal"></div>
+            </div>
+          </div>
+          <p class="hint">Quote the repair with parts, labour and the call-out fee in it. For the new machine, price the one you would actually buy, not the cheapest in the shop.</p>
+
+          <details class="fine">
+            <summary>Fine print (optional)</summary>
+            <div class="step-body">
+              <div class="row2">
+                <div class="field">
+                  <label for="install">Delivery, fitting, disposal</label>
+                  <div class="money"><span class="sym" id="sym3">€</span><input id="install" type="number" min="0" step="1" value="0" inputmode="decimal"></div>
+                </div>
+                <div class="field">
+                  <label for="oldval">Old one is worth</label>
+                  <div class="money"><span class="sym" id="sym4">€</span><input id="oldval" type="number" min="0" step="1" value="0" inputmode="decimal"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="kwhprice">Electricity, per kWh</label>
+                <div class="money"><span class="sym" id="sym5">€</span><input id="kwhprice" type="number" min="0" step="0.01" value="0.29" inputmode="decimal"></div>
+                <span class="hint">Off your bill, all charges in. Changing currency resets this to a typical rate.</span>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="step">
+        <h2><span class="num">03</span> The circumstances</h2>
+        <div class="step-body">
+          <div class="field">
+            <label for="parts">Spare parts for this model</label>
+            <select id="parts">
+              <option value="ok">Available &mdash; the repairer can get them</option>
+              <option value="unknown" selected>Not checked yet</option>
+              <option value="gone">Discontinued or on long back-order</option>
+            </select>
+            <span class="hint">In the EU and UK, makers must keep key spare parts available for seven to ten years after the last unit was sold, depending on the appliance. Ask the repairer to confirm before you agree to anything.</span>
+          </div>
+          <div class="checks">
+            <label class="check" for="repeat">
+              <input type="checkbox" id="repeat">
+              <span class="t">This is not its first breakdown<span class="s">A third fault, or a second within a year, says the rest of the machine is going too.</span></span>
+            </label>
+            <label class="check" for="moving">
+              <input type="checkbox" id="moving">
+              <span class="t">We are moving, or replacing the kitchen, within two years<span class="s">You only need the machine to last until then.</span></span>
+            </label>
+            <label class="check" for="safety">
+              <input type="checkbox" id="safety">
+              <span class="t">Burning smell, scorch marks, gas, shocks or water near the electrics<span class="s">This overrides the arithmetic.</span></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="tips">
+        <h2>Before you pay the call-out</h2>
+        <div class="step-body">
+          <ul class="checklist" id="tipList"></ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ============ RIGHT: verdict ============ -->
+    <div class="col">
+
+      <aside class="plate">
+        <div class="plate-band"><span id="bandType">Washing machine</span><span><b id="bandAge">5 yr</b> of <b id="bandLife">10 yr</b></span></div>
+
+        <div class="stamp" id="stamp">
+          <p class="call" id="call">&mdash;</p>
+          <p class="because" id="because">Fill in the two prices and the verdict appears here.</p>
+        </div>
+
+        <p class="alarm" id="alarm" hidden><span class="k">Stop</span><span id="alarmText"></span></p>
+
+        <div class="section">
+          <span class="lbl">Cost per year, each way</span>
+          <div class="meters">
+            <div>
+              <div class="meter-head"><span class="n">Repair and keep it</span><span class="v" id="vRepair">&mdash;</span></div>
+              <div class="track"><div class="bar" id="bRepair"></div></div>
+            </div>
+            <div>
+              <div class="meter-head"><span class="n">Buy a new one</span><span class="v" id="vReplace">&mdash;</span></div>
+              <div class="track"><div class="bar" id="bReplace"></div></div>
+            </div>
+          </div>
+          <p class="scale-note">Shorter is cheaper; the green bar is the better buy. Each figure spreads the money over the years that option actually gives you, and adds what it costs to run.</p>
+        </div>
+
+        <div class="breakeven">
+          <span class="lbl">Walk-away price</span>
+          <p id="breakeven">&mdash;</p>
+        </div>
+
+        <div class="section">
+          <span class="lbl">Why</span>
+          <ul class="facts" id="facts"></ul>
+        </div>
+
+        <div class="section">
+          <span class="lbl">What to do next</span>
+          <ol class="next" id="next"></ol>
+        </div>
+
+        <div class="act">
+          <button id="copy" type="button">Copy the summary</button>
+          <button id="reset" type="button" class="ghost">Clear</button>
+          <span id="copyNote" hidden>Copied</span>
+        </div>
+      </aside>
+
+      <details class="work">
+        <summary>Show the working</summary>
+        <div class="work-body">
+          <div class="scroller">
+            <table class="calc">
+              <thead><tr><th>Line</th><th style="text-align:right">Value</th></tr></thead>
+              <tbody id="workRows"></tbody>
+            </table>
+          </div>
+          <p class="hint" id="workNote"></p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Typical lifespans are the industry mid-range for a domestic machine in normal household use; a family of five running three loads a day will get less, a single household more. Electricity use is a reasonable estimate for the class of appliance, with older units assumed to draw about three percent more for each year of age, so treat the running-cost line as an order of magnitude rather than a meter reading. A repair is credited with the life left in the machine, but never less than a quarter of its typical lifespan.</p>
+    <p>Nothing you type leaves your browser, and nothing is stored. This is arithmetic and rules of thumb, not a diagnosis &mdash; anything involving gas, scorching or wiring is a job for a qualified engineer.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var APPLIANCES = {
+    washer:{n:"Washing machine",life:10,kwh:150,note:"Typical domestic machine, around 200 washes a year.",tips:[
+      "Clear the drain filter behind the bottom flap and check the outlet hose &mdash; a machine that will not empty or spin is very often just blocked, and that is a five-minute job you can do yourself.",
+      "Ask which part failed. Brushes, a belt, a pump or a door seal are cheap. Drum bearings are the expensive one, and on a machine past eight years they are rarely worth doing.",
+      "Ask whether the repairer credits the call-out fee against the job if you go ahead, and whether the repair carries a twelve-month parts-and-labour guarantee."
+    ]},
+    dishwasher:{n:"Dishwasher",life:10,kwh:200,note:"Around 220 cycles a year.",tips:[
+      "Pull the filter and the spray arms out and rinse them. Poor cleaning and standing water are usually blockages, not faults.",
+      "A jammed drain pump &mdash; often a shard of glass or a fruit stone &mdash; is a cheap part. A failed control board on an older machine usually is not.",
+      "Check the door seal and the hinge springs while it is open; both are inexpensive and both cause leaks that look like something worse."
+    ]},
+    fridge:{n:"Fridge or fridge-freezer",life:13,kwh:220,note:"Runs continuously, so its electricity use dominates everything else.",tips:[
+      "Test the door seal by closing it on a sheet of paper. If the paper slides out freely the seal has perished &mdash; a cheap strip, and it will cut your running cost noticeably.",
+      "Vacuum the condenser coils at the back or underneath. A coat of dust makes a healthy fridge run hot, loud and expensive.",
+      "If the diagnosis is the compressor or a leak in the sealed system, that is the expensive end. On a fridge over ten years old it is usually the point to stop."
+    ]},
+    freezer:{n:"Chest or upright freezer",life:12,kwh:200,note:"Runs continuously.",tips:[
+      "Defrost it fully first. Heavy ice build-up makes a freezer work far harder and mimics a failing thermostat.",
+      "Check the lid or door seal and the drain plug before paying for a diagnosis.",
+      "A sealed-system or compressor fault on an older freezer is generally terminal; factor in the cost of the food you would lose in a second failure."
+    ]},
+    dryer:{n:"Tumble dryer",life:12,kwh:300,note:"Around 150 cycles a year; one of the hungriest machines in the house.",tips:[
+      "Clean the lint filter and, on a condenser model, pull and rinse the heat-exchanger block. Most “it will not dry” calls end here.",
+      "Thermostats and thermal cut-outs are cheap parts and a common failure; belts are cheap too. A heat-pump compressor is not.",
+      "If yours is a vented or condenser model, compare against a heat-pump dryer when you price the new one &mdash; it uses roughly half the electricity, which changes the sums below."
+    ]},
+    washerdryer:{n:"Washer-dryer",life:9,kwh:350,note:"Shorter life and dearer repairs than two separate machines.",tips:[
+      "Clear the drain filter and check the outlet hose first, exactly as on a washing machine.",
+      "Combined machines work two jobs through one drum, so they wear out sooner and the parts cost more. Weigh a repair more sceptically than you would on a washer.",
+      "When pricing the replacement, price two separate machines as well if you have the space; it is often cheaper over the life of both."
+    ]},
+    oven:{n:"Oven or cooker",life:14,kwh:220,note:"Built-in or freestanding electric.",tips:[
+      "A cold oven is very often just the heating element, which is an inexpensive part and a quick swap.",
+      "Slow heating or burnt edges usually means the thermostat or the fan motor &mdash; both mid-priced and both worth doing on an otherwise sound oven.",
+      "A cracked inner door glass or a dead touch-control board is the expensive end. On a built-in model, check the replacement will fit your housing aperture before you commit."
+    ]},
+    hob:{n:"Hob or cooktop",life:15,kwh:300,note:"Induction, ceramic or gas.",tips:[
+      "On induction, one dead zone is usually one power board rather than the whole hob, and that is a worthwhile repair.",
+      "On gas, burner caps, jets and igniters are cheap parts. Anything involving the gas supply itself is a registered engineer's job and not negotiable.",
+      "A cracked glass top is a replacement, not a repair, on almost every model."
+    ]},
+    microwave:{n:"Microwave",life:9,kwh:60,note:"Cheap to buy, which changes the sums.",tips:[
+      "A failed magnetron on a mid-range microwave usually costs more in parts and labour than a new machine. Get the price of the part before the engineer starts.",
+      "Door interlock switches are cheap, but they are a safety part &mdash; never run a microwave with a damaged door, latch or seal.",
+      "Because the purchase price is low, the walk-away figure below will be small. That is the right answer, not a glitch."
+    ]},
+    hood:{n:"Cooker hood",life:14,kwh:40,note:"Low running cost, so the decision is almost entirely about the bill.",tips:[
+      "Degrease or replace the metal filters and swap the carbon filter if it recirculates. Poor extraction is nearly always filters.",
+      "A stuck or noisy impeller is often grease rather than a failed motor.",
+      "A motor swap is mid-priced and usually worth it; a failed touch panel on a decorative model often is not."
+    ]},
+    waterheater:{n:"Electric water heater",life:11,kwh:2000,note:"A very large share of a household electricity bill.",tips:[
+      "Heating elements and thermostats are routine, inexpensive replacements and should not condemn the tank.",
+      "The sacrificial anode is a maintenance part. If it has never been changed, that is normal wear, not a failure.",
+      "A leaking tank is terminal &mdash; no repair is worth paying for. Replace it, and price a heat-pump cylinder alongside the like-for-like option."
+    ]},
+    ac:{n:"Air conditioner or split unit",life:12,kwh:600,note:"Seasonal use; figure assumes a warm-climate summer.",tips:[
+      "Wash the indoor filters and clear the outdoor coil of leaves before anything else. Weak cooling is usually airflow.",
+      "Capacitors and fan motors are cheap and common failures. A refrigerant leak needs a certified technician, and topping up without finding the leak is money burnt.",
+      "Compressor failure on a unit past eight years is generally the end. A new unit will also be markedly more efficient."
+    ]},
+    vacuum:{n:"Vacuum cleaner",life:8,kwh:40,note:"Low running cost, low purchase price.",tips:[
+      "Check the hose, the brush bar and every filter for blockages. Loss of suction is almost never the motor.",
+      "Batteries on cordless models are replaceable on many brands and cost far less than a new machine &mdash; check before you write it off.",
+      "A new motor usually costs more than the vacuum is worth, unless it is a premium model."
+    ]},
+    coffee:{n:"Coffee machine",life:7,kwh:80,note:"Bean-to-cup or pump espresso.",tips:[
+      "Descale it properly before you accept any diagnosis. A large share of “dead” machines are simply scaled up.",
+      "Brew-unit seals and o-rings come as inexpensive service kits, and leaks are usually one of them.",
+      "A failed pump is a mid-priced part and often worth doing; a failed control board on a machine past five years usually is not."
+    ]},
+    tv:{n:"Television",life:9,kwh:100,note:"Around four hours a day.",tips:[
+      "A picture that is dark but still there is often the backlight LED strips, which is a real and reasonably priced repair.",
+      "No picture at all is frequently the power board, and a board swap can be cheap.",
+      "A cracked or damaged panel is the end of it &mdash; the panel is most of the cost of the television."
+    ]},
+    other:{n:"Something else",life:10,kwh:150,note:"Generic mid-range assumptions; adjust the fine print if you know better.",tips:[
+      "Ask for the quote in writing, itemised into parts, labour and call-out, before anything is ordered.",
+      "Ask whether the part is still manufactured. A repair that depends on a salvaged part is a repair that may not be repeatable.",
+      "Ask what guarantee the repair itself carries. Twelve months on parts and labour is the normal standard."
+    ]}
+  };
+
+  var CURR = {
+    EUR:{sym:"€",pre:true,kwh:0.29},
+    PLN:{sym:"zł",pre:false,kwh:1.10},
+    GBP:{sym:"£",pre:true,kwh:0.27},
+    USD:{sym:"$",pre:true,kwh:0.17}
+  };
+
+  var DEFAULTS = {type:"washer",age:"5",cur:"EUR",repair:"130",newprice:"449",install:"0",oldval:"0",parts:"unknown",repeat:false,moving:false,safety:false};
+
+  var $ = function(id){ return document.getElementById(id); };
+  var els = {};
+  ["type","age","cur","repair","newprice","install","oldval","kwhprice","parts","repeat","moving","safety"].forEach(function(k){ els[k] = $(k); });
+
+  // populate appliance select
+  Object.keys(APPLIANCES).forEach(function(k){
+    var o = document.createElement("option");
+    o.value = k; o.textContent = APPLIANCES[k].n;
+    els.type.appendChild(o);
+  });
+  els.type.value = DEFAULTS.type;
+
+  function num(el, fallback){
+    var v = parseFloat(el.value);
+    return isFinite(v) && v >= 0 ? v : (fallback === undefined ? NaN : fallback);
+  }
+
+  function money(v){
+    var c = CURR[els.cur.value] || CURR.EUR;
+    var abs = Math.abs(v);
+    var d = abs > 0 && abs < 10 ? 2 : 0;
+    var s = v.toLocaleString(undefined, {minimumFractionDigits:d, maximumFractionDigits:d});
+    return c.pre ? c.sym + " " + s : s + " " + c.sym;
+  }
+  function yrs(v){
+    var s = (Math.round(v * 10) / 10).toString().replace(/\.0$/, "");
+    return s + " yr";
+  }
+
+  var lastCall = "";
+
+  function compute(){
+    var a = APPLIANCES[els.type.value] || APPLIANCES.other;
+    var age = num(els.age, 0);
+    var repair = num(els.repair);
+    var np = num(els.newprice);
+    var install = num(els.install, 0);
+    var oldval = num(els.oldval, 0);
+    var kwhp = num(els.kwhprice, 0);
+
+    // energy
+    var kwhNew = a.kwh;
+    var decay = 1 + Math.min(age, 20) * 0.03;
+    var kwhOld = kwhNew * decay;
+    var eOld = kwhOld * kwhp;
+    var eNew = kwhNew * kwhp;
+
+    // years left if repaired
+    var lr = Math.max(a.life * 0.25, a.life - age);
+    if (els.repeat.checked) lr = Math.max(1, lr * 0.6);
+    var ln = a.life;
+
+    var ready = isFinite(repair) && isFinite(np) && np > 0;
+
+    var repYr = ready ? (repair / lr + eOld) : NaN;
+    var newYr = ready ? ((np + install - oldval) / ln + eNew) : NaN;
+    var ratio = ready ? repYr / newYr : NaN;
+
+    // walk-away price
+    var be = (newYr - eOld) * lr;
+
+    return {a:a, age:age, repair:repair, np:np, install:install, oldval:oldval, kwhp:kwhp,
+            kwhNew:kwhNew, kwhOld:kwhOld, eOld:eOld, eNew:eNew, lr:lr, ln:ln,
+            repYr:repYr, newYr:newYr, ratio:ratio, be:be, ready:ready};
+  }
+
+  function verdict(m){
+    if (els.safety.checked){
+      return {call:"Stop using it", tone:"bad",
+        why:"A burning smell, scorching, a gas smell, a shock or water near the electrics is not a cost question. Unplug it or shut the supply off, and have a qualified engineer look before it is used again — whatever the arithmetic below says.",
+        forced:true};
+    }
+    if (els.parts.value === "gone"){
+      return {call:"Replace it", tone:"bad",
+        why:"The part is out of production. Even if this repair can be improvised, the next fault will have nowhere to go, so you would be paying for a machine with no future.",
+        forced:true};
+    }
+    if (!m.ready) return {call:"—", tone:"", why:"Fill in the two prices and the verdict appears here.", forced:true};
+
+    if (m.repair >= m.np) return {call:"Replace it", tone:"bad",
+      why:"The quote is at or above the price of a new machine. There is nothing to weigh."};
+
+    if (m.ratio <= 0.85) return {call:"Repair it", tone:"good",
+      why:"Fixing it works out at " + money(m.repYr) + " a year against " + money(m.newYr) + " for a new one. That is a clear margin, not a rounding error."};
+    if (m.ratio <= 0.97) return {call:"Repair it", tone:"good",
+      why:"Repair still wins, at " + money(m.repYr) + " a year against " + money(m.newYr) + ", though the margin is modest. Get the repair guaranteed in writing before you commit."};
+    if (m.ratio < 1.08) return {call:"Line ball", tone:"warn",
+      why:"At " + money(m.repYr) + " against " + money(m.newYr) + " a year the two options cost the same within the error of these estimates. Decide on the things the arithmetic cannot see."};
+    return {call:"Replace it", tone:"bad",
+      why:"Keeping it costs " + money(m.repYr) + " a year against " + money(m.newYr) + " for a new machine. The quote is buying you too few years."};
+  }
+
+  function facts(m, v){
+    var out = [];
+    var a = m.a;
+
+    if (els.safety.checked) out.push(["b","Safety","Any fault involving heat, gas, wiring or water on the electrics settles the question on its own."]);
+    if (els.parts.value === "gone") out.push(["b","Parts","Discontinued, so this repair is the last one this machine will get."]);
+    else if (els.parts.value === "unknown") out.push(["w","Parts","Not confirmed yet. Ask before you agree to the job — a repair that waits three weeks on a back-order is a different proposition."]);
+
+    if (m.age >= a.life) out.push(["b","Age", "At " + yrs(m.age) + " it has already passed the " + yrs(a.life) + " a machine of this kind typically gives. You are buying borrowed time."]);
+    else if (m.age >= a.life * 0.75) out.push(["w","Age", "At " + yrs(m.age) + " of a typical " + yrs(a.life) + " it is in the last quarter of its life, so a repair is buying about " + yrs(m.lr) + "."]);
+    else out.push(["g","Age", "At " + yrs(m.age) + " of a typical " + yrs(a.life) + " there is real life left — roughly " + yrs(m.lr) + " after a repair."]);
+
+    if (m.ready){
+      var pct = Math.round(m.repair / m.np * 100);
+      var over = pct >= 50;
+      var clash = (over && v.call === "Repair it") || (!over && v.call === "Replace it");
+      out.push([over ? "b" : "g", "Old 50% rule",
+        "The quote is " + pct + "% of a new machine, " + (over ? "above" : "under") + " the line at which the trade says stop." +
+        (clash ? " That rule takes no account of how many years are left in the machine, which is why it lands the other way from the verdict above." : "")]);
+    }
+
+    var delta = m.eOld - m.eNew;
+    if (delta * m.lr >= 25 && m.kwhp > 0){
+      out.push([delta * m.lr >= m.repair ? "b" : "w", "Running cost",
+        "At " + Math.round(m.kwhOld) + " kWh a year it costs roughly " + money(delta) + " a year more to run than a new one — about " + money(delta * m.lr) + " over the years the repair buys."]);
+    } else if (m.kwhp > 0){
+      out.push(["g","Running cost","Electricity barely separates the two options for this kind of appliance, so the decision really is the purchase price."]);
+    }
+
+    if (els.repeat.checked) out.push(["b","History","Not the first failure, so the remaining life above has been cut by around 40%. Repeat breakdowns are the rest of the machine giving notice."]);
+    if (els.moving.checked) out.push(["w","Horizon","You only need it to last two years. If the call is close, the cheap repair that carries you to the move is usually the right one — buy the new machine for the kitchen you are keeping."]);
+
+    return out;
+  }
+
+  function nextSteps(v, m){
+    if (els.safety.checked) return [
+      "Disconnect it at the plug, or shut off the gas or water supply, and leave it off.",
+      "Get a qualified engineer to inspect before anyone uses it again — and if it is gas, a registered one.",
+      "Only once it has been declared safe is the repair-or-replace question worth reopening."
+    ];
+    if (v.call === "Repair it") return [
+      "Get the quote in writing, itemised into parts, labour and call-out, and confirm the call-out is credited against the job.",
+      "Ask for twelve months' parts-and-labour guarantee on the repair itself. A repairer who will not give it does not believe in the fix.",
+      "Note the " + money(Math.max(0, m.be)) + " walk-away price. If the engineer finds more once it is open and the total passes it, stop there."
+    ];
+    if (v.call === "Replace it") return [
+      "Shop on the kWh-per-year figure on the energy label, not the letter grade — the letters were rescaled and the number is the thing you pay for.",
+      "Arrange take-back. On a like-for-like purchase, retailers are obliged to take the old appliance away, usually free.",
+      "Before you order, ask the repairer what it would take to keep the old one running through the next month, so you are not buying under pressure."
+    ];
+    if (v.call === "Line ball") return [
+      "Break the tie on the things the arithmetic cannot price: how much longer you want this kitchen, how loud or thirsty the old one has become, how much a second breakdown would cost you.",
+      "If the machine has been reliable until now and parts are confirmed, repair. If this is the second thing to go, or parts are unconfirmed, replace.",
+      "Either way, get the written quote first — it costs nothing and it settles most line-ball cases by itself."
+    ];
+    return [
+      "Enter the repair quote and the price of a comparable new machine.",
+      "Then confirm with the repairer whether spare parts for the model are still available.",
+      "The verdict, the yearly costs and the walk-away price all update as you type."
+    ];
+  }
+
+  function render(){
+    var m = compute();
+    var v = verdict(m);
+    var a = m.a;
+
+    // header band + type hint
+    $("bandType").textContent = a.n;
+    $("bandAge").textContent = yrs(m.age);
+    $("bandLife").textContent = yrs(a.life);
+    $("typeHint").textContent = a.note + " Assumed life " + yrs(a.life) + ", about " + a.kwh + " kWh a year when new.";
+
+    // stamp
+    var tone = v.tone === "good" ? "var(--good)" : v.tone === "warn" ? "var(--warn)" : v.tone === "bad" ? "var(--bad)" : "var(--ink)";
+    var tint = v.tone === "good" ? "var(--good-bg)" : v.tone === "warn" ? "var(--warn-bg)" : v.tone === "bad" ? "var(--bad-bg)" : "transparent";
+    var stamp = $("stamp"), callEl = $("call");
+    stamp.style.setProperty("--tone", tone);
+    stamp.style.setProperty("--tint", tint);
+    if (v.call !== lastCall){
+      callEl.classList.remove("pulse");
+      void callEl.offsetWidth;
+      callEl.classList.add("pulse");
+      lastCall = v.call;
+    }
+    callEl.textContent = v.call;
+    $("because").textContent = v.why;
+
+    // safety alarm
+    var alarm = $("alarm");
+    if (els.safety.checked){
+      alarm.hidden = false;
+      $("alarmText").textContent = "Unplug it, or shut off the gas or water, and do not use it again until a qualified engineer has seen it. The figures below are only the money side of a question that is not about money yet.";
+    } else {
+      alarm.hidden = true;
+    }
+
+    // meters
+    if (m.ready){
+      var max = Math.max(m.repYr, m.newYr) * 1.08;
+      var repWin = m.repYr <= m.newYr;
+      $("vRepair").textContent = money(m.repYr) + " / yr";
+      $("vReplace").textContent = money(m.newYr) + " / yr";
+      $("bRepair").style.width = Math.max(6, m.repYr / max * 100) + "%";
+      $("bReplace").style.width = Math.max(6, m.newYr / max * 100) + "%";
+      $("bRepair").classList.toggle("win", repWin);
+      $("bReplace").classList.toggle("win", !repWin);
+    } else {
+      $("vRepair").textContent = "—";
+      $("vReplace").textContent = "—";
+      $("bRepair").style.width = "0";
+      $("bReplace").style.width = "0";
+      $("bRepair").classList.remove("win");
+      $("bReplace").classList.remove("win");
+    }
+
+    // walk-away
+    var be = $("breakeven");
+    if (!m.ready){
+      be.textContent = "—";
+    } else if (m.be <= 0){
+      be.innerHTML = "Even a free repair loses. The electricity this one burns, roughly " + money(m.eOld) +
+        " a year, already costs more than owning <em>and</em> running a new machine. Replace it.";
+    } else {
+      be.innerHTML = "Pay no more than <span class=\"big\">" + money(m.be) + "</span> to fix it. Above that, the years it buys cost more than a new machine would." +
+        (m.repair > m.be ? " Your quote of " + money(m.repair) + " is over the line." : " Your quote of " + money(m.repair) + " is under it.");
+    }
+
+    // facts
+    var fl = $("facts");
+    fl.textContent = "";
+    facts(m, v).forEach(function(f){
+      var li = document.createElement("li");
+      var tag = document.createElement("span");
+      tag.className = "tag " + f[0];
+      tag.textContent = f[1];
+      var tx = document.createElement("span");
+      tx.textContent = f[2];
+      li.appendChild(tag); li.appendChild(tx);
+      fl.appendChild(li);
+    });
+
+    // next
+    var nx = $("next");
+    nx.textContent = "";
+    nextSteps(v, m).forEach(function(s){
+      var li = document.createElement("li");
+      li.textContent = s;
+      nx.appendChild(li);
+    });
+
+    // tips
+    var tl = $("tipList");
+    tl.textContent = "";
+    a.tips.forEach(function(t){
+      var li = document.createElement("li");
+      var sp = document.createElement("span");
+      sp.innerHTML = t;
+      li.appendChild(sp);
+      tl.appendChild(li);
+    });
+
+    // working
+    var rows = [
+      ["Typical life for this appliance", yrs(m.ln)],
+      ["Age now", yrs(m.age)],
+      ["Years a repair buys" + (els.repeat.checked ? " (cut 40% for repeat failure)" : ""), yrs(m.lr)],
+      ["Floor on that \u2014 a quarter of typical life", yrs(m.ln * 0.25)],
+      ["Electricity, old unit", Math.round(m.kwhOld) + " kWh/yr = " + money(m.eOld) + "/yr"],
+      ["Electricity, new unit", Math.round(m.kwhNew) + " kWh/yr = " + money(m.eNew) + "/yr"]
+    ];
+    if (m.ready){
+      rows.push(["Repair: " + money(m.repair) + " ÷ " + yrs(m.lr) + " + running cost", money(m.repYr) + "/yr"]);
+      rows.push(["Replace: (" + money(m.np) + (m.install ? " + " + money(m.install) : "") + (m.oldval ? " − " + money(m.oldval) : "") + ") ÷ " + yrs(m.ln) + " + running cost", money(m.newYr) + "/yr"]);
+      rows.push(["Repair cost as a share of new", Math.round(m.repair / m.np * 100) + "%"]);
+      rows.push(["Walk-away repair price", m.be > 0 ? money(m.be) : "none — replace"]);
+    }
+    var tb = $("workRows");
+    tb.textContent = "";
+    rows.forEach(function(r){
+      var tr = document.createElement("tr");
+      var td1 = document.createElement("td"); td1.textContent = r[0];
+      var td2 = document.createElement("td"); td2.className = "n"; td2.textContent = r[1];
+      tr.appendChild(td1); tr.appendChild(td2); tb.appendChild(tr);
+    });
+    $("workNote").textContent = "Cost per year spreads each option over the years it actually gives you and adds what it costs to run, which is why a cheap repair on a nearly finished machine can still lose to a dearer new one. Older units are assumed to draw 3% more electricity per year of age, capped at twenty years, and a repair is never credited with less than a quarter of the appliance\u2019s typical life, because a mended machine does keep going a while.";
+
+    return {m:m, v:v};
+  }
+
+  function summary(){
+    var r = render();
+    var m = r.m, v = r.v;
+    var lines = [];
+    lines.push("REPAIR OR REPLACE — " + m.a.n.toUpperCase());
+    lines.push("");
+    lines.push("Verdict: " + v.call);
+    lines.push(v.why);
+    lines.push("");
+    lines.push("Age: " + yrs(m.age) + " of a typical " + yrs(m.a.life));
+    lines.push("Repair quote: " + money(m.repair));
+    lines.push("Comparable new machine: " + money(m.np));
+    if (m.ready){
+      lines.push("Cost per year if repaired: " + money(m.repYr));
+      lines.push("Cost per year if replaced: " + money(m.newYr));
+      lines.push("Walk-away repair price: " + (m.be > 0 ? money(m.be) : "none — replace"));
+    }
+    lines.push("");
+    lines.push("Why:");
+    facts(m, v).forEach(function(f){ lines.push("- " + f[1] + ": " + f[2]); });
+    lines.push("");
+    lines.push("Next:");
+    nextSteps(v, m).forEach(function(s, i){ lines.push((i + 1) + ". " + s); });
+    return lines.join("\n");
+  }
+
+  // events
+  Object.keys(els).forEach(function(k){
+    els[k].addEventListener("input", render);
+    els[k].addEventListener("change", render);
+  });
+
+  els.cur.addEventListener("change", function(){
+    var c = CURR[els.cur.value] || CURR.EUR;
+    els.kwhprice.value = c.kwh;
+    ["sym1","sym2","sym3","sym4","sym5"].forEach(function(id){ $(id).textContent = c.sym; });
+    render();
+  });
+
+  $("copy").addEventListener("click", function(){
+    var text = summary();
+    var note = $("copyNote");
+    var done = function(){
+      note.hidden = false;
+      note.textContent = "Copied";
+      setTimeout(function(){ note.hidden = true; }, 2200);
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    } catch (e){ fallback(); }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); }
+      catch (e2){ note.hidden = false; note.textContent = "Press Ctrl+C"; }
+      document.body.removeChild(ta);
+    }
+  });
+
+  $("reset").addEventListener("click", function(){
+    els.type.value = DEFAULTS.type;
+    els.age.value = "";
+    els.cur.value = DEFAULTS.cur;
+    els.repair.value = "";
+    els.newprice.value = "";
+    els.install.value = "0";
+    els.oldval.value = "0";
+    els.kwhprice.value = CURR[DEFAULTS.cur].kwh;
+    els.parts.value = "unknown";
+    els.repeat.checked = false;
+    els.moving.checked = false;
+    els.safety.checked = false;
+    ["sym1","sym2","sym3","sym4","sym5"].forEach(function(id){ $(id).textContent = CURR[DEFAULTS.cur].sym; });
+    render();
+    els.age.focus();
+  });
+
+  render();
+})();
+</script>
+
+</body></html>

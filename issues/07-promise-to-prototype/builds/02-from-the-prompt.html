@@ -1,0 +1,1171 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Worth Fixing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Instrument+Serif:ital@0;1&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#EDEFF1;
+  --sheet:#F7F8F9;
+  --ink:#10151A;
+  --ink-2:#47515A;
+  --ink-3:#79848D;
+  --rule:#C9D0D5;
+  --rule-2:#A8B2B9;
+  --pen:#B0122B;
+  --pen-soft:#F3DDE1;
+  --note:#2B5B6B;
+  --f-display:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  --f-body:"Public Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"Courier Prime",ui-monospace,"Courier New",monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1215;
+    --sheet:#161B1F;
+    --ink:#E6EBEE;
+    --ink-2:#A3ADB4;
+    --ink-3:#7C878E;
+    --rule:#2A3237;
+    --rule-2:#3D474D;
+    --pen:#F2606B;
+    --pen-soft:#2C171B;
+    --note:#7FB3C4;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1215;
+  --sheet:#161B1F;
+  --ink:#E6EBEE;
+  --ink-2:#A3ADB4;
+  --ink-3:#7C878E;
+  --rule:#2A3237;
+  --rule-2:#3D474D;
+  --pen:#F2606B;
+  --pen-soft:#2C171B;
+  --note:#7FB3C4;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:15.5px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1160px;margin:0 auto;padding-block:30px 60px;padding-inline:20px}
+
+h1,h2,h3{margin:0;font-weight:400}
+.lbl{
+  font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+em.q{font-family:var(--f-display);font-style:italic}
+
+/* ============ safety gate ============ */
+#gate{
+  position:fixed;inset:0;z-index:60;background:var(--paper);
+  overflow-y:auto;padding:max(24px,env(safe-area-inset-top,0px)) 20px 40px;
+}
+#gate .inner{max-width:620px;margin:0 auto;padding-top:6vh}
+#gate h1{font-family:var(--f-display);font-size:clamp(32px,6.5vw,46px);line-height:1.05;margin:14px 0 14px;text-wrap:balance}
+#gate p{color:var(--ink-2);margin:0 0 18px;max-width:58ch}
+ul.danger{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid var(--rule)}
+ul.danger li{
+  border-bottom:1px solid var(--rule);padding:11px 0 11px 26px;position:relative;font-size:16px;
+}
+ul.danger li::before{
+  content:"";position:absolute;left:4px;top:19px;width:7px;height:7px;background:var(--pen);
+}
+.gate-acts{display:flex;gap:12px;flex-wrap:wrap}
+#stop{background:var(--ink);color:var(--paper);margin-top:26px;padding:26px 24px}
+#stop h2{font-family:var(--f-display);font-size:clamp(26px,5vw,36px);line-height:1.1;margin-bottom:12px}
+#stop p{color:var(--paper);opacity:.82;max-width:52ch;margin:0 0 12px}
+#stop p:last-child{margin-bottom:0}
+
+button{
+  font-family:var(--f-mono);font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:11px 16px;cursor:pointer;border-radius:0;
+}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--rule-2)}
+button.pen{background:var(--pen);border-color:var(--pen);color:#fff}
+button:hover{opacity:.86}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--pen);outline-offset:2px}
+
+/* ============ masthead ============ */
+.masthead{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:0}
+.masthead h1{font-family:var(--f-display);font-size:clamp(34px,7vw,56px);line-height:1;letter-spacing:-.01em;margin:8px 0 10px}
+.masthead .deck{color:var(--ink-2);max-width:62ch;margin:0}
+.scopeline{
+  margin-top:14px;font-family:var(--f-mono);font-size:12.5px;line-height:1.7;color:var(--ink-3);
+  display:flex;gap:6px 18px;flex-wrap:wrap;text-transform:uppercase;letter-spacing:.09em;
+}
+
+/* ============ records bar ============ */
+.records{
+  border-bottom:1px solid var(--rule);padding:14px 0;
+  display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+}
+.records .state{display:flex;gap:11px;align-items:baseline;flex-wrap:wrap}
+.records .dotmark{width:9px;height:9px;background:var(--rule-2);flex:none;align-self:center}
+.records.on .dotmark{background:var(--ink)}
+.records .txt{font-size:14px;color:var(--ink-2);max-width:64ch}
+.records .txt b{color:var(--ink);font-weight:600}
+
+/* ============ sheet ============ */
+.sheet{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:0}
+@media (max-width:860px){.sheet{grid-template-columns:minmax(0,1fr)}}
+.intake{border-right:1px solid var(--rule);padding:22px 26px 26px 0}
+@media (max-width:860px){.intake{border-right:none;border-bottom:1px solid var(--rule);padding:22px 0 26px}}
+.reading{padding:26px 0 0 40px;min-width:0}
+@media (max-width:860px){.reading{padding:26px 0 0}}
+
+.fieldset{margin:0 0 22px;padding:0;border:0}
+.fieldset > legend{padding:0;margin-bottom:12px}
+.f{display:grid;gap:5px;margin-bottom:13px}
+.f:last-child{margin-bottom:0}
+label{display:block}
+input[type="number"],input[type="text"],select{
+  font-family:var(--f-mono);font-size:15.5px;color:var(--ink);background:var(--sheet);
+  border:0;border-bottom:1px solid var(--rule-2);border-radius:0;padding:8px 2px;width:100%;
+  font-variant-numeric:tabular-nums;appearance:none;
+}
+select{
+  font-family:var(--f-body);
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 10px) 55%,calc(100% - 5px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:24px;
+}
+input:disabled,select:disabled{opacity:.45}
+.help{font-size:14px;color:var(--ink-3);line-height:1.5}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.withsym{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:5px}
+.withsym .s{font-family:var(--f-mono);font-size:14px;color:var(--ink-3);padding-bottom:9px}
+
+.rulebox{border:1px solid var(--pen);padding:14px;background:var(--pen-soft)}
+.rulebox .lbl{color:var(--pen)}
+.rulebox .help{color:var(--ink-2)}
+.rulebox input{background:transparent;border-bottom-color:var(--pen);color:var(--ink)}
+.ruleline{display:grid;grid-template-columns:1fr 62px auto;gap:8px;align-items:end;margin-top:10px}
+.ruleline span{font-size:14px;padding-bottom:8px;line-height:1.3}
+.ruleline span:last-child{color:var(--ink-3);font-family:var(--f-mono);font-size:14px}
+
+.opt{display:grid;grid-template-columns:auto 1fr;gap:9px;align-items:start;cursor:pointer;margin-bottom:6px}
+.opt input{width:16px;height:16px;margin:3px 0 0;accent-color:var(--pen);padding:0;border:0;background:none}
+.opt .t{font-size:14px;line-height:1.4}
+
+/* ============ reading ============ */
+.stamp{
+  display:inline-flex;align-items:center;gap:9px;border:1px solid var(--ink);
+  padding:7px 12px;margin-bottom:24px;
+  font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.stamp.thin,.stamp.none{border-style:dashed;color:var(--note);border-color:var(--note)}
+.stamp b{font-weight:700}
+
+.block{border-top:1px solid var(--rule);padding:30px 0}
+.block:first-of-type{border-top:0;padding-top:0}
+.block > .lbl{display:block;margin-bottom:15px}
+
+#contribute{border-top:2px solid var(--ink);margin-top:48px;padding-top:26px}
+#contribute .lede{margin-bottom:10px}
+.choices{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 4px}
+.choices button{background:transparent;color:var(--ink);border-color:var(--rule-2)}
+.choices button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#cFinal{margin:16px 0 4px}
+#cAct{margin:16px 0 0}
+#cDone{margin-top:6px}
+.newrow{
+  border:1px solid var(--pen);background:var(--pen-soft);padding:12px 14px;margin:16px 0 12px;
+  font-family:var(--f-mono);font-size:14px;line-height:1.7;overflow-wrap:anywhere;
+}
+.newrow .k{
+  display:block;margin-bottom:7px;color:var(--pen);
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.honest{margin-top:34px;border-top:1px solid var(--rule);padding-top:24px}
+.honest dl{margin:15px 0 0;display:grid;gap:14px}
+.honest dt{
+  font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.honest dd{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55;max-width:60ch}
+.honest .lim dt{color:var(--note)}
+.honest .lim{border-left:2px solid var(--note);padding-left:15px}
+.verdict{margin-bottom:28px;padding-bottom:26px;border-bottom:1px solid var(--rule)}
+.verdict .word{
+  font-family:var(--f-display);font-size:clamp(36px,6.4vw,58px);line-height:1.02;
+  letter-spacing:-.015em;margin:0;text-wrap:balance;
+}
+.verdict .by{
+  display:block;margin:7px 0 11px;color:var(--pen);
+  font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.verdict .deriv{margin:0;font-size:14px;color:var(--ink-2);max-width:62ch;line-height:1.55}
+.lede{font-family:var(--f-display);font-size:clamp(23px,3.4vw,31px);line-height:1.18;margin:0 0 12px;text-wrap:balance}
+.lede .pen{color:var(--pen)}
+.para{margin:0 0 14px;max-width:62ch;line-height:1.62}
+.para:last-child{margin-bottom:0}
+.para b{font-weight:600}
+.caveat{
+  font-size:14px;line-height:1.6;color:var(--ink-2);max-width:58ch;
+  border-left:2px solid var(--note);padding-left:15px;margin:18px 0 0;
+}
+.caveat b{font-weight:600;color:var(--ink)}
+
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:0;border:1px solid var(--rule);margin:0 0 20px}
+.fig{padding:17px 18px;border-right:1px solid var(--rule)}
+.fig:last-child{border-right:0}
+@media (max-width:520px){.fig{border-right:0;border-bottom:1px solid var(--rule)}.fig:last-child{border-bottom:0}}
+.fig .k{display:block;margin-bottom:9px}
+.fig .v{font-family:var(--f-mono);font-size:31px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05;display:block;letter-spacing:-.02em}
+.fig .v.unknown{font-size:16px;letter-spacing:.1em;color:var(--note);padding:7px 0 6px}
+.fig .sub{display:block;font-size:14px;color:var(--ink-3);margin-top:7px;line-height:1.45}
+.fig.pen .v{color:var(--pen)}
+
+/* ---- the axis ---- */
+.chart{margin:4px 0 6px}
+.tierlabels{position:relative;height:0}
+.tier{position:relative;height:22px}
+.flag{
+  position:absolute;bottom:3px;white-space:nowrap;
+  font-family:var(--f-mono);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-2);padding-left:6px;border-left:1px solid var(--rule-2);
+}
+.flag.pen{color:var(--pen);border-left-color:var(--pen)}
+.flag.flip{padding-left:0;padding-right:5px;border-left:0;border-right:1px solid var(--rule-2);transform:translateX(-100%)}
+.flag.pen.flip{border-right-color:var(--pen)}
+
+.plot{position:relative;margin-inline:8px}
+.dots{position:relative;height:56px}
+.dot{
+  position:absolute;width:9px;height:9px;border-radius:50%;background:var(--ink);
+  transform:translateX(-50%);cursor:pointer;box-shadow:0 0 0 2px var(--paper);
+}
+.dot.back{background:var(--paper);border:2.5px solid var(--ink);width:10px;height:10px}
+.dot.sm{width:6.5px;height:6.5px;box-shadow:0 0 0 1.5px var(--paper)}
+.dot.sm.back{width:7px;height:7px;border-width:1.8px}
+.baseline{height:1px;background:var(--ink);position:relative}
+.vrule{position:absolute;top:0;bottom:0;width:1px;background:var(--rule-2);z-index:0}
+.vrule.pen{background:var(--pen);width:1.5px;z-index:1}
+.vrule.dash{background:none;border-left:1px dashed var(--ink-2)}
+.vrule.newprice{background:var(--rule-2)}
+.marks{position:relative;height:0}
+.markrow{position:relative;height:26px}
+.mk{position:absolute;top:0;white-space:nowrap;font-family:var(--f-mono);font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink);padding-top:6px}
+.mk::before{content:"";position:absolute;top:-1px;left:0;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:5px solid var(--ink);transform:translateX(-50%)}
+.mk span{display:inline-block;transform:translateX(-50%);padding-inline:3px}
+.mk.flipL span{transform:none;margin-left:-2px}
+.mk.flipR span{transform:translateX(-100%);margin-left:2px}
+.mk b{font-weight:700}
+.axnote{margin:10px 0 0;font-size:14px;color:var(--ink-3);line-height:1.45}
+
+#tip{
+  position:fixed;z-index:50;background:var(--ink);color:var(--paper);padding:10px 12px;
+  font-family:var(--f-mono);font-size:13px;line-height:1.5;max-width:270px;pointer-events:none;
+}
+#tip b{color:var(--paper)}
+
+/* ---- refusal ---- */
+.refusal{border:1px solid var(--note);padding:24px 26px}
+.refusal .lede{margin-bottom:10px}
+.refusal .para{color:var(--ink-2)}
+.refusal .para strong{color:var(--ink);font-weight:600}
+
+/* ---- ledger ---- */
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.ledger{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+table.ledger th{
+  text-align:left;padding:7px 10px 7px 0;border-bottom:1px solid var(--ink);
+  font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;
+}
+table.ledger td{padding:8px 10px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+table.ledger td.n{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+table.ledger tr.hl td{background:var(--pen-soft)}
+
+details{border-top:1px solid var(--rule)}
+details > summary{
+  padding:19px 0;cursor:pointer;list-style:none;
+  font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);
+  display:flex;gap:9px;align-items:center;
+}
+details > summary::-webkit-details-marker{display:none}
+details > summary::before{content:"+";font-size:14px;color:var(--ink-3)}
+details[open] > summary::before{content:"\2212"}
+details .dbody{padding-bottom:20px}
+
+/* ---- footer blocks ---- */
+.notes{margin-top:52px;border-top:2px solid var(--ink);padding-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:36px}
+.note h3{font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:11px}
+.note h3.lim{color:var(--note)}
+.note ul{margin:0;padding-left:16px;font-size:14px;color:var(--ink-2);line-height:1.5}
+.note ul li{margin-bottom:6px}
+.note p{margin:0 0 9px;font-size:14px;color:var(--ink-2)}
+.note p:last-child{margin-bottom:0}
+
+#unans{margin-top:26px;border:1px dashed var(--rule-2);padding:15px 17px}
+#unans h3{font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
+#unans ol{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2);font-family:var(--f-mono);line-height:1.6}
+
+.relink{background:none;border:0;padding:0;font-family:var(--f-body);font-size:14px;color:var(--ink-2);text-transform:none;letter-spacing:0;font-weight:400;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.relink:hover{color:var(--pen);opacity:1}
+
+/* ============ phones ============ */
+@media (max-width:560px){
+  /* 16px inputs so iOS does not zoom the page on focus; taller tap targets */
+  input[type="number"],input[type="text"],select{font-size:16px;padding:10px 2px}
+  button{font-size:13px;padding:13px 16px}
+
+  /* one thought per row instead of two cramped ones */
+  .figs{grid-template-columns:1fr}
+  .pair{grid-template-columns:1fr}
+
+  /* the small steps come up, and the wide mono tracking eases off */
+  body{font-size:16px}
+  .para{font-size:16px;line-height:1.6}
+  .lbl,.note h3,.honest dt,table.ledger th,.verdict .by,#unans h3,details > summary{font-size:12.5px;letter-spacing:.09em}
+  .help,.fig .sub,.caveat,.honest dd,.note ul,.note p,.verdict .deriv,.axnote,#unans ol,.records .txt,.newrow,table.ledger,.opt .t,.ruleline span,.relink{font-size:15px}
+  .scopeline{font-size:12.5px;letter-spacing:.07em;gap:5px 14px}
+  .withsym .s,.ruleline span:last-child{font-size:15px}
+  .stamp{font-size:12.5px;letter-spacing:.09em}
+  .fig .v{font-size:34px}
+  .refusal{padding:20px 18px}
+
+  /* positioned flags overrun both edges at this width, so they stack as a key */
+  .tier{position:static;height:auto}
+  .flag,.flag.flip{
+    position:static;display:block;white-space:normal;transform:none;
+    font-size:12px;letter-spacing:.06em;line-height:1.35;margin:0 0 7px;
+    padding:0 0 0 10px;border-left:2px solid var(--rule-2);border-right:0;
+  }
+  .flag.pen,.flag.pen.flip{border-left-color:var(--pen)}
+  .plot{margin-inline:10px}
+  .mk{font-size:13px}
+}
+</style>
+
+<!-- ======================= SAFETY GATE ======================= -->
+<div id="gate">
+  <div class="inner">
+    <span class="lbl">Before anything else</span>
+    <h1 id="gateH">Is the machine doing any of these?</h1>
+    <div id="gateAsk">
+      <p>This comes before the make, before the fault, before the quote. If any of it is true, there is no arithmetic to do.</p>
+      <ul class="danger">
+        <li>A burning smell, or a smell of hot plastic</li>
+        <li>Scorch marks, browning or melting around the plug, socket or controls</li>
+        <li>A smell of gas anywhere near it</li>
+        <li>Anyone has felt a shock, a tingle or a buzz from the case, the door or the pipework</li>
+        <li>Water is reaching the socket, the cable, or the electrics inside</li>
+      </ul>
+      <div class="gate-acts">
+        <button type="button" id="gateNo">No &mdash; none of these</button>
+        <button type="button" id="gateYes" class="pen">Yes &mdash; one or more</button>
+      </div>
+    </div>
+    <div id="stop" hidden>
+      <h2>Then stop here. This is not a money question.</h2>
+      <p>Switch it off at the socket and pull the plug. If you cannot reach the plug, turn it off at the consumer unit. If there is any smell of gas, do not touch a switch &mdash; open the windows, leave, and ring the gas emergency number from outside.</p>
+      <p>Get a qualified engineer to look at it before anyone uses it again. Do not run it once more to see whether it does it again.</p>
+      <p>This tool will not weigh a repair against a replacement while any of that is true, because the answer would not depend on the money.</p>
+      <p style="margin-top:16px"><button type="button" id="gateBack" class="ghost" style="color:var(--paper);border-color:rgba(255,255,255,.35)">None of that applies after all</button></p>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= APP ======================= -->
+<div class="wrap" id="app" hidden>
+
+  <header class="masthead">
+    <span class="lbl">Out of guarantee &middot; one decision, today</span>
+    <h1>Is it worth fixing?</h1>
+    <p class="deck">You have a quote in your hand and you have to say yes or no. This looks up what the same fault, on the same make, at the same sort of age, has actually cost before &mdash; and what happened to those machines afterwards.</p>
+    <div class="scopeline">
+      <span>Washing machines only</span><span>5 faults</span><span>3 makes</span><span>1 repair business, Ashfold</span><span>Records invented for demonstration</span>
+    </div>
+  </header>
+
+  <div class="records" id="recBar">
+    <div class="state">
+      <span class="dotmark"></span>
+      <span class="txt" id="recTxt"><b>No records loaded.</b> The tool starts empty, because that is the honest starting state. Nothing below is computed until there is something to compute from.</span>
+    </div>
+    <button type="button" id="recBtn">Load the demonstration records</button>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ---------------- intake ---------------- -->
+    <form class="intake" id="form" autocomplete="off">
+
+      <fieldset class="fieldset">
+        <legend class="lbl">The machine</legend>
+        <div class="f">
+          <label class="lbl" for="make">Make</label>
+          <select id="make">
+            <option value="Wraycroft">Wraycroft</option>
+            <option value="Halbern" selected>Halbern</option>
+            <option value="Tamsley">Tamsley</option>
+            <option value="other">Another make</option>
+          </select>
+          <span class="help">The three in these records are invented names. If yours is a real make, it is not in here &mdash; pick "another make" and see what the tool says.</span>
+        </div>
+        <div class="f">
+          <label class="lbl" for="age">Age, in years</label>
+          <input id="age" type="number" min="0" max="30" step="1" value="11" inputmode="numeric">
+        </div>
+        <div class="f">
+          <label class="lbl" for="fault">What it is doing wrong</label>
+          <select id="fault"></select>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="lbl">The two prices</legend>
+        <div class="pair">
+          <div class="f">
+            <label class="lbl" for="quote">Repair quote</label>
+            <div class="withsym"><span class="s">&euro;</span><input id="quote" type="number" min="0" step="1" inputmode="numeric"></div>
+          </div>
+          <div class="f">
+            <label class="lbl" for="newp">A comparable new one</label>
+            <div class="withsym"><span class="s">&euro;</span><input id="newp" type="number" min="0" step="1" inputmode="numeric"></div>
+          </div>
+        </div>
+        <span class="help">Euro, because the records are in euro. There is no currency switch: a tool that let you pick a currency the data is not in would be showing you a unit error and calling it a feature.</span>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="lbl">Your rule</legend>
+        <div class="rulebox">
+          <span class="lbl">Where is your line?</span>
+          <p class="help" style="margin:7px 0 0">Most people have one and have never written it down. Something like: replace above a certain share of a new machine, repair below another, argue with yourself in between. It is yours. The tool has no opinion about where it should sit, and will not fill these in for you.</p>
+          <div class="ruleline">
+            <span>Replace if the likely total is above</span>
+            <input id="ruleHi" type="number" min="1" max="200" step="1" placeholder="" inputmode="numeric" aria-label="Replace above this percentage of a new machine">
+            <span>% of new</span>
+          </div>
+          <div class="ruleline">
+            <span>Repair if it is below</span>
+            <input id="ruleLo" type="number" min="0" max="200" step="1" placeholder="" inputmode="numeric" aria-label="Repair below this percentage of a new machine">
+            <span>% of new</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="lbl">Optional</legend>
+        <label class="opt" for="moving">
+          <input type="checkbox" id="moving">
+          <span class="t">We are moving, or replacing the kitchen, within two years</span>
+        </label>
+        <span class="help" style="display:block;margin:0 0 15px">Shortens the time the repair has to cover, so the tool asks the records a different question: did jobs like this go two years.</span>
+        <div class="f">
+          <label class="lbl" for="kwh">New machine, kWh per year</label>
+          <input id="kwh" type="number" min="0" step="1" placeholder="" inputmode="numeric">
+          <span class="help">Off the energy label of the machine you are actually considering. Your candidate, your label &mdash; the tool holds no energy figures of its own.</span>
+        </div>
+      </fieldset>
+
+      <button type="button" class="relink" id="reGate">Re&ndash;check the safety questions</button>
+    </form>
+
+    <!-- ---------------- reading ---------------- -->
+    <div class="reading">
+      <div id="reading"></div>
+
+      <section id="contribute">
+        <h2 class="lbl">Close the loop</h2>
+        <p class="lede">What have you decided?</p>
+        <p class="para">A job book grows the only way a job book can: someone comes back and says what happened. Answer this, and the next person asking about the same make, the same fault, at the same sort of age gets a slightly better reading than you got. One row per person who used it. That is the whole mechanism, and it is why there is no dataset here that anybody bought.</p>
+        <div class="choices">
+          <button type="button" data-c="repaired" aria-pressed="false">I had it repaired</button>
+          <button type="button" data-c="replaced" aria-pressed="false">I replaced it</button>
+          <button type="button" data-c="deciding" aria-pressed="false">Still deciding</button>
+        </div>
+        <div id="cFinal" hidden>
+          <div class="f" style="max-width:270px">
+            <label class="lbl" for="cCost">What did it come to in the end?</label>
+            <div class="withsym"><span class="s">&euro;</span><input id="cCost" type="number" min="0" step="1" inputmode="numeric"></div>
+            <span class="help">The final bill, not the quote &mdash; including anything the engineer found once it was open.</span>
+          </div>
+        </div>
+        <div id="cAct" hidden><button type="button" id="cAdd">Add it to the book</button></div>
+        <div id="cDone" hidden></div>
+
+        <div class="honest">
+          <h3 class="lbl">What it asked you for, and what it will never ask</h3>
+          <p class="para">Two fields, and that is all of it: what you decided, and what it cost. No account, no email, no address, no name. The tool computes on what you type and collects nothing else.</p>
+          <p class="para">That decision has a price, and it is worth naming rather than quietly enjoying. The reading above tells you how many machines like yours went twelve months without the fault coming back. A book can only learn that by asking you again in a year &mdash; and asking you again in a year means keeping a way to reach you.</p>
+          <dl>
+            <div><dt>What it can learn from you today</dt><dd>What you decided, and what it actually came to. Those land in the cost range and the follow&ndash;on figure the next person reads, straight away.</dd></div>
+            <div class="lim"><dt>What it cannot learn, and will not</dt><dd>Whether your repair held. That column fills only from machines this repairer happens to see again, never from you &mdash; because the tool has chosen not to hold anything that could reach you in a year.</dd></div>
+          </dl>
+          <p class="para" style="margin-top:15px">It is a real trade, and it probably goes the way you would want it to go. But it is not free, and the twelve&ndash;month column is exactly where the cost lands.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note">
+      <h3>What these records are</h3>
+      <p>Every job in here is invented for the demonstration. The makes are invented too &mdash; no real manufacturer appears anywhere in this tool.</p>
+      <p>They stand for the job book of one repair business in one town. Not a survey, not an industry dataset, not your town.</p>
+    </div>
+    <div class="note">
+      <h3 class="lim">What the comparison leaves out</h3>
+      <ul>
+        <li>Your machine's own history, which the records do not have</li>
+        <li>How hard it has been used, and by how many people</li>
+        <li>Whether this particular engineer is any good</li>
+        <li>What days without a machine cost you</li>
+        <li>What the old one is worth sold or scrapped</li>
+        <li>What the old one draws in electricity, which is unknown</li>
+        <li>Everything outside washing machines, these five faults, these three makes, this one business</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h3>Before you agree to the job</h3>
+      <p>Three questions, all about the transaction rather than the machine. This tool has no view on how appliances behave, so it will not tell you which parts are cheap or which make lasts.</p>
+      <ul>
+        <li>Is the call&ndash;out fee credited against the repair if I go ahead?</li>
+        <li>Does the repair carry twelve months on parts and labour?</li>
+        <li>Is the part still manufactured?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="unans" hidden>
+    <h3>Questions this tool could not answer <span id="unansN"></span></h3>
+    <ol id="unansList"></ol>
+  </div>
+</div>
+
+<div id="tip" hidden></div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(i){ return document.getElementById(i); };
+
+  /* ================= fault scope ================= */
+  var FAULTS = [
+    {k:"drain",  n:"Will not drain or spin", base:95,  spread:50, pSame:0.14, pDiff:0.22, pScrap:0.05,
+     work:["Drain pump replaced","Pump filter cleared, outlet hose replaced","Drain pump and filter housing replaced","Blockage cleared at sump, pump tested"]},
+    {k:"leak",   n:"Leaking",                base:115, spread:55, pSame:0.12, pDiff:0.20, pScrap:0.06,
+     work:["Door seal replaced","Sump hose replaced and re-clipped","Detergent drawer housing replaced","Door seal and tub gasket replaced"]},
+    {k:"bearing",n:"Noisy on spin",          base:225, spread:75, pSame:0.06, pDiff:0.30, pScrap:0.32,
+     work:["Drum bearings and shaft seal replaced","Bearing kit fitted, spider arm inspected","Rear drum half and bearings replaced"]},
+    {k:"heat",   n:"Will not heat the water",base:120, spread:50, pSame:0.10, pDiff:0.26, pScrap:0.08,
+     work:["Heating element replaced","Element and NTC thermistor replaced","NTC sensor replaced","Element replaced, wiring loom repaired"]},
+    {k:"dead",   n:"Dead — no power, no response", base:160, spread:90, pSame:0.18, pDiff:0.28, pScrap:0.18,
+     work:["Mains filter replaced","Control board replaced","Door interlock replaced","Board re-soldered and refitted","Mains filter and interlock replaced"]}
+  ];
+  var F = {}; FAULTS.forEach(function(f){ F[f.k] = f; });
+
+  var BANDS = [{k:"young",n:"1 to 4 years",lo:0,hi:4},{k:"mid",n:"5 to 8 years",lo:5,hi:8},{k:"old",n:"9 years or more",lo:9,hi:99}];
+  function bandOf(a){ return a <= 4 ? BANDS[0] : a <= 8 ? BANDS[1] : BANDS[2]; }
+
+  /* counts[make][fault] = [young, mid, old] */
+  var COUNTS = {
+    Wraycroft:{drain:[22,64,20], leak:[38,26,6],  bearing:[1,9,31],  heat:[4,21,13],  dead:[3,12,14]},
+    Halbern:  {drain:[14,26,9],  leak:[11,15,5],  bearing:[2,19,54], heat:[4,9,7],    dead:[9,30,17]},
+    Tamsley:  {drain:[13,22,6],  leak:[10,18,7],  bearing:[0,6,18],  heat:[18,46,15], dead:[4,11,7]}
+  };
+  var AGEF = {young:0.6, mid:1.0, old:1.5};
+
+  /* ================= the records ================= */
+  var JOBS = null;
+
+  function mkRng(seed){ var s = seed >>> 0; return function(){ s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+
+  function build(){
+    var r = mkRng(20260915), out = [], id = 1000;
+    Object.keys(COUNTS).forEach(function(make){
+      Object.keys(COUNTS[make]).forEach(function(fk){
+        var f = F[fk];
+        COUNTS[make][fk].forEach(function(n, bi){
+          var band = BANDS[bi];
+          for (var i = 0; i < n; i++){
+            id++;
+            var lo = band.lo || 1, hi = band.hi === 99 ? 15 : band.hi;
+            var age = lo + Math.floor(r() * (hi - lo + 1));
+            var cost = Math.round((f.base + (r() - 0.5) * 2 * f.spread) / 5) * 5;
+            if (cost < 45) cost = 45;
+            var af = AGEF[band.k];
+            var j = {id:"J" + id, make:make, fault:fk, age:age, band:band.k,
+                     work:f.work[Math.floor(r() * f.work.length)], cost:cost,
+                     obs:6 + Math.floor(r() * 29), same:null, diff:null, scrap:null};
+
+            if (r() < f.pSame * af){
+              j.same = {month: 3 + Math.floor(r() * 18)};
+              if (j.same.month > j.obs) j.obs = j.same.month + 1 + Math.floor(r() * 10);
+            }
+            if (r() < f.pDiff * af){
+              var others = FAULTS.filter(function(x){ return x.k !== fk; });
+              var o = others[Math.floor(r() * others.length)];
+              var dc = Math.round((o.base + (r() - 0.5) * 2 * o.spread) / 5) * 5;
+              j.diff = {month: 2 + Math.floor(r() * 11), fault:o.k, cost: dc < 45 ? 45 : dc};
+              if (j.diff.month > j.obs) j.obs = j.diff.month + 1 + Math.floor(r() * 8);
+            }
+            if (r() < f.pScrap * af){
+              var spent = j.cost + (j.diff ? j.diff.cost : 0) + (j.same ? Math.round(j.cost * 0.8 / 5) * 5 : 0);
+              var m = Math.max(j.diff ? j.diff.month : 0, j.same ? j.same.month : 0) + 1 + Math.floor(r() * 6);
+              if (m > 12) m = 12;
+              j.scrap = {month:m, spent:spent};
+              j.obs = m;
+            }
+            out.push(j);
+          }
+        });
+      });
+    });
+    return out;
+  }
+
+  /* ================= stats ================= */
+  function med(a){
+    if (!a.length) return null;
+    var s = a.slice().sort(function(x,y){ return x - y; }), h = s.length >> 1;
+    return s.length % 2 ? s[h] : Math.round((s[h-1] + s[h]) / 2);
+  }
+  function heldMonths(j){ return j.same ? j.same.month : j.obs; }
+
+  var THIN = 8;
+
+  function query(){
+    var make = $("make").value, fk = $("fault").value, age = parseInt($("age").value, 10);
+    if (!JOBS) return {state:"empty"};
+    if (make === "other") return {state:"scope"};
+    if (!isFinite(age)) return {state:"noage"};
+    var band = bandOf(age);
+    var m = JOBS.filter(function(j){ return j.make === make && j.fault === fk && j.band === band.k; });
+    var q = {make:make, fk:fk, age:age, band:band, jobs:m, n:m.length};
+    if (m.length < THIN){ q.state = "thin"; return q; }
+    q.state = "ok";
+
+    q.costs = m.map(function(j){ return j.cost; });
+    q.costMed = med(q.costs); q.costLo = Math.min.apply(null, q.costs); q.costHi = Math.max.apply(null, q.costs);
+
+    q.same = m.filter(function(j){ return j.same; });
+    q.held = med(m.map(heldMonths));
+
+    q.diff = m.filter(function(j){ return j.diff; });
+    q.diffMed = med(q.diff.map(function(j){ return j.diff.cost; }));
+    q.expect = q.diff.length ? Math.round(q.diff.length / q.n * q.diffMed) : 0;
+
+    q.scrap = m.filter(function(j){ return j.scrap; });
+    q.walk = q.scrap.length >= 4 ? med(q.scrap.map(function(j){ return j.scrap.spent; })) : null;
+
+    q.seen24 = m.filter(function(j){ return heldMonths(j) >= 24 || (j.same && j.same.month < 24); });
+    q.made24 = q.seen24.filter(function(j){ return !j.same || j.same.month >= 24; });
+    return q;
+  }
+
+  /* ================= helpers ================= */
+  function eur(v){ return "€" + Math.round(v).toLocaleString(); }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]; }); }
+  function plural(n, a, b){ return n === 1 ? a : b; }
+  function num(id){ var v = parseFloat($(id).value); return isFinite(v) && v >= 0 ? v : null; }
+
+  /* ================= unanswered log ================= */
+  var LOG = [];
+  function logMiss(txt){
+    if (LOG.length && LOG[LOG.length - 1] === txt) return;
+    if (LOG.indexOf(txt) !== -1) return;
+    LOG.push(txt);
+    if (LOG.length > 12) LOG.shift();
+    $("unans").hidden = false;
+    $("unansN").textContent = "(" + LOG.length + ")";
+    $("unansList").innerHTML = LOG.map(function(t){ return "<li>" + esc(t) + "</li>"; }).join("");
+  }
+
+  /* ================= ledger ================= */
+  function ledger(jobs, open, title){
+    if (!jobs.length) return "";
+    var rows = jobs.map(function(j){
+      var next = "—";
+      if (j.same) next = "Same fault again at " + j.same.month + " mo";
+      if (j.diff) next = (j.same ? next + "; " : "") + "Back at " + j.diff.month + " mo: " + F[j.diff.fault].n.toLowerCase() + ", " + eur(j.diff.cost);
+      if (j.scrap) next = (next === "—" ? "" : next + "; ") + "Written off at " + j.scrap.month + " mo, " + eur(j.scrap.spent) + " spent";
+      return "<tr><td class=\"n\">" + j.id + "</td><td class=\"n\">" + j.age + " yr</td><td>" + esc(j.work) +
+             "</td><td class=\"n\">" + eur(j.cost) + "</td><td class=\"n\">" + heldMonths(j) + " mo</td><td>" + esc(next) + "</td></tr>";
+    }).join("");
+    return "<details" + (open ? " open" : "") + "><summary>" + esc(title) + "</summary><div class=\"dbody\"><div class=\"scroller\">" +
+      "<table class=\"ledger\"><thead><tr><th>Job</th><th>Age</th><th>Work done</th><th>Charged</th><th>Observed since</th><th>What happened next</th></tr></thead>" +
+      "<tbody>" + rows + "</tbody></table></div></div></details>";
+  }
+
+  /* ================= the axis ================= */
+  function chart(q, quote, newp, total){
+    var hi = Math.max(newp || 0, total || 0, q.costHi || 0, q.walk || 0) * 1.09;
+    if (!(hi > 0)) return "";
+    var pct = function(v){ return Math.max(0, Math.min(100, v / hi * 100)); };
+
+    /* dots, stacked where they crowd */
+    var dense = q.jobs.length > 26;
+    var sep = dense ? 2.0 : 3.4, step = dense ? 7 : 11, dotCls = dense ? " sm" : "";
+    var placed = [];
+    q.jobs.slice().sort(function(a,b){ return a.cost - b.cost; }).forEach(function(j){
+      var x = pct(j.cost), lv = 0, clash = true;
+      while (clash){
+        clash = placed.some(function(p){ return p.lv === lv && Math.abs(p.x - x) < sep; });
+        if (clash) lv++;
+      }
+      placed.push({x:x, lv:lv, j:j});
+    });
+    var maxLv = placed.reduce(function(a,p){ return Math.max(a, p.lv); }, 0);
+    var dh = 16 + maxLv * step;
+
+    var dots = placed.map(function(p){
+      var j = p.j;
+      var t = eur(j.cost) + " · " + j.age + " yr · " + j.work + "|" +
+        (j.same ? "Same fault back at " + j.same.month + " months. " : "") +
+        (j.diff ? "Back at " + j.diff.month + " months with " + F[j.diff.fault].n.toLowerCase() + " (" + eur(j.diff.cost) + "). " : "") +
+        (j.scrap ? "Written off at " + j.scrap.month + " months, " + eur(j.scrap.spent) + " spent." : "") +
+        (!j.same && !j.diff && !j.scrap ? "No return in " + j.obs + " months on the books." : "");
+      return "<span class=\"dot" + dotCls + (j.diff || j.same ? " back" : "") + "\" style=\"left:" + p.x.toFixed(2) + "%;bottom:" + (p.lv * step) + "px\" data-t=\"" + esc(t) + "\" tabindex=\"0\"></span>";
+    }).join("");
+
+    /* vertical rules + their flags */
+    var rules = "", tHi = "", tLo = "", tWalk = "", tNew = "";
+    function flag(x, txt, cls){
+      var flip = x > 62;
+      return "<span class=\"flag " + cls + (flip ? " flip" : "") + "\" style=\"left:" + x.toFixed(2) + "%\">" + esc(txt) + "</span>";
+    }
+    if (newp){
+      rules += "<span class=\"vrule newprice\" style=\"left:" + pct(newp).toFixed(2) + "%\"></span>";
+      tNew  += flag(pct(newp), "A new one · " + eur(newp), "");
+    }
+    if (q.walk){
+      rules += "<span class=\"vrule dash\" style=\"left:" + pct(q.walk).toFixed(2) + "%\"></span>";
+      tWalk += flag(pct(q.walk), "Walk away · " + eur(q.walk), "");
+    }
+    var hiR = num("ruleHi"), loR = num("ruleLo");
+    if (newp && hiR !== null){
+      rules += "<span class=\"vrule pen\" style=\"left:" + pct(newp * hiR / 100).toFixed(2) + "%\"></span>";
+      tHi   += flag(pct(newp * hiR / 100), "Your line · replace above " + hiR + "%", "pen");
+    }
+    if (newp && loR !== null){
+      rules += "<span class=\"vrule pen\" style=\"left:" + pct(newp * loR / 100).toFixed(2) + "%\"></span>";
+      tLo   += flag(pct(newp * loR / 100), "Your line · repair below " + loR + "%", "pen");
+    }
+
+    function mark(v, label, bold){
+      var x = pct(v), cls = x < 12 ? " flipL" : x > 88 ? " flipR" : "";
+      return "<span class=\"mk" + cls + "\" style=\"left:" + x.toFixed(2) + "%\"><span>" + (bold ? "<b>" : "") + esc(label) + (bold ? "</b>" : "") + "</span></span>";
+    }
+    var marks = "";
+    if (quote !== null) marks += "<div class=\"markrow\">" + mark(quote, "Quoted " + eur(quote), false) + "</div>";
+    if (total !== null) marks += "<div class=\"markrow\">" + mark(total, "Likely total " + eur(total), true) + "</div>";
+
+    return "<div class=\"chart\">" +
+      "<div class=\"plot\">" +
+        [tHi, tLo, tWalk, tNew].filter(function(t){ return t; })
+          .map(function(t){ return "<div class=\"tier\">" + t + "</div>"; }).join("") +
+        "<div class=\"dots\" style=\"height:" + dh + "px\">" + rules + dots + "</div>" +
+        "<div class=\"baseline\"></div>" +
+        marks +
+      "</div>" +
+      "<p class=\"axnote\">Every dot is one job in these records: what it was charged. A hollow dot is a machine that came back. Hover or tab a dot to read it.</p>" +
+      "</div>";
+  }
+
+  /* ================= running cost, always shown ================= */
+  function energy(){
+    var k = num("kwh");
+    return "<div class=\"block\"><span class=\"lbl\">Running cost, beside the verdict and not in it</span>" +
+      "<div class=\"figs\">" +
+        "<div class=\"fig\"><span class=\"k lbl\">New one, from your label</span>" +
+          (k !== null ? "<span class=\"v\">" + k + "<span style=\"font-size:13px;font-weight:400\"> kWh/yr</span></span>"
+                      : "<span class=\"v unknown\">NOT ENTERED</span><span class=\"sub\">Copy it off the energy label of the machine you are considering.</span>") +
+        "</div>" +
+        "<div class=\"fig\"><span class=\"k lbl\">This machine</span><span class=\"v unknown\">UNKNOWN</span>" +
+          "<span class=\"sub\">Not an empty field. Nobody here knows what your machine draws, and the tool will not guess it from its age.</span></div>" +
+      "</div>" +
+      "<p class=\"caveat\">Two ways to find out, both of which beat an estimate: read the energy label on the machine itself, or put a plug-in meter between it and the socket and run a normal wash. An old machine can cost more in electricity over the years a repair buys than the repair bill itself &mdash; which is exactly why the tool will not invent the number.</p>" +
+      "</div>";
+  }
+
+  /* ================= render ================= */
+  function render(){
+    var q = query(), quote = num("quote"), newp = num("newp"), out = "";
+    var makeName = $("make").value === "other" ? "another make" : $("make").value;
+    var faultName = (F[$("fault").value] || {}).n || "";
+
+    /* --- refusals --- */
+    if (q.state === "empty"){
+      logMiss(makeName + ", " + faultName.toLowerCase() + ", " + ($("age").value ? $("age").value + " yr" : "no age entered") + " — no records loaded");
+      out = "<span class=\"stamp none\">No records</span>" +
+        "<div class=\"refusal\"><p class=\"lede\">Ring a second repairer.</p>" +
+        "<p class=\"para\">That is the call this tool exists to save you, and on this machine it has not earned it. There are no records loaded, so there is nothing here that knows anything about your machine that you do not already know.</p>" +
+        "<p class=\"para\"><strong>A second quote is the cheapest thing you can do today.</strong> It costs a phone call, it tells you whether the first quote is a normal price or a strange one, and it does not depend on any tool agreeing with it.</p>" +
+        "<p class=\"para\">The demonstration records are something you switch on, not something you switch off. Until then this is the only honest screen.</p></div>" + energy();
+    }
+    else if (q.state === "scope"){
+      logMiss("Another make, " + faultName.toLowerCase() + " — outside the three makes in these records");
+      out = "<span class=\"stamp none\">Out of scope</span>" +
+        "<div class=\"refusal\"><p class=\"lede\">Your make is not in these records.</p>" +
+        "<p class=\"para\">There are three makes in here and all three are invented. If your machine is a real one, and it will be, then nothing in this job book is about it.</p>" +
+        "<p class=\"para\"><strong>Ring a second repairer.</strong> A tool that answered anyway, by borrowing figures from other makes and not telling you, would be worse than one that says this.</p></div>" + energy();
+    }
+    else if (q.state === "noage"){
+      var need = [];
+      need.push("<li><b>The age, in years.</b> The records are matched on make, fault and age together, so without it there is no set of jobs to look at.</li>");
+      if (num("quote") === null) need.push("<li><b>The repair quote.</b> Nothing about the walk\u2013away price appears until you have one.</li>");
+      if (num("newp") === null) need.push("<li><b>The price of a comparable new one.</b> Your rule is a share of it, so the line cannot be drawn without it.</li>");
+      out = "<span class=\"stamp\">Records loaded &middot; <b>" + JOBS.length + " jobs</b></span>" +
+        "<div class=\"refusal\"><p class=\"lede\">Loaded. Now tell it about your machine.</p>" +
+        "<p class=\"para\">The job book is in. It cannot look anything up yet, because the fields start empty on purpose &mdash; the tool does not show a reading built on numbers nobody typed.</p>" +
+        "<ul class=\"para\" style=\"padding-left:18px;color:var(--ink-2)\">" + need.join("") + "</ul></div>" + energy();
+    }
+    else if (q.state === "thin"){
+      logMiss(makeName + ", " + faultName.toLowerCase() + ", " + q.band.n + " — only " + q.n + " matching " + plural(q.n, "job", "jobs"));
+      out = "<span class=\"stamp thin\">Too thin &middot; <b>" + q.n + " " + plural(q.n, "job", "jobs") + "</b></span>" +
+        "<div class=\"refusal\"><p class=\"lede\">" + (q.n === 0 ? "Nothing like this in the book." : q.n + " " + plural(q.n, "job", "jobs") + " is not enough to tell you anything.") + "</p>" +
+        "<p class=\"para\">You asked about a " + esc(makeName) + ", " + esc(q.band.n) + " old, " + esc(faultName.toLowerCase()) +
+        ". There " + plural(q.n, "is", "are") + " <strong>" + q.n + "</strong> matching " + plural(q.n, "job", "jobs") + " in these records.</p>" +
+        "<p class=\"para\">So there is no percentage on this screen. A percentage off " + (q.n || "no") + " " + plural(q.n, "job", "jobs") +
+        " is a guess wearing a percentage sign, and it would read exactly as confidently as a real one. That is the whole reason it is not here.</p>" +
+        "<p class=\"para\"><strong>Ring a second repairer.</strong> On a thick match this tool can tell you something a second opinion cannot. On this one it cannot, and the second opinion is the better spend.</p>" +
+        (q.n ? "<p class=\"para\">Here are the " + q.n + " " + plural(q.n, "job", "jobs") + " themselves, in full, which is all the tool actually has:</p>" : "") +
+        "</div>" +
+        (q.n ? "<div style=\"margin-top:4px\">" + ledger(q.jobs, true, "The " + q.n + " matching " + plural(q.n, "job", "jobs")) + "</div>" : "") +
+        energy();
+    }
+    else {
+      /* --- an answer --- */
+      var total = quote !== null ? quote + q.expect : null;
+      var pctNew = (total !== null && newp) ? Math.round(total / newp * 100) : null;
+      var pctQuote = (quote !== null && newp) ? Math.round(quote / newp * 100) : null;
+      var hiR = num("ruleHi"), loR = num("ruleLo");
+
+      /* the word, but only ever as a reading of their rule */
+      var resolved = (pctNew !== null && (hiR !== null || loR !== null));
+      if (resolved){
+        var word, said;
+        if (hiR !== null && pctNew > hiR){
+          word = "Replace it"; said = "You said replace above " + hiR + "% of a new machine.";
+        } else if (loR !== null && pctNew < loR){
+          word = "Repair it"; said = "You said repair below " + loR + "% of a new machine.";
+        } else if (hiR !== null && loR === null){
+          word = "Repair it"; said = "You said replace above " + hiR + "% of a new machine, and it does not reach that.";
+        } else {
+          word = "Your call";
+          said = hiR !== null
+            ? "You said replace above " + hiR + "% and repair below " + loR + "%. This lands in between, in the stretch you told the tool you argue with yourself about."
+            : "You said repair below " + loR + "%, and this is above it. You have not said where replace begins, so your rule stops here.";
+        }
+        out += "<div class=\"verdict\"><p class=\"word\">" + word + "</p>" +
+          "<span class=\"by\">" + (word === "Your call" ? "\u2014 your own rule leaves this one open" : "\u2014 by your own rule") + "</span>" +
+          "<p class=\"deriv\">Likely total <b>" + eur(total) + "</b>, <b>" + pctNew + "%</b> of a new machine. " + said +
+          " <em class=\"q\">The forecast does not move. Only the line does.</em></p></div>";
+      }
+
+      out += "<span class=\"stamp\">Answered from <b>" + q.n + " jobs</b></span>";
+
+      /* forecast */
+      var figs = "<div class=\"figs\">" +
+        "<div class=\"fig\"><span class=\"k lbl\">You were quoted</span><span class=\"v\">" + (quote !== null ? eur(quote) : "—") + "</span><span class=\"sub\">" + (pctQuote !== null ? pctQuote + "% of a new one." : "Your figure.") + "</span></div>" +
+        "<div class=\"fig\"><span class=\"k lbl\">Likely follow&ndash;on</span><span class=\"v\">" + eur(q.expect) + "</span><span class=\"sub\">" + q.diff.length + " of " + q.n + " came back, median " + (q.diffMed ? eur(q.diffMed) : "—") + ".</span></div>" +
+        "<div class=\"fig\"><span class=\"k lbl\">Likely total</span><span class=\"v\">" + (total !== null ? eur(total) : "—") + "</span><span class=\"sub\">" + (pctNew !== null ? pctNew + "% of a new one." : "Enter a new price.") + "</span></div>" +
+        "</div>";
+      out += "<div class=\"block\"><span class=\"lbl\">What these " + q.n + " jobs say</span>";
+      out += figs;
+      out += "<p class=\"para\">" + esc(makeName) + ", " + esc(q.band.n) + ", " + esc(faultName.toLowerCase()) +
+             ". These jobs were charged between <b>" + eur(q.costLo) + "</b> and <b>" + eur(q.costHi) + "</b>, median <b>" + eur(q.costMed) + "</b>. " +
+             "Repairs on them have held a median of <b>" + q.held + " months</b> so far" +
+             (q.same.length ? ", and " + q.same.length + " of the " + q.n + " came back with <b>this same fault</b> again." : ", and none of them came back with <b>this fault</b> again.") + "</p>";
+
+      if (q.diff.length){
+        out += "<p class=\"para\">That is this fault. A different one is another matter: <b>" + q.diff.length + " of these " + q.n + "</b> machines came back within the year with something else: " +
+          q.diff.slice(0, 4).map(function(j){ return F[j.diff.fault].n.toLowerCase() + " at " + j.diff.month + " months, " + eur(j.diff.cost); }).join("; ") +
+          (q.diff.length > 4 ? "; and " + (q.diff.length - 4) + " more" : "") + ". Those follow&ndash;on jobs cost a median of <b>" + eur(q.diffMed) + "</b>.</p>";
+        out += "<p class=\"para\">Spread across all " + q.n + ", that is <b>" + eur(q.expect) + "</b> of follow&ndash;on work per machine. " +
+          "Anyone can divide your quote by the price of a new one. This is the part they cannot tell you.</p>";
+      } else {
+        out += "<p class=\"para\">None of these " + q.n + " came back within the year with a different fault, so there is no follow&ndash;on to add. The quote is the quote.</p>";
+      }
+
+      out += "</div>";
+
+      /* chart */
+      if (quote !== null && newp){
+        out += "<div class=\"block\"><span class=\"lbl\">The book, your quote, and your line</span>" + chart(q, quote, newp, total) + "</div>";
+      }
+
+      /* the line */
+      if (!resolved){
+      out += "<div class=\"block\"><span class=\"lbl\">Your rule</span>";
+      if (pctNew === null){
+        out += "<p class=\"para\">Enter the repair quote and the price of a comparable new machine, and this reads against your line.</p>";
+      } else if (hiR === null && loR === null){
+        out += "<p class=\"lede\">You have not drawn your line yet.</p>" +
+          "<p class=\"para\">The likely total is <b>" + eur(total) + "</b>, which is <b>" + pctNew + "%</b> of a new machine. Whether that is too much is not a fact about washing machines, and the tool will not decide it for you.</p>" +
+          "<p class=\"para\">Write your rule in the red box and this line resolves. <em class=\"q\">The forecast does not move. Only the line does.</em></p>";
+      } else {
+        var side, body;
+        if (hiR !== null && pctNew > hiR){
+          side = "That is <span class=\"pen\">above your own line</span>.";
+          body = "You said replace above " + hiR + "% of a new machine. The likely total is " + pctNew + "%.";
+        } else if (loR !== null && pctNew < loR){
+          side = "That is <span class=\"pen\">below your own line</span>.";
+          body = "You said repair below " + loR + "% of a new machine. The likely total is " + pctNew + "%.";
+        } else {
+          side = "That lands <span class=\"pen\">inside your own band</span>.";
+          body = "You said replace above " + (hiR !== null ? hiR + "%" : "—") + " and repair below " + (loR !== null ? loR + "%" : "—") +
+                 ". The likely total is " + pctNew + "%, which is the stretch you told the tool you argue with yourself about. It will not settle that for you.";
+        }
+        out += "<p class=\"lede\">" + side + "</p><p class=\"para\">" + body + " <em class=\"q\">The forecast does not move. Only the line does.</em> Move your rule and watch: " +
+          eur(total) + " stays where it is.</p>";
+      }
+      out += "</div>";
+      }
+
+      /* walk-away, only after a quote */
+      if (quote !== null){
+        out += "<div class=\"block\"><span class=\"lbl\">If the engineer finds more once it is open</span>";
+        if (q.walk){
+          out += "<div class=\"figs\"><div class=\"fig pen\"><span class=\"k lbl\">Walk&ndash;away price</span><span class=\"v\">" + eur(q.walk) + "</span>" +
+            "<span class=\"sub\">From " + q.scrap.length + " of these " + q.n + " that were written off within the year.</span></div>" +
+            "<div class=\"fig\"><span class=\"k lbl\">Repairs here have held</span><span class=\"v\">" + q.held + "<span style=\"font-size:13px;font-weight:400\"> months</span></span><span class=\"sub\">Median, across all " + q.n + ".</span></div></div>";
+          out += "<p class=\"para\">Of these " + q.n + " machines, <b>" + q.scrap.length + "</b> were written off within the year, and by then a median of <b>" + eur(q.walk) +
+            "</b> had been spent on them. <b>If the running total passes " + eur(q.walk) + " while the job is open, stop there</b> &mdash; take the loss on what has been done and put the rest toward a new machine.</p>";
+          if (quote >= q.walk){
+            out += "<p class=\"para\">Your quote of <b>" + eur(quote) + "</b> is already at or above that line, before anyone has opened the machine.</p>";
+          } else if (total !== null && total >= q.walk){
+            out += "<p class=\"para\">Your quote of <b>" + eur(quote) + "</b> sits under that line, but the likely total of <b>" + eur(total) +
+              "</b> does not. On this evidence you reach it without anything unexpected happening at all.</p>";
+          } else if (q.walk - total <= Math.max(10, q.walk * 0.05)){
+            out += "<p class=\"para\">Your quote of <b>" + eur(quote) + "</b> is " + eur(q.walk - quote) +
+              " under that line, but the likely total of <b>" + eur(total) + "</b> all but touches it. There is no room in this one: anything found once the machine is open takes you straight past it.</p>";
+          } else {
+            out += "<p class=\"para\">Nothing here is telling you to stop. Your quote of <b>" + eur(quote) + "</b> is " + eur(q.walk - quote) +
+              " under that line, and even the likely total of <b>" + eur(total) + "</b> stays " + eur(q.walk - total) +
+              " under it. The figure is for one moment only: the phone call from behind the machine, when the engineer has found something else and is asking whether to carry on.</p>";
+          }
+          out += "<p class=\"caveat\"><b>This is not an estimate of what the repair should cost.</b> It is not a fair price, not a target, and not a figure to quote back at the engineer. It is the point past which, in these records, the money stopped buying a working machine.</p>";
+        } else {
+          out += "<p class=\"para\">These records give no walk&ndash;away figure. " + (q.scrap.length ? "Only " + q.scrap.length + " of the " + q.n : "None of the " + q.n) +
+            " matching " + plural(q.n, "machine", "machines") + " " + plural(q.scrap.length, "was", "were") + " written off within the year, which is too few to take a figure from.</p>" +
+            "<p class=\"caveat\">A stop&ndash;loss invented from " + (q.scrap.length || "no") + " " + plural(q.scrap.length, "case", "cases") + " would be worse than none, so there is not one here. Agree a call&ndash;back with the engineer before the total goes past what you would have spent knowingly.</p>";
+        }
+        out += "</div>";
+      }
+
+      /* two-year reading */
+      if ($("moving").checked){
+        out += "<div class=\"block\"><span class=\"lbl\">You need two years, not the full run</span>";
+        if (q.seen24.length === 0){
+          out += "<p class=\"para\">None of these " + q.n + " jobs has been on the books long enough to tell you whether repairs like this go two years. The records are younger than your question.</p>";
+        } else {
+          out += "<p class=\"para\">Of these " + q.n + " jobs, <b>" + q.seen24.length + "</b> " + plural(q.seen24.length, "has", "have") +
+            " been on the books long enough to know, and <b>" + q.made24.length + " of those " + q.seen24.length + "</b> went two years without this fault again.</p>" +
+            "<p class=\"caveat\">Counted, not projected. The other " + (q.n - q.seen24.length) + " are still too recent to say either way, and are not quietly counted as successes.</p>";
+        }
+        out += "</div>";
+      }
+
+      out += energy();
+      out += ledger(q.jobs, false, "The " + q.n + " jobs this reading is built from");
+    }
+
+    $("reading").innerHTML = out;
+    wireDots();
+  }
+
+  /* ================= dot tooltip ================= */
+  var tip = $("tip");
+  function showTip(el){
+    var parts = (el.getAttribute("data-t") || "").split("|");
+    tip.innerHTML = "<b>" + esc(parts[0]) + "</b>" + (parts[1] ? "<br>" + esc(parts[1]) : "");
+    tip.hidden = false;
+    var r = el.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var left = r.left + r.width / 2 - t.width / 2;
+    left = Math.max(8, Math.min(window.innerWidth - t.width - 8, left));
+    var top = r.top - t.height - 9;
+    if (top < 8) top = r.bottom + 9;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip(){ tip.hidden = true; }
+  function wireDots(){
+    Array.prototype.forEach.call(document.querySelectorAll(".dot"), function(d){
+      d.addEventListener("mouseenter", function(){ showTip(d); });
+      d.addEventListener("mouseleave", hideTip);
+      d.addEventListener("focus", function(){ showTip(d); });
+      d.addEventListener("blur", hideTip);
+    });
+  }
+  document.addEventListener("scroll", hideTip, true);
+
+  /* ================= wiring ================= */
+  var sel = $("fault");
+  FAULTS.forEach(function(f){
+    var o = document.createElement("option");
+    o.value = f.k; o.textContent = f.n;
+    sel.appendChild(o);
+  });
+  sel.value = "bearing";
+
+  ["make","age","fault","quote","newp","ruleHi","ruleLo","moving","kwh"].forEach(function(id){
+    $(id).addEventListener("input", render);
+    $(id).addEventListener("change", render);
+  });
+
+  $("recBtn").addEventListener("click", function(){
+    if (JOBS){
+      JOBS = null;
+      $("recBar").classList.remove("on");
+      $("recBtn").textContent = "Load the demonstration records";
+      $("recTxt").innerHTML = "<b>No records loaded.</b> The tool starts empty, because that is the honest starting state. Nothing below is computed until there is something to compute from.";
+    } else {
+      JOBS = build();
+      paintBar();
+    }
+    render();
+  });
+
+  function paintBar(){
+    if (!JOBS) return;
+    var machines = JOBS.length;
+    var visits = JOBS.reduce(function(a, j){ return a + 1 + (j.same ? 1 : 0) + (j.diff ? 1 : 0); }, 0);
+    var follow = JOBS.filter(function(j){ return j.diff || j.same; }).length;
+    var mine = JOBS.filter(function(j){ return j.mine; }).length;
+    $("recBar").classList.add("on");
+    $("recBtn").textContent = "Unload them";
+    $("recTxt").innerHTML = "<b>" + machines + " machines, " + visits + " visits</b> \u2014 " + follow +
+      " of those machines came back at least once. Ashfold Domestic Repairs, one town, invented for this demonstration. Three makes, five faults, washing machines only." +
+      (mine ? " <b>" + mine + " row" + (mine === 1 ? "" : "s") + " added by you this session.</b>" : "");
+  }
+
+  /* ================= close the loop ================= */
+  (function(){
+    var choice = null, added = false;
+    var cFinal = $("cFinal"), cAct = $("cAct"), cDone = $("cDone");
+
+    function say(html){ cDone.hidden = false; cDone.innerHTML = html; }
+
+    function rowBox(id, outcome, cost, note){
+      var age = parseInt($("age").value, 10);
+      var fn = (F[$("fault").value] || {}).n || "";
+      return "<div class=\"newrow\"><span class=\"k\">New row in the book</span>" +
+        esc(id) + " \u00B7 " + esc($("make").value) + " \u00B7 " + (isFinite(age) ? age + " yr" : "age not given") +
+        " \u00B7 " + esc(fn.toLowerCase()) + " \u00B7 " + esc(outcome) +
+        (cost !== null ? " \u00B7 " + eur(cost) + " \u00B7 observed 0 months" : "") + "</div>" +
+        "<p class=\"para\">" + note + "</p>";
+    }
+
+    function storedNowhere(){
+      return "<p class=\"para\"><b>And in this demonstration it is stored nowhere.</b> Not on a server, not in your browser, not in a file. It is sitting in this page\u2019s memory and nowhere else. Reload and it is gone, along with the other " +
+        (JOBS ? JOBS.length - 1 : 0) + " rows, because the whole book is invented and built again from scratch every time the page opens. What you just watched is the mechanism, drawn honestly, running on nothing.</p>";
+    }
+
+    function moved(b, a){
+      if (a.state === "ok" && b.state === "ok"){
+        return "Straight into the cost column. This cell read " + eur(b.costLo) + "\u2013" + eur(b.costHi) + ", median " + eur(b.costMed) +
+          ", across " + b.n + " jobs. It now reads " + eur(a.costLo) + "\u2013" + eur(a.costHi) + ", median " + eur(a.costMed) +
+          ", across " + a.n + ". That is the next person\u2019s answer, moved by you.";
+      }
+      if (a.state === "ok" && b.state === "thin"){
+        return "That cell held " + b.n + " jobs and could not answer. It holds " + a.n + " now, which is enough. The next person asking about this exact machine gets a reading where you got a refusal.";
+      }
+      if (a.state === "thin"){
+        return "That cell holds " + a.n + " jobs now, still under the eight it needs. Your row is in the book. It is not enough on its own, and the tool will not pretend otherwise.";
+      }
+      return "The row is in the book.";
+    }
+
+    function pick(v){
+      if (added) return;
+      choice = v;
+      Array.prototype.forEach.call(document.querySelectorAll(".choices button"), function(b){
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-c") === v));
+      });
+      cFinal.hidden = (v !== "repaired");
+      cAct.hidden = (v === "deciding");
+      if (v === "deciding"){
+        say("<p class=\"para\">Then there is nothing worth adding yet. A row that says \u201cnot sure\u201d is worth nothing to the next person, and the book is better without it. Come back when something has actually happened.</p>");
+      } else {
+        cDone.hidden = true; cDone.innerHTML = "";
+      }
+      if (v === "repaired") $("cCost").focus();
+    }
+
+    function submit(){
+      if (added || !choice || choice === "deciding") return;
+      if (choice === "replaced"){
+        added = true; cAct.hidden = true;
+        say(rowBox(JOBS ? "Q" + (1000 + JOBS.length + 1) : "Q\u2014", "quote not taken", null,
+          "You did not have it repaired, so there is no repair to put a price on. The book records the decision and stops there: it has no figure to add to the cost range, and inventing one to fill the column would be the exact thing this tool refuses to do.") + storedNowhere());
+        return;
+      }
+      var cost = num("cCost");
+      if (cost === null){
+        say("<p class=\"para\">Put the final figure in first. The row is only worth having with the number on it.</p>");
+        $("cCost").focus();
+        return;
+      }
+      if (!JOBS){
+        added = true; cAct.hidden = true;
+        say(rowBox("J\u2014", "repaired", cost,
+          "There is no book loaded to put it in. Load the records and this same row would join them \u2014 which is the point: with nothing loaded, there is nothing for your answer to improve.") + storedNowhere());
+        return;
+      }
+      var age = parseInt($("age").value, 10);
+      var before = query();
+      var job = {
+        id: "J" + (1000 + JOBS.length + 1), make: $("make").value, fault: $("fault").value,
+        age: isFinite(age) ? age : 0, band: bandOf(isFinite(age) ? age : 0).k,
+        work: "Repaired \u2014 reported by the owner", cost: Math.round(cost),
+        obs: 0, same: null, diff: null, scrap: null, mine: true
+      };
+      JOBS.push(job);
+      var after = query();
+      added = true; cAct.hidden = true;
+      say(rowBox(job.id, "repaired", cost, moved(before, after)) + storedNowhere());
+      paintBar();
+      render();
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll(".choices button"), function(b){
+      b.addEventListener("click", function(){ pick(b.getAttribute("data-c")); });
+    });
+    $("cAdd").addEventListener("click", submit);
+  })();
+
+  /* safety gate */
+  function openGate(){
+    $("gate").hidden = false;
+    $("gateAsk").hidden = false;
+    $("stop").hidden = true;
+    $("gateH").textContent = "Is the machine doing any of these?";
+    document.documentElement.style.overflow = "hidden";
+  }
+  $("gateNo").addEventListener("click", function(){
+    $("gate").hidden = true;
+    $("app").hidden = false;
+    document.documentElement.style.overflow = "";
+    render();
+  });
+  $("gateYes").addEventListener("click", function(){
+    $("gateAsk").hidden = true;
+    $("stop").hidden = false;
+    $("gateH").textContent = "Then it is not a money question.";
+    window.scrollTo(0, 0);
+  });
+  $("gateBack").addEventListener("click", function(){
+    $("gateAsk").hidden = false;
+    $("stop").hidden = true;
+    $("gateH").textContent = "Is the machine doing any of these?";
+    window.scrollTo(0, 0);
+  });
+  $("reGate").addEventListener("click", openGate);
+
+  document.documentElement.style.overflow = "hidden";
+  render();
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repair or replace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+/* ===================================================================
+   design-system.md, implemented as plain custom properties.
+   Colours are raw HSL triplets so they compose with hsl(var(--x) / a).
+   Never hardcode a colour below this block: use the semantic tokens.
+   =================================================================== */
+:root{
+  /* --- surfaces and ink ------------------------------------------ */
+  --bg:40 20% 98%;
+  --surface:0 0% 100%;
+  --surface-sunken:40 16% 96%;
+  --fg:220 26% 14%;
+  --fg-muted:220 12% 42%;
+  --fg-subtle:220 10% 58%;
+  --border:220 14% 88%;
+  --border-strong:220 14% 76%;
+
+  /* --- interaction, and nothing else ----------------------------- */
+  --accent:212 84% 42%;
+  --accent-weak:212 84% 96%;
+
+  /* --- position against the reader own rule ---------------------- */
+  --below-line:158 52% 34%;  --below-line-weak:158 40% 95%;
+  --near-line:36 84% 42%;    --near-line-weak:36 80% 95%;
+  --above-line:356 62% 46%;  --above-line-weak:356 60% 96%;
+
+  /* --- states ----------------------------------------------------- */
+  --caution:16 74% 44%;
+  --unknown:220 10% 58%;     --unknown-weak:220 12% 95%;
+
+  /* --- type -------------------------------------------------------- */
+  --font-display:"Source Serif 4","Iowan Old Style",Georgia,"Times New Roman",serif;
+  --font-body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --text-display:2.25rem; --lh-display:1.15;
+  --text-h1:1.75rem;      --lh-h1:1.2;
+  --text-h2:1.25rem;      --lh-h2:1.3;
+  --text-h3:1.0625rem;    --lh-h3:1.4;
+  --text-body:1rem;       --lh-body:1.6;
+  --text-sm:.875rem;      --lh-sm:1.5;
+  --text-xs:.8125rem;     --lh-xs:1.45;
+
+  /* --- space, radius, elevation, motion ---------------------------- */
+  --space-1:4px;  --space-2:8px;  --space-3:12px;  --space-4:16px;
+  --space-5:20px; --space-6:24px; --space-7:32px;  --space-8:40px;
+  --space-9:48px; --space-10:64px;--space-11:80px; --space-12:96px;
+
+  --radius-sm:4px; --radius:8px; --radius-lg:14px; --radius-full:999px;
+
+  --shadow-sm:0 1px 2px hsl(220 26% 14% / .06), 0 1px 1px hsl(220 26% 14% / .04);
+  --shadow:0 4px 12px hsl(220 26% 14% / .08), 0 1px 3px hsl(220 26% 14% / .05);
+
+  --ease:cubic-bezier(.2,0,.15,1);
+  --dur-fast:120ms; --dur:200ms;
+}
+
+/* Dark. Only the changed tokens. Elevation goes to zero: on a dark ground
+   a shadow reads as a smudge, so a lighter surface and the hairline carry
+   the separation instead. */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:220 22% 10%;
+    --surface:220 20% 13%;
+    --surface-sunken:220 22% 9%;
+    --fg:40 20% 94%;
+    --fg-muted:220 10% 68%;
+    --fg-subtle:220 8% 52%;
+    --border:220 14% 22%;
+    --border-strong:220 14% 32%;
+    --accent:212 88% 64%;
+    --accent-weak:212 60% 18%;
+    --below-line:158 46% 52%;  --below-line-weak:158 40% 15%;
+    --near-line:36 76% 58%;    --near-line-weak:36 50% 16%;
+    --above-line:356 66% 62%;  --above-line-weak:356 45% 17%;
+    --caution:16 76% 58%;
+    --unknown:220 8% 56%;      --unknown-weak:220 12% 17%;
+    --shadow-sm:none; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:220 22% 10%;
+  --surface:220 20% 13%;
+  --surface-sunken:220 22% 9%;
+  --fg:40 20% 94%;
+  --fg-muted:220 10% 68%;
+  --fg-subtle:220 8% 52%;
+  --border:220 14% 22%;
+  --border-strong:220 14% 32%;
+  --accent:212 88% 64%;
+  --accent-weak:212 60% 18%;
+  --below-line:158 46% 52%;  --below-line-weak:158 40% 15%;
+  --near-line:36 76% 58%;    --near-line-weak:36 50% 16%;
+  --above-line:356 66% 62%;  --above-line-weak:356 45% 17%;
+  --caution:16 76% 58%;
+  --unknown:220 8% 56%;      --unknown-weak:220 12% 17%;
+  --shadow-sm:none; --shadow:none;
+}
+
+/* ===================================================================
+   BASE
+   =================================================================== */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:hsl(var(--bg));
+  color:hsl(var(--fg));
+  font-family:var(--font-body);
+  font-size:var(--text-body); line-height:var(--lh-body); font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:600}
+button{font-family:inherit;color:inherit}
+.tnum{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* --- type scale --------------------------------------------------- */
+.text-h1{font-family:var(--font-display);font-optical-sizing:auto;font-size:var(--text-h1);line-height:var(--lh-h1);font-weight:600;letter-spacing:-.008em}
+.text-h2{font-family:var(--font-display);font-optical-sizing:auto;font-size:var(--text-h2);line-height:var(--lh-h2);font-weight:600;letter-spacing:-.005em}
+.text-h3{font-size:var(--text-h3);line-height:var(--lh-h3);font-weight:600}
+.text-h4{font-size:var(--text-h3);line-height:var(--lh-h3);font-weight:600}
+.text-body-lg{font-size:var(--text-body);line-height:var(--lh-body);font-weight:400}
+.text-body{font-size:var(--text-body);line-height:var(--lh-body);font-weight:400}
+.text-caption{font-size:var(--text-xs);line-height:var(--lh-xs);font-weight:400}
+.text-overline{font-size:var(--text-xs);line-height:1.2;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+.muted{color:hsl(var(--fg-muted))}
+
+/* Measure. Running text stays inside 62-70 characters; on a decision
+   screen, narrower. Figures, tables and the gauge are exempt. */
+.measure{max-width:42rem;margin:0 auto}
+.lede,.hint,.sub,.claim,.card-description,.icap,.note,.callout,
+.page>p,ul.plain li,.step>p,.alert p,.field .helper{max-width:66ch}
+
+/* --- layout -------------------------------------------------------- */
+.container{max-width:72rem;margin:0 auto;padding:0 var(--space-5)}
+@media(min-width:640px){.container{padding:0 var(--space-7)}}
+
+/* Motion is for state changes the reader caused. Nothing animates on
+   arrival, and no number counts up: a figure that animates into place
+   looks like a performance rather than a measurement. */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* ===================================================================
+   SourceStrip: what the tool is currently running on. Not dismissible.
+   The demonstration state is set in ink, at full contrast, because a
+   screenshot outlives its caption. The empty state is --unknown, which
+   is what it actually is: nothing to place anything against.
+   =================================================================== */
+.sourcebar{
+  background:hsl(var(--fg));color:hsl(var(--bg));
+  position:relative;z-index:5;
+}
+.sourcebar.is-real{background:hsl(var(--unknown-weak));color:hsl(var(--fg));border-bottom:1px solid hsl(var(--border))}
+.sourcebar .container{display:flex;gap:var(--space-3);align-items:center;padding-top:var(--space-2);padding-bottom:var(--space-2);flex-wrap:wrap}
+.sourcebar .dot{width:.5rem;height:.5rem;border-radius:var(--radius-full);background:currentColor;flex:none}
+.sourcebar .name{font-weight:600;flex:none;font-size:var(--text-xs)}
+.sourcebar .what{flex:1 1 19rem;min-width:0;font-size:var(--text-xs);line-height:var(--lh-xs);opacity:.85}
+.sourcebar .link{color:currentColor;min-height:44px;display:inline-flex;align-items:center}
+
+.link{
+  background:none;border:0;padding:0;font:inherit;color:hsl(var(--accent));
+  text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;
+  cursor:pointer;border-radius:var(--radius-sm);font-weight:500;
+  transition:color var(--dur-fast) var(--ease);
+}
+.link:hover{color:hsl(var(--fg))}
+:focus-visible{outline:2px solid hsl(var(--accent));outline-offset:2px;border-radius:var(--radius-sm)}
+
+/* StepRail: position in a sequence, and how many remain. */
+.steprail{
+  position:sticky;top:0;z-index:4;background:hsl(var(--bg) / .94);
+  backdrop-filter:saturate(1.3) blur(8px);border-bottom:1px solid hsl(var(--border));
+}
+.steprail.hide{display:none}
+.steprail .container{display:flex;gap:var(--space-1);align-items:center;padding-top:var(--space-3);padding-bottom:var(--space-3)}
+.steprail .seg{flex:1;height:3px;border-radius:var(--radius-full);background:hsl(var(--border));transition:background var(--dur) var(--ease)}
+.steprail .seg.done{background:hsl(var(--fg-muted))}
+.steprail .seg.now{background:hsl(var(--accent))}
+.steprail .step-label{flex:none;margin-left:var(--space-3);color:hsl(var(--fg-muted))}
+
+/* ===================================================================
+   MASTHEAD
+   =================================================================== */
+.masthead{padding:var(--space-9) 0 var(--space-2)}
+.masthead .eyebrow{color:hsl(var(--fg-muted));margin-bottom:var(--space-3)}
+.masthead .lede{margin-top:var(--space-3);color:hsl(var(--fg-muted))}
+.masthead.compact{padding:var(--space-6) 0 0}
+.masthead.compact h1{font-size:var(--text-h2);line-height:var(--lh-h2)}
+.masthead.compact .lede{display:none}
+.masthead.compact .eyebrow{margin-bottom:var(--space-1)}
+
+/* ===================================================================
+   STEPS
+   =================================================================== */
+.step,.page{display:none}
+.step.on,.page.on{display:block}
+.step{padding:var(--space-7) 0 var(--space-9)}
+.step .eyebrow{color:hsl(var(--fg-muted));margin-bottom:var(--space-3)}
+.step h2{margin-bottom:var(--space-2)}
+.step .hint{color:hsl(var(--fg-muted));margin-bottom:var(--space-6)}
+
+/* Choice: equal visual weight across every option in a set. */
+.choices{display:grid;gap:var(--space-2);margin-bottom:var(--space-6)}
+.choice{
+  display:flex;gap:var(--space-3);align-items:flex-start;min-height:44px;
+  background:hsl(var(--surface));border:1px solid hsl(var(--border));border-radius:var(--radius);
+  padding:var(--space-3) var(--space-4);cursor:pointer;
+  transition:border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.choice:hover{border-color:hsl(var(--border-strong))}
+.choice input{
+  appearance:none;-webkit-appearance:none;flex:none;margin:.2rem 0 0;
+  width:1.15rem;height:1.15rem;border:1.5px solid hsl(var(--border-strong));
+  background:hsl(var(--surface));cursor:pointer;
+  transition:border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.choice input[type=radio]{border-radius:var(--radius-full)}
+.choice input[type=checkbox]{border-radius:var(--radius-sm)}
+.choice input:checked{border-color:hsl(var(--accent));background:hsl(var(--accent))}
+.choice input[type=radio]:checked{box-shadow:inset 0 0 0 3.5px hsl(var(--surface))}
+.choice input[type=checkbox]:checked{box-shadow:inset 0 0 0 3px hsl(var(--surface))}
+.choice .t{display:block;font-weight:500;line-height:var(--lh-h3)}
+.choice .d{display:block;color:hsl(var(--fg-muted));margin-top:.1rem}
+.choice:has(input:checked){border-color:hsl(var(--accent));background:hsl(var(--accent-weak))}
+
+/* FormField: an optional field says so in the label, never in a tooltip. */
+.field{display:block;margin-bottom:var(--space-5)}
+.field .label{display:block;font-weight:600;font-size:var(--text-sm);margin-bottom:.1rem}
+.field .optional{font-weight:400;color:hsl(var(--fg-muted))}
+.field .helper{display:block;color:hsl(var(--fg-muted));font-size:var(--text-xs);line-height:var(--lh-xs);margin-bottom:var(--space-2)}
+input[type=text],input[type=number],select{
+  width:100%;padding:0 var(--space-3);font:inherit;color:hsl(var(--fg));
+  background:hsl(var(--surface));border:1px solid hsl(var(--border-strong));border-radius:var(--radius);
+  height:2.75rem;
+  transition:border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+select{
+  appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:var(--space-8);
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 1.15rem) 1.25rem,calc(100% - .8rem) 1.25rem;
+  background-size:.35rem .35rem,.35rem .35rem;background-repeat:no-repeat;
+}
+input:focus,select:focus{outline:none;border-color:hsl(var(--accent));box-shadow:0 0 0 3px hsl(var(--accent) / .16)}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.money{position:relative;display:block}
+.money input{padding-left:1.75rem}
+.money::before{content:"\20AC";position:absolute;left:var(--space-3);top:.7rem;color:hsl(var(--fg-muted));pointer-events:none}
+.pcbox{display:flex;gap:var(--space-2);align-items:center}
+.pcbox input{max-width:5.5rem;text-align:center;font-weight:500}
+.pcbox span{color:hsl(var(--fg-muted));font-size:var(--text-sm)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5)}
+@media(max-width:580px){.grid2{grid-template-columns:1fr;gap:0}}
+
+/* Button: one primary per screen. */
+.actions{display:flex;gap:var(--space-4);align-items:center;margin-top:var(--space-2);flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:2.75rem;padding:0 var(--space-5);border-radius:var(--radius);cursor:pointer;
+  font-weight:500;font-size:var(--text-body);border:1px solid transparent;
+  background:hsl(var(--accent));color:hsl(0 0% 100%);
+  transition:background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.btn:hover{background:hsl(var(--accent) / .88)}
+:root[data-theme="dark"] .btn{color:hsl(var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:hsl(var(--bg))}}
+.btn-lg{min-height:3rem;padding:0 var(--space-6)}
+.btn-outline{background:transparent;color:hsl(var(--fg));border-color:hsl(var(--border-strong))}
+.btn-outline:hover{background:hsl(var(--surface-sunken));border-color:hsl(var(--fg-muted))}
+.btn-ghost{background:transparent;color:hsl(var(--fg-muted))}
+.btn-ghost:hover{background:hsl(var(--surface-sunken));color:hsl(var(--fg))}
+.error{color:hsl(var(--caution));font-size:var(--text-sm);margin-top:var(--space-3);font-weight:500}
+.error:empty{display:none}
+
+/* ===================================================================
+   Card: one idea per card.
+   =================================================================== */
+.card{
+  background:hsl(var(--surface));border:1px solid hsl(var(--border));border-radius:var(--radius);
+  padding:var(--space-5);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);
+}
+@media(min-width:640px){.card{padding:var(--space-6)}}
+.card-title{margin-bottom:var(--space-1)}
+.card-description{color:hsl(var(--fg-muted));margin-bottom:var(--space-4)}
+.card-feature{border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+.card-quiet{background:transparent;box-shadow:none;border-style:dashed}
+/* The card carrying the figure the reader cannot work out alone. Marked
+   by weight and elevation, not by colour: a coloured frame around a risk
+   figure tells the reader what to feel about it. */
+.card-lead{border-color:hsl(var(--border-strong));box-shadow:var(--shadow)}
+/* Too little evidence to place. --unknown is a deliberate state here,
+   not a disabled one. */
+.card-unknown{border-color:hsl(var(--unknown) / .55);background:hsl(var(--unknown-weak))}
+
+.section-head{display:flex;align-items:center;gap:var(--space-3);margin:var(--space-8) 0 var(--space-4)}
+.section-head .n{font-family:var(--font-mono);color:hsl(var(--fg-subtle));flex:none;font-size:var(--text-xs);font-weight:500}
+.section-head h3{flex:none;color:hsl(var(--fg-muted))}
+.section-head .rule{flex:1;height:1px;background:hsl(var(--border))}
+
+/* ===================================================================
+   VERDICT
+   The card is neutral. A single rule along the top carries the position
+   token, because the one thing it states is which side of the reader
+   own line this fell on. Repair and replace get identical weight.
+   =================================================================== */
+.verdict{
+  border-radius:var(--radius-lg);padding:var(--space-7) var(--space-5) var(--space-6);margin-bottom:var(--space-2);
+  border:1px solid hsl(var(--border));background:hsl(var(--surface));
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+@media(min-width:640px){.verdict{padding:var(--space-7) var(--space-7) var(--space-6)}}
+.verdict::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:hsl(var(--border-strong))}
+.verdict.is-repair::before{background:hsl(var(--below-line))}
+.verdict.is-replace::before{background:hsl(var(--above-line))}
+.verdict.is-judgement::before{background:hsl(var(--near-line))}
+.verdict .eyebrow{color:hsl(var(--fg-muted));margin-bottom:var(--space-3)}
+.verdict h2{margin-bottom:var(--space-2)}
+.verdict .sub{color:hsl(var(--fg-muted))}
+
+/* Badge: the text must stand alone without the colour. */
+.badge{
+  display:inline-flex;align-items:center;gap:var(--space-1);font-size:var(--text-xs);font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;border-radius:var(--radius-sm);padding:.3rem .55rem;
+  border:1px solid transparent;line-height:1.2;
+}
+/* Provenance stamp. Solid ink, full contrast, no borrowed semantics:
+   it has to survive being screenshotted. */
+.badge-stamp{background:hsl(var(--fg));color:hsl(var(--bg))}
+.badge-unknown{background:hsl(var(--unknown-weak));color:hsl(var(--fg-muted));border-color:hsl(var(--unknown) / .4)}
+
+/* ===================================================================
+   ThresholdMarker: where a value falls against the reader own rule.
+   The only place the three position tokens appear at full strength.
+   Every zone is labelled in words as well as colour.
+   =================================================================== */
+.gap-indicator{margin:var(--space-6) 0 var(--space-1);position:relative;height:7.4rem}
+.gap-indicator.single{height:4.6rem}
+.gap-indicator .track{
+  position:absolute;top:3.1rem;left:0;right:0;height:1.15rem;border-radius:var(--radius-full);
+  display:flex;overflow:hidden;border:1px solid hsl(var(--border));
+}
+.gap-indicator .track i{display:block;height:100%}
+.gap-indicator .z1{background:hsl(var(--below-line) / .20)}
+.gap-indicator .z2{background:hsl(var(--near-line) / .20)}
+.gap-indicator .z3{background:hsl(var(--above-line) / .18)}
+.gap-indicator .shift{
+  position:absolute;top:3.1rem;height:1.15rem;
+  background:repeating-linear-gradient(115deg,transparent 0 4px,hsl(var(--fg) / .34) 4px 5px);
+}
+.gap-indicator .pin{position:absolute;width:2px;background:hsl(var(--fg));border-radius:1px;transform:translateX(-50%)}
+.gap-indicator .dot{
+  position:absolute;width:.9rem;height:.9rem;border-radius:var(--radius-full);transform:translateX(-50%);
+  border:3px solid hsl(var(--fg));background:hsl(var(--surface));top:3.22rem;
+}
+.gap-indicator .dot.solid{background:hsl(var(--fg))}
+.gap-indicator .plab{
+  position:absolute;transform:translateX(-50%);white-space:nowrap;
+  font-size:var(--text-xs);font-weight:500;color:hsl(var(--fg));
+}
+.gap-indicator .plab em{font-style:normal;font-weight:400;color:hsl(var(--fg-muted));font-variant-numeric:tabular-nums}
+.zonekey{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-bottom:var(--space-5)}
+.zonekey .k{
+  font-size:var(--text-xs);font-weight:400;border-radius:var(--radius-sm);padding:.2rem .5rem;
+  border:1px solid hsl(var(--border));color:hsl(var(--fg-muted));
+  display:inline-flex;gap:var(--space-1);align-items:center;
+}
+.zonekey .k::before{content:"";width:.5rem;height:.5rem;border-radius:2px}
+.zonekey .k.below{border-color:hsl(var(--below-line) / .45)} .zonekey .k.below::before{background:hsl(var(--below-line))}
+.zonekey .k.near{border-color:hsl(var(--near-line) / .5)}    .zonekey .k.near::before{background:hsl(var(--near-line))}
+.zonekey .k.above{border-color:hsl(var(--above-line) / .45)} .zonekey .k.above::before{background:hsl(var(--above-line))}
+
+/* Figure rows. */
+.row{display:flex;justify-content:space-between;gap:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid hsl(var(--border));align-items:baseline}
+.row:last-of-type{border-bottom:0}
+.row .k{color:hsl(var(--fg-muted))}
+.row .v{font-weight:500;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+/* Both verdict rows carry .emph, so the quote and the quote-plus-what-follows
+   stay at identical weight. Asymmetry here would be a thumb on the scale. */
+.row.emph{padding:var(--space-4) 0}
+.row.emph .v{font-size:var(--text-h3)}
+@media(max-width:430px){.row{flex-direction:column;gap:.1rem}.row .v{text-align:left}}
+
+/* Callout. Variants: note (default), unknown, caution. There is no
+   success variant in this system and there is none here. */
+.callout{
+  margin-top:var(--space-5);padding:var(--space-4);border-radius:var(--radius);
+  background:hsl(var(--surface-sunken));border:1px solid hsl(var(--border));
+  color:hsl(var(--fg));
+}
+/* The divergence notice. Emphasis by an ink rule, not by a colour that
+   would tell the reader which way to jump. */
+.callout-mark{border-left:3px solid hsl(var(--fg));border-radius:0 var(--radius) var(--radius) 0}
+.callout-unknown{background:hsl(var(--unknown-weak));border-color:hsl(var(--unknown) / .4)}
+.callout-caution{background:hsl(var(--caution) / .08);border-color:hsl(var(--caution) / .4)}
+.note{color:hsl(var(--fg-muted));margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid hsl(var(--border))}
+
+/* ===================================================================
+   FigureBlock: a number, and what it rests on, in the same unit.
+   The unit chart and the interval are not decoration around the figure,
+   they are the basis the system says a figure may never appear without.
+   Both charts are set in ink. Filling one green and one red would be
+   colour doing the persuading: these are counts, not verdicts.
+   =================================================================== */
+.figure{font-family:var(--font-display);font-optical-sizing:auto;font-size:var(--text-display);font-weight:400;line-height:var(--lh-display);margin-bottom:var(--space-2);font-variant-numeric:tabular-nums}
+.figure small{font-size:.5em;font-weight:400;color:hsl(var(--fg-muted))}
+.claim{font-size:var(--text-body);line-height:var(--lh-body);color:hsl(var(--fg-muted));margin-bottom:var(--space-5)}
+.units{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:var(--space-4)}
+.units b{width:.9rem;height:.9rem;border-radius:2px;border:1.5px solid hsl(var(--border-strong));background:transparent;display:block}
+.units b.on{border-color:hsl(var(--fg));background:hsl(var(--fg))}
+.score-bar{position:relative;height:.4rem;border-radius:var(--radius-full);background:hsl(var(--surface-sunken));border:1px solid hsl(var(--border));overflow:hidden}
+.score-bar i{position:absolute;top:0;bottom:0;border-radius:var(--radius-full);background:hsl(var(--fg-muted) / .3)}
+.score-bar u{position:absolute;top:-2px;bottom:-2px;width:2.5px;background:hsl(var(--fg));border-radius:2px}
+.scale-ends{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:var(--text-xs);color:hsl(var(--fg-subtle));margin-top:.3rem}
+.icap{color:hsl(var(--fg-muted));margin-top:var(--space-3)}
+
+/* ===================================================================
+   EvidenceTable: rows that cannot answer the question are shown and
+   marked, never dropped.
+   =================================================================== */
+details{margin-top:var(--space-5);border-top:1px solid hsl(var(--border));padding-top:var(--space-4)}
+summary{
+  cursor:pointer;font-weight:500;font-size:var(--text-body);color:hsl(var(--accent));
+  list-style:none;display:flex;align-items:center;gap:var(--space-2);min-height:44px;
+}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"";width:0;height:0;border:5px solid transparent;border-left-color:currentColor;transition:transform var(--dur) var(--ease);flex:none}
+details[open] summary::before{transform:rotate(90deg)}
+.scroll{overflow-x:auto;margin-top:var(--space-2);border:1px solid hsl(var(--border));border-radius:var(--radius)}
+table{width:100%;border-collapse:collapse;font-size:var(--text-xs);min-width:41rem}
+th,td{text-align:left;padding:var(--space-2) var(--space-3);border-bottom:1px solid hsl(var(--border));vertical-align:top}
+thead th{
+  font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.07em;
+  color:hsl(var(--fg-muted));font-weight:600;background:hsl(var(--surface-sunken));
+}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:hsl(var(--surface-sunken) / .7)}
+td.n{font-family:var(--font-mono);white-space:nowrap;color:hsl(var(--fg-muted));font-variant-numeric:tabular-nums}
+/* What came back through the door is a record, not a score. The tags
+   carry their meaning in words and stay out of the position palette. */
+.tag{
+  display:inline-block;font-size:var(--text-xs);font-weight:400;padding:.1rem .45rem;border-radius:var(--radius-sm);
+  background:hsl(var(--surface-sunken));color:hsl(var(--fg-muted));white-space:nowrap;border:1px solid hsl(var(--border));
+}
+.tag-event{color:hsl(var(--fg));border-color:hsl(var(--border-strong));font-weight:500}
+.tag-unknown{background:hsl(var(--unknown-weak));color:hsl(var(--fg-muted));border-color:hsl(var(--unknown) / .4);font-style:italic}
+
+/* ===================================================================
+   Callout, caution variant at full size: the safety exit.
+   =================================================================== */
+.alert{
+  border-radius:var(--radius-lg);border:1px solid hsl(var(--caution) / .45);
+  background:hsl(var(--caution) / .07);padding:var(--space-7) var(--space-5);
+  box-shadow:var(--shadow);margin-bottom:var(--space-4);
+}
+@media(min-width:640px){.alert{padding:var(--space-7)}}
+.alert .mark{
+  width:2.5rem;height:2.5rem;border-radius:var(--radius-full);background:hsl(var(--caution));color:hsl(0 0% 100%);
+  display:flex;align-items:center;justify-content:center;font-size:1.35rem;font-weight:600;
+  margin-bottom:var(--space-4);line-height:1;
+}
+.alert h2{margin-bottom:var(--space-3)}
+.alert p{margin-bottom:var(--space-3)}
+.alert p:last-child{margin-bottom:0}
+.alert .said{
+  display:inline-block;background:hsl(var(--surface));border:1px solid hsl(var(--caution) / .35);
+  border-radius:var(--radius);padding:var(--space-2) var(--space-3);color:hsl(var(--fg-muted));font-size:var(--text-sm);
+}
+
+/* ===================================================================
+   DECISION
+   =================================================================== */
+.decide{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:var(--space-2);margin-top:var(--space-1)}
+.decide button{
+  text-align:left;background:hsl(var(--surface));border:1px solid hsl(var(--border));border-radius:var(--radius);
+  padding:var(--space-3) var(--space-4);cursor:pointer;font-weight:400;font-size:var(--text-sm);min-height:44px;
+  transition:border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.decide button:hover{border-color:hsl(var(--border-strong));background:hsl(var(--surface-sunken))}
+
+/* ===================================================================
+   PAGES + FOOTER
+   =================================================================== */
+.page{padding:var(--space-7) 0 var(--space-9)}
+.page>h2{margin-bottom:var(--space-3)}
+.page>p{color:hsl(var(--fg-muted));margin-bottom:var(--space-6)}
+ul.plain{padding-left:0;list-style:none;margin:0}
+ul.plain li{position:relative;padding-left:var(--space-5);margin:var(--space-3) 0;color:hsl(var(--fg-muted))}
+ul.plain li::before{content:"";position:absolute;left:.2rem;top:.65rem;width:.3rem;height:.3rem;border-radius:var(--radius-full);background:hsl(var(--fg-subtle))}
+.foot{
+  margin-top:var(--space-9);padding:var(--space-4) 0 var(--space-10);border-top:1px solid hsl(var(--border));
+  display:flex;gap:var(--space-6);flex-wrap:wrap;font-size:var(--text-sm);
+}
+.foot .link{min-height:44px;display:inline-flex;align-items:center}
+</style>
+</head>
+<body>
+
+<div class="sourcebar" id="srcbar">
+  <div class="container">
+    <span class="dot"></span>
+    <span class="name" id="srcName">Demonstration records</span>
+    <p class="what" id="srcText">Invented job history, used so the tool can be tried. No repair business's real records are loaded.</p>
+    <button class="link" id="srcSwitch" type="button">Switch</button>
+  </div>
+</div>
+
+<div class="steprail hide" id="rail">
+  <div class="container">
+    <i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i>
+    <span class="step-label text-overline" id="railLab">Step 1 of 5</span>
+  </div>
+</div>
+
+<div class="container"><div class="measure">
+
+<header class="masthead" id="mast">
+  <p class="eyebrow text-overline">Washing machines</p>
+  <h1 class="text-h1">Repair or replace</h1>
+  <p class="lede text-body-lg">You have a quote in your hand and you have to answer today.</p>
+</header>
+
+<main id="main">
+
+<!-- ============ STEP 0 ============ -->
+<section class="step on" id="s0">
+  <div class="card card-feature">
+    <p class="text-h3" style="margin-bottom:.7rem;font-weight:500">
+      This tells you two things you cannot work out yourself: how long this repair usually holds, and whether something else on the machine tends to go soon after.
+    </p>
+    <p class="text-body-lg muted">
+      Then you tell us your own rule for when a repair stops being worth it, and we show you which side of your line this quote falls on.
+    </p>
+  </div>
+  <div class="card card-quiet">
+    <h3 class="text-h4 card-title">Five questions, about two minutes</h3>
+    <p class="text-body muted" style="margin-top:.4rem">
+      It will not book anyone, will not get you a better price, and will not sell you a new machine. If we do not have enough jobs like yours to answer honestly, it will show you what we do have and leave the decision where it is.
+    </p>
+  </div>
+  <div class="actions" style="margin-top:1.5rem"><button class="btn btn-lg" data-go="1">Start</button></div>
+</section>
+
+<!-- ============ STEP 1 : SAFETY ============ -->
+<section class="step" id="s1">
+  <p class="eyebrow text-overline">Question 1 of 5</p>
+  <h2 class="text-h2">Has the machine done any of these?</h2>
+  <p class="hint text-body-lg">Tick anything that has happened, even once.</p>
+  <div class="choices" id="safetyOpts"></div>
+  <div class="actions">
+    <button class="btn" data-go="2">Continue</button>
+    <button class="btn btn-ghost" data-go="0">Back</button>
+  </div>
+  <p class="error" id="e1"></p>
+</section>
+
+<!-- ============ STEP 2 : MACHINE ============ -->
+<section class="step" id="s2">
+  <p class="eyebrow text-overline">Question 2 of 5</p>
+  <h2 class="text-h2">The machine</h2>
+  <p class="hint text-body-lg">Make and age are on the sticker inside the door, or on the back.</p>
+  <label class="field">
+    <span class="label">Make</span>
+    <span class="helper">We compare like with like. Parts and weak points differ by make.</span>
+    <select id="brand"></select>
+  </label>
+  <div class="grid2">
+    <label class="field">
+      <span class="label">Model line <span class="optional">(if you know it)</span></span>
+      <span class="helper">Used only if we hold enough jobs on your exact model. Otherwise we widen to the make and say so.</span>
+      <select id="model"></select>
+    </label>
+    <label class="field">
+      <span class="label">How old, in years</span>
+      <span class="helper">Your best guess is fine.</span>
+      <input type="number" id="age" min="0" max="30" step="1" inputmode="numeric" placeholder="8">
+    </label>
+  </div>
+  <div class="actions">
+    <button class="btn" data-go="3">Continue</button>
+    <button class="btn btn-ghost" data-go="1">Back</button>
+  </div>
+  <p class="error" id="e2"></p>
+</section>
+
+<!-- ============ STEP 3 : SYMPTOM ============ -->
+<section class="step" id="s3">
+  <p class="eyebrow text-overline">Question 3 of 5</p>
+  <h2 class="text-h2">What does it actually do?</h2>
+  <p class="hint text-body-lg">In your words, not the repairer's. Pick the closest.</p>
+  <div class="choices" id="symptomOpts"></div>
+  <div class="actions">
+    <button class="btn" data-go="4">Continue</button>
+    <button class="btn btn-ghost" data-go="2">Back</button>
+  </div>
+  <p class="error" id="e3"></p>
+</section>
+
+<!-- ============ STEP 4 : DIAGNOSIS + QUOTE ============ -->
+<section class="step" id="s4">
+  <p class="eyebrow text-overline">Question 4 of 5</p>
+  <h2 class="text-h2">What did the repairer say it is?</h2>
+  <p class="hint text-body-lg">Copy what is written on the quote. This is their finding, and we keep it separate from what you told us a moment ago.</p>
+  <div class="choices" id="diagOpts"></div>
+  <div class="grid2">
+    <label class="field">
+      <span class="label">The quote</span>
+      <span class="helper">Parts and labour, the total they gave you.</span>
+      <span class="money"><input type="number" id="quote" min="0" step="1" inputmode="numeric" placeholder="180"></span>
+    </label>
+    <label class="field">
+      <span class="label">A new one like it <span class="optional">(optional)</span></span>
+      <span class="helper">What a like-for-like replacement would cost. We do not look this up: that would mean picking the machine for you.</span>
+      <span class="money"><input type="number" id="newPrice" min="0" step="1" inputmode="numeric" placeholder="520"></span>
+    </label>
+  </div>
+  <div class="actions">
+    <button class="btn" data-go="5">Continue</button>
+    <button class="btn btn-ghost" data-go="3">Back</button>
+  </div>
+  <p class="error" id="e4"></p>
+</section>
+
+<!-- ============ STEP 5 : THE RULE ============ -->
+<section class="step" id="s5">
+  <p class="eyebrow text-overline">Question 5 of 5</p>
+  <h2 class="text-h2">Where is your line?</h2>
+  <p class="hint text-body-lg">Most people have a rough rule even if they have never said it out loud. Change these to yours. We will hold you to your numbers, not ours.</p>
+  <div class="grid2">
+    <label class="field">
+      <span class="label">Replace if it costs more than</span>
+      <span class="helper">As a share of what a new machine costs.</span>
+      <span class="pcbox"><input type="number" id="ruleHigh" min="1" max="100" step="1" value="50"><span>% of new</span></span>
+    </label>
+    <label class="field">
+      <span class="label">Repair if it costs this or less</span>
+      <span class="helper">Anything in between is your judgement call.</span>
+      <span class="pcbox"><input type="number" id="ruleLow" min="0" max="99" step="1" value="25"><span>% of new</span></span>
+    </label>
+  </div>
+  <div id="rulePreview"></div>
+  <div class="actions">
+    <button class="btn btn-lg" id="goAnswer">See the answer</button>
+    <button class="btn btn-ghost" data-go="4">Back</button>
+  </div>
+  <p class="error" id="e5"></p>
+</section>
+
+<!-- ============ STEP 6 : RESULT ============ -->
+<section class="step" id="s6"><div id="result"></div></section>
+
+<!-- ============ PAGES ============ -->
+<section class="page" id="pSources"></section>
+<section class="page" id="pGaps"></section>
+
+</main>
+
+<footer class="foot">
+  <button class="link" data-page="pSources">Where these numbers come from</button>
+  <button class="link" data-page="pGaps">What we could not answer</button>
+  <button class="link" id="restart">Start again</button>
+</footer>
+
+</div></div>
+<script>
+"use strict";
+
+/* =======================================================================
+   1. VOCABULARY
+   Two separate fields, never collapsed: what the machine DOES (the
+   householder's words) and what the repairer SAID IT IS (theirs).
+   ======================================================================= */
+
+const BRANDS = [
+  {id:'kelvane',  name:'Kelvane',  share:.42, models:['K-620','K-840'],   adj:{bearings:+.05, pcb:-.02}},
+  {id:'draycott', name:'Draycott', share:.34, models:['DW7','DW9'],       adj:{seal:+.03, pump:-.03}},
+  {id:'nordhaus', name:'Nordhaus', share:.24, models:['N-1400','N-1600'], adj:{pcb:-.06, heater:+.03}}
+];
+
+const SYMPTOMS = [
+  {id:'spin',  t:'It will not spin', short:'will not spin',         d:'The drum turns slowly, or not at all, at the end of the cycle.'},
+  {id:'leak',  t:'It leaks from the door', short:'leaking from the door',   d:'Water on the floor at the front.'},
+  {id:'stop',  t:'It stops mid-cycle', short:'stops mid-cycle',       d:'It halts part-way through and will not carry on.'},
+  {id:'drain', t:'It will not drain', short:'will not drain',        d:'The cycle ends with the drum still full of water.'},
+  {id:'noise', t:'It is very noisy on spin', short:'very noisy on spin', d:'A rumble, grinding or aircraft noise as it speeds up.'}
+];
+
+const DIAGS = [
+  {id:'brushes', t:'Motor brushes',   lo:90,  hi:150, freq:.15, hold:.90, follow:.14, sym:['spin']},
+  {id:'belt',    t:'Drive belt',      lo:70,  hi:120, freq:.11, hold:.93, follow:.12, sym:['spin','noise']},
+  {id:'seal',    t:'Door seal',       lo:110, hi:180, freq:.14, hold:.88, follow:.13, sym:['leak']},
+  {id:'pump',    t:'Drain pump',      lo:95,  hi:160, freq:.18, hold:.86, follow:.17, sym:['drain','stop']},
+  {id:'bearings',t:'Drum bearings',   lo:200, hi:340, freq:.12, hold:.82, follow:.31, sym:['noise','spin']},
+  {id:'pcb',     t:'Control board',   lo:170, hi:290, freq:.09, hold:.79, follow:.28, sym:['stop','spin']},
+  {id:'heater',  t:'Heating element', lo:100, hi:160, freq:.12, hold:.91, follow:.15, sym:['stop']},
+  {id:'lock',    t:'Door interlock',  lo:85,  hi:140, freq:.09, hold:.92, follow:.11, sym:['stop','drain']}
+];
+
+const SAFETY = [
+  {id:'burn',   t:'A burning smell',                              short:'a burning smell'},
+  {id:'scorch', t:'Scorch marks, or melted plastic',              short:'scorch marks or melted plastic'},
+  {id:'smoke',  t:'Smoke, or sparks',                             short:'smoke or sparks'},
+  {id:'shock',  t:'A shock or a tingle when you touched it',      short:'a shock or a tingle'},
+  {id:'trip',   t:'It tripped the fuse box or the RCD',           short:'tripped the fuse box or the RCD'},
+  {id:'water',  t:'Water reaching the plug, the socket or the cable', short:'water reaching the plug or socket'},
+  {id:'none',   t:'None of these', none:true}
+];
+
+const MIN_SAMPLE = 8;   // below this we show the jobs themselves, not a rate
+const AGE_BAND   = 2;   // years either side
+
+const brandById = id => BRANDS.find(b => b.id === id);
+const diagById  = id => DIAGS.find(d => d.id === id);
+const symById   = id => SYMPTOMS.find(s => s.id === id);
+
+/* =======================================================================
+   2. RECORDS
+   There is no repair business and there are no real job records. The data
+   source the brief rests on does not exist yet, so nothing in here claims
+   to be real. Two sources ship: an invented set, labelled as invented on
+   every screen it reaches, and the true empty set.
+   ======================================================================= */
+
+function mulberry32(a){
+  return function(){
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+
+function makeDemoRecords(seed){
+  const rnd = mulberry32(seed), out = [];
+  const pick  = arr => arr[Math.floor(rnd()*arr.length)];
+  const wpick = (arr, w) => {
+    let r = rnd() * arr.reduce((s,x) => s + w(x), 0);
+    for(const x of arr){ r -= w(x); if(r <= 0) return x; }
+    return arr[arr.length-1];
+  };
+
+  for(let i=0; i<540; i++){
+    const brand = wpick(BRANDS, b => b.share);
+    const model = pick(brand.models);
+    const age   = rnd() < .16 ? pick([3,4,13,14,15]) : 5 + Math.floor(rnd()*8);
+    const diag  = wpick(DIAGS, d => d.freq * ((d.id==='bearings'||d.id==='pcb') ? 1 + (age-7)*.08 : 1));
+
+    const monthsAgo      = 1 + Math.floor(rnd()*34);
+    const monthsObserved = Math.min(monthsAgo, 24);
+
+    // The householder's report is imperfect: usually it lines up with what was
+    // found, sometimes it does not. That is exactly why it is its own field.
+    const symptom = rnd() < .08 ? pick(SYMPTOMS).id : pick(diag.sym);
+
+    const cost   = Math.round((diag.lo + rnd()*(diag.hi-diag.lo))/5)*5;
+    const adj    = brand.adj[diag.id] || 0;
+    const hold   = clamp(diag.hold   - .015*(age-7) + adj,      .45, .98);
+    const follow = clamp(diag.follow + .022*(age-7) - adj*.5,   .03, .70);
+
+    // Declines and advised-againsts are kept. A machine the repairer talked
+    // someone out of is a record, not an absence.
+    const dear      = cost / 480;
+    const pAdvised  = clamp(.03 + dear*.22 + Math.max(0, age-9)*.05, 0, .42);
+    const pDeclined = clamp(.08 + dear*.16, 0, .34);
+    const roll      = rnd();
+    const outcome   = roll < pAdvised ? 'advised' : roll < pAdvised + pDeclined ? 'declined' : 'repaired';
+
+    let sameAgain = null, otherFail = null, otherDiag = null;
+    if(outcome === 'repaired'){
+      if(rnd() > hold){
+        const m = 1 + Math.floor(rnd()*12);
+        if(m <= monthsObserved) sameAgain = m;
+      }
+      if(rnd() < follow){
+        const m = 1 + Math.floor(rnd()*12);
+        if(m <= monthsObserved){ otherFail = m; otherDiag = pick(DIAGS.filter(d => d.id !== diag.id)).id; }
+      }
+    }
+
+    out.push({ id:'J'+(1000+i), brand:brand.id, model, age, symptom, diagnosis:diag.id,
+               cost, monthsAgo, monthsObserved, outcome, sameAgain, otherFail, otherDiag });
+  }
+  return out;
+}
+
+const SOURCES = {
+  demo: {
+    key:'demo', name:'Demonstration records',
+    text:"Invented job history, used so the tool can be tried. No repair business's real records are loaded.",
+    build:() => makeDemoRecords(20260911)
+  },
+  none: {
+    key:'none', name:'No records',
+    text:'The true state today. No repair business has shared its job history, so there is nothing to answer from.',
+    build:() => []
+  }
+};
+
+let SOURCE  = SOURCES[localStorage.getItem('ror.source') === 'none' ? 'none' : 'demo'];
+let RECORDS = SOURCE.build();
+
+/* =======================================================================
+   3. STATISTICS
+   Counts first, then an interval, then one plain word. Never a bare
+   number standing on its own.
+   ======================================================================= */
+
+function wilson(k, n){
+  if(!n) return [0,1];
+  const z = 1.96, p = k/n, d = 1 + z*z/n;
+  const c = (p + z*z/(2*n)) / d;
+  const h = z * Math.sqrt(p*(1-p)/n + z*z/(4*n*n)) / d;
+  return [clamp(c-h, 0, 1), clamp(c+h, 0, 1)];
+}
+function median(a){
+  if(!a.length) return null;
+  const s = [...a].sort((x,y) => x-y), m = s.length >> 1;
+  return s.length % 2 ? s[m] : Math.round((s[m-1] + s[m]) / 2);
+}
+function widthWord(lo, hi){
+  const w = hi - lo;
+  return w <= .20 ? 'a narrow range' : w <= .35 ? 'a wide range' : 'a very wide range';
+}
+
+function stats(jobs){
+  const repaired = jobs.filter(j => j.outcome === 'repaired');
+  const mature   = repaired.filter(j => j.monthsObserved >= 12);  // a young job cannot answer a twelve-month question
+  const held     = mature.filter(j => !j.sameAgain).length;
+  const other    = mature.filter(j => j.otherFail).length;
+  const costs    = repaired.map(j => j.cost);
+
+  // What the follow-on failures cost, taken from the same records rather than assumed.
+  const followCosts = mature.filter(j => j.otherFail).map(j => {
+    const like = RECORDS.filter(x => x.diagnosis === j.otherDiag && x.outcome === 'repaired').map(x => x.cost);
+    return like.length ? median(like) : null;
+  }).filter(v => v != null);
+
+  return {
+    n: jobs.length, nRepaired: repaired.length, nMature: mature.length,
+    advised:  jobs.filter(j => j.outcome === 'advised').length,
+    declined: jobs.filter(j => j.outcome === 'declined').length,
+    held,  heldCI:  wilson(held,  mature.length),
+    other, otherCI: wilson(other, mature.length),
+    costMid: median(costs),
+    costLo: costs.length ? Math.min(...costs) : null,
+    costHi: costs.length ? Math.max(...costs) : null,
+    followCost: median(followCosts), followCostN: followCosts.length,
+    jobs, mature
+  };
+}
+
+/* The ladder. Every rung is a DIFFERENT question. The tool names the rung it
+   answered on rather than quietly widening the net until it has enough.
+
+   It widens across AGE but never across MAKE to reach an answer. The whole
+   claim is that this fault behaves differently on this machine, so a figure
+   pooled across makes is not a weaker version of the answer, it is an answer
+   to another question. Those rungs are marked cross:true and are offered
+   separately, by name, when there is nothing better. They never drive a
+   verdict. */
+function ladder(st){
+  const bn = brandById(st.brand) ? brandById(st.brand).name : '';
+  const dt = diagById(st.diagnosis) ? diagById(st.diagnosis).t.toLowerCase() : '';
+  const from = st.age - AGE_BAND, to = st.age + AGE_BAND;
+  const R = [];
+
+  if(st.model) R.push({
+    id:'model', head: bn + ' ' + st.model + ', ' + from + ' to ' + to + ' years old',
+    q: dt + ' on a ' + st.model + ' aged ' + from + ' to ' + to,
+    f: j => j.brand===st.brand && j.model===st.model && j.diagnosis===st.diagnosis && Math.abs(j.age-st.age)<=AGE_BAND
+  });
+  R.push({
+    id:'brand-age', head: bn + ', ' + from + ' to ' + to + ' years old',
+    q: dt + ' on a ' + bn + ' aged ' + from + ' to ' + to,
+    f: j => j.brand===st.brand && j.diagnosis===st.diagnosis && Math.abs(j.age-st.age)<=AGE_BAND
+  });
+  R.push({
+    id:'brand', head: bn + ', any age',
+    q: dt + ' on a ' + bn + ' of any age',
+    f: j => j.brand===st.brand && j.diagnosis===st.diagnosis
+  });
+  R.push({
+    id:'all-age', cross:true, head: 'All makes, ' + from + ' to ' + to + ' years old',
+    q: dt + ' on any make aged ' + from + ' to ' + to,
+    f: j => j.diagnosis===st.diagnosis && Math.abs(j.age-st.age)<=AGE_BAND
+  });
+  R.push({
+    id:'all', cross:true, head: 'All makes, any age',
+    q: dt + ' on any make, any age',
+    f: j => j.diagnosis===st.diagnosis
+  });
+
+  return R.map(r => { const jobs = RECORDS.filter(r.f); return {...r, jobs, s: stats(jobs)}; });
+}
+
+/* =======================================================================
+   4. STATE AND SMALL HELPERS
+   ======================================================================= */
+
+const $  = s => document.querySelector(s);
+const $$ = s => Array.prototype.slice.call(document.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = n => '€' + Math.round(n).toLocaleString('en-IE');
+
+const state = {
+  safety:[], brand:'', model:'', age:null,
+  symptom:'', diagnosis:'', quote:null, newPrice:null,
+  ruleHigh:50, ruleLow:25
+};
+
+function store(key, val){
+  try{
+    const all = JSON.parse(localStorage.getItem(key) || '[]');
+    all.push(val);
+    localStorage.setItem(key, JSON.stringify(all.slice(-300)));
+  }catch(e){ /* a browser with storage off still gets an answer */ }
+}
+function load(key){
+  try{ return JSON.parse(localStorage.getItem(key) || '[]'); }catch(e){ return []; }
+}
+
+/* =======================================================================
+   5. THE FORM
+   ======================================================================= */
+
+function choices(el, items, name, type){
+  el.innerHTML = items.map(function(it){
+    return '<label class="choice"><input type="' + type + '" name="' + name + '" value="' + it.id + '">' +
+           '<span><span class="t">' + esc(it.t) + '</span>' +
+           (it.d ? '<span class="d text-caption">' + esc(it.d) + '</span>' : '') + '</span></label>';
+  }).join('');
+}
+
+function buildForm(){
+  choices($('#safetyOpts'), SAFETY, 'safety', 'checkbox');
+  choices($('#symptomOpts'), SYMPTOMS, 'symptom', 'radio');
+  choices($('#diagOpts'),
+    DIAGS.concat([{id:'other', t:'Something else, or the quote does not say', d:'We match on what was found. Without it we have nothing to match on.'}]),
+    'diag', 'radio');
+
+  $('#brand').innerHTML = '<option value="">Choose</option>' +
+    BRANDS.map(b => '<option value="' + b.id + '">' + esc(b.name) + '</option>').join('') +
+    '<option value="other">Another make</option>';
+
+  // "None of these" clears the rest, and any of the rest clears it.
+  $('#safetyOpts').addEventListener('change', function(e){
+    const boxes = $$('#safetyOpts input');
+    if(e.target.value === 'none' && e.target.checked){
+      boxes.forEach(b => { if(b.value !== 'none') b.checked = false; });
+    }else if(e.target.checked){
+      boxes.forEach(b => { if(b.value === 'none') b.checked = false; });
+    }
+  });
+
+  $('#brand').addEventListener('change', function(){
+    const b = brandById($('#brand').value);
+    $('#model').innerHTML = '<option value="">Not sure</option>' +
+      (b ? b.models.map(m => '<option value="' + esc(m) + '">' + esc(m) + '</option>').join('') : '');
+    $('#model').disabled = !b;
+  });
+  $('#model').innerHTML = '<option value="">Not sure</option>';
+  $('#model').disabled = true;
+
+  ['#ruleHigh','#ruleLow'].forEach(id => $(id).addEventListener('input', rulePreview));
+}
+
+function readForm(){
+  state.safety    = $$('#safetyOpts input:checked').map(i => i.value).filter(v => v !== 'none');
+  state.brand     = $('#brand').value;
+  state.model     = $('#model').value;
+  state.age       = parseInt($('#age').value, 10);
+  const sym       = $('#symptomOpts input:checked');
+  state.symptom   = sym ? sym.value : '';
+  const dg        = $('#diagOpts input:checked');
+  state.diagnosis = dg ? dg.value : '';
+  state.quote     = parseFloat($('#quote').value);
+  state.newPrice  = parseFloat($('#newPrice').value);
+  state.ruleHigh  = parseFloat($('#ruleHigh').value);
+  state.ruleLow   = parseFloat($('#ruleLow').value);
+}
+
+function validate(step){
+  readForm();
+  if(step === 1 && !$$('#safetyOpts input:checked').length)
+    return 'Tick one, including "none of these". We ask first because some faults are not ours to answer.';
+  if(step === 2){
+    if(!state.brand) return 'Choose a make.';
+    if(!(state.age >= 0 && state.age <= 30)) return 'Give the age in years, as a whole number.';
+  }
+  if(step === 3 && !state.symptom) return 'Pick the closest one.';
+  if(step === 4){
+    if(!state.diagnosis) return 'Pick what the repairer said it is.';
+    if(!(state.quote > 0)) return 'Put in the quoted total.';
+  }
+  if(step === 5 && !(state.ruleHigh > state.ruleLow))
+    return 'The replace figure has to be higher than the repair figure.';
+  return '';
+}
+
+function show(id){
+  $$('.step, .page').forEach(s => s.classList.remove('on'));
+  $('#' + id).classList.add('on');
+
+  const n = /^s[1-5]$/.test(id) ? parseInt(id.slice(1), 10) : 0;
+  $('#rail').classList.toggle('hide', n === 0);
+  if(n){
+    $$('#rail .seg').forEach(function(seg, i){
+      seg.className = 'seg' + (i < n - 1 ? ' done' : i === n - 1 ? ' now' : '');
+    });
+    $('#railLab').textContent = 'Step ' + n + ' of 5';
+  }
+  $('#mast').classList.toggle('compact', id === 's6' || id.charAt(0) === 'p');
+  if(id === 's5') rulePreview();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function goStep(n, from){
+  if(from != null){
+    const err = validate(from);
+    if($('#e' + from)) $('#e' + from).textContent = err;
+    if(err) return;
+  }
+  show('s' + n);
+}
+
+/* =======================================================================
+   6. THE ANSWER
+   ======================================================================= */
+
+function stamp(){
+  return SOURCE.key === 'demo'
+    ? '<span class="badge badge-stamp" style="margin-bottom:1rem">These numbers are invented</span>'
+    : '';
+}
+
+function place(ratioPct){
+  return ratioPct > state.ruleHigh ? 'replace' : ratioPct <= state.ruleLow ? 'repair' : 'judgement';
+}
+const VERDICT = {
+  repair:    'On your own rule, this is a repair.',
+  replace:   'On your own rule, this is a replace.',
+  judgement: 'On your own rule, this one is your call.'
+};
+const SIDE = {repair:'repair', replace:'replace', judgement:'undecided'};
+const PHRASE = {repair:'a repair', replace:'a replace', judgement:'your judgement call'};
+
+/* ThresholdMarker. expPct null renders the preview with one marker only. */
+function gapIndicator(quotePct, expPct){
+  const cap = v => Math.max(0, Math.min(100, v));
+  const lab = v => Math.max(12, Math.min(88, cap(v)));
+  const lo = cap(state.ruleLow), hi = cap(state.ruleHigh);
+  const x1 = cap(quotePct);
+
+  let h = '<div class="gap-indicator' + (expPct == null ? ' single' : '') + '">' +
+    '<div class="track">' +
+      '<i class="z1" style="width:' + lo + '%"></i>' +
+      '<i class="z2" style="width:' + (hi - lo) + '%"></i>' +
+      '<i class="z3" style="flex:1"></i>' +
+    '</div>';
+
+  if(expPct != null){
+    const x2 = cap(expPct), a = Math.min(x1, x2), b = Math.max(x1, x2);
+    if(b - a > 0.5) h += '<span class="shift" style="left:' + a + '%;width:' + (b - a) + '%"></span>';
+  }
+  h += '<span class="pin" style="left:' + x1 + '%;top:1.7rem;height:1.4rem"></span>' +
+       '<span class="dot" style="left:' + x1 + '%"></span>' +
+       '<span class="plab" style="left:' + lab(x1) + '%;top:.35rem">the quote <em>' + Math.round(quotePct) + '%</em></span>';
+
+  if(expPct != null){
+    const x2 = cap(expPct);
+    h += '<span class="pin" style="left:' + x2 + '%;top:4.25rem;height:1.4rem"></span>' +
+         '<span class="dot solid" style="left:' + x2 + '%"></span>' +
+         '<span class="plab" style="left:' + lab(x2) + '%;top:5.85rem">and what follows it <em>' +
+         Math.round(expPct) + '%</em></span>';
+  }
+  h += '</div>';
+
+  return h + '<div class="zonekey">' +
+    '<span class="k below">Repair, up to ' + lo + '%</span>' +
+    '<span class="k near">Your call, ' + lo + ' to ' + hi + '%</span>' +
+    '<span class="k above">Replace, above ' + hi + '%</span>' +
+  '</div>';
+}
+
+/* FigureBlock: counts first, then the interval, then one plain word. The
+   figure never appears without its basis in the same visual unit. */
+function dimension(k, n, ci, claim){
+  const lo = ci[0]*100, hi = ci[1]*100;
+  let cells = '';
+  for(let i = 0; i < n; i++) cells += '<b class="' + (i < k ? 'on' : '') + '"></b>';
+
+  return '<p class="figure">' + k + ' <small>of ' + n + '</small></p>' +
+    '<p class="claim">' + esc(claim) + '</p>' +
+    '<div class="units" role="img" aria-label="' + k + ' of ' + n + '">' + cells + '</div>' +
+    '<div class="interval">' +
+      '<div class="score-bar"><i style="left:' + lo + '%;width:' + (hi - lo) + '%"></i>' +
+        '<u style="left:' + (k/n*100) + '%"></u></div>' +
+      '<div class="scale-ends"><span>0%</span><span>100%</span></div>' +
+      '<p class="icap text-body">Somewhere between ' + Math.round(lo) + '% and ' + Math.round(hi) +
+      '%. That is ' + widthWord(ci[0], ci[1]) + ', off ' + n + ' job' + (n===1?'':'s') + '.</p>' +
+    '</div>';
+}
+
+function sectionHead(n, title){
+  return '<div class="section-head"><span class="n">' + n + '</span>' +
+    '<h3 class="text-overline">' + esc(title) + '</h3><span class="rule"></span></div>';
+}
+
+function evidenceTable(jobs){
+  const rows = jobs.slice(0, 40).map(function(j){
+    let next = '<span class="tag">nothing</span>';
+    if(j.monthsObserved < 12) next = '<span class="tag tag-unknown">too soon to say</span>';
+    else if(j.sameAgain) next = '<span class="tag tag-event">same fault back at ' + j.sameAgain + ' months</span>';
+    else if(j.otherFail) next = '<span class="tag tag-event">' + esc(diagById(j.otherDiag).t.toLowerCase()) + ' at ' + j.otherFail + ' months</span>';
+    const out = j.outcome === 'repaired' ? 'repaired'
+              : j.outcome === 'advised'  ? '<span class="tag">advised against</span>'
+              : '<span class="tag">owner declined</span>';
+    return '<tr><td class="n">' + j.id + '</td>' +
+      '<td>' + esc(brandById(j.brand).name) + ' ' + esc(j.model) + '</td>' +
+      '<td class="n">' + j.age + 'y</td>' +
+      '<td>' + esc(symById(j.symptom).short) + '</td>' +
+      '<td>' + esc(diagById(j.diagnosis).t) + '</td>' +
+      '<td class="n">' + (j.outcome === 'repaired' ? money(j.cost) : '&mdash;') + '</td>' +
+      '<td>' + out + '</td>' +
+      '<td class="n">' + j.monthsObserved + ' mo</td>' +
+      '<td>' + (j.outcome === 'repaired' ? next : '&mdash;') + '</td></tr>';
+  }).join('');
+  return '<div class="scroll"><table><thead><tr>' +
+    '<th>Job</th><th>Machine</th><th>Age</th><th>They reported</th><th>Repairer found</th>' +
+    '<th>Cost</th><th>Outcome</th><th>Watched</th><th>What came next</th>' +
+    '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
+    (jobs.length > 40 ? '<p class="icap text-caption">Showing 40 of ' + jobs.length + '.</p>' : '');
+}
+
+function logGap(reason, count){
+  store('ror.gaps', {
+    when: new Date().toISOString().slice(0,10),
+    brand: state.brand, model: state.model, age: state.age,
+    symptom: state.symptom, diagnosis: state.diagnosis,
+    reason: reason,
+    held: count || 0       // the same figure the householder was shown
+  });
+}
+
+/* Live preview on the rule step. Pure arithmetic, nothing forecast. */
+function rulePreview(){
+  const el = $('#rulePreview');
+  if(!el) return;
+  readForm();
+  if(!(state.quote > 0 && state.newPrice > 0) || !(state.ruleHigh > state.ruleLow)){
+    el.innerHTML = '';
+    return;
+  }
+  const r = state.quote / state.newPrice * 100, p = place(r);
+  el.innerHTML = '<div class="card" style="margin-bottom:1.5rem">' +
+    '<h3 class="text-h4 card-title">Your quote against your line</h3>' +
+    '<p class="card-description text-body">' + money(state.quote) + ' is ' + Math.round(r) + '% of ' +
+      money(state.newPrice) + '. On the rule as it stands, that is <strong>' + PHRASE[p] + '</strong>. ' +
+      'This is only the arithmetic. The forecast comes next.</p>' +
+    gapIndicator(r, null) + '</div>';
+}
+
+function answer(){
+  readForm();
+
+  /* Safety leaves before anything is computed. There is no answer on this path. */
+  if(state.safety.length){
+    const list = state.safety.map(id => SAFETY.find(s => s.id === id).short);
+    $('#result').innerHTML =
+      '<div class="alert">' +
+        '<div class="mark" aria-hidden="true">!</div>' +
+        '<h2 class="text-h2">Switch it off at the wall and unplug it.</h2>' +
+        '<p class="said">You told us it has done this: ' + esc(list.join(', ')) + '.</p>' +
+        '<p style="margin-top:1.1rem">We are not going to work out whether this one is worth fixing. A machine that has done that needs an electrician or a registered engineer to look at it before it goes back on, whatever the repair costs.</p>' +
+        '<p class="muted">If it turns out to be something else and the machine is safe, come back and start again.</p>' +
+      '</div>' +
+      '<div class="actions"><button class="btn btn-outline" id="againSafety">Start again</button></div>';
+    $('#againSafety').onclick = restart;
+    show('s6');
+    return;
+  }
+
+  const unknown = state.brand === 'other' || state.diagnosis === 'other';
+  const rungs   = unknown ? [] : ladder(state);
+
+  // Only rungs that stay on the householder's own make can produce a verdict.
+  const primary = rungs.find(r => !r.cross && r.s.nMature >= MIN_SAMPLE);
+  const narrow  = rungs.length ? rungs[0] : null;
+
+  if(!primary){ renderThin(rungs, narrow, unknown); return; }
+  renderAnswer(primary, narrow, rungs);
+}
+
+/* ---- not enough to answer -------------------------------------------
+   A designed screen, not an error state. Someone has just typed in six
+   facts, which is exactly the moment a product is tempted to lower its
+   threshold and give them something. It gives them the jobs instead.     */
+function renderThin(rungs, narrow, unknown){
+  const ownMake = rungs.filter(r => !r.cross);
+  const bestOwn = ownMake.reduce((a,r) => r.s.n > (a ? a.s.n : -1) ? r : a, null);
+  const wider = rungs.find(r => r.cross && r.s.nMature >= MIN_SAMPLE);
+  const held = bestOwn ? bestOwn.s.n : 0;
+  logGap(unknown ? 'outside what we hold' : 'too few jobs', held);
+
+  let h = '<div class="verdict is-judgement">' + stamp() +
+    '<p class="eyebrow text-overline">The answer</p>' +
+    '<h2 class="text-h2">We cannot answer this one.</h2>';
+
+  if(unknown || held === 0){
+    h += '<p class="sub text-body-lg">' + (state.brand === 'other'
+        ? 'These records come from one repair business, and that business does not service your make. Somebody else’s records would answer you. We do not have them.'
+        : state.diagnosis === 'other'
+        ? 'We match on the part the repairer named. Without it there is nothing to match on. If the quote names a part, go back a step and pick it.'
+        : 'Nothing on record matches this fault on this make.') + '</p></div>';
+  }else{
+    const nm = bestOwn.s.nMature;
+    h += '<p class="sub text-body-lg">We hold ' + held + ' job' + (held===1?'':'s') + ' like yours: ' +
+      esc(bestOwn.q) + '. Of those, ' + (nm === 0 ? 'none are' : nm === 1 ? 'one is' : 'only ' + nm + ' are') +
+      ' old enough to have been watched for a full year, and that is the question you are asking.</p></div>';
+
+    h += sectionHead('01', 'What we actually hold') +
+      '<div class="card card-unknown">' +
+      '<p class="card-description text-body">A percentage off ' + (nm || 'no') + ' job' + (nm===1?'':'s') +
+      ' would be a guess wearing a percentage sign. Here are the jobs themselves, unsorted and unweighted. Read them and judge it yourself.</p>' +
+      evidenceTable(bestOwn.jobs) +
+      '<p class="note text-body">This question has gone on the list of things we cannot answer. That list is the only thing that tells us whose records to ask for next.</p></div>';
+  }
+
+  // A cross-make figure is a different question. Offered by name, with no
+  // verdict attached, and never placed against the householder's line.
+  if(wider){
+    const s = wider.s;
+    h += sectionHead('02', 'A wider question, which is not yours') +
+      '<div class="card">' +
+      '<p class="card-description text-body">This is ' + esc(wider.q) +
+      '. It is not your machine. Different makes fail differently, and that is the entire reason this tool asks which one you have.</p>' +
+      '<div class="row"><span class="k">Repairs watched a full year</span><span class="v">' + s.nMature + '</span></div>' +
+      '<div class="row"><span class="k">Same fault did not come back</span><span class="v">' + s.held + ' of ' + s.nMature + '</span></div>' +
+      '<div class="row"><span class="k">A different part failed within the year</span><span class="v">' + s.other + ' of ' + s.nMature + '</span></div>' +
+      '<div class="row"><span class="k">Middle of what was charged</span><span class="v">' + (s.costMid ? money(s.costMid) : 'not known') + '</span></div>' +
+      '<p class="note text-body">We have deliberately not turned this into a yes or a no about your machine. Take it as background, not as an answer.</p>' +
+      '<details><summary>Show me those jobs</summary>' + evidenceTable(wider.jobs) + '</details></div>';
+  }
+
+  h += sectionHead(wider ? '03' : '02', 'What to do instead') +
+    '<div class="card card-quiet"><p class="text-body-lg muted">Ring a second repairer. That is the call this tool exists to save you, and on this machine it has not earned it.</p></div>' +
+    '<div class="actions" style="margin-top:1.5rem"><button class="btn btn-outline" id="againThin">Start again</button></div>';
+
+  $('#result').innerHTML = h;
+  $('#againThin').onclick = restart;
+  show('s6');
+}
+
+/* ---- the answer ------------------------------------------------------ */
+function renderAnswer(rung, narrow, rungs){
+  const s = rung.s;
+  const pFollow = s.other / s.nMature;
+  const followCost = s.followCost;
+  const extra = followCost ? pFollow * followCost : 0;
+  const expected = state.quote + extra;
+  let h = '';
+
+  /* --- the verdict, on the reader's own rule ------------------------- */
+  if(state.newPrice > 0){
+    const rq = state.quote / state.newPrice * 100;
+    const re = expected / state.newPrice * 100;
+    const pq = place(rq), pe = place(re);
+    h += '<div class="verdict is-' + pe + '">' + stamp() +
+      '<p class="eyebrow text-overline">The answer</p>' +
+      '<h2 class="text-h2">' + VERDICT[pe] + '</h2>' +
+      '<p class="sub text-body">Your rule, our records. You said replace above ' + state.ruleHigh +
+      '% of a new one, and repair at or below ' + state.ruleLow + '%.</p>' +
+      gapIndicator(rq, re) +
+      '<div class="row emph"><span class="k">The quote on its own</span><span class="v">' +
+        money(state.quote) + ' &middot; ' + Math.round(rq) + '% of new</span></div>' +
+      '<div class="row emph"><span class="k">The quote plus what usually follows within a year</span><span class="v">' +
+        money(expected) + ' &middot; ' + Math.round(re) + '% of new</span></div>';
+    h += pq !== pe
+      ? '<p class="callout callout-mark text-body"><strong>This is the bit worth stopping on.</strong> The quote by itself falls on the ' +
+        SIDE[pq] + ' side of your line. Once you add what tends to go next on these machines, it moves to the ' +
+        SIDE[pe] + ' side.</p>'
+      : '<p class="callout text-body">Adding what tends to follow does not move it across your line, so the arithmetic you could do yourself was already pointing the right way here.</p>';
+    h += '</div>';
+  }else{
+    h += '<div class="verdict">' + stamp() +
+      '<p class="eyebrow text-overline">The answer</p>' +
+      '<h2 class="text-h2">We can tell you what usually happens. We cannot place it against your line.</h2>' +
+      '<p class="sub text-body-lg">You did not tell us what a new one costs. Go back a step and add it, or read the two figures below and place them yourself.</p></div>';
+  }
+
+  /* --- the part nobody can work out from the quote -------------------- */
+  h += sectionHead('01', 'Does something else go soon after?') +
+    '<div class="card card-lead card-feature">' +
+    '<p class="card-description text-body">The question you cannot answer with a calculator.</p>' +
+    dimension(s.other, s.nMature, s.otherCI,
+      'machines like yours had a different part fail within a year of this repair') +
+    (followCost
+      ? '<p class="note text-body">When it happened, that second job came to about ' + money(followCost) +
+        ' (the middle of ' + s.followCostN + ' of them). That is the figure added to your quote above.</p>'
+      : '<p class="note text-body">None of the machines we watched had a second, different part fail inside the year, so there is nothing to add to your quote. With ' +
+        s.nMature + ' jobs that is worth knowing, and it is not the same as it never happening.</p>') +
+    '</div>';
+
+  /* --- does the repair itself hold ------------------------------------ */
+  h += sectionHead('02', 'Does this repair hold?') +
+    '<div class="card">' +
+    '<p class="card-description text-body">Whether the same fault came back.</p>' +
+    dimension(s.held, s.nMature, s.heldCI,
+      'were still running a year later without this fault returning') +
+    '</div>';
+
+  /* --- money, and what the repairer actually did ----------------------- */
+  h += sectionHead('03', 'What it costs, and what the repairer does') +
+    '<div class="card">' +
+    '<div class="row"><span class="k">Middle of what was charged</span><span class="v">' +
+      (s.costMid ? money(s.costMid) : 'not known') + '</span></div>' +
+    '<div class="row"><span class="k">Cheapest and dearest on record</span><span class="v">' +
+      (s.costLo ? money(s.costLo) + ' to ' + money(s.costHi) : 'not known') + '</span></div>' +
+    '<div class="row"><span class="k">Your quote</span><span class="v">' + money(state.quote) +
+      (s.costMid ? ' &middot; ' + (state.quote > s.costMid ? 'above' : state.quote < s.costMid ? 'below' : 'level with') + ' the middle' : '') +
+      '</span></div>' +
+    '<div class="row"><span class="k">Repaired</span><span class="v">' + s.nRepaired + ' of ' + s.n + '</span></div>' +
+    '<div class="row"><span class="k">Repairer advised against it</span><span class="v">' + s.advised + ' of ' + s.n + '</span></div>' +
+    '<div class="row"><span class="k">Owner decided not to</span><span class="v">' + s.declined + ' of ' + s.n + '</span></div>' +
+    '<p class="note text-body">The machines somebody was talked out of repairing are counted here on purpose. Leave them out and every repair looks like a good idea.</p>' +
+    '</div>';
+
+  /* --- which question was answered, and the jobs behind it ------------- */
+  h += sectionHead('04', 'Which jobs this came from') +
+    '<div class="card">' +
+    '<p class="card-description text-body">' + esc(rung.head) + '. ' + s.n + ' job' + (s.n===1?'':'s') +
+    ' on record, ' + s.nRepaired + ' repaired, ' + s.nMature + ' of those watched for a full year or more.</p>' +
+    (rung.id !== rungs[0].id
+      ? '<p class="text-body muted">We could not answer your exact question. We hold only ' + rungs[0].s.n +
+        ' job' + (rungs[0].s.n===1?'':'s') + ' like yours: ' + esc(rungs[0].q) +
+        '. So the figures above answer a wider one: <strong>' + esc(rung.q) +
+        '</strong>. It is a different question and you should weigh it as one.</p>'
+      : '<p class="text-body muted">These are jobs on your make, your fault, and roughly your machine’s age. We did not have to widen it.</p>') +
+    (state.age < 5 || state.age > 12
+      ? '<p class="note text-body">Your machine is ' + state.age + ' years old. This was built around machines of about five to twelve years, so it is at the edge of what we know.</p>'
+      : '') +
+    '<details><summary>Show me the jobs</summary>' + evidenceTable(rung.jobs) +
+      '<p class="icap text-caption">Jobs watched for under twelve months are listed but left out of the two figures above. They cannot answer a question about a year.</p>' +
+    '</details></div>';
+
+  /* --- how we are paid. On the page, in the open. ---------------------- */
+  h += sectionHead('05', 'How we get paid') +
+    '<div class="card card-quiet"><p class="text-body muted">We take a cut of the job either way, repair or replace, and it is the same cut. ' +
+    'Nothing on this page moves if you go one way rather than the other. We have told you that here rather than in the small print because it is the first thing you should want to know.</p></div>';
+
+  /* --- the intake gate closes ------------------------------------------ */
+  h += '<div class="card" id="decideCard" style="margin-top:2rem">' +
+    '<h3 class="text-h4 card-title">One last thing, and it is for the next person</h3>' +
+    '<p class="card-description text-body">What did you decide? This is the only way these records grow.</p>' +
+    '<div class="decide">' +
+      ['repaired|I am getting it repaired','replaced|I am replacing it','quote|I am getting another quote','thinking|Still deciding']
+        .map(x => { const p = x.split('|');
+          return '<button data-dec="' + p[0] + '">' + p[1] + '</button>'; }).join('') +
+    '</div></div>';
+
+  $('#result').innerHTML = h +
+    '<div class="actions" style="margin-top:1.5rem"><button class="btn btn-outline" id="againAnswer">Start again</button></div>';
+  $('#againAnswer').onclick = restart;
+  $$('#decideCard [data-dec]').forEach(btn => btn.onclick = () => recordDecision(btn.getAttribute('data-dec')));
+  show('s6');
+}
+
+function recordDecision(dec){
+  store('ror.intake', {
+    when: new Date().toISOString().slice(0,10),
+    brand: state.brand, model: state.model, age: state.age,
+    symptom: state.symptom, diagnosis: state.diagnosis,
+    quote: state.quote, newPrice: state.newPrice || null, decision: dec
+  });
+  $('#decideCard').innerHTML =
+    '<h3 class="text-h4 card-title">Saved</h3>' +
+    '<p class="card-description text-body">' +
+      esc(brandById(state.brand).name + (state.model ? ' ' + state.model : '')) + ', ' +
+      state.age + ' years, ' + esc(symById(state.symptom).short) + ', ' +
+      esc(diagById(state.diagnosis).t.toLowerCase()) + ', ' + money(state.quote) + '.</p>' +
+    '<p class="text-body muted">We did not ask for your name, your email or your address, so there is no way for us to come back in a year and ask whether the machine is still running. ' +
+    'That answer is the one that would make this tool worth trusting, and right now we have no way of collecting it. It is saved in this browser and nowhere else.</p>';
+}
+
+/* =======================================================================
+   7. THE TWO STANDING PAGES
+   ======================================================================= */
+
+function renderSources(){
+  const total = RECORDS.length;
+  const byBrand = BRANDS.map(b => b.name + ' ' + RECORDS.filter(r => r.brand === b.id).length).join(', ');
+  const mature = RECORDS.filter(r => r.outcome === 'repaired' && r.monthsObserved >= 12).length;
+
+  $('#pSources').innerHTML =
+    '<h2 class="text-h2">Where these numbers come from</h2>' +
+    (SOURCE.key === 'demo'
+      ? '<div class="card card-unknown card-feature">' + stamp() +
+        '<p class="text-h4" style="font-weight:500;margin-bottom:.6rem">Nothing here is a record of a real repair.</p>' +
+        '<p class="text-body muted">This tool was built to run on one repair business’s own job history: what they fixed, on what machine, at what age, and what came back through the door afterwards. No repair business has given us that yet. ' +
+        'So that you can try the thing at all, it is running on ' + total + ' invented jobs. They are shaped like real ones and they are not real ones. ' +
+        'You can switch them off at the top of the page and see exactly what the tool does when it has nothing: it is worth doing once.</p></div>'
+      : '<div class="card card-feature"><p class="text-h4" style="font-weight:500;margin-bottom:.6rem">Nothing is loaded, and that is the truthful setting.</p>' +
+        '<p class="text-body muted">No repair business has shared its job history, so every question gets the same honest answer. Switch to the demonstration records at the top of the page to see what the tool does once somebody has.</p></div>') +
+
+    sectionHead('01', 'What is in the pile') +
+    '<div class="card">' +
+      '<div class="row"><span class="k">Jobs</span><span class="v">' + total + '</span></div>' +
+      '<div class="row"><span class="k">By make</span><span class="v">' + esc(byBrand || 'none') + '</span></div>' +
+      '<div class="row"><span class="k">Repairs watched a full year or more</span><span class="v">' + mature + '</span></div>' +
+      '<div class="row"><span class="k">Makes covered</span><span class="v">three</span></div>' +
+      '<div class="row"><span class="k">Faults covered</span><span class="v">five</span></div>' +
+      '<div class="row"><span class="k">Machines covered</span><span class="v">washing machines only</span></div>' +
+    '</div>' +
+
+    sectionHead('02', 'How a figure gets made') +
+    '<div class="card"><ul class="plain text-body">' +
+      '<li>We look for jobs on your make, with the fault the repairer named, on machines within two years of yours.</li>' +
+      '<li>A job only counts towards a twelve-month figure if it is old enough to have been watched for twelve months. Recent jobs are listed and not counted.</li>' +
+      '<li>Under ' + MIN_SAMPLE + ' such jobs, you get the jobs themselves rather than a percentage. A percentage off four jobs is a guess with a decimal point.</li>' +
+      '<li>If we have to widen the question to answer it, the wider question is written out and you are told it is a different one. We widen across age. We never widen across makes.</li>' +
+      '<li>Every figure carries the two numbers it was made from and the range it could really be.</li>' +
+    '</ul></div>' +
+
+    sectionHead('03', 'What is not in here, and will not be') +
+    '<div class="card"><ul class="plain text-body">' +
+      '<li>What a manufacturer says its machines last. That is a claim about their own product.</li>' +
+      '<li>What a repairer reckons from memory. What was written down when the job happened, yes. What someone remembers about machines in general, no.</li>' +
+      '<li>Published average-lifespan tables. They would fill the gaps and we would have no way to tell you which figures were real.</li>' +
+      '<li>Anything about you beyond the six things you typed in. No name, no address, no account.</li>' +
+    '</ul></div>' +
+
+    sectionHead('04', 'What is wrong with it') +
+    '<div class="card"><ul class="plain text-body">' +
+      '<li>One repair business is one town, one set of customers, one set of makes they happen to service. It is not the country.</li>' +
+      '<li>A repairer only ever sees the machines somebody chose to carry in. The ones quietly skipped are missing, and your answers at the end are the only thing that starts to fill that in.</li>' +
+      '<li>We do not know how many people currently ring a second repairer, so we cannot yet say whether this saves anybody that call.</li>' +
+    '</ul></div>' +
+
+    '<div class="actions" style="margin-top:1.5rem"><button class="btn btn-outline" id="backFromSrc">Back</button></div>';
+  $('#backFromSrc').onclick = () => show('s0');
+}
+
+function renderGaps(){
+  const g = load('ror.gaps'), n = load('ror.intake');
+  const rows = g.slice().reverse().slice(0, 50).map(function(x){
+    const b = brandById(x.brand);
+    return '<tr><td class="n">' + esc(x.when) + '</td>' +
+      '<td>' + esc(b ? b.name : 'another make') + (x.model ? ' ' + esc(x.model) : '') + '</td>' +
+      '<td class="n">' + (x.age != null && !isNaN(x.age) ? x.age + 'y' : '&mdash;') + '</td>' +
+      '<td>' + esc(diagById(x.diagnosis) ? diagById(x.diagnosis).t : 'not named') + '</td>' +
+      '<td class="n">' + x.held + '</td><td>' + esc(x.reason) + '</td></tr>';
+  }).join('');
+
+  $('#pGaps').innerHTML =
+    '<h2 class="text-h2">What we could not answer</h2>' +
+    '<p class="text-body-lg">Every time somebody asks something we do not hold enough to answer, it goes on this list instead of being smoothed over. The list is the argument for whose records to go and ask for next.</p>' +
+    (g.length
+      ? '<div class="card"><div class="scroll" style="margin-top:0"><table style="min-width:34rem"><thead><tr><th>Asked</th><th>Machine</th><th>Age</th><th>Fault</th><th>Jobs held</th><th>Why not</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>'
+      : '<div class="card card-quiet"><p class="text-body muted">Nothing yet. Ask something we do not hold, an unusual make or a fault on a very old machine, and it will appear here.</p></div>') +
+    '<div class="card">' +
+      '<div class="row"><span class="k">Decisions recorded at the end</span><span class="v">' + n.length + '</span></div>' +
+      '<div class="row"><span class="k">Questions we could not answer</span><span class="v">' + g.length + '</span></div>' +
+      '<p class="note text-body">Both sit in this browser only. Clearing your browsing data clears them.</p>' +
+    '</div>' +
+    '<div class="actions" style="margin-top:1.5rem"><button class="btn btn-outline" id="backFromGaps">Back</button></div>';
+  $('#backFromGaps').onclick = () => show('s0');
+}
+
+/* =======================================================================
+   8. WIRING
+   ======================================================================= */
+
+function paintSource(){
+  $('#srcName').textContent = SOURCE.name;
+  $('#srcText').textContent = SOURCE.text;
+  $('#srcbar').className = 'sourcebar' + (SOURCE.key === 'none' ? ' is-real' : '');
+  $('#srcSwitch').textContent = SOURCE.key === 'demo' ? 'Switch these off' : 'Switch them on';
+}
+function restart(){
+  $$('input[type=checkbox], input[type=radio]').forEach(i => i.checked = false);
+  ['age','quote','newPrice'].forEach(id => $('#' + id).value = '');
+  $('#brand').value = '';
+  $('#model').innerHTML = '<option value="">Not sure</option>';
+  $('#model').disabled = true;
+  $('#ruleHigh').value = 50; $('#ruleLow').value = 25;
+  $('#rulePreview').innerHTML = '';
+  $$('.error').forEach(e => e.textContent = '');
+  show('s0');
+}
+
+buildForm();
+paintSource();
+
+$$('[data-go]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const to = parseInt(btn.getAttribute('data-go'), 10);
+    const cur = parseInt(btn.closest('.step').id.slice(1), 10);
+    goStep(to, to > cur ? cur : null);
+  });
+});
+$('#goAnswer').addEventListener('click', function(){
+  const err = validate(5);
+  $('#e5').textContent = err;
+  if(!err) answer();
+});
+$$('[data-page]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const p = btn.getAttribute('data-page');
+    if(p === 'pSources') renderSources(); else renderGaps();
+    show(p);
+  });
+});
+$('#restart').addEventListener('click', restart);
+$('#srcSwitch').addEventListener('click', function(){
+  SOURCE = SOURCES[SOURCE.key === 'demo' ? 'none' : 'demo'];
+  try{ localStorage.setItem('ror.source', SOURCE.key); }catch(e){}
+  RECORDS = SOURCE.build();
+  paintSource();
+  restart();
+});
+</script>
+</body>
+</html>
