@@ -5,7 +5,11 @@ description: Interviews you until a customer promise is complete enough to build
 
 # The promise
 
-**What this is for.** You are about to have something built. Before you brief anyone or anything, this turns what you know into a promise a builder can work from and you can check.
+> **v1.1 - amended after the run published in this kit.** v1.0 produced the promise brief in this folder and differed in three ways: it had no LIVED provenance label, no outcome-versus-solution test at Q1, and it told you to run the interview before any build rather than after a one-line one. Nothing else changed. The brief and both builds in this folder came out of v1.0.
+
+**What this is for.** You are about to have something built.
+
+**Build the cheap version first.** One line into any assistant, no brief, no documents. Then run this against what came back. The free version will put things in front of you that you did not know to ask for, and it will decide a dozen things on your behalf without telling you. This turns both of those, plus what you already knew, into a promise a builder can work from and you can check.
 
 **Twenty-five minutes cold, or about ten if you bring your documents.** It stops as soon as the promise can answer the questions a build will ask. It does not ask you fifty questions.
 
@@ -21,7 +25,7 @@ Paste this whole file into any assistant and say: **"Run this on my promise."** 
 
 ### BRING YOUR DOCUMENTS - optional, and it shortens the interview
 
-**The promise is not the beginning of anything.** Strategy, business model, operating model and roadmap come first, and most of what this interview asks was decided in those. **Paste or attach them and the interview gets shorter.**
+**The promise is not the beginning of anything.** Strategy, business model, operating model and roadmap come first, and most of what this interview asks was decided in those. **The one-line build comes first too**, and what it produced is the most useful document you can bring in here. **Paste or attach them and the interview gets shorter.**
 
 Useful: the strategy or business-model document · the operating model · the roadmap or initiative list · customer research, interview notes, support or complaint data · anything with the current numbers in it.
 
@@ -70,15 +74,18 @@ These cannot be inferred from anything, because their value is in the answer bei
 
 - **HEARD** - it came from customers saying it, and you can say when and how many.
 - **INFERRED** - it came from data about customers rather than from customers.
+- **LIVED** - you are the customer, or you have done the job yourself. Specific and honest, and a sample of one. It is not a substitute for HEARD, and it should be printed as what it is.
 - **ASSUMED** - it came from inside the building.
 
-**Do not stop the interview if the answer is ASSUMED.** Record it, print it at the top of the output, and carry on. A promise that says *assumed* at the top is honest. A promise that has been through a structure and does not say where it came from is laundered, and this tool exists partly to stop that.
+**Do not stop the interview if the answer is ASSUMED or LIVED.** Record it, print it at the top of the output, and carry on. A promise that says *assumed* at the top is honest. A promise that has been through a structure and does not say where it came from is laundered, and this tool exists partly to stop that.
 
 ---
 
 ## PART 1 - the promise, in the customer's words
 
 **Q1.** In one sentence, what does the customer get that they do not get today? **Write it as something the customer would say, not as something you would say about them.**
+
+⚠ **If the sentence names a thing you would build - a price, a score, a report, an alert, a dashboard - it is a solution wearing the customer's voice.** Ask what that thing lets them do, and write that instead. *I get a walk-away price* is a feature. *I know when to stop paying* is a promise.
 
 **Q2.** Who is "the customer" here, precisely? A role and a situation, not a segment.
 
@@ -174,7 +181,7 @@ A system name, a table, a screen, a field, a process step, a piece of your archi
 
 ## THE SCORE
 
-**Now score the promise on five fields. For each, answer YES or NOT YET, and say why in one line. Do not soften this.**
+**Now score the promise on six fields. For each, answer YES or NOT YET, and say why in one line. Do not soften this.**
 
 | # | Field | It is YES when |
 |---|---|---|
@@ -205,10 +212,10 @@ A system name, a table, a screen, a field, a process step, a piece of your archi
 ```
 PROMISE BRIEF
 
-PROVENANCE:   [HEARD / INFERRED / ASSUMED] - [G1 and G2, one line]
+PROVENANCE:   [HEARD / INFERRED / LIVED / ASSUMED] - [G1 and G2, one line]
 BUILT FROM:   [documents used, or "interview only". Note next to any field that came from
               a document rather than from a person.]
-SCORE:        [N] of 5 fields. Not yet: [list]
+SCORE:        [N] of 6 fields. Not yet: [list]
 
 THE PROMISE, IN THE CUSTOMER'S WORDS
 [Q1, verbatim, after both edge tests]
@@ -259,10 +266,7 @@ ALSO ASKED
 
 **Keep the brief open while it is built. Every time a decision gets made that the brief did not answer, write it down in one of two columns:**
 
-- **In the room** - it falls under DEPENDS ON, AND WE DO NOT CONTROL
-[Q17, with the plan. If there is no plan, write NO PLAN and the build does not start.]
-
-DELIBERATELY NOT SPECIFIED. That is the promise working.
+- **In the room** - it falls under DELIBERATELY NOT SPECIFIED. That is the promise working.
 - **Drift** - it does not, and it changes what the customer gets.
 
 **Count both at the end.** A good promise produces some of the first and almost none of the second. **If you have no entries in the first column, the promise was too tight and you paid for a typist.**
