@@ -1,4 +1,4 @@
-# The AI review said "locked". The bid had an exception.
+# The AI review recommended a supplier. Nobody had seen its full terms.
 
 **So What, Now What - Issue 8 · Saturday 3 October 2026**
 
@@ -35,7 +35,7 @@ If you cannot answer the fourth, find out before you rely on it. That is the who
 - [**`worked-example/ledger.csv`**](worked-example/ledger.csv) - all 142 findings, each with its clause, category, commitment key, verbatim quote and any condition or exception.
 - [**`worked-example/run-output.md`**](worked-example/run-output.md) - the full run: the checklist marks, the relief list, the check of the AI review, the four readings, the difference pass, the clarification letter, the schedule of commitments, and the register with the pre-mortem behind its odds.
 - [**`worked-example/verify_ledger.py`**](worked-example/verify_ledger.py) - rebuilds the ledger and checks every quote and every count.
-- [**`assets/`**](assets) - the cover card and the review-against-clause image from the LinkedIn edition, with the image's HTML source.
+- [**`assets/`**](assets) - the cover card and the review-against-bid image from the LinkedIn edition, with the image's HTML source.
 
 ## How to run it
 
