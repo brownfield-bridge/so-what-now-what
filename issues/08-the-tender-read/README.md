@@ -1,4 +1,4 @@
-# The AI review recommended a supplier. Nobody had seen its full terms.
+# The AI favoured one supplier. It never asked for its full terms.
 
 **So What, Now What - Issue 8 · Saturday 3 October 2026**
 
