@@ -17,7 +17,9 @@ This repo houses the downloadable artefacts that ship with each issue: paste-and
     ├── 03-portfolio-map/         # Issue 3: The AI Portfolio Map
     ├── 04-agent-kit/             # Issue 4: Build your own AI manager
     ├── 05-commitment-register/   # Issue 5: The Commitment Register
-    └── 06-independence-test/     # Issue 6: The Independence Test
+    ├── 06-independence-test/     # Issue 6: The Independence Test
+    ├── 07-promise-to-prototype/  # Issue 7: Promise to prototype
+    └── 08-the-tender-read/       # Issue 8: The Sourcing Read
 ```
 
 Issue 1 sits at the top level rather than under `issues/`, for historical reasons. Its link
@@ -40,4 +42,4 @@ All artefacts are CC-BY 4.0. Use them, adapt them, ship them. Attribution apprec
 
 ## Subscribe
 
-The publication itself ships at so-what-now-what.beehiiv.com. Free. Independent.
+The publication itself ships as the So What, Now What newsletter on LinkedIn. Free. Independent.
