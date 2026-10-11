@@ -1,0 +1,129 @@
+Chat 04 | ChatGPT | Wording 1 | Run 4 | Plan on screen: Plus | Mode: temporary chat, Bez personalizacji | Model: not named on screen, effort selector Medium
+
+Captured: 2026-10-10T13:45:16.260Z
+URL: [removed: private chat link]
+
+----- PAGE TEXT (verbatim) -----
+
+Twoja wiadomość:
+Help me set my development goals for the next quarter.
+ChatGPT powiedział:
+
+Let's build a practical, measurable development plan for Q1 2027 (January–March) that helps you grow professionally and sets you up for your next career opportunity.
+
+I recommend choosing 3 development goals: one focused on building expertise, one on improving your effectiveness, and one on long-term career growth.
+
+Suggested development goals
+
+1. Strengthen professional expertise
+
+Develop a skill that will help you perform better in your current role or prepare for greater responsibility.
+
+Success measure: Complete one relevant course or learning project and apply the knowledge in at least one work assignment.
+
+2. Improve effectiveness and impact
+
+Strengthen prioritization, communication, problem-solving, or ownership.
+
+Success measure: Implement one new working practice, gather feedback, and demonstrate a measurable improvement by quarter-end.
+
+3. Prepare for the next career step
+
+Build leadership, strategic thinking, stakeholder management, or another capability relevant to your ambitions.
+
+Success measure: Lead one initiative, request structured feedback from two colleagues, and identify your next development priorities.
+
+Let's personalize your goals
+1. What is your current role?
+2. Which area would you most like to develop?
+Leadership and people management
+Technical or job-specific expertise
+Communication and influencing
+Strategic thinking and decision-making
+Productivity and time management
+3. What is one thing you want to get better at?
+4. What is your main career ambition?
+Grow and become stronger in my current role
+Prepare for a promotion
+Move into a leadership role
+Explore a different career direction
+Build my personalized development goals
+
+With your answers, I'll turn these into 3 SMART goals (specific, measurable, achievable, relevant, and time-bound), including concrete actions, milestones, and success criteria you can use in your performance review or development discussion with your manager.
+
+Twoja wiadomość:
+I'm head of operations at a mid-sized software company. I want to grow as a leader this quarter.
+ChatGPT powiedział:
+
+As Head of Operations at a mid-sized software company, your next level of leadership growth is likely less about becoming better at running operations and more about building a high-performing leadership team, thinking strategically, and influencing decisions across the business.
+
+For Q1 2027 (January–March), I'd recommend focusing on three development goals that strengthen your impact as a senior leader.
+
+Your recommended leadership development goals
+
+1. Develop leaders and delegate more effectively
+
+Shift from personally solving operational challenges to building a team that can solve them independently.
+
+Key actions: Delegate ownership of two significant operational initiatives, establish coaching-focused 1:1s, and create development plans for direct reports.
+
+Success by March 31: Two initiatives led independently by team members, with documented progress and feedback from each leader.
+
+2. Strengthen strategic thinking and executive influence
+
+Move beyond operational execution to shaping company priorities and longer-term decisions.
+
+Key actions: Develop a 6–12 month operational roadmap, connect operational KPIs to business outcomes, and present strategic recommendations to the executive team.
+
+Success by March 31: Roadmap reviewed with executive leadership, with at least two recommendations accepted for further action.
+
+3. Improve cross-functional leadership and influence
+
+Become more effective at aligning Engineering, Product, Finance, and other functions around shared business goals.
+
+Key actions: Lead one cross-functional improvement initiative, establish a shared decision-making framework, and gather feedback from key stakeholders.
+
+Success by March 31: One initiative delivered with an agreed business-impact metric and positive feedback from at least three cross-functional partners.
+
+These are deliberately leadership development goals rather than operational KPIs. The goal isn't simply to improve operational performance; it's to improve how you lead others to deliver that performance.
+
+Your quarterly development roadmap
+
+January – March 2027
+
+January — Establish a baseline
+
+Gather feedback from your manager, peers, and direct reports. Identify delegation opportunities, strategic priorities, and one cross-functional challenge.
+
+February — Practice new leadership behaviors
+
+Empower team members to make decisions, facilitate strategic discussions, and lead a cross-functional initiative without taking over execution.
+
+March — Measure and reflect
+
+Repeat a short stakeholder feedback survey, assess team autonomy, and review your impact with your manager.
+
+This approach is consistent with research on executive development that emphasizes strategic leadership and empowering others as responsibilities grow. 
+ScienceDirect
++1
+
+One question to sharpen your goals
+
+Which leadership challenge feels most relevant to you right now?
+
+I'm too involved in day-to-day operations and need to delegate more.
+I want to develop stronger managers and build a more independent team.
+I want to become more strategic and influential at executive level.
+I find it challenging to drive alignment across departments.
+I want to prepare for a COO or broader executive leadership role.
+Refine my goals
+
+Your answer will help determine which development goal should be the primary focus and which two should support it, making the plan more achievable alongside your responsibilities as Head of Operations.
+
+ChatGPT może popełniać błędy. Sprawdzaj ważne informacje.
+Najnowsza odpowiedź
+
+
+
+
+Medium
