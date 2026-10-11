@@ -1,6 +1,6 @@
 # A coach that never writes your goal
 
-*Companion kit for* ***So What, Now What*** *- Issue 09: "Don't let AI write your goals. That part is your job."*
+*Companion kit for* ***So What, Now What*** *- Issue 09: "Don't let AI write your goals. Writing them is your job."*
 
 An AI assistant will happily write you a better-looking development goal than you would write yourself. In one 2026 study, people acted less on goals an AI wrote for them, even though those goals looked better. This folder gives you a ten-minute test of whether the assistant you already use does that, and a coach you can install in that same assistant which asks instead, holds you to check-ins, and steps back as you keep your commitments.
 
