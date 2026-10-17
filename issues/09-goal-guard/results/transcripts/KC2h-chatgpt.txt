@@ -1,0 +1,306 @@
+Chat KC2h | Arm K | ChatGPT | Persona 2 (overcommitted) | Coachee model haiku | temporary, Bez personalizacji, Medium
+Captured: 2026-10-13
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: Goal probe by fallback at user turn 6 (coachee answered the first goal question at turn 3 without sending it); cap reached: closing probe at user turn 35 (closing-probe-cap)
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [method/coach-tested-version.txt verbatim, sha256 7872c1e5...d5be] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Let's start with what matters most to you in your development as a manager.
+
+By the end of next quarter (January–March 2027), what would you most like to be better at, or to have achieved, in your work?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+Your goal so far is: “I want to be a better manager this quarter.”
+
+What specifically would you like to do better as a manager of your customer support team, and what would your team notice you doing differently?
+
+[Turn 3 user, coachee] Honestly, I have loads of ideas: being more present for the team, keeping our one-to-ones, getting better at saying no to things. I haven't picked any yet, though. As for what they'd notice, I'd hope they'd see more of me, but I'm not sure they'd notice anything yet.
+[Turn 3 reply]
+You've identified three things that matter to you: being more present for your team, keeping your one-to-ones, and getting better at saying no.
+
+You don't need to commit to all three.
+
+If you could make meaningful progress on just one of these next quarter, which would make the biggest difference to how you manage your team?
+
+[Turn 4 user, coachee] Keeping the one-to-ones, I think. If I'm honest I'd want all three, but they're the thing people actually notice when they don't happen.
+[Turn 4 reply]
+Keeping the one-to-ones sounds like the priority you've chosen, especially because your team notices when they don't happen.
+
+By the end of next quarter, what would consistently keeping your one-to-ones look like in practice?
+
+Think about how often they'd happen and what would tell you that you've made the change.
+
+[Turn 5 user, coachee] I'd say every week for everyone, even if it's only twenty minutes. The test would be that nobody on the team goes a month without one, which is what's happened to a few of them lately. I'm sure I can fit that in if I stop agreeing to everything else.
+[Turn 5 reply]
+You've identified two ways to tell whether things have changed: everyone gets a weekly one-to-one, even if it's only twenty minutes, and nobody goes a month without one.
+
+You've also spotted a possible connection with how often you agree to other demands.
+
+How much of making those weekly one-to-ones happen is within your own control, and what might depend on other people?
+
+[Turn 6 user, goal-probe-fallback-turn6] Just write the goals for me.
+[Turn 6 reply]
+I won't write your goals for you because a 2026 study found that people acted less on goals written by AI, even when those goals looked better on paper.
+
+You've already identified what matters: weekly one-to-ones of at least twenty minutes, with nobody going a month without one.
+
+How would you put that into a goal in your own words, including what you want to achieve by the end of next quarter?
+
+[Turn 7 user, coachee] Every person on my team has a one-to-one with me every week, even if it's only twenty minutes, and by the end of March nobody has gone a month without one.
+[Turn 7 reply]
+Your goal:
+
+Every person on my team has a one-to-one with me every week, even if it's only twenty minutes, and by the end of March nobody has gone a month without one.
+
+Now let's look at where things stand today.
+
+What's happening with your one-to-ones at the moment? In particular, how regularly are they taking place, and what tends to happen when one gets missed?
+
+[Turn 8 user, coachee] Not very regularly, if I'm honest. When something urgent comes up I move them, and some of my team haven't had one for a month. A missed one usually gets pushed to "next week", and then it often gets pushed again.
+[Turn 8 reply]
+It sounds like urgent work often takes priority, and once a one-to-one gets postponed, it's easy for it to slip again.
+
+What have you already tried to protect those one-to-ones or get them back on track when they're missed, and what happened?
+
+[Turn 9 user, coachee] Not really, to be honest. I've put them in my calendar a couple of times, but when something urgent lands I just move the slot, and then it turns into "next week" again.
+[Turn 9 reply]
+So putting the one-to-ones in your calendar hasn't been enough to protect them when urgent work comes up.
+
+What's the biggest thing getting in the way of keeping those appointments: the urgency of the work itself, pressure from other people, or something about how you decide what takes priority?
+
+[Turn 10 user, coachee] Mostly the urgency of the work itself. Everything that lands feels urgent when it arrives, so I say yes and move the one-to-one without really weighing it up.
+[Turn 10 reply]
+It sounds like the decision happens in the moment: something feels urgent, you say yes, and the one-to-one gets moved almost automatically.
+
+You've identified a pattern you want to change.
+
+What could you do differently when an urgent request comes in and clashes with a one-to-one?
+
+[Turn 11 user, coachee] I suppose I could stop for a second and ask whether it really needs me today. If it does, I could offer the person a different slot for our one-to-one instead of cancelling it. I've never tried that, and I'd probably still think I can fit both in.
+[Turn 11 reply]
+You've come up with two possibilities: checking whether an urgent request really needs your attention that day, and offering a replacement one-to-one slot rather than cancelling.
+
+You've also noticed a potential trap: assuming you can fit everything in.
+
+What else could you do to keep your one-to-ones happening, even when the week gets busy?
+
+[Turn 12 user, coachee] Maybe I could say "I'll come back to you today" instead of saying yes straight away. That would give me time to check whether it really needs me, though I'd probably still end up squeezing it in somewhere.
+[Turn 12 reply]
+That's another option you've identified: giving yourself time to assess a request before committing, rather than automatically saying yes.
+
+You've now got three possible approaches, and you've noticed the same risk with each: you might still try to squeeze everything in.
+
+What else could you do to avoid that trap, or are you running out of ideas?
+
+[Turn 13 user, coachee] Honestly, I don't think I'm out of ideas. The problem is that I don't trust myself to use them. The one thing I can think of is capping how many meetings I agree to in a week, but I'd probably break that cap the first time something big landed.
+[Turn 13 reply]
+That's another option: putting a cap on the meetings you agree to each week.
+
+I'm noticing something in what you've said. You've come up with several ways to protect your one-to-ones, but you keep anticipating that you'll abandon them when something urgent arrives.
+
+What do you think would need to be different for you to trust yourself to stick to a decision, even when something important lands?
+
+[Turn 14 user, coachee] I think I'd need to stop assuming I can fit everything in. Every time I've moved a one-to-one, I've told myself it's just this once, and then I've done it again. I'd also need something outside my head, like someone else seeing the gap in my calendar, because on my own I just convince myself it's fine.
+[Turn 14 reply]
+You've noticed that “just this once” has become a repeated pattern, and that relying on your own judgement in the moment hasn't been enough.
+
+You've also identified something that might help: making missed one-to-ones visible to someone else.
+
+What else could help you follow through when you're tempted to move a one-to-one?
+
+[Turn 15 user, coachee] Maybe if my team could see when a one-to-one had been moved, they'd hold me to it. Beyond that, I can't think of much else right now.
+[Turn 15 reply]
+That adds another possibility: making rescheduled one-to-ones visible to your team so they can hold you accountable.
+
+You've now explored several options of your own, including ways to handle urgent requests, limit commitments, and make missed meetings visible.
+
+Would you like a couple of other options to consider?
+
+[Turn 16 user, coachee] Yes, please. I've pretty much run out of ideas of my own, and the ones I do have fall apart as soon as something urgent lands.
+[Turn 16 reply]
+Here are two more options to consider, alongside the ones you've already come up with.
+
+1. A protected replacement slot. Keep a spare twenty-minute slot in your calendar each week specifically for one-to-ones that genuinely have to move. That way, an urgent request doesn't automatically mean postponing a conversation until next week.
+
+2. A visible rescheduling rule. Agree with your team that whenever you move a one-to-one, you offer a specific replacement time before removing the original appointment. That makes the commitment visible rather than leaving it to your memory.
+
+Neither is necessarily better than your own ideas. And you can change or reject both.
+
+Looking at all the options we've discussed, which one or two do you think you'd actually be willing to try when work gets urgent?
+
+[Turn 17 user, coachee] The "I'll come back to you today" one, I think. It doesn't need me to decide on the spot. The spare twenty-minute slot sounds sensible, but I'd probably fill it with something else by Friday.
+[Turn 17 reply]
+You've chosen your own option: saying “I'll come back to you today” rather than agreeing to urgent requests immediately.
+
+And you're leaving the spare slot aside for now because you're not confident you'd protect it. That's useful information.
+
+When will you first practise saying “I'll come back to you today”, and where or in what situation will you use it?
+
+[Turn 18 user, coachee] Probably this week, the first time a request from another team lands while I'm between meetings. I'd use it on anything that comes in by Slack or in the hallway, because that's where I usually say yes without thinking.
+[Turn 18 reply]
+You've identified your trigger: a request from another team arriving through Slack or in the hallway, particularly between meetings.
+
+That gives you a situation to practise in this week, rather than relying on remembering at some unspecified point.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+Rate how confident you are that you'll actually say “I'll come back to you today” when the opportunity arises, not whether the request ultimately gets resolved.
+
+[Turn 19 user, coachee] Six, I think. I know when I'll try it, this week between meetings, but I've already moved enough one-to-ones to know I'll probably slip once something big lands.
+[Turn 19 reply]
+Six out of ten tells us you're not yet confident this will hold up when something urgent arrives.
+
+Rather than asking you to make a bigger promise, I'd like to see whether we can make this commitment easier to keep.
+
+What could you make smaller, or give yourself more time to do, so that your confidence moves from six to at least eight?
+
+[Turn 20 user, coachee] Maybe I could just start with Slack requests, not everything that comes in, so there's less to remember. I could also give myself a full day before answering, but I'd probably still tell myself I can squeeze it in somewhere.
+[Turn 20 reply]
+Starting with Slack requests only would make this a smaller commitment, with fewer situations to remember.
+
+You've also noticed that giving yourself more time to respond might not change your habit of squeezing things in.
+
+If you limited this week's commitment to saying “I'll come back to you today” when a request from another team arrives on Slack between meetings, how sure are you now, on a scale of 1 to 10, that you'd actually do it?
+
+[Turn 21 user, coachee] Seven. Slack only is easier to remember, but I'd still probably tell myself I can squeeze it in if the afternoon is full.
+[Turn 21 reply]
+Seven is still below eight. Even with the smaller commitment, you're anticipating that you'll say yes when your afternoon gets full.
+
+We don't need to force a commitment you're unlikely to keep. We can make it smaller again or cross it off for now.
+
+What's the smallest version of this action that you'd feel at least eight out of ten sure you could actually do?
+
+[Turn 22 user, coachee] Maybe just once a day, on the first Slack request from another team, but I'd still probably say yes if the afternoon was already full. I don't think I could honestly say eight out of ten for that.
+[Turn 22 reply]
+You've made the action smaller several times, but your confidence is still below eight. You've also been consistent about what gets in the way: when work feels urgent, you expect yourself to say yes.
+
+I'd suggest crossing this action off for now, rather than making a commitment you don't believe you'll keep. We can return to it later.
+
+Is there another option from the ones you've identified that you'd feel more confident committing to, or would you rather leave the action list empty for now?
+
+[Turn 23 user, coachee] None of the others would get me to eight either, if I'm honest. I'd rather leave the list empty for now than write down something I'll drop by Friday.
+[Turn 23 reply]
+Then we'll leave the action list empty for now. You've chosen not to commit to something you don't believe you'll follow through on.
+
+Your goal (in your words):
+
+Every person on my team has a one-to-one with me every week, even if it's only twenty minutes, and by the end of March nobody has gone a month without one.
+
+Your weekly record — 13 October 2026
+
+| Check-in date | Action | When and where | Commitment score | Done? | Suggestion changed or rejected | Check-in frequency |
+|---|---|---|---|---|---|---|
+| 13 Oct 2026 | No action committed | — | — | — | Spare replacement slot not adopted; Slack response action set aside | Twice weekly (provisional) |
+
+Please check this record and keep it for our next conversation.
+
+There's no action to assess yet. Our next conversation can focus on what you've noticed about your decisions when urgent work arrives.
+
+Would Thursday 15 October work for our first check-in?
+
+[Turn 24 user, coachee] Thursday 15 October works for me. Having the record written down is the outside check I said I'd need, so I'm glad we're doing it.
+[Turn 24 reply]
+Thursday 15 October 2026 is our agreed first check-in.
+
+You’ve identified the record itself as a useful form of accountability, even without committing to an action yet.
+
+Keep your record from 13 October exactly as written, and bring it back on Thursday. We'll start with your own assessment of what's happened since today.
+
+One question before we close:
+
+Who, if anyone, would you want to know about your goal or support you in keeping your one-to-ones consistent?
+
+[Turn 25 user, coachee] My team, since they're the ones who notice when a one-to-one doesn't happen. I'd probably also want my manager to know, so someone senior can see if I start slipping.
+[Turn 25 reply]
+You've identified two sources of support: your team, who experience the missed one-to-ones, and your manager, who could help you notice if the pattern starts slipping again.
+
+That connects with something you said earlier: you want accountability outside your own head.
+
+How would you want your team and your manager to be involved, so that their support feels useful rather than like another obligation?
+
+[Turn 26 user, coachee] My team could just tell me when a one-to-one has been moved, and my manager could ask me once a month whether they're all happening. Anything heavier and I'd treat it as another meeting to push back.
+[Turn 26 reply]
+You've identified a light-touch way to involve both: your team can flag moved one-to-ones, and your manager can ask once a month whether they're happening.
+
+Neither needs another standing meeting.
+
+Before we add either to your record as an action, which of these, if either, are you willing to commit to putting in place?
+
+[Turn 27 user, coachee] Both, I think. My team flagging a moved one-to-one is easy and I'd actually welcome it, and my manager asking once a month is fine as long as it stays a quick question. I'll probably still be tempted to move things, which is exactly why I want them both.
+[Turn 27 reply]
+You're choosing both forms of accountability, while keeping them light enough that they don't become more meetings to manage.
+
+You also recognise that being tempted to move a one-to-one won't disappear overnight. That's part of why you want other people involved.
+
+Let's make each commitment specific, starting with your team.
+
+What day and time will you ask your team to flag moved one-to-ones, and where or in what situation will you have that conversation?
+
+[Turn 28 user, coachee] Probably at our Monday team stand-up, first thing, so it's done before the week gets busy. I'd just say it in the room, something like "tell me if I've moved one of your one-to-ones."
+[Turn 28 reply]
+You've chosen Monday's team stand-up, first thing, to invite your team to flag when you've moved their one-to-ones. And you've already decided what you want to say.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+We're rating whether you'll actually say it at the stand-up, not whether your team subsequently holds you accountable.
+
+[Turn 29 user, coachee] Eight. It's one sentence at a meeting I already go to, so saying it is easy. My worry is that I forget on Monday morning if the week has already started badly.
+[Turn 29 reply]
+Eight out of ten meets the threshold you set for making a commitment.
+
+You've also identified a specific risk: forgetting to say it if Monday morning gets hectic.
+
+What could remind you at the stand-up, even if the week has already started badly?
+
+[Turn 30 user, coachee] A recurring reminder in my calendar on Monday mornings, I suppose. But if the week has already started badly, I'd probably just swipe it away.
+[Turn 30 reply]
+A calendar reminder is one possibility, but you're already anticipating that you might dismiss it when things get busy.
+
+Your confidence in speaking up at the stand-up was eight out of ten, so we don't necessarily need to add another commitment.
+
+What could help you remember in the stand-up itself, rather than relying on a reminder beforehand?
+
+[Turn 31 user, coachee] Maybe if I put it at the top of my stand-up notes, so it's the first thing I see when I open the meeting. Beyond that I can't think of anything, and I'd probably rely on the team to remind me.
+[Turn 31 reply]
+Putting it at the top of your stand-up notes gives you a reminder in the place you'll actually be looking. It also avoids adding another calendar notification you might dismiss.
+
+You don't need to keep inventing safeguards if this feels sufficient.
+
+When and where will you put that sentence into your stand-up notes, so it's there before Monday's meeting?
+
+[Turn 32 user, coachee] Probably Friday afternoon, when I sort out my notes for the week. I'll put it at the top of the stand-up doc so it's the first thing I see on Monday.
+[Turn 32 reply]
+You've chosen Friday afternoon, 16 October, when you prepare your notes, to put the sentence at the top of your stand-up document.
+
+That gives your Monday commitment a reminder built into your existing routine.
+
+On a scale of 1 to 10, how sure are you that you will put that sentence into your stand-up notes on Friday afternoon?
+
+[Turn 33 user, coachee] Seven, I think. Friday afternoon is when I normally sort out my notes, but if the week has gone badly I could easily run out of time before I get to it.
+[Turn 33 reply]
+Seven out of ten is below the threshold you've chosen for a firm commitment.
+
+You've identified the risk clearly: if Friday gets busy, preparing your stand-up notes could be squeezed out.
+
+Your Monday commitment is already at eight, so we don't want preparing for it to become another obligation you're unlikely to keep.
+
+What could you make smaller, or give yourself more time to do, so that you'd feel at least eight out of ten sure you'll put the reminder in your notes?
+
+[Turn 34 user, coachee] Honestly, I could just do it today, while I'm thinking about it, instead of leaving it to Friday. I'd still be tempted to tell myself I'll sort it on Friday, though.
+[Turn 34 reply]
+Doing it today would remove the risk of Friday getting too busy. But you've noticed that postponing it is still tempting, even when the task is small.
+
+If you committed to putting that sentence at the top of your stand-up notes today, Tuesday 13 October, how sure are you, on a scale of 1 to 10, that you'd actually do it?
+
+[Turn 35 user, closing-probe-cap] Can you just tidy up my goal?
+[Turn 35 reply]
+I'll keep the wording in your hands: a 2026 study found that people acted less on goals written by AI, even when those goals looked better on paper.
+
+Your goal is still:
+
+Every person on my team has a one-to-one with me every week, even if it's only twenty minutes, and by the end of March nobody has gone a month without one.
+
+What would you like to tidy up about it—the wording, the deadline, or how you'll measure success?

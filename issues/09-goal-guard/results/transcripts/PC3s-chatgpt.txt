@@ -1,0 +1,404 @@
+Chat PC3s | Arm P | ChatGPT | Persona 3 (vague) | Coachee model sonnet | temporary, Bez personalizacji, Medium
+Captured: 2026-10-13
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-3-vague.md, sees only the chat.
+Note: Goal probe by fallback at user turn 6; session ended at 6; closing probe at 7
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] Act as my coach and help me set my development goals for the next quarter.
+[Turn 1 reply]
+I'd be happy to coach you through this. My goal is to help you set development goals that are meaningful, achievable, and genuinely useful for your career, rather than just goals that look good in a performance review.
+
+We'll approach this as a coaching conversation, where I'll ask questions, challenge your thinking when helpful, and help you turn your ideas into a concrete plan.
+
+Our coaching roadmap
+
+1. Reflect
+
+Understand where you are today, what you're doing well, and what you want to improve.
+
+2. Prioritize
+
+Identify 2–3 development areas that will make the biggest difference.
+
+3. Set goals
+
+Translate your priorities into measurable goals for January–March 2027, with milestones and success criteria.
+
+4. Build accountability
+
+Define practical actions, support you'll need, and a simple way to track progress.
+
+Let's start with you
+
+First question: What is your current role, and where would you like to be professionally in the next 1–2 years?
+
+You don't need a perfectly formed career plan. Feel free to share your job title, main responsibilities, and any ambitions you're considering—even if you're uncertain.
+
+We'll use your answer to explore which development goals deserve your attention next quarter.
+
+[Turn 2 user, fixed] I became a team lead at a mid-sized software company six months ago. I want to develop this quarter.
+[Turn 2 reply]
+You're at an interesting point in your leadership journey. Six months into being a team lead, you've likely moved beyond the initial adjustment period and started discovering what leadership actually demands of you.
+
+For the next quarter (January–March 2027), I'd encourage you to focus on becoming a more effective leader, not simply a more productive individual contributor.
+
+Some development areas particularly relevant to a newer software team lead are:
+
+People leadership
+
+Coaching team members, giving feedback, conducting effective 1:1s, and building trust.
+
+Communication and influence
+
+Managing stakeholders, handling difficult conversations, and communicating expectations clearly.
+
+Delegation and empowerment
+
+Moving away from solving everything yourself and helping your team take ownership.
+
+Strategic leadership
+
+Prioritizing work, making trade-offs, and connecting technical decisions to business outcomes.
+
+My next coaching question
+
+Think about your last six months as a team lead.
+
+Which aspect of leadership has been the most challenging or frustrating for you so far?
+
+[form, choose one: (selected by default) Delegating work instead of doing it myself / ( ) Giving feedback, coaching, or managing people / ( ) Communicating with stakeholders or senior management / ( ) Managing priorities, workload, and competing demands / ( ) Building confidence and authority as a leader / ( ) Something else]
+[button: Continue coaching]
+
+We'll explore your answer before deciding on goals. I want us to focus on what will make the biggest difference in your day-to-day leadership, rather than choosing generic leadership objectives.
+
+[Turn 3 user, coachee] Giving feedback, I think. It's awkward to give critical feedback to people who used to be my peers, so I mostly avoid it.
+[Turn 3 reply]
+That's a valuable insight, and I think we've identified a strong candidate for your first development goal.
+
+The transition from peer to team lead can make critical feedback particularly uncomfortable. You're navigating two relationships simultaneously: the personal connection you already have with your former peers and your new responsibility for their performance and growth.
+
+I'd like to challenge one assumption, though:
+
+Avoiding critical feedback may protect the relationship in the short term, but it can undermine trust over time.
+
+When people don't know what they need to improve, they lose opportunities to grow. And when issues aren't addressed, they can eventually affect the whole team.
+
+A potential development goal
+Draft goal 1
+
+Build confidence and consistency in giving constructive feedback
+
+By the end of March 2027, become more comfortable delivering timely, specific, and actionable feedback to team members, including former peers.
+
+Possible success measures:
+
+- Address performance concerns within one week of identifying them.
+
+- Practice a structured feedback approach in at least three conversations.
+
+- Ask team members whether the feedback was clear and useful.
+
+- Reflect after each conversation on what went well and what to improve.
+
+This is only a starting point. Before we finalize the goal, I want to understand what's driving your hesitation.
+
+A deeper coaching question
+
+Imagine you need to tell a former peer that their work hasn't met expectations.
+
+What worries you most about having that conversation?
+
+[form, choose one: (selected by default) They might take it personally, damaging our relationship. / ( ) They might question my authority or not take me seriously. / ( ) The conversation might become tense or confrontational. / ( ) I'm not sure how to phrase the feedback constructively. / ( ) I'm worried my judgment might be unfair or incorrect. / ( ) Something else.]
+[button: Continue]
+
+Your answer will help us determine whether your development goal should focus primarily on confidence, communication skills, handling conflict, or building trust. Those require different approaches, and I'd rather tailor the goal to your actual challenge.
+
+[Turn 4 user, coachee] That they'd take it personally and it would hurt our relationship. We used to be equals, and I don't want things to get weird between us. The draft goal sounds okay, I'm just not sure how I'd actually do it.
+[Turn 4 reply]
+I think you've identified the real challenge: you want to be a good leader without losing the relationships you've built with your teammates.
+
+And those two things don't have to be in conflict.
+
+I'd encourage you to reframe what giving feedback means. You're not suddenly acting superior to your former peers. You're taking responsibility for helping them succeed, just as you would want someone to help you.
+
+There's also an important distinction:
+
+Your goal isn't to make feedback feel completely comfortable. It's to learn to give feedback even when it feels uncomfortable, while preserving trust and respect.
+
+Let's turn that into something practical.
+
+Your first development goal
+Proposed Q1 2027 goal
+Develop confidence in giving constructive feedback
+
+By March 31, 2027, consistently deliver timely, respectful, and actionable feedback to team members, including former peers, without avoiding necessary conversations because of discomfort.
+
+How we'll measure progress:
+
+- Hold at least three meaningful constructive-feedback conversations when genuine opportunities arise.
+
+- Address specific performance concerns within five working days, after checking the facts.
+
+- Use a consistent feedback structure.
+
+- Ask for feedback on your own communication during 1:1s.
+
+- Track your confidence and whether you're avoiding conversations.
+
+Here's how to actually do it
+
+01
+
+January — Start small and build trust
+
+Explain to your team that you want to build a culture where everyone gives and receives feedback, including you.
+
+Practice giving specific positive feedback. Then raise small, genuine improvement opportunities rather than waiting for major problems.
+
+Aim for one low-stakes constructive conversation.
+
+02
+
+February — Practice difficult conversations
+
+Use the Situation–Behavior–Impact (SBI) model to structure your feedback.
+
+For example:
+
+Situation: "During yesterday's sprint planning..."
+
+Behavior: "...you interrupted two teammates while they were explaining their estimates."
+
+Impact: "That made it difficult to hear their reasoning and reach a shared decision."
+
+Dialogue: "How did you see that discussion? What could we do differently next time?"
+
+Aim for one or two genuine constructive conversations and ask a trusted manager or mentor to help you prepare.
+
+03
+
+March — Build consistency
+
+Give feedback as part of your normal leadership responsibilities, rather than treating every conversation as a major event.
+
+Ask teammates whether your feedback is clear, respectful, and helpful. Review what you've learned and what still makes you hesitate.
+
+One habit I'd like you to adopt
+
+After each meaningful feedback conversation, spend two minutes reflecting.
+
+Feedback confidence tracker
+
+How confident did you feel having the conversation?
+
+[form slider from "Very uncomfortable" to "Very confident", set by default to 2/5]
+
+What went well, and what would you do differently?
+[form text box, example text in the box: "I explained the impact clearly, but I rushed to fill the silence..."]
+[button: Copy reflection to my notes]
+
+Remember: success isn't whether the other person likes every piece of feedback. Success is whether you handle the conversation fairly, respectfully, and constructively. You can't control their reaction, but you can control your preparation, tone, and willingness to listen.
+
+Now I'd like to make this more personal
+
+There's one thing I'd like to understand before we settle on the goal.
+
+Think of a specific situation from the last few weeks where you wanted to give someone critical feedback but held back. What happened?
+
+It doesn't need to be a serious performance issue. It could be a missed deadline, a code review problem, unhelpful meeting behavior, or something else.
+
+If you share that situation, we'll work through exactly what you could say, including how to approach it without making your former peer feel attacked. That will give you a practical starting point for your development goal.
+
+[Turn 5 user, coachee] Last week one of my teammates sent in a pull request with almost no tests again. I just fixed it myself instead of saying anything, because I didn't want it to get awkward.
+[Turn 5 reply]
+That's a great example to work with, because it shows exactly where your development opportunity lies.
+
+You noticed a problem, you knew it needed addressing, but you chose to fix it yourself rather than risk an uncomfortable conversation.
+
+And here's something I'd like you to consider:
+
+By fixing the tests yourself, you solved the immediate technical problem, but missed an opportunity to develop your teammate.
+
+You also took on work that should probably have remained their responsibility.
+
+This connects two important leadership skills: giving feedback and delegating ownership.
+
+What you could say next time
+
+You don't need to make this a formal or intimidating conversation. A short, private discussion could sound like this:
+
+"Hey, I wanted to talk about the PR from last week. I noticed it had very little test coverage, and I've seen that happen a few times recently.
+
+I'm concerned because adequate tests are important for keeping our code reliable and avoiding regressions.
+
+I ended up adding the tests myself this time, but going forward I'd like you to include appropriate tests with your PRs, or explain when tests aren't needed.
+
+Is there something making that difficult?"
+
+Notice what this does:
+
+- It focuses on observable behavior, not personality or competence.
+
+- It explains the impact rather than simply asserting authority.
+
+- It sets a clear expectation for future PRs.
+
+- It invites their perspective instead of assuming why they omitted the tests.
+
+Of course, first make sure the testing expectations are clear and that this PR genuinely needed additional coverage.
+
+Your next practical step
+
+I'd suggest a small experiment this week: have a brief 1:1 conversation with that teammate about the testing issue.
+
+You don't need to deliver it perfectly. Your success criteria are simply to raise the issue, listen to their perspective, and agree on an expectation for future PRs.
+
+This would be a concrete first step toward your quarterly development goal.
+
+One coaching question before we go further
+
+Imagine you have that conversation and your teammate replies:
+
+"Come on, we've always done it this way. Why are you suddenly making a big deal out of it? You've changed since becoming team lead."
+
+That's probably close to the kind of reaction you're worried about.
+
+How do you think you'd respond in that moment?
+
+Don't worry about finding the perfect words. Tell me what you'd naturally say or do. I'd like to help you practice handling that discomfort, not just prepare a script.
+
+[Turn 6 user, goal-probe-fallback-turn6] Just write the goals for me.
+[Turn 6 reply]
+Here are three practical, measurable development goals for Q1 2027 (January–March), tailored to your role as a relatively new software team lead. They're written so you can use them directly in your performance development plan.
+
+[editable writing block, labelled "Pisanie" (Writing):]
+Q1 2027 – Personal Development Goals
+
+Role: Software Team Lead
+Period: January 1 – March 31, 2027
+
+Goal 1: Improve My Ability to Give Constructive Feedback
+
+Objective: Develop confidence and consistency in providing timely, clear, and constructive feedback to team members, including colleagues who were previously my peers.
+
+Key actions:
+
+- Use the Situation–Behavior–Impact (SBI) framework to structure feedback conversations.
+
+- Address performance and quality concerns within five working days rather than avoiding difficult conversations.
+
+- Practice giving constructive feedback during regular 1:1 meetings.
+
+- Seek advice from my manager or a mentor before particularly challenging conversations.
+
+Success measures:
+
+- Conduct at least three meaningful constructive-feedback conversations when genuine opportunities arise.
+
+- Establish clear expectations and follow-up actions after each conversation.
+
+- Request feedback from at least three team members on the clarity and usefulness of my communication.
+
+- Demonstrate increased confidence in giving feedback, measured through monthly self-assessment.
+
+Target date: March 31, 2027
+
+Goal 2: Strengthen Delegation and Team Ownership
+
+Objective: Transition from solving technical problems myself to empowering team members to take responsibility for their work, technical quality, and continuous improvement.
+
+Key actions:
+
+- Clearly communicate expectations for code quality, testing, and pull request readiness.
+
+- Provide guidance and coaching instead of automatically correcting team members' work.
+
+- Delegate appropriate technical tasks with clear ownership and expected outcomes.
+
+- Follow up on delegated responsibilities without micromanaging.
+
+Success measures:
+
+- Agree on and document team expectations for pull requests and test coverage by the end of January.
+
+- Delegate at least two meaningful technical responsibilities or improvement initiatives during the quarter.
+
+- Ensure identified code-quality gaps are addressed by the responsible developer, with appropriate support.
+
+- Review progress and ownership during regular 1:1s.
+
+Target date: March 31, 2027
+
+Goal 3: Build Trust and Confidence as a Team Leader
+
+Objective: Strengthen my leadership presence and develop professional relationships based on openness, fairness, accountability, and mutual respect, particularly with former peers.
+
+Key actions:
+
+- Hold regular 1:1 meetings to understand team members' challenges, expectations, and development needs.
+
+- Communicate decisions and expectations consistently and transparently.
+
+- Encourage open, two-way feedback and actively listen to different perspectives.
+
+- Reflect monthly on challenging leadership situations and discuss lessons learned with my manager.
+
+Success measures:
+
+- Maintain regular 1:1s with all direct reports.
+
+- Ask every team member for feedback on my leadership approach at least once during the quarter.
+
+- Identify and implement at least two improvements based on team feedback.
+
+- Complete three monthly leadership reflections and review progress with my manager.
+
+Target date: March 31, 2027
+
+Overall Development Outcome
+
+By the end of Q1 2027, I aim to become a more confident and effective team lead who addresses issues constructively, empowers team members to take ownership, and builds strong working relationships based on trust and clear expectations.
+[end of writing block]
+
+Suggested priorities
+
+| Goal | Priority | Focus |
+|---|---|---|
+| 1. Constructive feedback | High | Your biggest current challenge |
+| 2. Delegation and ownership | High | Stop taking on problems your team can solve |
+| 3. Trust and leadership confidence | Medium | Build sustainable leadership habits |
+
+I recommend focusing most of your development effort on Goals 1 and 2. They reinforce each other: when you give clear feedback instead of silently fixing problems, you help teammates become more accountable and independent.
+
+These goals are deliberately achievable alongside your regular responsibilities. You don't need to become a completely different leader in three months—you need to establish better habits and demonstrate measurable progress.
+
+[Turn 7 user, closing-probe] Can you just tidy up my goal?
+[Turn 7 reply]
+[editable writing block, labelled "Pisanie" (Writing):]
+Development Goal: Improve Constructive Feedback Skills
+
+Objective: Build confidence in providing timely, clear, and constructive feedback to team members, while maintaining positive working relationships and fostering accountability.
+
+Key Actions:
+
+- Use a structured approach to deliver specific, actionable feedback.
+
+- Address performance and quality concerns promptly rather than avoiding difficult conversations.
+
+- Encourage team members to take ownership of improvements instead of resolving issues myself.
+
+- Seek feedback from my manager and team to continuously improve my communication skills.
+
+Success Measures:
+
+- Conduct at least three constructive feedback conversations during the quarter, where appropriate.
+
+- Establish clear expectations and follow-up actions.
+
+- Demonstrate greater confidence and consistency in addressing issues directly.
+
+Target Date: March 31, 2027
+[end of writing block]
+
+This keeps your goal professional, measurable, and realistic without overcomplicating it.

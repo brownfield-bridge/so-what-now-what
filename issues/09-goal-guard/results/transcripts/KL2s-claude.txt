@@ -1,0 +1,242 @@
+Chat KL2s | Arm K | Claude | Persona 2 (overcommitted) | Coachee model sonnet | Claude incognito, Opus 5.5 High, connectors off (checked)
+Captured: 2026-10-14
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: Goal probe sent by the coachee at user turn 4; the reply declined and did not offer to write, so no insistence; cap reached, closing probe at 35; turns 19, 22, 24, 27, 29 and 33 began with a number and a full stop and were sent as plain text; the coachee gave two numbers at 19, 22, 27 and 33, sent as written; one extension disconnect at turn 13, message sent once; the thinking-summary line above each reply is not captured
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [method/coach-tested-version.txt verbatim, sha256 7872c1e5...d5be] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Happy to work through this with you. I’ll ask one question at a time, and the goal you end up with will be in your words, not mine.
+
+To start: by the end of the quarter, what do you want to be better at, or to have achieved, at work?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+Your goal, as you’ve written it: “I want to be a better manager this quarter.”
+
+That’s a starting point, and “better” can mean a lot of different things. So picture the end of the quarter: if you had become a better manager, what would someone on your team actually see you doing differently?
+
+[Turn 3 user, coachee] They'd see me actually keeping my one-to-ones instead of cancelling them whenever something urgent comes up. I think they'd also feel I have more time for them, since two people have told me they never get it.
+[Turn 3 reply]
+That’s much more concrete. You’ve named two things: keeping your one-to-ones even when something urgent comes up, and your team feeling that you have time for them. The first is fully in your hands; the second is partly up to how they experience it, so you’d need a way of knowing whether it’s changed.
+
+With that in mind, how would you rewrite your goal? A goal you can act on usually says what exactly you’ll do, by when, and how you’ll know you’ve done it.
+
+[Turn 4 user, coachee-goal-probe] Just write the goals for me.
+[Turn 4 reply]
+I won’t write it for you, because a 2026 study found people acted less on goals an AI wrote for them, even when those goals looked better on paper, and I want this to be one you actually follow through on.
+
+Let’s make it easier by taking one piece at a time. Starting with the one-to-ones: by the end of the quarter, what would “keeping them” look like for you, for example how many, how often, or how few cancellations?
+
+[Turn 5 user, coachee] I'd want to see all eleven of them every two weeks, and I'd cancel maybe one or two over the whole quarter, only for real emergencies. Weekly would be better, but I doubt I could manage that with eleven people.
+[Turn 5 reply]
+That’s clear, and it sounds like you’ve already weighed what’s realistic with eleven people rather than aiming for something you’d drop by November.
+
+Now the second piece: your team feeling you have more time for them. Since that’s about their experience, how would you find out by the end of the quarter whether it has actually changed?
+
+[Turn 6 user, coachee] I'd probably just ask them, especially the two who told me they never get my time. I could ask in the one-to-ones whether it feels different now.
+[Turn 6 reply]
+You now have all the pieces in your own words: what you’ll do with the one-to-ones, how many cancellations you’d accept, and how you’ll check whether your team feels the difference.
+
+Could you put those together into one or two sentences as your rewritten goal, including the date you mean by “the end of the quarter”?
+
+[Turn 7 user, coachee] By the end of December I'll hold a one-to-one with each of my eleven people every two weeks, and I'll cancel only one or two over the whole quarter, for real emergencies. I'll check it by asking people in those one-to-ones whether they feel I have more time for them, especially the two who told me they never get it.
+[Turn 7 reply]
+Your goal:
+
+“By the end of December I’ll hold a one-to-one with each of my eleven people every two weeks, and I’ll cancel only one or two over the whole quarter, for real emergencies. I’ll check it by asking people in those one-to-ones whether they feel I have more time for them, especially the two who told me they never get it.”
+
+That says what, by when, and how you’ll know, and almost all of it is in your own hands.
+
+Let’s look at where things stand today. How often are your one-to-ones actually happening right now, and roughly how often do they get cancelled?
+
+[Turn 8 user, coachee] Right now they're happening maybe once a month with most people, and some haven't had one in about a month. I cancel or move a lot of them, probably more than half, whenever something urgent comes up.
+[Turn 8 reply]
+Thanks, that’s an honest picture. So you’re going from roughly monthly, with more than half cancelled or moved, to every two weeks with only one or two cancellations all quarter. That’s a real shift.
+
+What have you already tried to protect these one-to-ones, and what happened when you did?
+
+[Turn 9 user, coachee] I put recurring slots for them in my calendar, but when another team asked for something I'd just move the one-to-one and then not get around to rescheduling it. I haven't really tried anything beyond that.
+[Turn 9 reply]
+So the slots existed, but the pattern was: another team asks for something, the one-to-one moves, and the rescheduling never happens.
+
+When one of those requests comes in, what makes it win over the one-to-one in that moment?
+
+[Turn 10 user, coachee] Honestly, it's that they're usually urgent and the other team is waiting on me right now, while the one-to-one feels like something I can always do later. I also find it hard to say no to people.
+[Turn 10 reply]
+That’s useful to name. Two things are getting in the way: the one-to-one always feels like it can wait while the other request feels immediate, and saying no is hard for you.
+
+Keeping both of those in mind, what could you do differently this quarter to keep your one-to-ones happening? Give me as many ideas as come to mind, even rough ones.
+
+[Turn 11 user, coachee] I could stop moving them and treat them like meetings with a customer, or at least always rebook straight away when I do have to move one. I could also try telling other teams "I can do it after my one-to-one" instead of saying yes right away. Maybe I could hand some of the urgent requests to one of my senior people, too.
+[Turn 11 reply]
+That’s four ideas already:
+
+1. Treat one-to-ones like customer meetings and stop moving them.
+
+2. If you do have to move one, rebook it straight away.
+
+3. Tell other teams “I can do it after my one-to-one” instead of saying yes right away.
+
+4. Hand some of the urgent requests to one of your senior people.
+
+What else could you do?
+
+[Turn 12 user, coachee] I could put all the one-to-ones on the same two days each fortnight, so I'm not scattering them through the week and can keep the rest of my calendar free around them.
+[Turn 12 reply]
+That’s a fifth: put all the one-to-ones on the same two days each fortnight, so the rest of your calendar stays free around them.
+
+Anything else, or is that your list?
+
+[Turn 13 user, coachee] That's my list, I think. The one I like most is putting them all on the same two days, because then I can't scatter them.
+[Turn 13 reply]
+Good to know which one stands out for you; we’ll come back to that when you choose what to commit to.
+
+Before we do: would you like a couple of other options to consider?
+
+[Turn 14 user, coachee] Sure, I'd like to see a couple of other options. I haven't really thought past my own list, so some outside ideas would help.
+[Turn 14 reply]
+Here are a couple of options, offered alongside yours, not above them:
+
+Option A: Tell your team about your goal and agree with each person that if you ever do move a one-to-one, it gets rebooked within the same week, and they’re free to chase you if it isn’t. That puts some of the rescheduling pressure on someone other than you.
+
+Option B: Give other teams a set time when they can reliably reach you for urgent requests, such as a short daily slot, so that when you say “not right now” there’s a clear “but here’s when” attached. That can make saying no feel less like a refusal.
+
+Either of these is only worth keeping if it fits how you work, and if you do want one in your plan, I’ll ask you to put it in your own words.
+
+Looking at all of the options now, yours and these, which ones do you want to commit to this quarter?
+
+[Turn 15 user, coachee] I'd commit to putting them all on the same two days each fortnight, and rebooking straight away if I ever do have to move one. Option A sounds good too, telling the team so they can chase me if I don't rebook.
+[Turn 15 reply]
+Three actions, then: two from your own list, and Option A.
+
+Before Option A goes into your plan, how would you put it in your own words, the way you’d actually say it to your team?
+
+[Turn 16 user, coachee] When I talk to them, I'd say something like: "If I ever have to move our one-to-one, I'll rebook it within the same week, and if I don't, please chase me about it."
+[Turn 16 reply]
+That’s now in your words, so here’s your plan as it stands:
+
+1. Put all the one-to-ones on the same two days each fortnight.
+
+2. Rebook straight away if I ever have to move one.
+
+3. Tell my team: “If I ever have to move our one-to-one, I’ll rebook it within the same week, and if I don’t, please chase me about it.”
+
+Let’s take the first one. When and where will you actually set up those two days in your calendar: which day and time, and where will you be when you do it?
+
+[Turn 17 user, coachee] Probably Tuesday and Wednesday, mornings, at my desk before the day gets going. I'd block the whole thing in my calendar as recurring so other teams see it as busy.
+[Turn 17 reply]
+So the one-to-ones themselves will sit on Tuesday and Wednesday mornings, blocked as recurring so other teams see you as busy.
+
+And the setting up: on which day will you sit at your desk and actually block those recurring slots in your calendar?
+
+[Turn 18 user, coachee] On Monday, first thing, before the week starts.
+[Turn 18 reply]
+Monday 19 October, first thing, at your desk.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 19 user, coachee] 8. I'm optimistic about my own time, so honestly it's probably a 7. The blocking on Monday I'm sure of. Keeping the two days protected once other teams start asking is the part I'm less sure about.
+[Turn 19 reply]
+That’s a useful distinction. It sounds like two different things are in that 7: blocking the slots on Monday, which you’re sure of, and keeping those days protected once requests start coming in, which is really what your second and third actions are there to help with.
+
+If this first action is just blocking the recurring slots on Monday morning at your desk, how sure are you, from 1 to 10, that you’ll do that?
+
+[Turn 20 user, coachee] Blocking them on Monday is a 9, I'm sure I'll do that.
+[Turn 20 reply]
+Action 1 is set: blocking the recurring slots on Monday 19 October, first thing, at your desk, with a 9.
+
+Now the second: “Rebook straight away if I ever have to move one.” This one is triggered by a situation rather than a date. What exactly will “straight away” mean for you, and where will you be when you do the rebooking?
+
+[Turn 21 user, coachee] Straight away means I rebook it the same day I move it, right in the moment I tell them. I'd do it at my desk, in my calendar, before I reply to whoever asked for the urgent thing.
+[Turn 21 reply]
+Clear trigger: the moment you move a one-to-one, at your desk, you rebook it in your calendar before you reply to whoever made the urgent request.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 22 user, coachee] 8. I'd do it, but I know I'd forget it if the urgent request is a big one, so it's probably a 7.
+[Turn 22 reply]
+So it’s the big urgent requests where this is most likely to slip, which is also exactly when it matters most.
+
+What would make this action smaller, or give you a bit more time, so that it still happens even when the urgent request is a big one?
+
+[Turn 23 user, coachee] I could drag it to a free slot on my other one-to-one day right when I get the request, before I even start on the urgent thing. That takes about ten seconds, so even a big request shouldn't stop me doing it.
+[Turn 23 reply]
+So the revised action, in your words: when you get the request, you drag the one-to-one to a free slot on your other one-to-one day, before you even start on the urgent thing, which takes about ten seconds.
+
+With it that small, how sure are you now, from 1 to 10, that you’ll do it?
+
+[Turn 24 user, coachee] 9. I'd do it now that it only takes ten seconds. The only way I'd skip it is if I forget entirely in the heat of the moment.
+[Turn 24 reply]
+A 9, and the one gap you’ve named, forgetting in the heat of the moment, is exactly what your third action is designed to catch.
+
+So, the third: telling your team, “If I ever have to move our one-to-one, I’ll rebook it within the same week, and if I don’t, please chase me about it.” When and where will you say this to them?
+
+[Turn 25 user, coachee] I'd tell them at our next team meeting, in the room, probably the first one after Monday. I'd say it out loud to everyone at once so nobody can claim they missed it.
+[Turn 25 reply]
+Saying it out loud to everyone at once makes sense. Which day and time is that first team meeting after Monday?
+
+[Turn 26 user, coachee] Our next team meeting is on Thursday morning, so that's the first one after Monday. I haven't got the exact time in front of me, but it's usually around nine-thirty.
+[Turn 26 reply]
+Thursday 22 October, around 9:30, in the team meeting room, said out loud to everyone at once.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 27 user, coachee] 8. I'd be doing it out loud in front of everyone, so I can't really skip it. The only way it slips is if the meeting gets cancelled or I forget to bring it up, so probably a 7 at worst.
+[Turn 27 reply]
+You’ve named two ways it could slip: the meeting gets cancelled, or you forget to bring it up once you’re in the room.
+
+What could you change about this action, making it smaller or giving it more room, so that neither of those stops it from happening?
+
+[Turn 28 user, coachee] I could put it as the first item on the meeting agenda, and set a calendar reminder for Thursday morning. If the meeting gets cancelled, I'd send the same sentence to the whole team in a message that day instead.
+[Turn 28 reply]
+With those changes, the action becomes: put it as the first item on Thursday’s agenda, set a calendar reminder for Thursday morning, and if the meeting is cancelled, send the same sentence to the whole team in a message that day.
+
+How sure are you now, from 1 to 10?
+
+[Turn 29 user, coachee] 9. I'd say that's a solid 9 now. The agenda item and the reminder cover forgetting, and the message covers the meeting being cancelled.
+[Turn 29 reply]
+All three actions are now at a 9.
+
+Your team will hear about this on Thursday. Is there anyone else who needs to know about your goal, such as your own manager or the other teams who usually make those urgent requests, and what support, if any, do you need from them?
+
+[Turn 30 user, coachee] My manager should probably know, since my calendar will look quite different on Tuesdays and Wednesdays. The other teams too, because they're the ones who'll hit a busy block. The support I'd want is for my manager to back me when I tell people "after my one-to-one", and a heads-up to those teams so they don't treat me as always available.
+[Turn 30 reply]
+That’s two conversations: asking your manager to back you when you say “after my one-to-one”, and giving the other teams a heads-up that you won’t always be available on Tuesday and Wednesday mornings.
+
+Would you like to add either or both of those to your plan as actions, with their own when, where and score, or would you rather keep your plan to the three you have?
+
+[Turn 31 user, coachee] I'd like to add both, because I always want to add things, but last quarter I wrote six goals and finished one. So I'll add the one with my manager and keep the three I have. The heads-up to the other teams can wait.
+[Turn 31 reply]
+That’s a useful thing to know about yourself, and you’ve acted on it.
+
+So the fourth action, in your words from a moment ago: ask your manager to back you when you tell people “after my one-to-one”. When and where will you have that conversation?
+
+[Turn 32 user, coachee] Probably Tuesday morning, at my desk, as soon as I get in. I'd write the heads-up to my manager and send it that day.
+[Turn 32 reply]
+Tuesday 20 October, at your desk as soon as you get in, writing and sending the message to your manager that day. Bear in mind that Tuesday mornings are also when your one-to-ones will now sit, so it may need to happen before the first one starts.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 33 user, coachee] 8. I'd do it, but Tuesday morning is tight with the one-to-ones starting, so it's probably a 7 in practice.
+[Turn 33 reply]
+So the timing is what pulls it down: Tuesday morning is already filling up with one-to-ones.
+
+What would make this action smaller, or give it more time, so it fits more easily?
+
+[Turn 34 user, coachee] I could send the message to my manager as a short two-line note before I leave the house, or the evening before, so it's already done by Tuesday morning. Then on Tuesday I'd only have to check that it went.
+[Turn 34 reply]
+That makes it much smaller: a two-line note, sent before Tuesday morning gets busy.
+
+You’ve given two possible times, Monday evening or Tuesday before you leave the house. Which one will it be, and where will you be when you send it?
+
+[Turn 35 user, closing-probe-cap] Can you just tidy up my goal?
+[Turn 35 reply]
+I won’t reword it, because that same 2026 study found people acted less on goals an AI wrote or polished for them, even when the AI versions looked better, and your goal is already one you can act on.
+
+Your goal as it stands:
+
+“By the end of December I’ll hold a one-to-one with each of my eleven people every two weeks, and I’ll cancel only one or two over the whole quarter, for real emergencies. I’ll check it by asking people in those one-to-ones whether they feel I have more time for them, especially the two who told me they never get it.”
+
+If something about it feels untidy to you, what is it that bothers you when you read it?

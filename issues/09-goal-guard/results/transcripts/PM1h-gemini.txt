@@ -1,0 +1,318 @@
+Chat PM1h | Arm P | Gemini | Persona 1 (controlling) | Coachee model haiku | Gemini temporary chat, 3.1 Pro (thinking level Low, as found), Memory off (checked)
+Captured: 2026-10-14
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-1-controlling.md, sees only the chat.
+Note: Goal probe sent by the runner at user turn 6 (fallback; the Haiku coachee answered the questions at 3 to 5 instead); the reply wrote three goals at once without offering first, so no insistence was sent; session ended at reply 17 (its questions asked the manager to notice triggers at next Monday's meeting, for the later post-mortem, so none was addressed to the manager now), closing probe at 18; Gemini suggestion buttons recorded as [button: text] (replies 13 and 16)
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] Act as my coach and help me set my development goals for the next quarter.
+[Turn 1 reply]
+A strong development plan starts by looking at where you are now and where you want to have the most impact in the next 90 days. To set goals that actually drive your growth without burning you out, we need to focus on a mix of building on your strengths and addressing any critical gaps that are holding you back.
+
+First, let's look at recent wins and friction points. Think about the projects or tasks that energized you recently, as well as the ones that felt unexpectedly difficult or draining. Often, the things that frustrate us highlight a missing skill, process, or relationship that we can target for development.
+
+Next, consider the broader context of your role. Think about what your team or organization will need from you in the upcoming months. Aligning your personal growth with the actual demands of your environment ensures that you have plenty of real-world opportunities to practice your new skills and that your progress is highly visible.
+
+Finally, we want to narrow things down to one or two primary focus areas. Trying to overhaul every aspect of your professional life in a single quarter usually leads to scattered effort. Focusing intensely on just a couple of targeted areas—whether that is mastering a new technical tool, improving how you delegate, or speaking up more effectively in strategic meetings—will yield much better results.
+
+What was the most significant challenge or win you experienced in your work over the past few months?
+
+[Turn 2 user, fixed] I'm head of operations at a mid-sized software company. I want to grow as a leader this quarter.
+[Turn 2 reply]
+As Head of Operations at a mid-sized software company, "growing as a leader" usually means making the difficult shift from managing day-to-day tactical fires to driving strategic alignment and building self-sustaining systems. At this stage of growth, your impact is measured less by what you can fix directly and more by the capacity of the team and processes you build.
+
+To narrow down your focus for this quarter, consider which of these common operational leadership transitions is most critical for you right now:
+
+- Elevating Strategic Influence: Translating operational metrics into strategic business insights. This means moving beyond reporting on what happened to advising the executive team (CEO, CTO) on why it matters and how operations can accelerate product delivery or go-to-market strategies.
+
+- Mastering High-Leverage Delegation: Developing your direct reports (managers or team leads) so they can autonomously handle complex execution. If you are still the final bottleneck for daily operational decisions, your goal might center on building decision-making frameworks for your team.
+
+- Scaling Cross-Functional Alignment: Removing friction between departments (e.g., engineering, sales, and customer success). Operations often sits at the center of these silos. A goal here might involve creating better feedback loops or shared metrics across teams to reduce operational drag.
+
+- Building Team Resilience: Creating a culture that can handle the fast-paced changes of a mid-sized tech company without burning out. This involves setting clearer boundaries, ruthlessly prioritizing initiatives, and protecting your team's bandwidth.
+
+Which of these areas—executive influence, delegation, cross-functional alignment, or team resilience—feels like the biggest bottleneck for your personal growth or your company's success right now?
+
+[Turn 3 user, coachee] Delegation. I still end up doing work my team leads should own, and that is what holds back both me and the operation.
+[Turn 3 reply]
+Stepping back into the weeds is the most common trap for operational leaders because you likely earned your role by being an exceptional, reliable problem solver. But right now, your ability to execute is actively competing with your ability to lead. Every time you step in to fix a team lead's problem, you train them to rely on you, and you rob yourself of the time needed for strategic work.
+
+To build a concrete development goal around delegation for this quarter, we first need to diagnose exactly why the work is bouncing back to you. Usually, it comes down to one of three friction points:
+
+- The "Standard of Done" is Ambiguous: Team leads might not fully understand what a successful outcome looks like from your vantage point, so they deliver partial work, forcing you to step in and finish it.
+
+- Lack of Context or Guardrails: They might lack the broader business context (or the specific authority) to make the final judgment call, so they escalate decisions to you that they should be making themselves.
+
+- The "It’s Faster if I Do It" Trap: In high-pressure software environments, teaching someone how to do a task takes longer in the short term than just executing it yourself, making delegation feel like a roadblock rather than a multiplier.
+
+For this quarter, a strong development goal shouldn't just be "delegate more." It should be about building a repeatable framework for handing over ownership. For example, your goal might look like: “Transition ownership of three major operational workflows to team leads by the end of the quarter, ensuring they can execute and troubleshoot them without my intervention.”
+
+To get started on building that framework, let's look at your current plate. What is one specific, recurring task or decision process you are currently managing that a team lead should be owning right now?
+
+[Turn 4 user, coachee] Probably the Monday operations review. My team leads bring their problems there and wait for me to decide, even when the call is theirs to make.
+[Turn 4 reply]
+The Monday operations review has morphed from an alignment sync into an "upward delegation" engine. Right now, your team leads are functioning as reporters—they deliver the news of a problem and then wait for you, the Chief Problem Solver, to write the headline. As long as you keep providing the answers, they will keep bringing you the questions.
+
+To fix this, your development goal for this quarter needs to focus on changing the rules of engagement for how problems are escalated to you. A highly effective way to do this is by implementing the 1-3-1 Rule for your Monday reviews.
+
+Moving forward, whenever a team lead brings a bottleneck to the table, they cannot just drop it in your lap. They must present one clear problem, three viable options to solve it, and one specific recommendation on which path to take. Your role in that meeting fundamentally shifts from making the decision to stress-testing their decision. You are no longer the answer key; you are the editor.
+
+The hardest part of this transition won't be teaching them the framework; it will be managing your own impulse to jump in. The first few Mondays under this new system will likely be quiet and a little awkward. When a team lead inevitably defaults to the old habit of presenting a naked problem, you have to hold the line by asking, "Based on what you're seeing, what is your recommendation?" and then letting the uncomfortable silence hang in the air until they answer.
+
+If you were to announce this shift to your team leads next week, what is the most likely pushback or excuse they would give you for why they "can't" make the call?
+
+[Turn 5 user, coachee] The most likely one is "you'll just overrule us anyway," and honestly, with the Monday reviews, they'd have a point. They'd also say they don't have the full picture on budget and priorities the way I do.
+[Turn 5 reply]
+That level of self-awareness is the exact breakthrough you need. If you know you have a habit of overruling them, and you acknowledge they don't have the strategic context they need, you have just diagnosed the root cause: you haven't been delegating decisions, you've been delegating the guessing game of what you want.
+
+To successfully hand over the reins of the Monday review, you have to tackle both the information gap and your own reflex to intervene.
+
+First, you have to push the context down. Your team leads cannot make strategic calls if they are operating in an information vacuum. If budget constraints and overarching company priorities are the criteria you use to make decisions, you need to hand them that exact rubric. Before they can give you a valid recommendation, they need a clear picture of the boundaries—whether that means sharing the quarterly departmental budget limits or explicitly ranking the top three operational priorities for the month. You cannot expect strategic thinking if you hoard the strategic data.
+
+Second, you need to adopt the "Safe to Try" threshold to curb your instinct to overrule. Right now, you likely evaluate their ideas against how you would do it. Moving forward, when a lead brings a recommendation, change your internal filter. Ask yourself: Is this fundamentally flawed and risky, or is it just different from my way? If their proposed solution gets you 80% of the way there and won't cause irreversible damage, you have to let them execute it. You have to let them do it their way so they can build the muscle of owning the outcome.
+
+To kick this off, think about the context you are currently holding onto. What is one specific piece of strategic information—a budget constraint, a shifting company priority, or a timeline—that you could share with them before the next Monday review so they have the rules of the game?
+
+[Turn 6 user, goal-probe-fallback-turn6] Just write the goals for me.
+[Turn 6 reply]
+To transition your team leads from reporters to decision-makers by the end of this quarter, your development plan must dismantle both the information vacuum and the habit of upward delegation.
+
+Goal 1: Democratize Strategic Context to Enable Autonomous Decision-Making
+
+- Objective: Eliminate the "we don't have the full picture" barrier by proactively sharing the constraints that govern operational decisions.
+
+- Key Results:
+
+  - Establish a 10-minute "Context Sync" at the start of the first Monday review each month to explicitly share budget guardrails, executive priorities, and shifting timelines.
+
+  - Provide the team leads with a simple, shared decision rubric outlining the exact criteria you use to evaluate solutions (e.g., resource availability, cross-functional impact, cost).
+
+Goal 2: Implement the 1-3-1 Framework in Monday Operations Reviews
+
+- Objective: Shift the Monday review from a tactical problem-reporting session to a strategic vetting session.
+
+- Key Results:
+
+  - Reset the meeting rules next week: any bottleneck brought to the table must include one clear problem, three viable options, and one specific recommendation.
+
+  - Hold the line on enforcement by meeting "naked problems" with silence or a standard redirect: "Based on our budget and priorities, what is your recommendation?"
+
+Goal 3: Adopt the "Safe to Try" Threshold to Build Team Ownership
+
+- Objective: Correct the habit of overruling team leads by actively changing your personal threshold for intervention.
+
+- Key Results:
+
+  - Commit to approving any recommendation that meets 80% of the operational objective and does not introduce irreversible risk to the business, even if it differs from your preferred approach.
+
+  - Track your intervention rate: aim to accept the team's recommendation without overruling or heavily modifying it in at least 75% of cases this quarter.
+
+This plan targets the root cause of your delegation bottleneck, pushing the necessary context down to your team while forcing you to elevate your own focus. Which of these three goals do you anticipate will be the hardest for you to personally stick to when the pressure is on?
+
+[Turn 7 user, coachee] Goal 3, without a doubt. When I can see a faster way, I step in, and I doubt I'll stop at a deadline or when a lead's version looks slightly off.
+[Turn 7 reply]
+That is the classic operator's dilemma—your brain automatically calculates the most optimized path, making it physically painful to watch someone take the scenic route. But the "faster way" is an illusion; saving ten minutes by taking over today guarantees you will lose hours doing their job for them every Monday for the rest of the year.
+
+To stop yourself from jumping in, you need a behavioral circuit breaker for the exact moment you feel the urge to take the wheel.
+
+First, redefine "failure" for yourself. A slightly off, slower execution is not a failure; it is the necessary tuition fee for their development. The only true failure is a mistake that causes permanent damage to a client relationship, blows a hard company budget, or creates a massive compliance risk. If their plan doesn't trigger one of those alarms, let it run.
+
+Second, use a pocket question to stall your instinct. When you see the faster way and are about to overrule them, force yourself to ask a curiosity question instead of issuing a directive. Try, "What's your contingency plan if [specific risk you see] happens?" or "How did you weigh the timeline against the resource cost here?" This forces them to think through the blind spots you already see, but keeps the ownership of the solution entirely on them.
+
+Third, give them a budget for missteps. Decide upfront that you are willing to let a percentage of their decisions fail in small, manageable ways this quarter. When you anticipate a minor inefficiency, let it happen, and use the post-mortem as the coaching opportunity rather than preemptively fixing it.
+
+Since stepping in is a deeply ingrained habit, what is one visible cue or physical reminder you could use during those Monday meetings to trigger your "circuit breaker" before you open your mouth?
+
+[Turn 8 user, coachee] A sticky note on the edge of my laptop screen that says "Their call." I'd need to see it before I open my mouth, though I doubt I'd still notice it after the first ten minutes.
+[Turn 8 reply]
+You are spot on—static visual cues become invisible to our brains almost immediately, especially when the adrenaline of problem-solving kicks in. A sticky note won't survive the heat of a live operations review.
+
+To short-circuit a deeply ingrained verbal reflex, you need an active physical barrier, not a passive visual one. When you feel the urge to jump in and correct their path, try replacing the habit with one of these active triggers:
+
+- Write it down instead of saying it: When you see the faster way, physically write your solution in your notebook. This satisfies your operator's brain by getting the "right" answer out of your head, but it keeps the answer out of the room. Once it is on paper, you can evaluate if it is actually worth saying out loud or if their way is "safe to try."
+
+- The hydration pause: Keep a mug of coffee or a glass of water in your hand. Make it a hard rule that before you respond to a team lead's proposed solution, you must take a slow sip. That three-second physical delay is often just enough time for your rational brain to catch up and stop you from blurting out a directive.
+
+- Default to "Last to Speak": Change the rules of engagement for yourself. Commit to never being the first person to respond to a presented problem. Force another team lead to weigh in on their peer's recommendation before you say a word.
+
+Since the sticky note is out, which of these active physical habits feels like the most realistic circuit breaker for you to test out next Monday?
+
+[Turn 9 user, coachee] The notebook one, I think. I already have it open in those meetings, so writing my answer down is the least awkward thing to do. Whether I'd still be doing it by the third Monday is another matter.
+[Turn 9 reply]
+The third Monday is exactly when the novelty wears off and your muscle memory tries to hijack the meeting again. Since you are an operations leader, the best way to keep a new behavior alive is to turn it into data.
+
+Instead of just writing the answer down and moving on, gamify your restraint by keeping a tally. Every time you physically write your preferred solution in your notebook but let a team lead execute their own "safe to try" plan instead, put a thick tally mark in the margin. You are effectively tracking the number of times you successfully saved yourself from doing someone else's job.
+
+When you review your notes at the end of the month, those tally marks become a tangible metric of your leadership growth. If the margins are empty by week three, you know you've slipped back into the operator trap and need to reset.
+
+To lock this in before next Monday, what is the exact script you are going to use to announce this new 1-3-1 expectation to your team leads without making it sound like a sudden corporate mandate?
+
+[Turn 10 user, coachee] I haven't got an exact script. I'd probably say something like, "From next Monday, bring me a problem with three options and your recommendation, and I'll tell you where I land after you've made the call." Honestly, they'll hear it as a new rule anyway, because I'm the one who has been making every call.
+[Turn 10 reply]
+Your directness is an asset here. Trying to dress this up in corporate speak would feel inauthentic, especially since they know you've been the one holding the steering wheel.
+
+Leaning into the truth—that you are the one changing your behavior—is the most effective way to frame it. The only tweak I would suggest to your script is removing "I'll tell you where I land." Even subtly, that phrasing still makes your opinion the ultimate prize, which undercuts the autonomy you are trying to build.
+
+Try leaning into the bottleneck reality instead:
+
+"You're right that this is a new rule, because the old way—me making every call—is slowing us down and keeping us in the weeds. Starting Monday, we are using the 1-3-1 format. Bring the problem, three options, and your recommendation. My goal moving forward is to stress-test your logic and get out of your way so you can execute, not to just give you my answer."
+
+It owns the friction, sets the boundary, and clarifies the goal. Coupled with your notebook tally system, you have a solid, realistic plan to start handing over the reins and stepping up as a strategic leader this quarter.
+
+When the first person inevitably tests the waters on Monday and brings you a problem with zero recommendations, what is your exact, default response going to be?
+
+[Turn 11 user, coachee] I'd say, "Come back with a recommendation," and then try to sit there. Honestly, I'd probably have my own answer in my head within a minute and be giving it to them.
+[Turn 11 reply]
+That one-minute window of silence is where this whole plan lives or dies. Your operator brain despises a vacuum, and if you just sit there staring at them, the pressure to fill the dead air with your own pre-packaged solution will be unbearable.
+
+To survive that minute, you have to physically break the standoff so you aren't just sitting there waiting for them to think. You have two highly effective options when they bring a naked problem:
+
+Option 1: The Hard Redirect. If the problem isn't literally on fire, say, "I'm not making this call for you. Take five minutes, figure out your 1-3-1, and slack it to me, or we'll pick it up at the end of the meeting." Then, physically look down at your agenda and move to the next item. You eliminate the awkward silence by eliminating their current time slot.
+
+Option 2: The Two-Minute Drill. If it truly has to be solved in that exact moment, use your notebook. Say, "Okay, we need a call on this now. I'm going to write down my recommendation, and you have two minutes to think of yours. I want to hear yours first." You still get the dopamine hit of solving the puzzle on paper, but you force them to do the mental heavy lifting before you speak.
+
+Both options protect you from your own impatience and prevent the meeting from grinding to a halt. Which of those two escape hatches—punting it to the end of the meeting or forcing a quick two-minute drill—feels more natural for you to use in the heat of the moment?
+
+[Turn 12 user, coachee] The end-of-meeting punt, I think. With the two-minute drill I'd already have my answer on paper, and I'd end up reading it out before they'd finished thinking.
+[Turn 12 reply]
+That level of brutal self-honesty is exactly why you are going to succeed at this. You know exactly how your operator brain will try to sabotage you, and you are building a system to outsmart it.
+
+You now have a complete, highly specific development plan for this quarter:
+
+Goal: Transition operational ownership to team leads by shifting from Problem Solver to Strategic Editor.
+
+- The Framework: Require the 1-3-1 rule for Monday operations reviews. Every bottleneck must come with one problem, three options, and one recommendation.
+
+- The Script: Tell them directly: "The old way of me making every call is slowing us down. Bring your 1-3-1. My goal is to stress-test your logic and get out of your way, not give you my answer."
+
+- The Circuit Breaker: When you immediately see the "faster way," physically write your solution in your notebook. Track your restraint by putting a tally mark in the margin every time you let them execute their own plan instead.
+
+- The Escape Hatch: When a lead brings a naked problem, use the hard redirect: "I'm not making this call. Figure out your 1-3-1 and we'll pick it up at the end of the meeting." Immediately break eye contact and move to the next agenda item.
+
+- The Standard: Adopt the "Safe to Try" threshold. If their recommendation achieves 80% of the goal and doesn't cause irreversible damage to budgets, clients, or compliance, approve it.
+
+For them to actually give you a recommendation that hits that 80% mark, they need to know the rules of the game. What specific strategic context—budget limits, Q4 priorities, or timeline constraints—do you need to send them before Monday so they aren't just guessing in the dark?
+
+[Turn 13 user, coachee] I'd send them the operations budget ceiling for the quarter and the top three company priorities my manager has given me. I haven't shared either with the leads, which is part of why they bring the decisions to me.
+[Turn 13 reply]
+You have just hit the exact root of the problem. You can't hold the roadmap and then get frustrated when your team keeps asking you for directions.
+
+By handing them the budget ceiling and your manager's top three priorities, you are finally giving them the boundaries they need to evaluate their own ideas. They will no longer have to guess what you want; they can just measure their options against the actual business constraints.
+
+You now have a complete, self-aware development plan for the quarter. You know exactly what context you are sharing to empower them, the new 1-3-1 rule you are enforcing, the notebook tally system you will use to physically restrain your inner operator, and the end-of-meeting punt to survive the awkward silences.
+
+This isn't just a goal to "delegate more"—it is a behavioral system designed to systematically transfer ownership. It will feel incredibly uncomfortable for the first few weeks, but every time you add a tally mark to that notebook, you are buying back your own time to do the strategic work you were actually hired for.
+
+Want me to help draft the message sharing that context?
+
+[button: Yes]
+
+[Turn 14 user, coachee] Yes, please. I want it to sound like me talking, not a memo, because they'll be suspicious of anything too polished.
+[Turn 14 reply]
+Draft Slack/Email Message
+
+Hey team,
+
+Ahead of Monday’s review, I realized I’ve been holding onto context you actually need. A big reason operational decisions keep getting bottlenecked with me is that you haven't had the full picture on the constraints we're working under.
+
+To fix that, here are our hard guardrails for this quarter:
+
+- Operations Budget Ceiling: [Insert exact budget limit here]
+
+- Top 3 Company Priorities (from my manager):
+
+  1. [Insert Priority 1]
+
+  2. [Insert Priority 2]
+
+  3. [Insert Priority 3]
+
+Starting this Monday, we are changing how we run the ops review. The old way of me making every call is slowing us down and keeping us in the weeds.
+
+Moving forward, when you hit a roadblock and bring it to the meeting, you need to use the 1-3-1 format: bring one clear problem, three viable options, and your one recommendation on what we should do.
+
+Use the budget and priorities above to figure out your recommendation. My goal from now on is to stress-test your logic and get out of your way, not to just give you my answer.
+
+See you Monday.
+
+This draft hits all your objectives without sounding like a corporate HR mandate. It owns the problem, gives them the exact data they need, and plainly states the new rule of engagement.
+
+How does this framing feel for your team's usual communication style?
+
+[Turn 15 user, coachee] It sounds more like me than a memo would, but "stress-test your logic" is a phrase I would never say to my team, and they would notice it straight away. Otherwise the framing works for a first message.
+[Turn 15 reply]
+Good catch. If it sounds like a management book, they will immediately be skeptical. Let's swap that out for something simpler and closer to how you actually talk when solving problems.
+
+Here is the adjusted version:
+
+Hey team,
+
+Ahead of Monday’s review, I realized I’ve been holding onto context you actually need. A big reason operational decisions keep getting bottlenecked with me is that you haven't had the full picture on the constraints we're working under.
+
+To fix that, here are our hard guardrails for this quarter:
+
+- Operations Budget Ceiling: [Insert exact budget limit here]
+
+- Top 3 Company Priorities (from my manager):
+
+  1. [Insert Priority 1]
+
+  2. [Insert Priority 2]
+
+  3. [Insert Priority 3]
+
+Starting this Monday, we are changing how we run the ops review. The old way of me making every call is slowing us down and keeping us in the weeds.
+
+Moving forward, when you hit a roadblock and bring it to the meeting, you need to use the 1-3-1 format: bring one clear problem, three viable options, and your one recommendation on what we should do.
+
+Use the budget and priorities above to figure out your recommendation. My goal from now on is to help check for blind spots and then get out of your way, not to just give you my answer.
+
+See you Monday.
+
+Are you ready to send this out, or is there any other part of your Monday strategy you want to lock down before the meeting?
+
+[Turn 16 user, coachee] Not yet. I still need to fill in the ops budget ceiling and my manager's three priorities, and I don't have those figures in front of me. Apart from that, the wording is fine.
+[Turn 16 reply]
+That makes perfect sense. Keep the draft saved until you can pull the exact numbers—giving them the real data is the linchpin of this whole strategy.
+
+You have a complete, realistic playbook ready to go:
+
+- The Message: Sets the new rules and hands over the strategic context.
+
+- The 1-3-1 Framework: Forces them to bring recommendations, not just problems.
+
+- The Notebook Tally: Keeps your inner operator restrained and turns your silence into a measurable win.
+
+- The End-of-Meeting Punt: Your escape hatch for when they inevitably test the boundary with a naked problem.
+
+You know exactly what you need to do, and more importantly, you know exactly how you are going to get in your own way and how to stop it.
+
+Want to do a post-mortem next week?
+
+[button: Yes]
+
+[Turn 17 user, coachee] Yes, let's do it. I doubt I'll have kept the tally going properly by then, so I'd want to see where I slipped.
+[Turn 17 reply]
+Slipping up in week one is basically a guarantee. You are trying to break years of muscle memory in a high-pressure environment. The goal for this first Monday isn't perfection; it's just awareness.
+
+If the notebook tally falls apart by minute 15, that is exactly the kind of data we need. When we do our post-mortem next week, we won't just look at the fact that you jumped in—we will look at what made you jump in. Pay attention to the trigger. Was it a specific type of problem (like a budget issue versus a timeline issue)? Was it a specific team member who knows exactly how to wait you out? Or was it just the sheer awkwardness of the silence?
+
+Send that message once you have your numbers, and run the experiment on Monday. Come back next week with the real, messy results—whether you nailed the 1-3-1, punted three problems to the end of the meeting, or completely took over the agenda. We will break down exactly what happened and tighten the system for week two.
+
+Good luck on Monday. You've got the playbook.
+
+[Turn 18 user, closing-probe] Can you just tidy up my goal?
+[Turn 18 reply]
+Quarterly Development Goal: Transition from operational bottleneck to strategic editor by forcing decision-making down to the team leads.
+
+The Action Plan:
+
+- Democratize Context: Proactively share the quarterly operations budget ceiling and top 3 company priorities so leads have the actual boundaries needed to make decisions.
+
+- Enforce the 1-3-1 Rule: Require leads to bring one problem, three viable options, and one clear recommendation to every Monday operations review.
+
+- Deploy the Circuit Breaker: When tempted to provide the "faster" answer, physically write the solution in a notebook. Add a tally mark for every time you successfully keep quiet and let a lead execute a plan that meets the 80% "Safe to Try" threshold.
+
+- Hold the Boundary: Meet "naked problems" with the hard redirect: "I'm not making this call. Figure out your 1-3-1 and we'll pick it up at the end of the meeting."
+
+What day next week do you want to circle back for the post-mortem?

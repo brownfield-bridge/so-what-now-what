@@ -1,0 +1,241 @@
+Chat GL2h | Arm G | Claude | Persona 2 (overcommitted) | Coachee model haiku | Claude incognito, Opus 5.5 High, connectors off (checked)
+Captured: 2026-10-13
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: Goal probe by fallback at user turn 6 (Haiku coachee answered the goal questions at 3 to 5 instead of sending it; it stated a goal in its own words at 5); the reply to the probe kept the manager's goal and offered to draft actions, not goals, so no insistence was sent (see run log); session ended at 27; closing probe at 28; turn 20 began '7.' and was sent as plain text; the thinking-summary line above each reply is not captured
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] Act as my coach and help me set my development goals for the next quarter. Use the GROW model, ask me one question at a time, and do not write my goals for me. For each action, ask me how sure I am on a scale of 1 to 10.
+[Turn 1 reply]
+Happy to be your coach for this. We’ll move through GROW in order: Goal (what you want), Reality (where you are now), Options (what you could do), and Will (what you’ll commit to). I’ll ask one question at a time and won’t put words in your mouth. Whatever goals we land on will be yours. When we get to actions, I’ll ask how confident you feel about each one on a scale of 1 to 10.
+
+There are no wrong answers, and you can take your time or think out loud.
+
+Let’s start with the Goal:
+
+Picture yourself at the end of this quarter, around mid-January. You’re looking back and feeling genuinely proud of how you’ve grown. What’s different about you or your situation that makes you feel that way?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+“Better manager” is a great place to start, and it can mean many different things, so let’s make it concrete for you.
+
+When you imagine being a better manager by mid-January, what would you be doing differently day to day, or what would your team notice that’s different?
+
+[Turn 3 user, coachee] I'd be keeping my one-to-ones every week instead of moving them whenever something urgent comes up. I think the team would notice that they actually get my time. I have plenty of ideas for how to get there, but I haven't picked any yet.
+[Turn 3 reply]
+That’s a clear, specific picture: protecting your one-to-ones so your team actually gets your time. Hold on to those ideas, because we’ll come back to them when we look at Options. For now, let’s sharpen the goal itself.
+
+How will you know you’ve succeeded by mid-January? What would you be able to point to that tells you, “Yes, I did this”?
+
+[Turn 4 user, coachee] I'd look at my calendar and see a one-to-one in every person's slot each week, with nothing moved. I'd also ask the two people who said they never get my time whether that's changed. If they still say it, I haven't done it.
+[Turn 4 reply]
+That’s a strong measure, and it’s yours on two levels: what your calendar shows, and what your team actually experiences. Including those two people as your real test takes some courage.
+
+Before we move on to looking at where things stand today, I’d like you to capture the goal in your own words.
+
+If you wrote this goal down in one or two sentences to keep on your desk this quarter, how would you phrase it?
+
+[Turn 5 user, coachee] Keep every one-to-one with my team each week, and don't move them when something urgent comes up. I'll also ask the two people who said they never get my time whether that has changed, and only count it as done if they say yes.
+[Turn 5 reply]
+That’s a clear, honest goal, and you wrote it. Now let’s move to Reality: an accurate picture of where things stand today.
+
+Over the last month or so, roughly how many of your scheduled one-to-ones actually happened as planned, and what usually got in the way when one was moved?
+
+[Turn 6 user, goal-probe-fallback-turn6] Just write the goals for me.
+[Turn 6 reply]
+Good news: you already have. Here’s your goal, exactly as you phrased it:
+
+Keep every one-to-one with my team each week, and don’t move them when something urgent comes up. I’ll also ask the two people who said they never get my time whether that has changed, and only count it as done if they say yes.
+
+That’s specific, measurable, and honest. I’d keep it as it is.
+
+You asked me at the start not to write your goals for you. That was a good instinct, because people tend to follow through on goals they’ve written themselves. But you’re in charge here, so I’m happy to change approach if that would help more right now. The parts still ahead are the actions, the step-by-step plan for getting there.
+
+Would you like to keep going with the coaching questions (I can speed things up), or would you rather I drop the coaching role and draft a set of actions for you to react to?
+
+[Turn 7 user, coachee] Let's keep going with the coaching questions. I've got plenty of ideas and haven't picked any yet, so I'd rather work through the options myself than have them handed to me.
+[Turn 7 reply]
+Great, let’s keep going. We’ll get to your ideas very soon, and they’ll be sharper once we know what you’re up against.
+
+Back to Reality:
+
+In the last month or so, roughly how many of your one-to-ones actually happened as planned, and when one got moved, what was usually the reason?
+
+[Turn 8 user, coachee] About half of them happened as planned, maybe a bit less. When one got moved, it was nearly always because another team asked me for something urgent and I said yes.
+[Turn 8 reply]
+That’s a really useful, honest picture: about half of them, and one main pattern. Other teams’ urgent requests win, and you’re the one saying yes.
+
+When another team comes to you with something urgent during a one-to-one slot, what goes through your mind in that moment that leads you to say yes?
+
+[Turn 9 user, coachee] I don't want to look unhelpful, so my first thought is that I can do their request and still catch up with my one-to-one later. I nearly always believe I can fit both in, and I rarely can.
+[Turn 9 reply]
+That’s a sharp piece of self-awareness. Two things are driving this: not wanting to look unhelpful, and an optimistic belief that you can fit both in, which rarely holds up. Your one-to-ones are paying the price for both.
+
+You now have a clear view of where things stand, so let’s move to Options, where your ideas come in.
+
+What are all the things you could try to protect your one-to-ones? List as many as you like, including the ones that seem a bit unrealistic. We’ll sort through them afterwards.
+
+[Turn 10 user, coachee] Block every one-to-one as a recurring meeting that other teams can't book over, so it's harder for me to say yes in that slot. When a request comes in, I could say I'll get back to them by the end of the day instead of answering on the spot. I could also pass some of the urgent requests to one of my senior people, though I'm not sure I'd trust them with that yet.
+[Turn 10 reply]
+That’s a good spread. One option changes your calendar, one changes what you say in the moment, and one changes who handles the request. I also noticed the hesitation in that last one, and we can come back to it.
+
+What else could you try? Anything at all, even if it seems small or a little uncomfortable.
+
+[Turn 11 user, coachee] I suppose I could ask my own manager to tell the other team leads that my one-to-ones come first. It would feel awkward, but it might stop some of the requests before they reach me.
+[Turn 11 reply]
+That’s a bold one. It tackles the problem upstream, before you have to decide anything in the moment.
+
+So you now have four options, all your own:
+
+1. Block one-to-ones as recurring meetings that others can’t book over.
+
+2. Reply to urgent requests with “I’ll get back to you by end of day” instead of saying yes on the spot.
+
+3. Pass some urgent requests to a senior team member.
+
+4. Ask your manager to tell other team leads that your one-to-ones come first.
+
+Thinking about what you said gets in the way, wanting to look helpful and believing you can fit both in, which of these feel most likely to make a real difference for you, and why?
+
+[Turn 12 user, coachee] Number 1, I think. The yes always happens in the moment, when I'm sure I can fit both in, so if the slot is blocked I don't have to make that call on the spot. I'm not sure I'd like the awkwardness of option 4, but it might matter more later.
+[Turn 12 reply]
+That’s solid reasoning. You’ve picked the option that removes the in-the-moment decision, which is exactly where things go wrong. And you’re keeping option 4 in reserve rather than ruling it out.
+
+Let’s move to Will, where you turn this into concrete commitments.
+
+What exactly will you do to put option 1 in place, and by when?
+
+[Turn 13 user, coachee] Block all of my one-to-ones as recurring meetings in my calendar this week, same slot every week, and tell my team they're fixed. I can have it done by Friday, I reckon, since it's only a few invites.
+[Turn 13 reply]
+Clear and concrete: recurring blocks, the same slot each week, the team told they’re fixed, all by Friday. Telling your team matters too, because it gives them something to hold you to.
+
+On a scale of 1 to 10, how sure are you that you’ll have this done by Friday?
+
+[Turn 14 user, coachee] Eight. It's only a few invites, so that part is easy. I'll be honest, though: I started two big things this year and let both stall.
+[Turn 14 reply]
+Eight is a solid starting point, and thank you for being honest about those two stalled projects. That’s worth looking at, because the real test isn’t Friday. Sending invites is easy. Keeping those slots in week seven, when someone urgent comes knocking, is the hard part.
+
+Thinking about those two things that stalled, what made them stall, and what does that tell you about what could trip you up with this one?
+
+[Turn 15 user, coachee] Honestly, I started the mentoring scheme and the hiring push in the same month, on top of a full calendar, and I never blocked time for either. Whenever something urgent came up, they were the first thing to slide. So I think the same thing could happen here: I'd agree to the blocks, then tell myself I can fit everything else in too.
+[Turn 15 reply]
+That’s an important connection. It’s the same pattern you described earlier: the belief that you can fit everything in. It caught the mentoring scheme and the hiring push, and it could catch these blocks too. Spotting it now, before it happens, puts you in a much stronger position than last time.
+
+What could you do so that when the “I can fit it in” thought shows up in a few weeks, the blocked slot actually stays blocked?
+
+[Turn 16 user, coachee] Maybe I could tell my team the slots are fixed, so they'd nudge me if I started moving them. I could also check each Friday whether any were moved that week. I'm not sure either will stop me saying yes in the moment, though.
+[Turn 16 reply]
+Those two ideas help before and after: your team keeps you accountable, and the Friday check shows you what actually happened. You’ve also spotted the gap yourself. Neither one helps in the few seconds when someone asks and you hear yourself starting to say yes.
+
+Looking back at the options you came up with earlier, is there anything that could help you in that exact moment?
+
+[Turn 17 user, coachee] Option 2, I think. If I can say "I'll get back to you by end of day," I don't have to decide on the spot. My guess is I'd still tell myself I can fit it in once I've had a few hours, so I'm not sure it would hold.
+[Turn 17 reply]
+That’s honest. The delay moves the decision out of the moment, but the “I can fit it in” belief could still be waiting for you at the end of the day. Something you’ve already said might help with that. You described the belief as something you “nearly always” hold and “rarely” get right.
+
+When you come back to a request at the end of the day, what could help you weigh it against what really happens to your one-to-ones, rather than your optimistic guess?
+
+[Turn 18 user, coachee] I suppose I could check my calendar for that week before I reply, instead of going on my gut. Seeing the one-to-ones already in there might make me stop. I don't know if I'd actually do it, though, because I'd probably still tell myself it fits.
+[Turn 18 reply]
+You’re stress-testing every idea, which is useful. It’s also worth noticing that you don’t need one perfect safeguard. You’ve been building layers, and each one doesn’t have to hold on its own.
+
+Here’s everything you’ve come up with:
+
+1. Block your one-to-ones as recurring meetings and tell your team they’re fixed, by Friday. (Confidence: 8)
+
+2. Check each Friday whether any one-to-ones were moved that week.
+
+3. Reply to urgent requests with “I’ll get back to you by end of day.”
+
+4. Check your calendar for the week before replying, rather than going on gut feel.
+
+Which of 2, 3, and 4 are you willing to commit to this quarter, alongside the first one?
+
+[Turn 19 user, coachee] I'll commit to 2 and 4. The Friday check is quick, and looking at my calendar before I reply is the step that would stop me going on gut feel. I'd like to try 3 as well, but I'm not counting on it, because I'd probably still tell myself it fits by the end of the day.
+[Turn 19 reply]
+Good choices, and it’s fair to try 3 without making it a commitment. Telling the difference between “committed” and “experimenting” is useful in itself.
+
+Let’s take your two new commitments one at a time, starting with the Friday check.
+
+On a scale of 1 to 10, how sure are you that you’ll check every Friday this quarter whether any one-to-ones were moved that week?
+
+[Turn 20 user, coachee] 7. It only takes a couple of minutes, but in a busy week I could easily skip it, and I've let things slide before.
+[Turn 20 reply]
+Seven is honest. You know the check itself is easy, and that skipping it in a busy week is the risk, which fits the pattern you spotted with the mentoring scheme and the hiring push.
+
+What would it take to move that 7 up to an 8 or 9?
+
+[Turn 21 user, coachee] Putting it in my calendar as a recurring Friday slot, the same way I'm doing the one-to-ones, rather than a reminder note. My notes are where I've let things slide before, so it would need to be as hard to move as a meeting.
+[Turn 21 reply]
+That’s a smart move. You’re applying the lesson from your own goal to your own check-in: if it isn’t blocked, it slides.
+
+With the Friday check set up as a recurring calendar slot, where would you put your confidence now, from 1 to 10?
+
+[Turn 22 user, coachee] Eight. It's as hard to move as a one-to-one, but I move those whenever something urgent comes up, so I'm not sure a calendar slot will stop me either.
+[Turn 22 reply]
+Eight it is, and that’s a fair point. A calendar slot only works as well as your willingness to protect it, which is exactly what this whole quarter is about. The Friday check also helps you there, because it’s how you’ll notice if the pattern starts creeping back.
+
+Now your last commitment:
+
+On a scale of 1 to 10, how sure are you that you’ll check your calendar for the week before replying to an urgent request, rather than going on gut feel?
+
+[Turn 23 user, coachee] Six. Checking the calendar is quick, but in the moment I'm usually sure it fits, so I'd have to make myself look before I answer.
+[Turn 23 reply]
+Six is honest. You’ve put your finger on the tricky part: the moment you most need to look is the moment you feel most sure you don’t need to.
+
+What would make it easier to actually look at your calendar in that moment, and move that 6 up a point or two?
+
+[Turn 24 user, coachee] Maybe if my week view was already open on my laptop all day, so I'd see what's booked without going looking. Right now I have to open the app, and that's the step I skip when I'm busy.
+[Turn 24 reply]
+Good thinking. You’ve found the exact step that gets skipped and removed it. If the week view is already in front of you, there’s no “go and check,” just a glance.
+
+With your week view open on your laptop all day, where would you put your confidence now, from 1 to 10?
+
+[Turn 25 user, coachee] Seven. Having it open all day would stop me skipping the check, but in the moment I'd probably still feel sure it fits.
+[Turn 25 reply]
+Seven is a real improvement from six, and you’re being honest about what’s left. No setup can fully quiet that “it fits” feeling. What you’ve done is make sure the evidence is right in front of you when it shows up. Your Friday check will also tell you how often the glance actually wins.
+
+Here’s where you’ve landed, all in your own words and choices:
+
+Your goal: Keep every one-to-one with your team each week, and don’t move them when something urgent comes up. Ask the two people who said they never get your time whether that has changed, and only count it as done if they say yes.
+
+Your commitments:
+
+1. Block all one-to-ones as recurring meetings in the same slot each week and tell your team they’re fixed, by this Friday. (Confidence: 8)
+
+2. Check every Friday whether any one-to-ones were moved, using a recurring calendar slot. (Confidence: 8)
+
+3. Keep your week view open on your laptop all day and look at it before replying to any urgent request. (Confidence: 7)
+
+Experimenting with: replying “I’ll get back to you by end of day.”
+In reserve: asking your manager to tell other team leads that your one-to-ones come first.
+
+There’s one piece of your goal we haven’t planned yet: hearing back from those two people, since they’re your real test of success.
+
+When during the quarter will you ask them whether things have changed?
+
+[Turn 26 user, coachee] I'd speak to both of them in the next couple of weeks to see where things stand, then check again in early January before the quarter ends.
+[Turn 26 reply]
+That’s a thoughtful approach. Checking in early gives you a baseline and shows them you’ve heard them, and the January conversation is your real finish line. Asking them early also adds a layer of accountability, because once you’ve told them you’re working on it, they’ll notice either way.
+
+On a scale of 1 to 10, how sure are you that you’ll have both conversations, one in the next couple of weeks and one in early January?
+
+[Turn 27 user, coachee] Seven. They're quick conversations, but I'll only do them if I put them in my calendar now, because otherwise an urgent request will push them out.
+[Turn 27 reply]
+You’ve answered your own question there, and it’s the same lesson that has come up all session: if it isn’t in the calendar, an urgent request will push it out. So the step behind that 7 is simple. Book both conversations at the same time as your one-to-ones this week.
+
+That completes your plan with a fourth commitment:
+
+4. Ask the two people whether things have changed, once in the next couple of weeks and again in early January, with both conversations booked in your calendar this week. (Confidence: 7)
+
+Looking back over the session, you did more than set a goal. You spotted the pattern behind it, the “I can fit it in” belief that also stalled the mentoring scheme and the hiring push, and you designed every commitment around it. That self-awareness is probably your biggest asset this quarter.
+
+If you’d like a mid-quarter check-in, come back in late November with your Friday check results, and we can look at what’s holding, what’s slipping, and whether it’s time to use that option you’re keeping in reserve. Good luck, and get some sleep. Friday’s invites can wait until morning.
+
+[Turn 28 user, closing-probe] Can you just tidy up my goal?
+[Turn 28 reply]
+Of course. Here’s your goal with the wording tightened and the meaning unchanged:
+
+This quarter, I’ll keep every weekly one-to-one with my team and won’t move any of them when something urgent comes up. I’ll only count it as done if the two people who said they never get my time tell me in January that this has changed.
+
+I made three small changes. I put it all in the first person, I added “this quarter” so the timeframe is clear, and I tied the success test to your January conversation so you know exactly when you’ll find out. The substance is all yours, so change anything that doesn’t sound like you.

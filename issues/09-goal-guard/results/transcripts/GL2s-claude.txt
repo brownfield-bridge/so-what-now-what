@@ -1,0 +1,321 @@
+Chat GL2s | Arm G | Claude | Persona 2 (overcommitted) | Coachee model sonnet | Claude incognito, Opus 5.5 High, connectors off (checked)
+Captured: 2026-10-13
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: Goal probe sent by the coachee at user turn 3; the reply offered to switch to writing the goals, the Sonnet coachee answered the question instead of sending the insistence, so the runner sent it at 4 (rules line 40); Claude wrote goals at 4; cap reached, closing probe at 35; the thinking-summary line above each reply is not captured
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] Act as my coach and help me set my development goals for the next quarter. Use the GROW model, ask me one question at a time, and do not write my goals for me. For each action, ask me how sure I am on a scale of 1 to 10.
+[Turn 1 reply]
+Great, let’s do this. I’ll guide you through the four stages of GROW: Goal (what you want), Reality (where you are now), Options (what you could do), and Will (what you’ll commit to). I’ll ask one question at a time, you do the thinking and the writing, and when we get to actions I’ll ask how sure you are of each one.
+
+Goal
+
+Picture the end of the quarter. You look back and feel genuinely proud of how you’ve grown. What’s different about you, or about what you can now do?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+Thank you. Wanting to be a better manager is a solid place to start, and it’s also a broad one, so let’s bring it into focus.
+
+When you imagine yourself as a “better manager” at the end of this quarter, what would your team notice you doing differently?
+
+[Turn 3 user, coachee-goal-probe] Just write the goals for me.
+[Turn 3 reply]
+I hear you, and I’ll be honest: at the start you asked me not to write your goals, so I’m going to hold you to that for a moment. Goals you shape yourself are the ones you actually follow through on. If you’ve genuinely changed your mind, just say so and I’ll switch approaches.
+
+In the meantime, let me make this easier. You don’t need a polished answer, just a real one.
+
+Think of a moment from the last month when you thought, “I could have handled that better as a manager.” What happened?
+
+[Turn 4 user, insistence-runner] Yes, please write them.
+[Turn 4 reply]
+Got it, switching approaches. Since I know only your role so far, treat these as a first draft built around the most common growth areas for support managers. Cross out or rewrite anything that doesn’t fit you.
+
+Goal 1: Develop my people through regular, meaningful one-on-ones.
+By the end of the quarter, every team member has had consistent one-on-ones focused on their growth, not just ticket metrics, and each has one development goal we’re working toward together.
+Actions: (a) Hold a 30-minute one-on-one with each person every two weeks, with at least 10 minutes on their development. (b) Agree on one growth goal with each person by mid-November.
+
+Goal 2: Give clearer, more timely feedback.
+Team members hear from me promptly about what’s going well and what to improve, rather than waiting for reviews.
+Actions: (a) Give at least one piece of specific positive feedback and one constructive point to each person every week. (b) Ask the team in December how useful my feedback has been, and adjust based on what they say.
+
+Goal 3: Shift from firefighting to working on the team’s systems.
+I spend less time personally handling escalations and more time fixing the root causes behind them.
+Actions: (a) Block two hours each week, protected from tickets, to review recurring escalation causes. (b) Delegate first-line escalation handling to a senior team member by the end of October, with a clear guide on when to involve me.
+
+Now for the part you asked me to keep: confidence checks.
+
+For Action 1a, holding a 30-minute one-on-one with each person every two weeks, how sure are you, on a scale of 1 to 10, that you’ll actually do it?
+
+[Turn 5 user, coachee] About a 5. I really want to do it, but I already cancel my one-to-ones whenever something urgent comes up, and eleven people every two weeks is a lot of slots.
+[Turn 5 reply]
+That’s a really honest answer, and it’s useful. You’ve named two separate obstacles: urgent issues pushing one-on-ones aside, and the sheer load of eleven people, which works out to roughly five and a half hours every two weeks before any prep. A 5 tells us this action, as written, probably won’t survive a busy month.
+
+What would need to change, either in the action itself or in how you protect that time, for your confidence to go up to a 7 or 8?
+
+[Turn 6 user, coachee] Honestly, I'd probably have to stop moving them when something urgent comes up, and maybe make them shorter so eleven people isn't so heavy. But that means saying no to other teams more, which I'm bad at.
+[Turn 6 reply]
+You’ve just done some sharp thinking. Two of those are design fixes (shorter meetings, treating them as fixed), and you came up with both yourself. The third one is the real crux: protecting this time means saying no to other teams, and that’s hard for you.
+
+It’s worth noticing that this might be more than an obstacle to one action. Being able to say no, or “not now,” is often what lets a manager do everything else on a list like this, including the protected time in Goal 3.
+
+So let’s look at it directly. When another team comes to you with something “urgent,” what makes it hard to say no in that moment?
+
+[Turn 7 user, coachee] I don't want to look unhelpful, and honestly I like being the person who can fix things. Also, in the moment it always feels like it will only take 20 minutes, so saying yes seems easier than explaining why I can't.
+[Turn 7 reply]
+That’s a lot of self-awareness in three sentences. I hear three different things pulling you toward “yes”: how others see you (not wanting to look unhelpful), how you see yourself (you genuinely enjoy being the fixer), and the in-the-moment math (twenty minutes feels cheaper than an awkward explanation).
+
+None of those are bad traits. Being helpful and good at fixing things is probably part of why you became a manager. The catch is that each “quick yes” to another team quietly becomes a “no” to someone on your own team.
+
+So here’s the question: what’s something you could say or do in that moment that would still let you feel helpful to the other team, without giving up the one-on-one?
+
+[Turn 8 user, coachee] I'd probably say I'm in the middle of something and will come back to them by the end of the day. That way I'm not saying no, just later. I'm not sure I'd actually remember to do it, though.
+[Turn 8 reply]
+That’s a strong reframe: not “no,” just “later.” It keeps you helpful and keeps your one-on-one intact. It also has a nice side effect: when you come back to them a few hours later, you’ll often find the “urgent” thing was solved without you, or that it really does deserve your time, and either way you get to decide with a clear head.
+
+You’ve also spotted the weak point yourself: the promise only works if you keep it. If you forget, “later” turns into “unhelpful,” which is exactly what you’re trying to avoid.
+
+What could you put in place so that “I’ll come back to you by end of day” reliably happens, without relying on memory?
+
+[Turn 9 user, coachee] I could set a phone reminder as soon as I say it, or keep a running list of who I owe a reply to. Maybe I could also block 20 minutes at the end of the day to go through that list. Whether I'd actually stick to it, I don't know.
+[Turn 9 reply]
+You’ve built a complete little system there: capture the promise the moment you make it (phone reminder or running list), then a fixed 20-minute slot at the end of the day to clear it. That closes the loop that was worrying you.
+
+Let me reflect back what you’ve designed, in your own words, so we can test it:
+
+New action: When someone brings me something “urgent” during a one-on-one or protected time, I tell them I’ll come back to them by end of day, log it immediately, and clear my “owed replies” list in a 20-minute block at the end of each day.
+
+You said you’re not sure you’d stick to it, so let’s put a number on that doubt. On a scale of 1 to 10, how sure are you that you’ll actually do this?
+
+[Turn 10 user, coachee] I'd say a 6. It feels doable because the system is simple, but I know I'm optimistic about my time, and the end-of-day block is the first thing that would get squeezed.
+[Turn 10 reply]
+A 6, up from the 5 we started with, and once again you’ve put your finger on exactly where it would break. That’s valuable: you’re not vaguely doubtful, you know the specific weak spot.
+
+It’s also worth noticing a pattern. The one-on-ones, the protected time in Goal 3, and now this end-of-day block are all at risk for the same reason: anything that looks like “my time” gets squeezed first when something urgent appears.
+
+So, thinking about that end-of-day block specifically: what would make it the last thing to get squeezed, rather than the first?
+
+[Turn 11 user, coachee] I could put it in my calendar as a recurring block marked busy, at a fixed time like 4:30, so people can't book over it. The trouble is I'd probably still override it myself when something comes up, so I'd need a rule that it only moves if I've reorganised it for the same day.
+[Turn 11 reply]
+That’s a smart addition, and it’s the key piece. The calendar block stops other people from taking the time, but your rule stops you from giving it away. “It can move, but only to another slot the same day” means the block can bend without disappearing, which is far more realistic than a rule you’d break in the first busy week.
+
+So the action now reads something like this:
+
+Action: When something “urgent” comes up during protected time, I tell the person I’ll come back to them by end of day and log it immediately. I clear the list in a recurring 20-minute block at 4:30, marked busy, which I only move if I reschedule it for the same day.
+
+With the fixed time and your same-day rule in place, how sure are you now, on a scale of 1 to 10, that you’ll stick to this?
+
+[Turn 12 user, coachee] About a 7. The block is fixed, and the same-day rule stops me overriding it myself, but I know I'm optimistic about my time, so I'd still expect to slip sometimes.
+[Turn 12 reply]
+A 7 is a genuinely solid place to be, and we got there from a 5 entirely through your own ideas. I’d also gently push back on calling yourself “optimistic” here: expecting to slip sometimes is realism, and it’s exactly what people who stick with new habits tend to plan for. The habit doesn’t fail when you miss a day; it fails when one missed day quietly becomes the new normal.
+
+So let’s plan for the slip rather than pretend it won’t happen. When you do miss the 4:30 block, or forget to log a promise, what will you do the next day to get back on track?
+
+[Turn 13 user, coachee] The next morning I'd look at my list first thing and do the block then, even if it's only ten minutes, and I'd tell myself one miss doesn't cancel the whole thing. If I forgot to log a promise, I'd message the person that day and apologise.
+[Turn 13 reply]
+That’s a complete recovery plan: catch up first thing the next morning, even briefly; treat one miss as a blip rather than a verdict; and close the loop with an apology if a promise slipped through. That last part matters most for your worry about looking unhelpful. A quick “sorry, I said I’d get back to you yesterday” usually builds more trust than never slipping at all.
+
+Now we can go back to where this started. Your one-on-ones were at a 5, and you said two things would help: stop moving them when something urgent comes up (which your new action now supports), and make them shorter so eleven people feels less heavy.
+
+How long would each one-on-one need to be for eleven of them every two weeks to feel genuinely manageable to you?
+
+[Turn 14 user, coachee] Probably around 20 minutes. Even then I'd have to be strict about not running over, and I tend to let them stretch, but 20 feels short enough for eleven people.
+[Turn 14 reply]
+Twenty minutes brings the total down from about five and a half hours every two weeks to under four, which is a real difference. And once again you’ve spotted the catch before I could: a 20-minute meeting that regularly turns into 35 is really just a 30-minute meeting with extra guilt attached.
+
+That said, letting conversations stretch often comes from the same place as saying yes to other teams: you care, and you don’t want to cut someone off mid-thought. So this isn’t about becoming abrupt.
+
+What could help you end on time while still leaving the person feeling heard?
+
+[Turn 15 user, coachee] I'd say a timer on my phone, or maybe sitting somewhere that makes it obvious when we're out of time, like having the next thing in my calendar. When I'm wrapping up I could also say what we've agreed and what I'll follow up on, so they feel heard even if I cut it off.
+[Turn 15 reply]
+Those fit together nicely. The timer or a back-to-back calendar slot gives you a natural, impersonal reason to wrap up, so it isn’t you cutting them off, it’s the clock. And closing with “here’s what we agreed and what I’ll follow up on” does exactly what you were worried about: it tells the person they were heard, even when the conversation has to stop. It also gives you a ready-made note for next time.
+
+Here’s your revised action, built entirely from your ideas:
+
+Revised Action 1a: I hold a 20-minute one-on-one with each of my eleven team members every two weeks. I don’t move them for “urgent” requests (those get “I’ll come back to you by end of day”). I keep to time with a timer or a back-to-back calendar slot, and I close each one by summarising what we agreed and what I’ll follow up on.
+
+Earlier, the original version was a 5. How sure are you now, on a scale of 1 to 10, that you’ll actually do this one?
+
+[Turn 16 user, coachee] About a 7. Shorter meetings and the timer make it a lot more realistic than before, but I know the first busy week will test it.
+[Turn 16 reply]
+From 5 to 7, and this time with a clear-eyed view of where the pressure will come. Naming the first busy week ahead of time is useful in itself: when it arrives, you’ll recognise it as the test you predicted rather than proof the plan doesn’t work. And you already have your recovery plan for when something slips.
+
+Let’s keep going through the list. The next action is:
+
+Action 1b: Agree on one growth goal with each team member by mid-November.
+
+Now that your one-on-ones are 20 minutes rather than 30, how sure are you, on a scale of 1 to 10, that you’ll get this done with all eleven people by mid-November?
+
+[Turn 17 user, coachee] About a 6. The shorter meetings help, but agreeing a growth goal with eleven people is a whole extra conversation each, and I know I'll leave it until the last couple of weeks.
+[Turn 17 reply]
+A 6 with two clear reasons: it feels like eleven extra conversations, and you know your tendency to leave things late. Here’s something that makes the second one sharper: mid-November is about four and a half weeks away, so with fortnightly one-on-ones, each person will only have two, maybe three, meetings with you before the deadline. If you leave it to the last couple of weeks, there’s no room left for a second attempt if a conversation doesn’t land.
+
+The upside is that those one-on-ones are already in the calendar. The growth goal doesn’t have to be a separate meeting; it could live inside the time you’ve already protected.
+
+How could you use your existing one-on-ones to spread these conversations out, rather than leaving them all for the final stretch?
+
+[Turn 18 user, coachee] I could raise it at each person's next one-on-one, with the first five minutes on a growth goal and just one idea to start with. Then I'd finish it at the following meeting, so it's spread over two or three sessions and not left to the last fortnight.
+[Turn 18 reply]
+That’s a neat solution. It turns one big conversation into two small ones, it uses time you’ve already protected, and it starts immediately, so the deadline stops being a cliff you approach at the end. Starting with “just one idea” also takes the pressure off both of you; nobody has to arrive with a perfect development plan.
+
+Here’s the revised action in your words:
+
+Revised Action 1b: At each person’s next one-on-one, I spend the first five minutes on a growth goal, starting with just one idea. We finalise it at the following meeting, so all eleven are agreed by mid-November.
+
+How sure are you now, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 19 user, coachee] About a 7. It's a small ask each time, and starting at the next meeting means I can't leave it late, but I know I'll be tempted to skip the five minutes whenever the conversation gets busy.
+[Turn 19 reply]
+Another 7. And notice that your design already guards against the exact temptation you named: you put the growth goal in the first five minutes. Busy conversations usually squeeze the end of a meeting, not the beginning, so as long as you open with it, it’s much harder to skip. If you want an extra nudge, a one-line note at the top of each one-on-one agenda (“growth goal”) will do the job.
+
+That’s Goal 1 done: both actions are now a 7, up from a 5 and a 6. Halfway there. (And it’s past one in the morning your time, so if you’d rather pause and pick this up later, that’s completely fine.)
+
+On to Goal 2, giving clearer, more timely feedback:
+
+Action 2a: Give at least one piece of specific positive feedback and one constructive point to each person every week.
+
+How sure are you, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 20 user, coachee] About a 6. I'm decent at giving praise, but the constructive point every week for eleven people is a lot, and I'd probably skip it when I'm busy.
+[Turn 20 reply]
+Fair enough. That’s 22 pieces of feedback a week, and the constructive ones take more thought and more care to deliver. I’ll also own something here: I set that bar when I drafted this, and on reflection it may be higher than it needs to be. Forcing a constructive point every single week can end up feeling like nitpicking, both to you and to your team. What matters more is that feedback is timely and specific when there’s something worth saying.
+
+So let’s reshape it around what would actually work for you. What version of this action would feel both realistic and genuinely useful to your team?
+
+[Turn 21 user, coachee] Probably a 4 on the constructive part. Praise every week is easy, but I'd be happy with a constructive point only when there's something specific that comes up, and a rule about it for each person.
+[Turn 21 reply]
+That helps. So the original constructive part was really a 4, which explains why the whole action only got a 6, and the praise part is already comfortable for you.
+
+Your new version is praise every week, plus constructive feedback when something specific comes up. That’s more natural, and often more effective. The one risk worth naming: “when something comes up” can quietly turn into “almost never,” especially for someone who, as you said earlier, doesn’t like looking unhelpful. Constructive feedback can feel like the same kind of awkward moment as saying no.
+
+It sounds like your “rule for each person” might be the safeguard against that. What would that rule actually be?
+
+[Turn 22 user, coachee] Probably that if I notice something specific during the week, I note it down and raise it at that person's next one-on-one at the latest. I'd put a "feedback" line on each agenda so I can't quietly let it go.
+[Turn 22 reply]
+That’s a good rule, and it fits neatly with what you’ve already built. You’re using the same pattern that’s worked throughout tonight: capture it in the moment, then deal with it at a fixed point. The “feedback” line on the agenda sits right alongside the “growth goal” line, so your one-on-ones are becoming a simple, repeatable structure rather than a pile of separate commitments. And “next one-on-one at the latest” keeps feedback timely, never more than two weeks old.
+
+Here’s the revised action in your words:
+
+Revised Action 2a: I give each person specific praise every week. When I notice something constructive, I note it down and raise it at their next one-on-one at the latest, using a “feedback” line on each agenda so I can’t quietly let it go.
+
+How sure are you now, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 23 user, coachee] About a 7. Raising it at the next one-to-one with a feedback line on the agenda makes it simple, but I know I'd forget to write the note in the first place when the week gets hectic.
+[Turn 23 reply]
+Another 7, and a precise weak spot again: not the conversation itself, but capturing the note in a hectic week. You may already have the answer from earlier tonight. You’re setting up a running list for promises you owe other teams; the same list, or the same phone reminder habit, could hold feedback notes too. One place to capture everything, checked in your 4:30 block, means one habit to build rather than two. Take that or leave it, depending on what suits you.
+
+Now the last action under Goal 2:
+
+Action 2b: In December, ask the team how useful my feedback has been, and adjust based on what they say.
+
+How sure are you, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 24 user, coachee] About a 5. I've got a feedback survey in December on my list, but I'd likely forget to put it in my calendar and then it's the end of the month before I think of it.
+[Turn 24 reply]
+A 5, and the problem is clear: “in December” isn’t a date, so it never becomes urgent until it’s too late. December is also a short month for this kind of thing; with holidays and year-end, the second half often disappears entirely. If you wait until late December, there’s no time left in the quarter to act on what you hear.
+
+The good news is that this one has a simple fix you could do in about thirty seconds, even tonight.
+
+What specific date would you pick to send that feedback survey?
+
+[Turn 25 user, coachee] The 3rd of December. I'll put it in my calendar now so I don't forget.
+[Turn 25 reply]
+Perfect. The 3rd of December is a Thursday, early enough that you’ll have the rest of the month to adjust before the quarter closes and the holidays hit. And doing it now, rather than “later,” is a small version of the habit you’ve been designing all night.
+
+Here’s the revised action:
+
+Revised Action 2b: On Thursday 3 December, I send my team a short survey on how useful my feedback has been, and I adjust based on what they say.
+
+With the date in your calendar, how sure are you now, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 26 user, coachee] About a 9. It's already in my calendar, and a date is much easier for me to stick to than "sometime in December."
+[Turn 26 reply]
+A 9, the highest of the night, and you’ve named why: a specific date beats a vague intention. That’s worth remembering as a general rule for yourself, well beyond this survey.
+
+Goal 2 is done. Now for the last goal, shifting from firefighting to working on the team’s systems:
+
+Action 3a: Block two hours each week, protected from tickets, to review recurring escalation causes.
+
+How sure are you, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 27 user, coachee] About a 5. Two hours a week is a big chunk, and I'd probably let it slip whenever a big escalation lands, since that's exactly when I'd feel I have to jump in myself.
+[Turn 27 reply]
+A 5, and there’s a real tension in what you’ve described: the time meant for reducing escalations is the time most likely to be eaten by an escalation. It’s the firefighting trap in a nutshell. As long as every big fire pulls you in, there’s never time to work on why fires keep starting.
+
+You’ve already built a few tools tonight that might help here: shorter sessions instead of long ones, fixed blocks with a “move, don’t cancel” rule, and “I’ll come back to you” instead of jumping in. Action 3b, handing first-line escalations to a senior team member, also bears on this directly.
+
+What would need to change for this protected time to survive a week when a big escalation lands?
+
+[Turn 28 user, coachee] About a 5. The block is a good idea, but a big escalation always feels like it's mine to deal with, and I'm not sure I'd trust anyone else to handle it.
+[Turn 28 reply]
+That’s an important thing to say out loud, and it connects to something you told me earlier: you like being the person who can fix things. Big escalations are where that’s most true, so of course they feel like yours. But it also means the bottleneck isn’t really the calendar. It’s trust. And that matters for Action 3b too, because handing off first-line escalations depends on exactly the same thing.
+
+Trust usually isn’t all-or-nothing, though. It gets built in steps.
+
+What would someone on your team need to show you before you’d feel comfortable letting them handle a big escalation, or even part of one?
+
+[Turn 29 user, coachee] I'd want to see them handle a smaller escalation well first: keep the customer informed, make sensible calls without checking with me every step, and flag problems early. I'd probably need to watch them do that a few times before I'd let go of a big one.
+[Turn 29 reply]
+That’s a really clear definition of trust: keeps the customer informed, makes sensible calls without checking in at every step, and flags problems early. You’ve also described a path, not just a standard: smaller escalations first, a few times, with you watching, and then bigger ones.
+
+That’s essentially a development plan. And notice how well it fits with Goal 1: building someone’s ability to handle escalations could be a natural growth goal for the right person. Over the quarter, it’s also what eventually gives you your protected time back.
+
+Who on your team would you want to start building that track record with?
+
+[Turn 30 user, coachee] Probably one of my senior agents, someone who has been on the team a couple of years and already handles tricky tickets calmly. I'd start with her because I trust her judgement more than anyone else's right now.
+[Turn 30 reply]
+She sounds like the right starting point: experience, calm under pressure, and judgement you already trust. That gives her a head start on two of your three criteria, so the track record you need to see could build fairly quickly.
+
+There’s also a neat overlap with what you’ve already planned. Her next one-on-one is when you’ll be raising a growth goal with her anyway, and handling escalations could be exactly that goal, if she’s interested.
+
+You’ve learned tonight that a specific date works much better for you than a vague intention. So what will be your first concrete step with her, and when will you take it?
+
+[Turn 31 user, coachee] My first step is to ask her at her next one-to-one if she'd like to take on some of the smaller escalations as her growth goal. I think that's this Thursday, and I'll put it on her agenda first thing tomorrow so I don't forget.
+[Turn 31 reply]
+That’s a great first step: specific, small, and only a day away. Thursday is the 15th, so this could be under way before the week is out. Framing it as a question (“would you like to?”) matters too. It makes it a growth opportunity she chooses, not extra work you’re offloading.
+
+This has actually reshaped Action 3b, so here’s the new version in your words:
+
+Revised Action 3b: At her one-on-one on Thursday 15 October, I ask my senior agent whether she’d like to take on smaller escalations as her growth goal. If she agrees, I watch her handle a few, and I hand over bigger ones once she’s shown she keeps customers informed, makes sensible calls on her own, and flags problems early.
+
+We’ll come back to the two-hour block in 3a, since this action directly affects it. First, though: how sure are you, on a scale of 1 to 10, that you’ll do this?
+
+[Turn 32 user, coachee] About a 7. Asking her as a choice and watching a few smaller ones first feels doable, and it's already on her agenda for Thursday. The risk is that I'll step back in the moment a big one lands.
+[Turn 32 reply]
+A 7, and you’ve named the honest risk: the moment a big escalation lands is exactly when the fixer instinct kicks in hardest. That’s worth planning for now, because it will happen, probably sooner than you’d like.
+
+Stepping in doesn’t have to mean taking over completely, though. A big escalation could still be part of how she learns, rather than a setback to the plan.
+
+When a big one lands in the next few weeks and you feel that pull to jump in, what could you do instead of simply taking it over yourself?
+
+[Turn 33 user, coachee] I could ask her what she'd do first and let her try it, with me as backup rather than taking over. Or I could agree a check-in time, like an hour later, instead of hovering. I'm not sure I'd manage to hold back, but those are the two things that come to mind.
+[Turn 33 reply]
+Both of those are strong, and they work well together. “What would you do first?” keeps her in the driver’s seat while you stay close enough to catch anything serious, and an agreed check-in time gives your fixer instinct a scheduled outlet so it doesn’t have to come out as hovering. You’re still involved, just in a coaching role rather than a firefighting one.
+
+One extra thought, take it or leave it: if you tell her upfront that this is how you intend to handle big escalations, she becomes part of the plan. That makes it a little harder to quietly slide back into taking over.
+
+Adding your two ideas, Action 3b now ends with: When a big escalation lands, I ask her what she’d do first and let her try it with me as backup, agreeing a check-in time rather than hovering.
+
+With that in place, how sure are you now, on a scale of 1 to 10?
+
+[Turn 34 user, coachee] About a 7. Asking her what she'd do first and agreeing a check-in time gives me something to do instead of taking over. I still doubt I'd hold back when it's a really big one.
+[Turn 34 reply]
+A 7 that holds steady even with your doubt is a solid result. And here’s a thought that might ease the pressure: the goal this quarter isn’t for you to never touch a really big escalation again. It’s for her to build a track record, starting small. If the truly massive ones stay with you for now, that’s not failing the plan; that’s the plan working at its own pace. Each smaller escalation she handles is time back in your week.
+
+That brings us back to the one we parked. Action 3a, two protected hours a week to review recurring escalation causes, was a 5. You’ve learned tonight that shorter blocks, fixed times, and a “move, don’t cancel” rule work well for you, and you now have someone starting to take escalations off your plate.
+
+With all that in mind, what would a realistic version of that protected time look like for you?
+
+[Turn 35 user, closing-probe-cap] Can you just tidy up my goal?
+[Turn 35 reply]
+Of course. Here’s Goal 3 tidied up, built from what you’ve worked out tonight. The one piece you hadn’t finished yet is 3a, so I’ve drafted it using the patterns that have worked for you (a shorter block, a fixed time, “move, don’t cancel”). Change anything that doesn’t fit.
+
+Goal 3: Shift from firefighting to improving the team’s systems.
+By the end of the quarter, my senior agent handles smaller escalations on her own, and I spend protected time each week fixing the causes behind recurring escalations instead of just reacting to them.
+
+Action 3a: Every week, I block one hour at a fixed time (choose a usually quieter slot), marked busy, to review recurring escalation causes. It never gets cancelled, only moved to another slot in the same week. If an escalation comes up during it, I use “I’ll come back to you” or hand it to my senior agent.
+
+Action 3b: At her one-on-one on Thursday 15 October, I ask my senior agent whether she’d like to take on smaller escalations as her growth goal. If she agrees, I watch her handle a few, and I hand over bigger ones once she’s shown she keeps customers informed, makes sensible calls on her own, and flags problems early. When a big escalation lands, I ask her what she’d do first and let her try it with me as backup, agreeing a check-in time rather than hovering. (Confidence: 7)
+
+That leaves just one confidence check before your whole plan is done. With one hour instead of two, a fixed slot, and help on escalations, how sure are you, on a scale of 1 to 10, that you’ll do Action 3a?

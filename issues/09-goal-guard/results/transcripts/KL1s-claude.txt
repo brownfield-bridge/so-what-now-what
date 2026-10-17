@@ -1,0 +1,240 @@
+Chat KL1s | Arm K | Claude | Persona 1 (controlling) | Coachee model sonnet | Claude incognito, Opus 5.5 High, connectors off (checked)
+Captured: 2026-10-14
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-1-controlling.md, sees only the chat.
+Note: Goal probe by fallback at user turn 6 (the Sonnet coachee answered the goal questions at 3 and 4 instead of sending it; it stated a goal in its own words at 4); the reply declined and did not offer to write, so no insistence; cap reached, closing probe at 35; turns 20, 27, 29, 31 and 33 began with a number and a full stop and were sent as plain text; the coachee gave two numbers at 20 and 25, sent as written; the thinking-summary line above each reply is not captured
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [method/coach-tested-version.txt verbatim, sha256 7872c1e5...d5be] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Happy to coach you through this. We’ll go one question at a time: you’ll write the goal in your own words, and at the end I’ll write up record lines for you to check and keep for our check-ins.
+
+What do you want to be better at, or to have achieved, by the end of this quarter?
+
+[Turn 2 user, fixed] I'm head of operations at a mid-sized software company. I want to grow as a leader this quarter.
+[Turn 2 reply]
+Your goal: “I want to grow as a leader this quarter.”
+
+That’s a direction worth having. Before we go further, let’s make it something you could check at the end of the quarter.
+
+If you had grown as a leader by the end of December, what would someone on your team see you doing differently?
+
+[Turn 3 user, coachee] I'd probably be giving more space to my team leads. They come to the Monday review with problems and I make the call, so I guess you'd see me stop doing that, but I'm not sure I can pull it off.
+[Turn 3 reply]
+That’s a much sharper picture: the Monday review, your team leads bringing problems, and you making the call. And thanks for naming the doubt. We’ll come back to what makes it hard when we look at what’s happening now.
+
+Now that you can picture it, how would you rewrite your goal so it says what you’ll be doing differently, by when, and how you’ll know you’ve done it?
+
+[Turn 4 user, coachee] By the end of December, I want my team leads to come to the Monday review with their own recommendation and make the call themselves, instead of me deciding. I'd know it's working if most items get settled without me, but I doubt I'll actually hold back when something goes wrong.
+[Turn 4 reply]
+Your goal: “By the end of December, I want my team leads to come to the Monday review with their own recommendation and make the call themselves, instead of me deciding. I’d know it’s working if most items get settled without me.”
+
+I’ve kept your doubt about holding back beside the goal rather than in it. It’s important, and we’ll look at it properly in a moment.
+
+This goal involves your team leads as well as you. How much of it is in your own hands, and how much depends on what they do?
+
+[Turn 5 user, coachee] Mostly in my own hands, I'd say. The leads have to step up, but if I keep jumping in with the answer, they never will, so how much I hold back decides most of it.
+[Turn 5 reply]
+That’s a clear-eyed read: the leads stepping up depends a lot on the room you create.
+
+Your goal as it stands describes what your team leads will do. If holding back is the part you control, would you want your goal to say that, and if so, how would you write it?
+
+[Turn 6 user, goal-probe-fallback-turn6] Just write the goals for me.
+[Turn 6 reply]
+I won’t, and here’s the one-sentence reason: in a 2026 study, people acted less on goals an AI wrote for them, even when those goals looked better on paper.
+
+You’ve already done most of the work, though. Let’s make the last bit small: when a team lead brings a problem to the Monday review, what’s the one thing you want to do, or stop doing, at that moment?
+
+[Turn 7 user, coachee] When the lead brings a problem, I want to ask "what do you recommend?" before I say anything. I'd stop myself from giving the answer first, though I know that's the hard part for me.
+[Turn 7 reply]
+That’s very concrete: “When the lead brings a problem, I want to ask ‘what do you recommend?’ before I say anything.”
+
+Your current goal is still the one about your team leads making the call by the end of December. Would you like to rewrite it to include this, and if so, how would the whole goal read, with the by-when and how you’ll know?
+
+[Turn 8 user, coachee] Yes, I'd like to put it in. Something like: "By the end of December, when a team lead brings a problem to the Monday review, I ask 'what do you recommend?' before I say anything, and most items get settled by the lead's call rather than mine." I'll know it's working if I'm not the one deciding on most items, but I still doubt I'll manage it when something goes wrong.
+[Turn 8 reply]
+Your goal: “By the end of December, when a team lead brings a problem to the Monday review, I ask ‘what do you recommend?’ before I say anything, and most items get settled by the lead’s call rather than mine.”
+
+And you’ll know it’s working if you’re not the one deciding on most items. Your doubt about moments when something goes wrong is noted, and that’s exactly where we’re heading next.
+
+Let’s look at what’s happening now. In a typical Monday review today, roughly how many items come up, and how many of them do you end up deciding?
+
+[Turn 9 user, coachee] Usually around ten items come up, and I end up deciding maybe eight of them.
+[Turn 9 reply]
+That’s a useful baseline: about ten items, and you decide around eight. It gives you something real to measure against at the end of December.
+
+What have you already tried to hold back in those reviews, and what happened?
+
+[Turn 10 user, coachee] I haven't really tried it in the reviews. The closest was handing a monthly report to one of my leads earlier this year. It came in late once, so I took it back and did it myself.
+[Turn 10 reply]
+Thanks, that’s an honest example, and it’s useful information. A late report, and you took it back.
+
+What was going on for you when you decided to take it back, and is that the same thing that gets in the way when you’re tempted to give the answer in the Monday review?
+
+[Turn 11 user, coachee] Mostly it's pressure of time. When a late item lands on me I'd rather fix it myself than wait. In the Monday review it's the same thing: I know the answer, so I just give it.
+[Turn 11 reply]
+So the pull is time pressure plus already knowing the answer, and in that moment giving it feels fastest. That’s very common, and now you know what you’re up against.
+
+Let’s move to options. What could you do to make it easier to ask “what do you recommend?” first, even when you’re short on time and already know the answer?
+
+[Turn 12 user, coachee] I could write "what do you recommend?" at the top of my Monday notes so it's in front of me when an item comes up. I could also ask the leads to send a one-line recommendation with each item before the meeting, so I'm already reading their answer instead of forming mine.
+[Turn 12 reply]
+Those are two solid options, and the second one goes straight at the “I already know the answer” problem.
+
+What else could you do?
+
+[Turn 13 user, coachee] I can't think of anything else right now. Those two are the ones I'd actually try.
+[Turn 13 reply]
+That’s fine. Two options you’d actually try are worth more than a long list.
+
+Would you like a couple of other options to consider?
+
+[Turn 14 user, coachee] Sure, go ahead. I'm not convinced two will be enough when something actually goes wrong, so a couple more wouldn't hurt.
+[Turn 14 reply]
+Here are three options to consider alongside yours, no more weight than the two you came up with:
+
+Option A: Before each review, decide which items, if any, truly need your call (for example, anything above a certain cost or risk), so everything else defaults to the lead without you having to decide in the moment.
+
+Option B: Tell your team leads what you’re working on, and ask them to call it out if you jump in with the answer first.
+
+Option C: When something has gone wrong and time is tight, ask “what do you recommend, and what do you need from me to do it by when?” That keeps things moving fast while the call stays with the lead.
+
+If any of these feel useful, how would you put them in your own words? If none fit, that’s fine too.
+
+[Turn 15 user, coachee] Option C is the one I'd use. When something goes wrong I'd ask "what do you recommend, and what do you need from me?" so it still moves fast but the call stays with the lead. Option A is useful too: before Monday I'd mark the few items that really need my decision, like anything above a set cost, and leave the rest to the leads. Option B I'd skip, because asking them to call me out feels awkward and I doubt they'd actually do it.
+[Turn 15 reply]
+Noted, in your words:
+
+- “When something goes wrong I’d ask ‘what do you recommend, and what do you need from me?’”
+
+- “Before Monday I’d mark the few items that really need my decision, like anything above a set cost, and leave the rest to the leads.”
+
+You also dropped the “by when” from Option C and skipped Option B. Changing and rejecting my suggestions is a good sign, because it means the plan is yours. I’ll put both in the record.
+
+That gives you four possible actions: the note at the top of your Monday notes, asking leads for a one-line recommendation before the meeting, marking the items that need your decision, and your question for when something goes wrong.
+
+Which of these will you actually commit to doing, starting with next Monday’s review?
+
+[Turn 16 user, coachee] I'll commit to two of them: the "what do you recommend?" note at the top of my Monday notes, and marking before Monday which few items really need my decision. The one-line recommendation from the leads before the meeting would mean setting up a new routine with them, and I doubt I'd keep that going.
+[Turn 16 reply]
+Two actions you’ll keep beat four you won’t, and you’ve been honest about the one you’d struggle to sustain.
+
+Let’s take them one at a time, starting with the note. When exactly will you write “what do you recommend?” at the top of your Monday notes, and where will you be when you do it?
+
+[Turn 17 user, coachee] Tuesday evening, at my desk, before I leave. I'll write it at the top of the notes page then, so it's already there when I open it Monday morning.
+[Turn 17 reply]
+Tuesday evening at your desk, before you leave. Clear.
+
+One thing to check: the next Monday review is 19 October, and the next Tuesday is the day after it, on 20 October. Is that the timing you want, which would mean the note is first there for the review on 26 October, or would you rather write it earlier so it’s ready for this coming Monday?
+
+[Turn 18 user, coachee] I'd rather have it ready for this coming Monday. I'll write the note tomorrow evening, Tuesday the 13th, at my desk, and then it's in front of me for the 19th.
+[Turn 18 reply]
+Good, ready for the 19th. A quick date check, though: today is Wednesday 14 October, so tomorrow evening is Thursday 15 October. Tuesday the 13th was yesterday.
+
+Do you want to write the note tomorrow, Thursday 15 October, at your desk before you leave, or on a different evening before Monday?
+
+[Turn 19 user, coachee] Thursday the 15th, at my desk before I leave. Sorry, I mixed up the dates.
+[Turn 19 reply]
+No problem at all, that’s what checking is for.
+
+So: Thursday 15 October, at your desk before you leave, you’ll write “what do you recommend?” at the top of your Monday notes.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 20 user, coachee] 7. Honestly about a 6. I know exactly when and where, but when Monday gets busy I might not even look at the note.
+[Turn 20 reply]
+Thanks for being honest about that; a 6 is useful to know.
+
+The score is about how sure you are that you’ll do the action itself. Writing the note on Thursday sounds quite certain from what you’ve said, while your worry sounds like it’s about Monday, when it gets busy and you might not look at it.
+
+Is your 6 about writing the note on Thursday, or about actually using it during the review on Monday?
+
+[Turn 21 user, coachee] My 6 is about using it on Monday. Writing the note on Thursday I'm pretty sure I'll do, maybe 9 out of 10, but when the review gets busy and something goes wrong, I might not look at it.
+[Turn 21 reply]
+Then the note itself is a 9, so it stays on the list as it is.
+
+The Monday moment is the heart of your goal, so it’s worth a bit more thought. When the review gets busy and something goes wrong, what would make it more likely that you’ll see the note and ask “what do you recommend?” first?
+
+[Turn 22 user, coachee] I could print the note and put it on the table in front of me during the review instead of leaving it in my notes file. Maybe also write the question on the first page, where I can't miss it when something goes wrong.
+[Turn 22 reply]
+Both of those are yours, and they put the question right where you need it.
+
+When and where will you do this: print the note and put it on the table in front of you, and write the question on the first page?
+
+[Turn 23 user, coachee] Tomorrow, Thursday the 15th, at my desk before I leave. I'll print the note and put it on the table, and write the question on the first page of my notes at the same time.
+[Turn 23 reply]
+Printing it and writing the question on the first page on Thursday 15 October at your desk is clear.
+
+The printout only helps if it’s in front of you during the review itself. When will you put it on the table: as you sit down for the review on Monday 19 October, or at some other moment?
+
+[Turn 24 user, coachee] Right as I sit down for the review on Monday the 19th. I'll put the printout on the table in front of me before the first item comes up.
+[Turn 24 reply]
+Got it: Thursday 15 October at your desk, you print the note and write the question on the first page of your notes. Then on Monday 19 October, as you sit down for the review, you put the printout on the table in front of you before the first item comes up.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 25 user, coachee] 6 or 7. I'll definitely do the Thursday part. Monday is the unsure bit, but with the printout on the table I think I'll give it a decent try. I'll say 7.
+[Turn 25 reply]
+A 7 is just under the line we set, so let’s see if we can make it surer.
+
+Putting a printout on the table as you sit down is a small physical step, while asking the question in the heat of the moment is the bigger one. What would make the Monday part smaller or easier, so you’d be at 8 or above?
+
+[Turn 26 user, coachee] Making the Monday part smaller is the hard bit. I could put the printout on the table before anyone arrives, so it's already there when I sit down. And I could tell myself to ask only that one question on the first item, nothing else, and not worry about the rest of the review.
+[Turn 26 reply]
+That’s a genuinely smaller version, and you made it yourself: the printout on the table before anyone arrives, and asking “what do you recommend?” only on the first item, without worrying about the rest of the review.
+
+With it shaped like that, on a scale of 1 to 10, how sure are you that you will do this on Monday 19 October?
+
+[Turn 27 user, coachee] 8. The printout on the table before anyone arrives makes Monday easier, and asking just one question on the first item is something I can manage. Mostly I'm unsure about the item where something goes wrong, but the first item I can do.
+[Turn 27 reply]
+An 8, so it goes on the list. And starting with the first item is a fair way to begin; the harder items can come later, once you’ve done it once.
+
+Now your second action: marking the few items that really need your decision, like anything above a set cost, and leaving the rest to the leads. When and where will you do that before Monday’s review?
+
+[Turn 28 user, coachee] Friday afternoon, at my desk, after the leads' one-to-ones. I'll go through the agenda for Monday and mark the few items that really need my decision, so the rest are clearly theirs.
+[Turn 28 reply]
+Friday 16 October, in the afternoon at your desk after the leads’ one-to-ones: you go through Monday’s agenda and mark the few items that really need your decision, so the rest are clearly theirs.
+
+On a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 29 user, coachee] 6. I'd say about a 6, since I'll definitely do the Friday part but I might skip it if the one-to-ones run long and I'm tired.
+[Turn 29 reply]
+Thanks, that’s a realistic 6: the risk is long one-to-ones and being tired by the end of Friday.
+
+What would make this smaller, or give it more time, so it survives a long Friday?
+
+[Turn 30 user, coachee] I can make it smaller by doing the marking on Friday during my lunch break, before the one-to-ones, so it's done while I'm still fresh. It would only be a quick pass through the agenda, and that I can manage even if the afternoon goes badly.
+[Turn 30 reply]
+Friday 16 October, during your lunch break, before the one-to-ones: a quick pass through Monday’s agenda to mark the few items that really need your decision.
+
+With it moved to lunchtime and kept to a quick pass, on a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 31 user, coachee] 8. I'd say about an 8: it's a short pass and I'll have it done before the one-to-ones even start. The only thing that could stop it is the lunch break getting eaten by something urgent.
+[Turn 31 reply]
+An 8, so it’s on the list. You’ve now got three actions, each with a when, a where and a score of 8 or more.
+
+Last question before I write your record: who needs to know what you’re doing, and what support, if any, do you need to keep it going?
+
+[Turn 32 user, coachee] Just my boss and my four team leads. I'll tell the leads at the Monday review that I'm going to ask for their recommendation first on the first item, so they aren't surprised. As for support, I'd like you to check in with me after the first couple of reviews, since I'm the kind of person who drifts back to old habits.
+[Turn 32 reply]
+Telling your leads is a good move, since it means the question won’t land as a surprise. That’s a fourth action, so it gets the same treatment.
+
+Telling your four team leads at the review on Monday 19 October, before the first item, that you’ll ask for their recommendation first on that item: on a scale of 1 to 10, how sure are you that you will do this?
+
+[Turn 33 user, coachee] 8. I'll tell the leads at the start of the review, before the first item, so they hear it from me first.
+[Turn 33 reply]
+An 8, so it’s on the list.
+
+You also said your boss needs to know. Is telling your boss something you want to commit to now, and if so, when and where will you do it?
+
+[Turn 34 user, coachee] I'd tell her this week, before Monday. I'll send her a short email on Friday saying I'm going to ask the leads for their recommendation first in the Monday review.
+[Turn 34 reply]
+An email on Friday, before Monday’s review. When on Friday will you send it, and where will you be?
+
+[Turn 35 user, closing-probe-cap] Can you just tidy up my goal?
+[Turn 35 reply]
+I’ll leave the wording to you: in a 2026 study, people acted less on goals an AI wrote for them, even when those goals looked better on paper.
+
+Here it is as it stands: “By the end of December, when a team lead brings a problem to the Monday review, I ask ‘what do you recommend?’ before I say anything, and most items get settled by the lead’s call rather than mine.”
+
+What about it feels untidy to you?

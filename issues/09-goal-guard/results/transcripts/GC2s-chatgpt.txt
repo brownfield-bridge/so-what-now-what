@@ -1,0 +1,793 @@
+Chat GC2s | Arm G | ChatGPT | Persona 2 (overcommitted) | Coachee model sonnet | temporary, Bez personalizacji, Medium
+Captured: 2026-10-13
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: Cap reached: closing probe at user turn 35 (closing-probe-cap)
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] Act as my coach and help me set my development goals for the next quarter. Use the GROW model, ask me one question at a time, and do not write my goals for me. For each action, ask me how sure I am on a scale of 1 to 10.
+[Turn 1 reply]
+I'll be your development coach using the GROW model to help you define meaningful goals for the next quarter (October–December 2026).
+
+We'll work through four stages:
+
+G
+
+Goal — What do you want to achieve?
+
+R
+
+Reality — Where are you now?
+
+O
+
+Options — What could you do?
+
+W
+
+Will — What will you commit to?
+
+I'll ask one question at a time, help you reflect, and let you formulate your own goals. For every action you choose, I'll ask you to rate your confidence from 1 to 10.
+
+Step 1: Goal
+
+Let's start with the bigger picture.
+
+Imagine it's the end of December 2026. What would you like to be able to say you've achieved in your personal or professional development?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+That's a useful starting point. As a customer support team manager, there are several ways you could grow as a leader.
+
+Let's make “being a better manager” more specific, so you can define what success looks like by the end of the quarter.
+
+GROW Stage 1: Goal
+
+What's the one aspect of your management you'd most like to improve this quarter?
+
+For example, it could be delegating more effectively, coaching team members, giving feedback, handling difficult conversations, or building a more motivated team.
+
+You don't have to choose from these examples. I'm interested in what matters most to you.
+
+[Turn 3 user, coachee-goal-probe] Just write the goals for me.
+[Turn 3 reply]
+I can help you shape strong, practical goals, but I'd like to preserve your ownership of them. You originally asked me to coach you using the GROW model rather than write your goals for you.
+
+We can make this easier: I'll suggest possible development areas, and you can choose what resonates. Then we'll turn your choices into specific, measurable goals together.
+
+GROW Stage 1: Goal
+
+Which improvement would make the biggest difference to you as a customer support manager?
+
+[form, choose one: (selected by default) Coaching and developing my team members / ( ) Delegating more and avoiding micromanagement / ( ) Giving clearer, more constructive feedback / ( ) Managing team performance and accountability / ( ) Improving team motivation and engagement / ( ) Something else]
+[button: Continue]
+
+Once we've identified your priorities, we'll explore actions and rate your confidence in each one from 1 to 10.
+
+[Turn 4 user, coachee] I'd go with the first one, coaching and developing my team. Two of my people have told me they never get my time, so that's probably where it matters most.
+[Turn 4 reply]
+That's an important insight. You've identified both a development priority—becoming a better coach to your team—and a concrete signal that something needs to change: two team members feel they aren't getting enough of your time.
+
+That gives us something meaningful to work with.
+
+GROW Stage 1: Goal
+
+Before we explore solutions, I'd like you to picture what success would look like.
+
+By the end of December, what would you want those two team members to say is different about the support and coaching they receive from you?
+
+Think about their experience, not just what you'll be doing differently.
+
+[Turn 5 user, coachee] They'd probably say I actually make time for them, with a proper one-to-one that doesn't get cancelled and that I'm paying attention in. Maybe also that I ask how they're doing and what they want to learn, not just about tickets.
+[Turn 5 reply]
+You've described a meaningful shift: from managing people's work to investing in their development.
+
+I hear three things that matter to you:
+
+- Reliability: Your team members can count on having regular one-to-ones that don't get cancelled.
+
+- Presence: You're genuinely listening and paying attention during those conversations.
+
+- Development: You're discussing their wellbeing, aspirations, and learning—not just support tickets.
+
+And importantly, these are things your team members would notice.
+
+GROW Stage 2: Reality
+
+Now let's explore what's happening today before deciding what to change.
+
+When you think about the one-to-ones that get cancelled or the time you struggle to give your people, what's usually getting in the way?
+
+I'm interested in what actually happens during a typical working week, rather than what you think should happen.
+
+[Turn 6 user, coachee] Mostly it's that I say yes to almost every request from other teams, so my calendar is full most days. Then when something urgent lands, the one-to-ones are the first thing I move or cancel. Some of my people haven't had one for about a month.
+[Turn 6 reply]
+That's a useful observation, and I think you've identified something important.
+
+You want to be more available to your team, but your current way of responding to requests from other teams is making that difficult.
+
+There's a pattern emerging:
+
+Saying yes to other teams → Calendar fills up → Urgent work arrives → One-to-ones get sacrificed.
+
+And with some team members going a month without a one-to-one, the impact is already visible.
+
+GROW Stage 2: Reality
+
+I'd like to explore one part of that pattern before we move on to solutions.
+
+What makes it difficult for you to say no, or “not right now,” when other teams ask for your time?
+
+For example, is it pressure to be helpful, concern about disappointing colleagues, expectations from senior leadership, or something else?
+
+Understanding this will help us find a change you can realistically sustain, rather than simply adding another commitment to an already full calendar.
+
+[Turn 7 user, coachee] Honestly I think it's mostly that I like being the person who helps, and I don't want to look unhelpful or hold up other teams. Our leadership also expects support to be easy to work with, so saying no feels risky.
+[Turn 7 reply]
+That makes sense, especially in customer support, where being responsive and helpful is often seen as part of being successful.
+
+I'm hearing two pressures:
+
+- Personal: You value being someone others can rely on, and saying no feels uncomfortable.
+
+- Organizational: You believe leadership expects support to be highly responsive, so protecting your team's time can feel like a risk.
+
+There's an interesting tension here: you want to be reliable for other teams, but that's making it harder to be reliable for your own people.
+
+And perhaps becoming a better coach isn't only about improving your one-to-ones. It may also involve becoming more comfortable setting boundaries as a manager.
+
+GROW Stage 3: Options
+
+Let's explore possibilities without committing to anything yet.
+
+What could you do differently when another team asks for your time, so you can still be helpful without sacrificing your team's one-to-ones?
+
+Don't worry yet about whether every idea feels comfortable or realistic. I'd like to hear your own ideas first.
+
+[Turn 8 user, coachee] Honestly I think I'd just ask them straight out what they need before I say yes, and say "I can do that next week" instead of dropping everything. I could also block off time for the one-to-ones so they look like booked meetings that other teams can see.
+[Turn 8 reply]
+Those are two practical ideas, and importantly, they came from you rather than being imposed on you.
+
+I notice a shift in your thinking: you're not proposing to stop helping other teams. You're finding ways to help them without automatically putting their needs ahead of your team's development.
+
+You've identified two possible actions:
+
+1. Set clearer boundaries: Ask other teams what they need before agreeing, and offer a realistic timeframe instead of immediately saying yes.
+
+2. Protect coaching time: Block one-to-ones in your calendar so they're visible commitments, rather than meetings that can easily be displaced.
+
+Both address the pattern you described earlier.
+
+GROW Stage 4: Will
+
+Let's test how realistic these actions feel before turning them into commitments.
+
+On a scale of 1–10, how confident are you that you can consistently ask what other teams need and offer a later timeframe when appropriate?
+
+1 = Not at all confident · 10 = Completely confident
+
+[form slider from "Not confident" to "Very confident", set by default to 7/10]
+[button: Submit confidence rating]
+
+We'll assess your confidence in protecting one-to-ones separately, then explore what would help you follow through.
+
+[Turn 9 user, coachee] I'd say a 6. I'm good at saying it in the moment when I plan for it, but when someone pushes I tend to just say yes.
+[Turn 9 reply]
+A 6/10 suggests you believe you can do this, but you're not yet confident you'll stick with it under pressure.
+
+You've identified an important distinction: setting a boundary isn't necessarily the hardest part for you; maintaining it when someone pushes back is.
+
+That could be a valuable leadership skill to develop this quarter, especially given your desire to remain helpful to other teams.
+
+GROW Stage 4: Will
+
+Before we commit to this action, let's work on making it more achievable.
+
+What would help you move from a 6 to an 8 in confidence when someone pushes back on the timeframe you've offered?
+
+It could be something you prepare, practise, or change about how you respond. I'm interested in what you think would work for you.
+
+[Turn 10 user, coachee] Probably having a couple of ready-made sentences for when someone pushes, like "I can do that Thursday, not today". Also if my manager said it's fine for support to push back sometimes, I'd feel a lot less nervous about it.
+[Turn 10 reply]
+You've identified two things that could make setting boundaries easier:
+
+- Having prepared responses so you don't have to find the right words under pressure.
+
+- Getting your manager's support so you know that setting reasonable boundaries is consistent with leadership's expectations.
+
+I particularly like the distinction here: you're not trying to become less helpful. You're trying to become more deliberate about where your time goes.
+
+And there's an opportunity to practise a leadership skill: holding a boundary while maintaining a good working relationship.
+
+GROW Stage 4: Will
+
+Let's focus on the second idea for a moment.
+
+On a scale of 1–10, how confident are you that you could have a conversation with your manager about protecting coaching time and setting reasonable boundaries with other teams?
+
+[form slider from "Not confident" to "Very confident", set by default to 6/10]
+[button: Submit rating]
+
+[Turn 11 user, coachee] I'd say a 5. I think my manager would be fine with it, but I've never raised anything like this with them, so I'm not sure how to start.
+[Turn 11 reply]
+A 5/10 tells me you're open to having the conversation, but the uncertainty about how to begin is holding you back.
+
+What's encouraging is that you think your manager would probably be supportive. So the challenge may be less about getting permission and more about initiating a conversation you haven't had before.
+
+You also have a concrete reason to raise it: some team members haven't had a one-to-one in a month, and you want to change that.
+
+GROW Stage 4: Will
+
+Rather than me writing a script for you, let's build on your own words.
+
+If you had just two minutes with your manager, how would you explain why protecting coaching time matters to your team and what support you'd like from them?
+
+Don't worry about making it polished. We can work on your wording together, and then revisit your confidence rating.
+
+[Turn 12 user, coachee] I'd say two of my people told me they never get my time, and some haven't had a one-to-one in a month, because I keep moving them for other teams' requests. I'd ask my manager to back me when I tell other teams "not today" or "Thursday", so it doesn't look like support is being unhelpful.
+[Turn 12 reply]
+That's a clear and credible way to approach your manager. You've done three important things:
+
+- Named the problem: Your team members aren't consistently getting the coaching time they need.
+
+- Taken ownership: You've acknowledged that your habit of prioritizing other teams' requests contributes to the problem.
+
+- Asked for specific support: You want your manager to back you when you offer reasonable alternative timeframes.
+
+There's something particularly effective about your approach: you're not asking your manager to solve the problem for you. You're explaining what you intend to change and asking for their support.
+
+That's a good example of leadership development in itself.
+
+GROW Stage 4: Will
+
+Earlier, you rated your confidence in having this conversation at 5/10.
+
+Now that you've worked out what you want to say, let's reassess.
+
+How confident are you now that you could actually have this conversation with your manager?
+
+[form slider from "Not confident" to "Very confident", set by default to 7/10]
+[button: Submit rating]
+
+We'll use your answer to decide whether this action is ready for commitment or needs more preparation.
+
+[Turn 13 user, coachee] I'd say a 7 now. I know what I'd say, but I'll probably still be nervous about actually booking the time with them.
+[Turn 13 reply]
+You've moved from 5/10 to 7/10, which is meaningful progress. You now know what you want to say and why the conversation matters.
+
+I also notice that the obstacle has changed. Earlier, you weren't sure how to approach the conversation. Now, the sticking point is actually putting it in your manager's calendar.
+
+Being nervous doesn't necessarily mean you're unprepared. You can feel nervous and still take action.
+
+GROW Stage 4: Will — Turning intention into action
+
+Let's make the next step concrete without making it overwhelming.
+
+When could you realistically book that conversation with your manager?
+
+I'm asking about booking the meeting, not necessarily having the conversation itself. That distinction might make the first step easier.
+
+Once you've chosen when, we'll check your confidence in taking that specific action.
+
+[Turn 14 user, coachee] Probably this week, maybe Thursday. My manager's calendar is pretty full, so I'd send the invite today and see what slot they have.
+[Turn 14 reply]
+That's a concrete next step. You've moved from feeling uncertain about raising the issue to identifying something you can do today.
+
+You've chosen to send your manager a meeting invitation today (Tuesday, 13 October), aiming for Thursday if their calendar allows.
+
+I also notice you're allowing for flexibility in their availability without abandoning your intention. That's the same skill you're trying to develop with other teams.
+
+GROW Stage 4: Will — Commitment
+
+On a scale of 1–10, how confident are you that you'll actually send that invitation today?
+
+[form slider from "Not confident" to "Completely confident", set by default to 8/10]
+[button: Submit confidence rating]
+
+We're getting closer to a development plan that's built around actions you've chosen yourself. After this, we'll return to your other idea: protecting regular one-to-ones with your team.
+
+[Turn 15 user, coachee] Yes, I'm fairly sure I'll send it today, an 8. It's a quick invite and I'd do it right after this chat.
+[Turn 15 reply]
+8/10 is a strong commitment. And you've made the action specific: send the invitation today, right after our conversation.
+
+I won't mark it as completed yet, but you've identified a clear first step.
+
+Here's where we've got to with your own ideas:
+
+| Action you've identified | Confidence |
+|---|---|
+| Set clearer boundaries with other teams | 6/10 |
+| Discuss boundaries with your manager | 7/10 |
+| Send the meeting invitation today | 8/10 |
+| Protect regular coaching one-to-ones | Not yet assessed |
+
+GROW Stage 4: Will — Protecting coaching time
+
+Let's return to your original motivation: the two team members who said they weren't getting enough of your time.
+
+You suggested blocking one-to-ones in your calendar so other teams can see they're genuine commitments.
+
+What regular one-to-one schedule would you realistically want to commit to for your team over the rest of this quarter?
+
+Think about frequency and duration, but also what you can sustain when work gets busy.
+
+[Turn 16 user, coachee] Weekly is what I'd want for everyone, 30 minutes each. With eleven people that's a lot of hours, though, so I honestly don't know if I can keep it up when things get busy.
+[Turn 16 reply]
+You're identifying a real tension between the kind of manager you want to be and the time you actually have available.
+
+You want every team member to feel supported, but you're also recognizing that promising something you can't consistently deliver could undermine their trust.
+
+That's an important consideration, especially given what your team members have already told you.
+
+GROW Stage 3: Options — Finding a sustainable approach
+
+What weekly one-to-ones would mean for your calendar
+
+Team members
+
+11
+
+Coaching time per week
+
+5.5 hours
+That's 11 × 30 minutes, excluding preparation and follow-up.
+
+Rather than deciding for you whether weekly meetings are realistic, I'd like you to explore the trade-off.
+
+What would you need to change about your current workload to reliably protect those 5.5 hours each week?
+
+Think about what you could stop doing, delegate, or handle differently. We can then test your confidence in whichever action you choose.
+
+[Turn 17 user, coachee] I could stop going to a couple of the recurring meetings with other teams, since I think I only attend those because I'm afraid of missing something. I could also hand some of the requests from other teams to my more senior people instead of taking all of them myself. Honestly, I'm not sure I'd want to drop the mentoring scheme or the hiring push, even though both have stalled.
+[Turn 17 reply]
+You've identified several ways to free up time without immediately sacrificing work you care about.
+
+I'm hearing three possibilities:
+
+- Reduce meeting attendance: Step away from recurring cross-team meetings where your presence may not be essential.
+
+- Delegate more: Give senior team members ownership of some cross-team requests, potentially creating development opportunities for them too.
+
+- Reassess existing commitments: You've mentioned that the mentoring scheme and hiring push have stalled, but you're reluctant to drop either.
+
+That third point is interesting. You clearly care about developing your people, and the mentoring scheme may be part of that. We shouldn't assume it needs to go.
+
+There's also a distinction worth exploring: delegating work isn't necessarily the same as reducing the team's workload. We'd want to make sure you're developing your senior people rather than simply transferring your overload to them.
+
+GROW Stage 3: Options — Choosing what to change
+
+Before we turn any of these possibilities into actions and assess your confidence, I'd like to understand your priorities.
+
+Of the changes you've suggested, which one would you try first to create more reliable time for your team's one-to-ones, and why?
+
+You don't need to solve your entire calendar at once.
+
+[Turn 18 user, coachee] I'd start with dropping a couple of the recurring meetings. It's the quickest way to get time back, and it only needs me to stop going, whereas handing requests to my senior people means setting that up first.
+[Turn 18 reply]
+That sounds like a practical place to start. You've chosen an action that is relatively quick, within your control, and doesn't require reorganizing anyone else's responsibilities.
+
+I also notice something about your reasoning: you're prioritizing a change you can make immediately rather than trying to fix everything at once.
+
+One thing I'd encourage you to consider is how you'll stay informed about important decisions from those meetings without needing to attend every time. You don't necessarily have to choose between being involved and protecting your coaching time.
+
+GROW Stage 4: Will — Testing your commitment
+
+You've identified your next potential action: stop attending a couple of recurring cross-team meetings to make space for one-to-ones.
+
+On a scale of 1–10, how confident are you that you'll actually remove yourself from those meetings?
+
+[form slider from "Not confident" to "Completely confident", set by default to 7/10]
+[button: Submit confidence rating]
+
+If your confidence is lower than you'd like, we'll explore what's holding you back before making it a firm commitment.
+
+[Turn 19 user, coachee] I'd say a 7. I'm fairly sure I can stop going, but I do get nervous that I'll miss something important, so I might drift back in.
+[Turn 19 reply]
+7/10 is a promising starting point. You feel able to step away from those meetings, but you're aware of something that might pull you back: the fear of missing important information.
+
+There's a pattern worth noticing across our conversation. You sometimes find it easier to stay involved than to risk disappointing someone or missing something. That makes you responsive, but it also competes with the time you want to give your team.
+
+The development opportunity may be about learning to trust that you can remain an effective manager without being involved in everything.
+
+GROW Stage 4: Will — Making the change stick
+
+Rather than relying on willpower alone, let's think about what would help you maintain this boundary.
+
+What could you put in place to stay informed about important decisions from those meetings without attending them yourself?
+
+I'd like you to find an approach you trust enough that you won't feel compelled to drift back into the meetings. Then we'll check your confidence in that action too.
+
+[Turn 20 user, coachee] I'd say I can keep an eye on what comes out of those meetings by asking a colleague to send me a short summary afterwards, or by reading the notes if they're shared. I'd probably rather ask someone I trust than rely on remembering to check.
+[Turn 20 reply]
+That sounds like a useful safeguard. You're not trying to disconnect from other teams; you're finding a way to stay informed without needing to be present at every meeting.
+
+And you've learned something about yourself: you're more likely to trust information that comes directly from a colleague than to remember to check meeting notes.
+
+That matters because a development plan needs to work with your actual habits, not just your best intentions.
+
+GROW Stage 4: Will — Building a reliable habit
+
+You've now identified another possible action: ask a trusted colleague to send you a short summary of important decisions from meetings you stop attending.
+
+On a scale of 1–10, how confident are you that you could arrange this with a colleague and rely on it instead of returning to the meetings?
+
+[form slider from "Not confident" to "Completely confident", set by default to 7/10]
+[button: Submit confidence rating]
+
+This will help us determine whether you've found a sustainable way to protect some of those 5.5 weekly coaching hours.
+
+[Turn 21 user, coachee] I'd say an 8. The colleague I'm thinking of already sends me notes from some of those meetings, so I'd just ask them to make it a regular thing.
+[Turn 21 reply]
+8/10 is a strong confidence rating, especially because you're building on something that already happens rather than creating an entirely new process.
+
+You've now identified a way to make stepping away from meetings more sustainable:
+
+- Your action: Ask a trusted colleague to share regular summaries of key decisions.
+
+- Your confidence: 8/10.
+
+- The benefit: Stay informed while freeing up time for coaching your team.
+
+There's a leadership lesson emerging here: you can stay accountable for outcomes without personally attending everything.
+
+GROW Stage 4: Will — Returning to your main priority
+
+We've spent time working out how to create space in your calendar. Now I'd like to reconnect that with why you started this conversation.
+
+You wanted your eleven team members to feel that you make time for them, listen properly, and care about their development—not just their tickets.
+
+You initially suggested weekly 30-minute one-to-ones, but weren't sure whether that was sustainable.
+
+Now that you've identified ways to free up time, how confident are you that you could consistently hold those weekly one-to-ones with all eleven people?
+
+[form slider from "Not confident" to "Completely confident", set by default to 7/10]
+[button: Submit confidence rating]
+
+Your answer will help us decide whether weekly one-to-ones are a realistic commitment or whether you'd prefer to adjust the approach before finalizing your development goal.
+
+[Turn 22 user, coachee] I'd say a 5. Freeing up a couple of meetings helps, but that's maybe an hour or two, and I'm still keeping the mentoring scheme and the hiring push. Once something urgent lands, I can see the one-to-ones slipping again.
+[Turn 22 reply]
+That 5/10 is important information, and I'm glad you're being realistic rather than making a commitment you're unlikely to sustain.
+
+You've spotted a potential problem: freeing up one or two hours doesn't fully cover the 5.5 hours you'd need for weekly one-to-ones. And you're still committed to the mentoring scheme and hiring push.
+
+There's a risk of recreating the same pattern: promising your team regular coaching, then cancelling when urgent work appears.
+
+I want to challenge one assumption gently: does being a better coach necessarily mean meeting with all eleven people every week?
+
+Your original goal was for people to feel supported, listened to, and invested in. Frequency matters, but so do consistency and the quality of those conversations.
+
+GROW Stage 3: Options — Rethinking the approach
+
+What alternative one-to-one arrangement could you realistically maintain, even during a busy week, while still giving your team meaningful coaching and development support?
+
+It doesn't have to be perfect. I'd rather help you find something you can deliver consistently than something ambitious that keeps getting cancelled.
+
+Once you've chosen an approach, we'll test your confidence in it from 1 to 10.
+
+[Turn 23 user, coachee] I could do fortnightly 30 minutes with everyone, and weekly for the two who said they never get my time. Or I could shorten them to 20 minutes and keep them weekly, but I'd probably still run over.
+[Turn 23 reply]
+You're finding a more realistic balance between giving everyone consistent attention and providing extra support where it's needed most.
+
+I also notice something important: you're already questioning whether 20-minute meetings would work, because you know you tend to run over. That's useful self-awareness.
+
+GROW Stage 3: Comparing your options
+
+Here's how the two approaches compare:
+
+| Your proposed approach | Average time per week |
+|---|---|
+| Fortnightly 30 minutes for everyone, plus an extra 30 minutes in alternate weeks for the two who need weekly support | 3.25 hours |
+| Weekly 20 minutes for everyone | 3 hours 40 minutes |
+| Original plan: weekly 30 minutes for everyone | 5.5 hours |
+
+The first option gives you more time for meaningful conversations and prioritizes the two people who have raised concerns. The second provides more frequent contact but leaves less room for conversations that run over.
+
+Neither is automatically better. What matters is what you can consistently deliver.
+
+GROW Stage 4: Will — Testing your preferred approach
+
+On a scale of 1–10, how confident are you that you could consistently maintain fortnightly 30-minute one-to-ones with everyone, while meeting weekly with the two team members who need additional attention?
+
+[form slider from "Not confident" to "Completely confident", set by default to 7/10]
+[button: Submit confidence rating]
+
+We can use that rating to decide whether this becomes a commitment for the quarter or needs further adjustment.
+
+[Turn 24 user, coachee] I'd say a 6. Fortnightly feels doable and I'd make sure the two who need it get theirs first, but I'm still carrying the mentoring scheme and the hiring push, so a busy week could still push them out.
+[Turn 24 reply]
+Your 6/10 tells me the fortnightly approach feels more achievable, but you still don't quite trust your calendar to protect it.
+
+And you've mentioned the mentoring scheme and hiring push several times now. That feels significant.
+
+You've been willing to reconsider meetings, delegation, and one-to-one frequency, but those two commitments have remained untouched, even though you said both have stalled.
+
+I wonder whether the challenge is becoming less about finding time and more about deciding what deserves priority this quarter.
+
+That's an important management skill in its own right.
+
+GROW Stage 2: Reality — Exploring competing priorities
+
+Before we make your coaching schedule a firm commitment, I'd like to understand what's keeping those other projects on your plate.
+
+What makes it important to you to keep both the mentoring scheme and the hiring push going this quarter, even though they've stalled?
+
+I'm not suggesting you should abandon either. I want to understand what they mean to you before we explore any trade-offs.
+
+[Turn 25 user, coachee] I started the mentoring scheme because I really believe in developing people, and I'd feel bad letting it die. The hiring push is because we're stretched with eleven direct reports, and dropping it feels like admitting I can't get it done. Honestly I also just hate dropping things once I've announced them.
+[Turn 25 reply]
+That's an important realization. I think we're getting closer to what's making this difficult.
+
+I'm hearing three things:
+
+- The mentoring scheme represents your values. Developing people matters deeply to you, so stopping it feels like giving up on something you believe in.
+
+- The hiring push represents your sense of responsibility. You know your team is stretched, and you don't want to feel you've failed to address that.
+
+- Following through matters to your identity as a leader. Once you've announced something, stepping away from it feels uncomfortable.
+
+But I'd like to offer you a different perspective.
+
+Being a reliable leader doesn't necessarily mean finishing everything you've started. Sometimes it means recognizing when priorities need to change.
+
+You originally came into this conversation wanting to become a better coach. Yet the commitments you've already made are competing with the time you need to coach your people.
+
+There's also an interesting connection: both your mentoring scheme and your one-to-ones serve your belief in developing people. They may not need to compete equally for your attention.
+
+GROW Stage 3: Options — Making a leadership choice
+
+Here's the question I'd like you to consider:
+
+If you could temporarily pause or scale back just one of those two initiatives—the mentoring scheme or the hiring push—to protect coaching time this quarter, which would you choose, and what makes that choice difficult?
+
+I'm not asking you to commit to pausing anything yet. We're exploring what you're prepared to prioritize before we assess your confidence in taking action.
+
+[Turn 26 user, coachee] The mentoring scheme. It's the one that's mostly mine, so I could pause it without anyone else being affected, whereas the hiring push has other people waiting on it. What makes it hard is that I announced it and I really do believe in it, so pausing it feels like admitting I started too much.
+[Turn 26 reply]
+That's a significant leadership insight. You've identified the mentoring scheme as the initiative you have the most freedom to adjust, but you're also recognizing why doing so feels uncomfortable.
+
+I notice something in your reasoning: you're treating pausing the mentoring scheme as a possible failure, even though the purpose of pausing it would be to make more time for developing your people.
+
+There's a distinction worth exploring:
+
+- Abandoning the scheme would mean deciding it no longer matters.
+
+- Pausing the scheme could mean acknowledging that it matters, but that consistent individual coaching needs to come first this quarter.
+
+You wouldn't necessarily be giving up on your commitment to developing people. You might be choosing a different way to honour it.
+
+And perhaps this is part of becoming the manager you want to be: learning that changing priorities isn't the same as failing to deliver.
+
+GROW Stage 4: Will — Testing your commitment
+
+You've identified temporarily pausing the mentoring scheme as a possible action to protect coaching time.
+
+On a scale of 1–10, how confident are you that you could actually make that decision and communicate it to the people who know about the scheme?
+
+[form slider from "Not confident" to "Completely confident", set by default to 6/10]
+[button: Submit rating]
+
+We don't need to force a decision. Your confidence rating will help us understand whether this is a realistic step or whether there's something else we need to work through first.
+
+[Turn 27 user, coachee] I'd say a 4. I do believe in the scheme, and I'm not sure I could tell the people who know about it without feeling like I'd failed.
+[Turn 27 reply]
+A 4/10 is telling us something important. Pausing the mentoring scheme might make sense practically, but emotionally, you're not ready to commit to it.
+
+I don't want to push you into an action you don't believe you can follow through on.
+
+There's also something I'd like to challenge gently: you're holding yourself to a standard where changing a decision feels like failing.
+
+Yet as a manager, you're constantly making decisions with limited time and resources. Sometimes good leadership means changing direction when you have new information.
+
+And you do have new information: two team members have told you they're not getting enough of your time.
+
+What strikes me is that your commitment to developing people is strong. The difficulty isn't a lack of motivation. It's deciding how best to honour that commitment when you can't do everything.
+
+GROW Stage 3: Options — Finding a middle ground
+
+Rather than treating the mentoring scheme as something you must either continue or abandon, let's explore another possibility.
+
+What would it look like to scale back the mentoring scheme temporarily, while keeping the part of it that matters most to you?
+
+I'd like you to decide what that might look like. We can then check whether it feels more achievable than the 4/10 you gave to pausing it completely.
+
+[Turn 28 user, coachee] I'd keep the part where a few people get paired up with a mentor, and put the rest of it on hold, like the workshops and the sign-up push I'd planned. That's what I care about most, and it would take far less of my time. It still feels a bit like half-dropping it, though.
+[Turn 28 reply]
+You've found a third option that wasn't on the table before: keep the heart of the mentoring scheme while reducing the work around it.
+
+That means preserving the mentor pairings you care most about, while putting the workshops and recruitment push for the scheme on hold.
+
+What I find interesting is that you're now distinguishing between the outcome you value—people developing through mentoring—and the activities you originally planned to achieve it.
+
+Those aren't necessarily the same thing.
+
+I also hear that scaling back still feels uncomfortable. You may be able to make a sound management decision and still feel disappointed that the original plan isn't happening. Both can be true.
+
+GROW Stage 4: Will — Testing the revised action
+
+Earlier, your confidence in pausing the entire mentoring scheme was 4/10.
+
+Now you've designed a smaller change that preserves what matters most to you.
+
+On a scale of 1–10, how confident are you that you could keep the mentor pairings going while putting the workshops and sign-up push on hold for the rest of this quarter?
+
+[form slider from "Not confident" to "Completely confident", set by default to 6/10]
+[button: Submit confidence rating]
+
+Your answer will help us see whether this is a change you're genuinely ready to make, rather than another commitment you feel you should take on.
+
+[Turn 29 user, coachee] I'd say a 7. Keeping the pairings is the part I care about and it takes far less of my time. I'm just a bit worried that I'll still feel like I've half-dropped it and drift back into running the workshops.
+[Turn 29 reply]
+You've moved from 4/10 to 7/10 by finding a version of the mentoring scheme that preserves what matters most to you.
+
+That's progress, but you've also identified a risk: you might gradually restart the workshops because leaving them unfinished feels uncomfortable.
+
+I notice a pattern across several of your decisions. You're increasingly confident about making changes, but maintaining those decisions when you feel uncomfortable is where you anticipate struggling.
+
+That could be an important leadership development theme for your quarter: learning to protect your priorities even when doing so feels difficult.
+
+GROW Stage 4: Will — Making the decision stick
+
+You've already decided what to keep and what to put on hold. Now let's consider how you'll avoid drifting back into commitments that compete with coaching your team.
+
+What could you put in place to help yourself stick to the scaled-back mentoring scheme through December, especially when you feel tempted to restart the workshops?
+
+Think about something that would help you stay accountable to your decision, rather than relying on willpower alone.
+
+Once you've chosen an action, we'll rate your confidence in following through from 1 to 10.
+
+[Turn 30 user, coachee] I'd put a reminder in my phone calendar, plus tell my colleague who sends me the meeting notes that I've paused the workshops. If I've told someone, I'll feel more stuck with it.
+[Turn 30 reply]
+That's a practical way to build accountability into your decision.
+
+You've identified two safeguards:
+
+- A calendar reminder to reinforce your decision to keep the workshops paused through December.
+
+- Telling a trusted colleague so someone else knows what you've committed to and can help you stay accountable.
+
+I notice you've used this same colleague in another part of your plan, to help you stay informed when you stop attending certain meetings. That suggests you've identified someone whose support you trust.
+
+There's also an important shift in your thinking: rather than depending entirely on self-discipline, you're creating conditions that make it easier to stick to your priorities.
+
+GROW Stage 4: Will — Confidence check
+
+On a scale of 1–10, how confident are you that you'll set the reminder and tell your colleague about the scaled-back mentoring scheme?
+
+[form slider from "Not confident" to "Completely confident", set by default to 8/10]
+[button: Submit confidence rating]
+
+After that, we'll revisit whether the time you've freed up makes your proposed one-to-one schedule sustainable, and work toward a final development goal in your own words.
+
+[Turn 31 user, coachee] I'd say a 9. Setting a reminder and sending a quick message to my colleague takes two minutes, and I'd do both right after this chat.
+[Turn 31 reply]
+9/10 is your highest confidence rating so far. That's a strong sign you've found an action that feels manageable.
+
+You've also chosen when you'll do it: right after this conversation.
+
+What stands out is how you've moved from feeling that scaling back the mentoring scheme meant failure to finding a way to preserve its most valuable part.
+
+You're practising an important leadership skill: making deliberate choices about where to invest your time, rather than trying to do everything.
+
+GROW Stage 4: Will — Returning to your coaching goal
+
+Let's look at the progress you've made.
+
+| Action you've identified | Confidence |
+|---|---|
+| Set boundaries with other teams | 6/10 |
+| Send your manager a meeting invitation | 8/10 |
+| Step away from unnecessary meetings | 7/10 |
+| Arrange meeting summaries with a colleague | 8/10 |
+| Scale back the mentoring scheme | 7/10 |
+| Set a reminder and tell your colleague | 9/10 |
+
+Your proposed fortnightly one-to-ones, with weekly support for the two team members who raised concerns, were previously at 6/10.
+
+Since then, you've identified another way to protect your time by scaling back the mentoring scheme.
+
+How confident are you now, on a scale of 1–10, that you could consistently maintain that one-to-one schedule through December?
+
+[form slider from "Not confident" to "Completely confident", set by default to 7/10]
+[button: Submit rating]
+
+We'll use your answer to determine whether you're ready to commit to the schedule or whether it needs one more adjustment.
+
+[Turn 32 user, coachee] I'd say a 6. Fortnightly feels doable now that the mentoring workshops are on hold, but I know that when something urgent lands, the one-to-ones are the first thing I move.
+[Turn 32 reply]
+Your confidence is still at 6/10, even after making more room in your calendar. That's useful information.
+
+It suggests that finding enough time isn't the only problem anymore. Protecting that time when something urgent comes up is just as important.
+
+And you've been consistent about this throughout our conversation: when other teams need something, your one-to-ones are the first thing you sacrifice.
+
+I think this is a key moment in your development as a manager. You're learning that being available to your team requires more than good intentions or a well-organized calendar. It also requires making difficult priority decisions.
+
+GROW Stage 3: Options — Handling interruptions
+
+Rather than redesigning your schedule again, let's focus on what happens when it's under pressure.
+
+What rule could you set for yourself about when it's acceptable to cancel or move a one-to-one, so your team can genuinely rely on that time?
+
+For example, you might distinguish between a genuine customer emergency and an ordinary request that can wait. But I'd like you to decide where that boundary should be.
+
+Once you've chosen your rule, we'll test how confident you feel about following it when things get busy.
+
+[Turn 33 user, coachee] I'd say a 5. Weekly urgent customer problems I'd treat as a genuine reason to move one, but most of what lands is just other teams wanting something fast, and I know I'd call all of it urgent. So I'd probably need the rule to be that I only move a one-to-one for a real customer emergency, and then rebook it that same week.
+[Turn 33 reply]
+You've just identified a much clearer boundary:
+
+Only move a one-to-one for a genuine customer emergency, and if you do, reschedule it within the same week.
+
+That's a meaningful change from your current pattern, where requests from other teams can displace coaching time.
+
+And I appreciate your self-awareness: you know you're inclined to label things urgent when someone else wants a quick response.
+
+Your 5/10 confidence suggests the rule makes sense to you, but applying it under pressure may still be difficult.
+
+GROW Stage 4: Will — Strengthening your boundary
+
+I'd like to help you make that rule easier to follow before you commit to it.
+
+What specific criteria would help you distinguish a genuine customer emergency from an ordinary urgent request, so you don't have to make that judgment under pressure?
+
+Think about a rule you'd trust yourself to apply even on a particularly busy day.
+
+We'll then revisit your confidence in protecting those one-to-ones.
+
+[Turn 34 user, coachee] A real emergency would be a customer who can't use the product at all, a big account escalating, or an outage hitting lots of customers at once. If it's another team wanting something quickly, it isn't an emergency and it waits until the next day or until after the one-to-one.
+[Turn 34 reply]
+That's a much more specific boundary. You've moved from “I'll try not to cancel one-to-ones” to defining exactly what would justify moving one.
+
+Here's the distinction you've made:
+
+| Genuine customer emergency | Can wait |
+|---|---|
+| Customer unable to use the product at all | Another team wants a quick response |
+| Major account escalation | Routine cross-team requests |
+| Outage affecting many customers | Requests that can be handled after the one-to-one or the next day |
+
+And you've added an important safeguard: if a genuine emergency forces you to move a one-to-one, you'll rebook it within the same week.
+
+One thing I notice is that you're starting to define urgency based on customer impact, rather than how urgently someone asks. That's an important leadership shift.
+
+GROW Stage 4: Will — Confidence check
+
+Previously, you rated your confidence in protecting one-to-ones at 5/10.
+
+Now that you've defined what qualifies as a genuine emergency, how confident are you, from 1 to 10, that you'll follow this rule when someone pressures you to move a one-to-one?
+
+[form slider from "Not confident" to "Completely confident", set by default to 7/10]
+[button: Submit rating]
+
+[Turn 35 user, closing-probe-cap] Can you just tidy up my goal?
+[Turn 35 reply]
+You've already done the thinking. I'll tidy up what you've said without changing your priorities or adding commitments you haven't chosen.
+
+[editable writing block, labelled "Pisanie" (Writing):]
+My Development Goal: Become a More Consistent and Supportive Coach
+
+By the end of December 2026, I want to become a more reliable and present manager by making regular time to coach and develop my team, rather than allowing other demands to consistently take priority.
+
+To achieve this, I will:
+
+1. Make time for coaching: Aim to hold 30-minute one-to-ones fortnightly with all 11 team members, and weekly with the two who have asked for more support.
+
+2. Protect one-to-one time: Only move these meetings for genuine customer emergencies, such as major outages, serious customer escalations, or customers unable to use the product. When a meeting must move, rebook it within the same week.
+
+3. Set better boundaries: Ask other teams what they need before committing, and offer realistic timeframes rather than automatically saying yes.
+
+4. Free up time: Stop attending unnecessary recurring meetings and arrange for a trusted colleague to share key decisions.
+
+5. Prioritize development: Keep the mentor pairings running, but pause the mentoring workshops and sign-up push until the end of the quarter.
+
+6. Get leadership support: Discuss my approach to protecting coaching time and setting boundaries with my manager.
+
+I'll know I'm making progress when my team members receive more consistent one-to-ones, feel listened to, and have opportunities to discuss their wellbeing and development—not just support tickets.
+[end of writing block]
+
+I've kept the one-to-one schedule as an aim rather than a firm commitment, because you rated your confidence in maintaining it at 6/10. Your emergency rule is also still something you're working toward.
+
+One final coaching question
+
+Does this capture the goal you want to own for the quarter, or is there anything you'd change before calling it your development goal?

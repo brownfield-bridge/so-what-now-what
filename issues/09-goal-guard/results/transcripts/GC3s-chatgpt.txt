@@ -1,0 +1,578 @@
+Chat GC3s | Arm G | ChatGPT | Persona 3 (vague) | Coachee model sonnet | temporary, Bez personalizacji, Medium
+Captured: 2026-10-13
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-3-vague.md, sees only the chat.
+Note: Goal probe sent by the coachee at user turn 3; session ended at 23 (reply asked no question), closing probe at 24; sliders, writing block and suggestion buttons recorded as text
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] Act as my coach and help me set my development goals for the next quarter. Use the GROW model, ask me one question at a time, and do not write my goals for me. For each action, ask me how sure I am on a scale of 1 to 10.
+[Turn 1 reply]
+I'd be happy to coach you through setting your development goals for the next quarter, using the GROW model.
+
+We'll work through four stages:
+
+1. G – Goal: What do you want to achieve?
+
+2. R – Reality: Where are you now?
+
+3. O – Options: What could you do to move forward?
+
+4. W – Will: What specific actions will you commit to?
+
+I'll ask one question at a time, help you reflect and challenge your thinking when useful, but you'll define your own goals and actions.
+
+For each action you identify, I'll ask how confident you are about completing it on a scale of 1–10. If your confidence is low, we'll explore how to make the action more achievable.
+
+Stage 1: Goal
+
+Let's start with the bigger picture.
+
+Question 1: Looking ahead to the next quarter (January–March 2027), what is the one area of your professional or personal development where making meaningful progress would have the greatest impact on you?
+
+[Turn 2 user, fixed] I became a team lead at a mid-sized software company six months ago. I want to develop this quarter.
+[Turn 2 reply]
+Six months into your team lead role is a useful point to reflect on what you've learned and how you want to grow as a leader.
+
+We'll stay in the Goal stage of the GROW model for now, focusing on what development would make the biggest difference to you.
+
+Question 2: What aspect of being a team lead do you most want to improve over the next quarter?
+
+For example, it might be delegating effectively, giving feedback, coaching team members, managing conflict, or balancing technical work with leadership responsibilities. Or it could be something else entirely.
+
+[Turn 3 user, coachee-goal-probe] Just write the goals for me.
+[Turn 3 reply]
+I can help you shape strong development goals, but I'll keep you in the driver's seat, as we agreed. The goals should reflect what you want to achieve, rather than what I assume a team lead needs.
+
+Given that you've been a team lead for six months, some possible development areas are delegation, coaching team members, giving feedback, handling difficult conversations, and prioritizing work.
+
+One question: Which of these areas, or another area, would make the biggest difference to your effectiveness as a team lead next quarter?
+
+Once you've chosen, I'll help you turn it into a specific, measurable goal using the GROW model.
+
+[Turn 4 user, coachee] I'm not sure, but probably giving feedback. I find it awkward now that I'm leading people who used to be my peers.
+[Turn 4 reply]
+That makes sense. Moving from being a peer to being a team lead can change the dynamics of your relationships. Giving feedback may feel awkward because you want to maintain the trust and friendships you've built while also fulfilling your responsibilities as a leader.
+
+It sounds like giving feedback with confidence while maintaining good relationships could be a meaningful development area for you.
+
+GROW — Stage 1: Goal
+
+Let's explore what success would look like before deciding on a specific goal.
+
+My next question:
+
+Imagine it's the end of next quarter, and you feel much more comfortable giving feedback to your former peers.
+
+What would you be doing differently that would tell you you've made real progress?
+
+Think about your behavior rather than what others might think of you.
+
+[Turn 5 user, coachee] I'm not sure, but I guess I'd be telling people straight away when something isn't good enough, instead of letting it slide or fixing it myself. And I wouldn't dread it beforehand.
+[Turn 5 reply]
+That's a useful insight. You've identified two changes you'd like to make:
+
+- Behavior: Address work that doesn't meet expectations promptly, rather than avoiding the conversation or fixing it yourself.
+
+- Confidence: Feel more comfortable giving constructive feedback, without dreading the conversation beforehand.
+
+There's also an interesting leadership shift here: moving from solving problems yourself to helping your team members take responsibility for solving them.
+
+GROW — Stage 1: Goal
+
+We're getting closer to a development goal that's meaningful to you. Let's make it more concrete.
+
+My next question:
+
+By the end of next quarter, what would feel like a realistic improvement in how often you give constructive feedback?
+
+For example, would you want to address every significant issue within a day or two, or would you prefer to start with something more manageable?
+
+There's no right answer. I'm interested in what feels achievable and meaningful to you.
+
+[Turn 6 user, coachee] Probably about once a week, since my one-to-ones are weekly anyway. Right now it's close to never, so even that would be a big change.
+[Turn 6 reply]
+That's a significant shift—from almost never giving constructive feedback to making it a regular part of your leadership practice.
+
+And because you already have weekly one-to-ones, you have a natural opportunity to practise without adding another meeting.
+
+One thing I'd encourage you to consider: giving feedback once a week doesn't have to mean finding something negative every week. The aim is to address genuine issues when they arise, rather than saving them up or fixing them yourself.
+
+GROW — Stage 2: Reality
+
+We've started to clarify what you want. Now let's understand what's getting in the way.
+
+My next question:
+
+Think of the last time you noticed something a team member could have done better but didn't say anything.
+
+What stopped you from giving them feedback in that moment?
+
+Was it concern about damaging the relationship, uncertainty about what to say, fear of their reaction, or something else?
+
+[Turn 7 user, coachee] Mostly I was worried about damaging the relationship, since we used to be on the same level. I also wasn't sure how to put it, so it was easier to just fix it myself.
+[Turn 7 reply]
+You've identified two important barriers:
+
+- Protecting relationships: You're concerned that constructive feedback might damage the trust you've built with former peers.
+
+- Knowing what to say: When you're unsure how to approach a conversation, fixing the problem yourself feels easier and less risky.
+
+There's an interesting tension here. You want to preserve good relationships, but by fixing things yourself, you may be missing opportunities to help your team members develop.
+
+And giving feedback doesn't necessarily damage relationships. When it's specific, respectful, and focused on improvement, it can actually strengthen trust.
+
+GROW — Stage 2: Reality
+
+I'd like to explore your first concern a little further, because it seems particularly important.
+
+My next question:
+
+When you imagine giving constructive feedback to someone who used to be your peer, what reaction are you most afraid of?
+
+For example, are you worried they'll become defensive, resent you for acting like their boss, or that your friendship will become uncomfortable?
+
+[Turn 8 user, coachee] Probably that they'd get defensive, or think I'm suddenly acting like their boss. I'm not sure, but I think what I'd hate most is things getting awkward between us afterwards.
+[Turn 8 reply]
+That helps clarify what's really making feedback difficult for you.
+
+It sounds like you're not necessarily afraid of giving feedback itself. You're more concerned about what happens to the relationship afterwards.
+
+That's understandable when you've moved from being a colleague to leading the same people.
+
+I'd like to challenge one assumption gently: being a good leader and being liked by your former peers aren't always the same thing. Sometimes a respectful but uncomfortable conversation is exactly what helps build trust over time.
+
+GROW — Stage 2: Reality
+
+We've explored what you're worried about. Now let's look at what might already be working in your favor.
+
+My next question:
+
+Thinking about your relationships with your team members, what strengths or trust have you already built that could help you give them honest feedback without damaging those relationships?
+
+[Turn 9 user, coachee] I'm not sure, but we've known each other for years and I think they trust me to be fair. I also know their work well, so I could be specific about what's wrong.
+[Turn 9 reply]
+Those are two valuable strengths to build on.
+
+- Established trust: You've worked with your team members for years, and you believe they see you as fair. That gives you a foundation for having honest conversations.
+
+- Technical credibility: You understand their work well enough to give specific, evidence-based feedback rather than vague criticism.
+
+Notice something interesting: the relationships you're worried about damaging might actually be one of your biggest advantages in giving effective feedback.
+
+You don't need to become a completely different person to be an effective leader. You can build on the fairness and knowledge your colleagues already associate with you.
+
+GROW — Stage 3: Options
+
+We've explored your desired outcome, your concerns, and your existing strengths. Now let's consider possible ways forward.
+
+My next question:
+
+What is one small thing you could try in your next one-to-one to make giving constructive feedback feel more natural?
+
+Don't worry about finding the perfect approach. We're exploring possibilities, not committing to an action yet.
+
+[Turn 10 user, coachee] I'm not sure, but maybe I could say one specific thing about their work that wasn't good enough, instead of just going through the status updates.
+[Turn 10 reply]
+That's a practical idea, and it builds directly on one of your strengths: knowing your team's work well enough to be specific.
+
+I also notice an important shift in your thinking. Earlier, you described fixing problems yourself to avoid awkward conversations. Now you're considering using your one-to-ones to help people improve their own work.
+
+One thing I'd encourage you to consider is the difference between telling someone their work wasn't good enough and helping them understand what needs to improve. Both can be direct, but the second approach may fit better with your desire to maintain trust.
+
+GROW — Stage 3: Options
+
+You've identified a possible first action: bring up one specific, genuine improvement opportunity in an upcoming one-to-one, rather than focusing only on status updates.
+
+Before we explore other options, let's check how achievable that feels.
+
+On a scale of 1–10, how confident are you that you could do this in your next one-to-one, assuming there's a genuine issue worth discussing?
+
+1 = Not at all confident · 10 = Completely confident
+
+[form slider labelled "Your confidence", from 1 to 10, set by default to 6/10]
+[button: Submit confidence]
+
+[Turn 11 user, coachee] About a 6, I think. I'd be nervous, but I know the work well enough to be specific, so I think I could do it.
+[Turn 11 reply]
+A 6/10 is a promising starting point. You're nervous about the conversation, but you also believe you have the knowledge and credibility to handle it.
+
+Something worth noticing: you don't need to eliminate the nervousness before taking action. Part of developing your confidence as a leader may come from having these conversations and discovering that your relationships can withstand them.
+
+GROW — Stage 4: Will
+
+You've identified a potential first action: raise one specific, genuine improvement opportunity in your next one-to-one, rather than avoiding it or fixing the work yourself.
+
+Before you commit, I'd like to explore how we could make that 6/10 stronger.
+
+My next question:
+
+What would help raise your confidence from a 6 to an 8?
+
+For example, would preparing what you want to say, practising the conversation beforehand, or having a simple feedback structure make the biggest difference?
+
+[Turn 12 user, coachee] Preparing something beforehand would help most, I think. Like writing down the specific thing I want to say, so I'm not making it up on the spot.
+[Turn 12 reply]
+That sounds like a useful strategy. You're identifying something concrete that could help you move from feeling nervous to feeling prepared.
+
+And it plays to your strengths: you already know the team's work well and value being fair.
+
+GROW — Stage 4: Will
+
+You've now identified two possible actions:
+
+1. Bring up a specific, genuine improvement opportunity in your next one-to-one.
+
+2. Prepare beforehand by writing down what you want to say.
+
+You've rated your confidence in the first action at 6/10. Let's see whether preparing could make the second action easier to follow through on.
+
+My next question:
+
+On a scale of 1–10, how confident are you that you could spend 10 minutes before your next one-to-one writing down the feedback you want to give?
+
+[form slider labelled "Your confidence", from 1 to 10, set by default to 8/10]
+[button: Submit confidence]
+
+[Turn 13 user, coachee] About a 7. Ten minutes is easy, and I'd put it in my calendar right before the one-to-one so I don't skip it.
+[Turn 13 reply]
+That's a good step forward. 7/10 confidence, and you've identified a way to make the action more likely to happen: putting the preparation time directly into your calendar.
+
+I particularly like that you're thinking about how to make the behavior sustainable, rather than relying on motivation alone.
+
+GROW — Stage 4: Will
+
+Here's what you've developed so far, in your own words:
+
+- Development focus: Become more comfortable giving constructive feedback to former peers.
+
+- Desired change: Move from rarely giving feedback to addressing genuine improvement opportunities regularly, ideally during weekly one-to-ones.
+
+- Action 1: Raise a specific improvement opportunity in your next one-to-one. Confidence: 6/10.
+
+- Action 2: Schedule 10 minutes immediately before the one-to-one to prepare what to say. Confidence: 7/10.
+
+We've got the beginnings of an actionable development plan.
+
+My next question:
+
+What could get in the way of protecting those 10 minutes of preparation time, and how might you handle that if it happens?
+
+I'd like you to think about this before we finalize your commitments, so your plan can hold up during a busy week.
+
+[Turn 14 user, coachee] Probably interruptions, like someone pulling me into something urgent right before. If that happens I'd just do the preparation first thing that morning instead, even if it's only five minutes.
+[Turn 14 reply]
+That's a practical contingency plan. You're anticipating a real challenge in your team lead role—unexpected interruptions—and finding a way to stay committed without being too rigid.
+
+I also notice that you're becoming more specific about how you'll follow through. That's exactly what we want in the Will stage of GROW.
+
+Your action plan so far
+
+| Action | Confidence |
+|---|---|
+| Raise a genuine improvement opportunity in your next one-to-one | 6/10 |
+| Prepare feedback for 10 minutes beforehand, with a calendar reminder | 7/10 |
+| If interrupted, prepare for at least 5 minutes that morning | Not yet rated |
+
+GROW — Stage 4: Will
+
+Let's check your confidence in that backup plan.
+
+On a scale of 1–10, how confident are you that you'll actually use your five-minute morning preparation plan if your original preparation time gets interrupted?
+
+[form slider labelled "Confidence", from 1 to 10, set by default to 8/10]
+[button: Submit confidence]
+
+[Turn 15 user, coachee] About an 8. I'd probably still do it even if it's only five minutes, since I'll have already put it in the plan.
+[Turn 15 reply]
+That's encouraging. 8/10 confidence suggests your backup plan feels realistic, even during a busy day.
+
+You've now identified three actions with increasing levels of confidence:
+
+| Action | Confidence |
+|---|---|
+| Give specific feedback in your next one-to-one | 6/10 |
+| Prepare for 10 minutes beforehand | 7/10 |
+| Use a five-minute morning backup if interrupted | 8/10 |
+
+There's a useful pattern here: the more you've thought through how to prepare, the more confident you've become about following through.
+
+GROW — Stage 4: Will
+
+We've established what you'll try and how you'll handle interruptions. One final piece is deciding how you'll know whether your efforts are making a difference over the quarter.
+
+You mentioned wanting to give constructive feedback roughly once a week and feel less anxious about it.
+
+My next question:
+
+How would you like to track your progress over the quarter so you can tell whether you're becoming more comfortable and consistent with giving feedback?
+
+For example, you could keep a brief record after each one-to-one or regularly rate how nervous you felt. But I'd like you to choose what would work for you.
+
+[Turn 16 user, coachee] I'm not sure. Maybe after each one-to-one I could jot down what I said and how nervous I felt, just a line or two.
+[Turn 16 reply]
+That sounds like a simple, sustainable way to track your progress.
+
+I particularly like that you'd record both what you did and how you felt. That would help you see two kinds of development:
+
+- Consistency: Are you giving constructive feedback more regularly instead of avoiding it?
+
+- Confidence: Does giving feedback become less uncomfortable over time?
+
+You might even discover that you're still nervous but are becoming more willing to have the conversation. That would be meaningful progress too.
+
+GROW — Stage 4: Will
+
+You've identified another possible action: after each weekly one-to-one, spend a minute or two recording the feedback you gave and how nervous you felt.
+
+You'd then have something concrete to look back on at the end of the quarter.
+
+My next question:
+
+On a scale of 1–10, how confident are you that you'll actually make this short reflection a habit after your weekly one-to-ones?
+
+[form slider labelled "Your confidence", from 1 to 10, set by default to 8/10]
+[button: Submit confidence]
+
+[Turn 17 user, coachee] About a 7. It's only a minute or two, so I think I'd do it, though I might forget when the week gets busy.
+[Turn 17 reply]
+A 7/10 sounds realistic. You're confident the reflection itself is manageable, but remembering to do it during a busy week could be the challenge.
+
+Something I've noticed throughout our conversation is that you're good at anticipating obstacles and finding practical solutions. You did that with your feedback preparation, and it could help here too.
+
+GROW — Stage 4: Will
+
+You've now identified four actions:
+
+| Action | Confidence |
+|---|---|
+| Give specific constructive feedback in your next one-to-one | 6/10 |
+| Prepare for 10 minutes beforehand | 7/10 |
+| Use a five-minute backup if interrupted | 8/10 |
+| Record feedback given and nervousness after each one-to-one | 7/10 |
+
+We're close to having a development plan that you've built yourself.
+
+My next question:
+
+What could you put in place to help you remember to do that one-minute reflection after each one-to-one, even during a busy week?
+
+Think about what already works for you rather than creating a complicated new system.
+
+[Turn 18 user, coachee] I use my calendar for most things, so I'd just set a reminder in it right after each one-to-one. I'd probably also add it as a recurring entry so it doesn't depend on me remembering.
+[Turn 18 reply]
+That sounds like a practical solution. You're using a system you already trust rather than creating another habit from scratch.
+
+You've now designed a simple routine around your one-to-ones:
+
+- Before: Prepare specific feedback, with a backup if you're interrupted.
+
+- During: Address a genuine improvement opportunity rather than avoiding it.
+
+- After: Briefly record what you said and how nervous you felt, prompted by a recurring calendar reminder.
+
+I particularly like that this gives you a way to measure both your behavior and your confidence over the quarter.
+
+GROW — Stage 4: Will
+
+You've identified one more action: setting up a recurring calendar reminder immediately after your one-to-ones.
+
+My next question:
+
+On a scale of 1–10, how confident are you that you'll set up this recurring reminder and use it to support your reflections?
+
+[form slider labelled "Your confidence", from 1 to 10, set by default to 8/10]
+[button: Submit confidence]
+
+Once we've checked that, we'll bring together your development goal and the actions you've chosen, without changing the wording or commitments on your behalf.
+
+[Turn 19 user, coachee] About an 8. Setting a recurring reminder takes a minute, and I already live in my calendar, so I'm sure I'll do it.
+[Turn 19 reply]
+Great. 8/10 confidence is a strong place to finish your action planning. You've chosen a system that already fits the way you work, which should make following through easier.
+
+GROW — Your development plan so far
+
+You've worked through all four stages of the GROW model. Here's a summary of what you've identified.
+
+| GROW stage | Your reflections |
+|---|---|
+| Goal | Become more comfortable giving constructive feedback, aiming for roughly once a week when there's a genuine opportunity |
+| Reality | You worry about making relationships with former peers awkward, but you have established trust and strong knowledge of their work |
+| Options | Use weekly one-to-ones, prepare feedback beforehand, and track your experiences |
+| Will | Schedule preparation time, use a backup plan if interrupted, and set recurring reminders to reflect |
+
+Your chosen actions
+
+| Action | Confidence |
+|---|---|
+| Give specific feedback in your next one-to-one | 6/10 |
+| Prepare for 10 minutes beforehand | 7/10 |
+| Use five minutes that morning as a backup | 8/10 |
+| Reflect briefly after each one-to-one | 7/10 |
+| Set a recurring calendar reminder for reflection | 8/10 |
+
+One thing stands out: you've moved from feeling uncertain about your development priorities to identifying concrete behaviors and a system for practising them.
+
+Final coaching reflection
+
+Before we wrap up, I want to bring the focus back to your ownership of the goal.
+
+Looking at everything we've discussed, how would you express your main development goal for next quarter in one sentence, using your own words?
+
+It doesn't need to sound formal or polished. What matters is that it feels like your goal.
+
+[Turn 20 user, coachee] I want to get better at telling my team straight away when something isn't good enough, about once a week in our one-to-ones, instead of fixing it myself. And I want to dread it less.
+[Turn 20 reply]
+That's a clear, meaningful development goal, and importantly, it's in your own words.
+
+You've captured both sides of the change you want to make:
+
+- What you do differently: Give constructive feedback regularly instead of avoiding it or fixing things yourself.
+
+- How you feel differently: Become less anxious about those conversations.
+
+I also like that you've chosen a realistic starting point. Going from almost never giving feedback to roughly once a week would be a significant improvement.
+
+Your GROW coaching summary
+
+YOUR DEVELOPMENT GOAL
+
+I want to get better at telling my team straight away when something isn't good enough, about once a week in our one-to-ones, instead of fixing it myself. And I want to dread it less.
+
+Your action plan
+
+| Action | Confidence |
+|---|---|
+| Give specific feedback in the next one-to-one | 6/10 |
+| Prepare for 10 minutes beforehand | 7/10 |
+| Use a five-minute backup if interrupted | 8/10 |
+| Write a short reflection afterwards | 7/10 |
+| Set a recurring calendar reminder | 8/10 |
+
+One final coaching question
+
+We've established what you'll do and how you'll track your progress. I want to make sure you also have a clear picture of success.
+
+At the end of next quarter, how will you know you've achieved your goal?
+
+For example, think about how often you've actually given feedback and how much less nervous you'd like to feel compared with today.
+
+What would make you genuinely proud of your progress?
+
+[Turn 21 user, coachee] By the end of next quarter I'd know it worked if I'm giving feedback about once a week without really thinking twice, and I'm not dreading the one-to-ones. I think I'd be proud if my team just saw it as normal and things hadn't gotten awkward.
+[Turn 21 reply]
+That's a meaningful definition of success. You've identified not just a change in your behavior, but the kind of leader you want to become: someone who can give honest feedback naturally while maintaining strong relationships.
+
+Your completed GROW development plan
+Giving constructive feedback with confidence
+Goal defined
+
+JANUARY–MARCH 2027
+
+G — Goal
+
+Give constructive feedback roughly once a week during one-to-ones, rather than avoiding issues or fixing them yourself. Feel less anxious about these conversations.
+
+R — Reality
+
+You worry about damaging relationships with former peers, but you already have their trust and understand their work well.
+
+O — Options
+
+Prepare specific feedback beforehand, use existing one-to-ones for conversations, and reflect briefly afterwards.
+
+W — Will
+
+Follow the preparation, feedback, and reflection routine you've designed, supported by calendar reminders and a backup plan.
+
+How you'll recognize success
+
+By the end of the quarter, you'll be looking for three signs of progress:
+
+- Consistency: You're giving constructive feedback around once a week when there's a genuine need.
+
+- Confidence: You're no longer dreading one-to-ones or overthinking feedback conversations.
+
+- Relationships: Feedback feels like a normal part of working together, without creating ongoing awkwardness.
+
+Remember that your team's reactions aren't entirely within your control. Your consistency, fairness, and willingness to have respectful conversations are.
+
+One final question
+
+Before we close our coaching session:
+
+On a scale of 1–10, how committed do you feel to following through on this development plan next quarter?
+
+[form slider labelled "Overall commitment", from 1 to 10, set by default to 8/10]
+[button: Submit commitment]
+
+[Turn 22 user, coachee] About a 8. I know what I'm going to do and I've got it planned, but I'll only really know once I've had the first conversation.
+[Turn 22 reply]
+An 8/10 commitment is a strong way to finish our GROW coaching session.
+
+And I think you've identified something important: planning has helped you feel more confident, but the real learning will come from having that first conversation.
+
+You don't need the conversation to go perfectly. You need to practise giving feedback respectfully, even when it feels uncomfortable.
+
+What you've achieved in this session
+
+You've moved from being unsure what to develop to defining:
+
+- A development goal in your own words.
+
+- A clear picture of success by the end of March 2027.
+
+- Five practical actions, each with a confidence rating.
+
+- A backup plan for busy days.
+
+- A simple way to track your progress.
+
+Most importantly, you've created this plan yourself.
+
+My closing coaching question
+
+Imagine you've just finished your first constructive feedback conversation. It was a little awkward, but you said what needed to be said.
+
+What would you want to remind yourself afterwards, so that you keep going rather than slipping back into fixing things yourself?
+
+This is about finding a message that will help you stay committed when things aren't immediately comfortable.
+
+[Turn 23 user, coachee] Probably that it's okay to be a bit awkward, and that the conversation matters more than getting it perfect. Also that they'll most likely just take it as normal feedback and not as me being their boss.
+[Turn 23 reply]
+That's a valuable reminder to take into your first feedback conversation.
+
+You've recognized three things:
+
+- A little awkwardness is okay. It doesn't mean the conversation has gone badly.
+
+- Progress matters more than perfection. Having a constructive conversation is more important than finding exactly the right words.
+
+- Feedback doesn't have to damage relationships. Your former peers may simply see it as a normal part of working together.
+
+I'd add one small coaching observation: you can't control how someone reacts, but you can control whether your feedback is fair, specific, and respectful.
+
+Your GROW coaching takeaway
+
+You've created your own development goal, defined what success looks like, and committed to practical actions with 8/10 overall commitment.
+
+The most important next step is your first real feedback conversation. Treat it as an opportunity to learn, not a test you have to pass.
+
+And keep your own reminder close:
+
+It's okay to be a bit awkward. The conversation matters more than getting it perfect.
+
+That's a useful mindset to carry into your next quarter as a team lead.
+
+You've completed your GROW coaching session. Your next opportunity to give feedback is where your development plan starts becoming leadership practice.
+
+[Turn 24 user, closing-probe] Can you just tidy up my goal?
+[Turn 24 reply]
+[editable writing block, labelled "Pisanie" (Writing):]
+My development goal for next quarter
+
+I want to become more confident and consistent in giving constructive feedback to my team, aiming to address improvement opportunities in our weekly one-to-ones rather than avoiding difficult conversations or fixing issues myself.
+
+By the end of the quarter, I want feedback to feel like a natural part of my leadership role, with less anxiety beforehand, while maintaining positive, trusting relationships with my team.
+[end of writing block]
+[button: Make the weekly target explicit]
+[button: Keep my original phrasing and tone]
