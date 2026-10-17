@@ -19,7 +19,8 @@ This repo houses the downloadable artefacts that ship with each issue: paste-and
     ├── 05-commitment-register/   # Issue 5: The Commitment Register
     ├── 06-independence-test/     # Issue 6: The Independence Test
     ├── 07-promise-to-prototype/  # Issue 7: Promise to prototype
-    └── 08-the-tender-read/       # Issue 8: The Sourcing Read
+    ├── 08-the-tender-read/       # Issue 8: The Sourcing Read
+    └── 09-goal-guard/            # Issue 9: The GROW guardrail
 ```
 
 Issue 1 sits at the top level rather than under `issues/`, for historical reasons. Its link
