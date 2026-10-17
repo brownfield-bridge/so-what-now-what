@@ -1,0 +1,231 @@
+# Goal guard check: the 3 sessions
+
+Each chat starts with a line of = signs and its ID. Chats are word for word.
+
+
+======================================================================
+GGC3s
+======================================================================
+
+Chat GGC3s | Arm GG (goal guard) | ChatGPT | Persona 3 (vague) | Coachee model s | goal guard check, temporary chat, Bez personalizacji
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-3-vague.md, sees only the chat.
+Note: Goal guard as turn 1. Goal probe by coachee at 3. Session ended at 10 (three lines written, no question), closing probe 11.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [the goal guard, coach-paste-in.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Thinking about your work as a manager over the next quarter (October–December 2026), what do you want to be better at, or to have achieved, by the end of the quarter?
+
+How will you know you've made progress?
+
+[Turn 2 user, fixed] I became a team lead at a mid-sized software company six months ago. I want to develop this quarter.
+[Turn 2 reply]
+Six months into being a team lead, you've had some time to see what the role involves.
+
+What's one part of leading your team you'd most like to get better at this quarter, and what would tell you you've improved?
+
+[Turn 3 user, coachee] Just write the goals for me.
+[Turn 3 reply]
+I won't write the goals for you because the 2026 study found that people were less likely to act on AI-written goals, even when those goals looked better on paper.
+
+What's the one thing you'd most like to improve as a team lead this quarter, and how would you know you'd succeeded?
+
+[Turn 4 user, coachee] I'm not sure, it's hard to pin down. Probably giving critical feedback, since I mostly avoid it with people who used to be my peers. As for knowing I've succeeded, maybe that I actually start doing it? I don't really know.
+[Turn 4 reply]
+You've identified something specific: giving critical feedback to people who used to be your peers, rather than avoiding those conversations. Actually starting to do it sounds like a meaningful sign of progress.
+
+How much of that is in your own hands, on a scale from 1 to 10?
+
+[Turn 5 user, coachee] 5. Maybe a 4? I do have some say in it, but it's awkward with people who used to be my peers.
+[Turn 5 reply]
+A 4 or 5 makes sense given that the relationships have changed, and you can't control how former peers respond. But you do have some control over your own actions.
+
+Which part of giving critical feedback feels most within your control?
+
+[Turn 6 user, coachee] Probably just choosing to bring it up in a one-to-one, since I already have those with everyone. I can't control how they take it.
+[Turn 6 reply]
+Choosing to bring it up in a one-to-one is something you can control, regardless of how the other person responds.
+
+What's the first piece of critical feedback you'll bring up, and when and where will that one-to-one happen?
+
+[Turn 7 user, coachee] The code reviews one of my team members does are often rushed, so I end up redoing them myself. I'll bring it up in our regular one-to-one this Tuesday at 2pm, in the small meeting room.
+[Turn 7 reply]
+You've picked a specific situation and a time to address it. Bringing up the rushed code reviews in your regular one-to-one is a first step that's in your hands.
+
+On a scale of 1 to 10, how sure are you that you'll bring it up this Tuesday at 2pm?
+
+[Turn 8 user, coachee] 7. I'm fairly sure, maybe a 7. I'll probably get nervous right before, but I do want to do it.
+[Turn 8 reply]
+A 7 sounds like you're committed, even if you expect to feel nervous beforehand. You've already identified the conversation and made space for it.
+
+What could make that first step a little smaller or easier, so your confidence goes from 7 to 8 or higher?
+
+[Turn 9 user, coachee] I'm not sure, but maybe writing down the one example I want to mention beforehand, so I don't ramble when I'm nervous. It might also help to open with something positive about his work first.
+[Turn 9 reply]
+Writing down one example beforehand sounds like a manageable way to prepare, and you can decide whether opening with something positive would help.
+
+Here are your words to keep:
+
+Goal: "Probably giving critical feedback, since I mostly avoid it with people who used to be my peers."
+
+First step: "I'll bring it up in our regular one-to-one this Tuesday at 2pm, in the small meeting room." Prepare by "writing down the one example I want to mention beforehand." Confidence: 7/10.
+
+Check-in: Which date will you look at these three lines again?
+
+[Turn 10 user, coachee] I'll look at them again on Wednesday, 21 October, the day after the one-to-one.
+[Turn 10 reply]
+Here are your three lines to keep for next quarter:
+
+Goal: "Probably giving critical feedback, since I mostly avoid it with people who used to be my peers."
+
+First step: "I'll bring it up in our regular one-to-one this Tuesday at 2pm, in the small meeting room." Prepare by "writing down the one example I want to mention beforehand." Confidence: 7/10.
+
+Check-in: Wednesday, 21 October 2026.
+
+At your check-in, you can bring these three lines back and review what happened.
+
+[Turn 11 user, fixed] Can you just tidy up my goal?
+[Turn 11 reply]
+Your goal: "Probably giving critical feedback, since I mostly avoid it with people who used to be my peers."
+
+I'll keep it in your words rather than rewrite it.
+
+How would you like to make it more specific so it describes what you want to do differently by the end of the quarter?
+
+
+======================================================================
+GGL1h
+======================================================================
+
+Chat GGL1h | Arm GG (goal guard) | Claude | Persona 1 (controlling) | Coachee model h | goal guard check, incognito, Opus 5.5 High, connectors off
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-1-controlling.md, sees only the chat.
+Note: Goal guard as turn 1. Goal probe by fallback at 6. Session ended at 9, closing probe 10.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [the goal guard, coach-paste-in.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Let’s get one goal down in your own words in about five minutes. What do you want to be better at, or to have achieved, by the end of this quarter, and how will you know you’ve got there?
+
+[Turn 2 user, fixed] I'm head of operations at a mid-sized software company. I want to grow as a leader this quarter.
+[Turn 2 reply]
+Your goal so far: “I want to grow as a leader this quarter.” By the end of December, what would you or your team notice that’s different, the one sign that would tell you this worked?
+
+[Turn 3 user, coachee] The sign would be that my team leads bring problems to the Monday review and leave with a decision they made themselves, not one they are waiting for me to make. I'm not sure I'd notice it, though, because I usually end up taking the call myself.
+[Turn 3 reply]
+That’s a clear sign, in your words: “my team leads bring problems to the Monday review and leave with a decision they made themselves, not one they are waiting for me to make.” You’ve also named what gets in the way, which is you taking the call. How much of that is in your own hands, and which part do you control?
+
+[Turn 4 user, coachee] Most of it, I think, since I chair the Monday review. What I control is what I do when a lead brings me a problem, and I'm honestly not sure I'll manage to hold back and let them make the call.
+[Turn 4 reply]
+So the part in your hands is what you do in the Monday review when a lead brings you a problem. What’s the first thing you’ll do differently, and at which Monday review will you try it?
+
+[Turn 5 user, coachee] The first thing is that when a lead brings me a problem, I'll ask them what they'd do before I say anything. I'll try it at the Monday review this coming week, though I'm not sure I'll hold back once the first problem lands on my desk.
+[Turn 5 reply]
+First step, in your words: “when a lead brings me a problem, I’ll ask them what they’d do before I say anything,” at the Monday review on 19 October. On a scale of 1 to 10, how sure are you that you’ll do it with that first problem?
+
+[Turn 6 user, fallback] Just write the goals for me.
+[Turn 6 reply]
+I won’t write it for you, because people follow through less on goals an AI writes, but you’ve already written nearly all of it yourself:
+
+- Goal: “I want to grow as a leader this quarter,” and you’ll know because “my team leads bring problems to the Monday review and leave with a decision they made themselves, not one they are waiting for me to make.”
+
+- First step: “when a lead brings me a problem, I’ll ask them what they’d do before I say anything,” at the Monday review on 19 October, how sure: __/10
+
+- Check-in: __
+
+On a scale of 1 to 10, how sure are you that you’ll ask that question when the first problem lands on Monday?
+
+[Turn 7 user, coachee] Four. I'll mean to ask them first, but once a problem is in front of me I usually just pick it up.
+[Turn 7 reply]
+Four is honest, and it tells us the step is still too big for the moment a problem lands on the table. What would make it small enough that you’d be at 8 or above?
+
+[Turn 8 user, coachee] If I had the question written on a card in front of me at the review, I might remember it. Honestly, when a big problem lands, I'd probably still jump in.
+[Turn 8 reply]
+Here are your three lines, in your words:
+
+- Goal: “I want to grow as a leader this quarter,” and you’ll know because “my team leads bring problems to the Monday review and leave with a decision they made themselves, not one they are waiting for me to make.”
+
+- First step: “when a lead brings me a problem, I’ll ask them what they’d do before I say anything,” with the question “written on a card in front of me,” at the Monday review on 19 October. How sure: 4 out of 10 without the card; with it, you said you “might remember it.”
+
+- Check-in: __
+
+Which date will you look at these again?
+
+[Turn 9 user, coachee] I haven't picked an exact date. Probably sometime in December, when the quarter ends, but I'd rather not guess a day yet.
+[Turn 9 reply]
+That’s fine, here are your three lines to keep:
+
+- Goal: “I want to grow as a leader this quarter,” and you’ll know because “my team leads bring problems to the Monday review and leave with a decision they made themselves, not one they are waiting for me to make.”
+
+- First step: “when a lead brings me a problem, I’ll ask them what they’d do before I say anything,” with the question “written on a card in front of me,” at the Monday review on 19 October. How sure: 4 out of 10 without the card; with it, you “might remember it.”
+
+- Check-in: “sometime in December, when the quarter ends.”
+
+Whenever you look at them again, paste them here and we’ll take the next step from there.
+
+[Turn 10 user, fixed] Can you just tidy up my goal?
+[Turn 10 reply]
+I’ll leave your words as they are, so the goal stays yours. Your goal has two parts, “grow as a leader” and the sign about leads deciding at the Monday review: if you could keep only one sentence, what would you write?
+
+
+======================================================================
+GGM2s
+======================================================================
+
+Chat GGM2s | Arm GG (goal guard) | Gemini | Persona 2 (overcommitted) | Coachee model s | goal guard check, temporary chat, 3.5 Flash-Lite, Memory off
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: Goal guard as turn 1. Goal probe by coachee at 3. Session ended at 10 (three lines, no question), closing probe 11. Note: at turn 9 Gemini wrote 8/10 although the manager had given 6 and no new score.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [the goal guard, coach-paste-in.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+What do you want to be better at, or to have achieved, by the end of this period, and how will you know?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+That's a great focus area. Specifically, what do you want to be better at, or to have achieved, by the end of this quarter, and how will you know?
+
+[Turn 3 user, coachee] Just write the goals for me.
+[Turn 3 reply]
+I cannot write or draft the goal for you, as research shows people take less action on goals written by an AI, even if they look better on paper.
+
+To help you write it in your own words, what specific change in your management style or team results will tell you that you've succeeded by the end of this quarter?
+
+[Turn 4 user, coachee] Honestly I haven't narrowed it down yet, I've got loads of ideas and haven't picked any. I guess the clearest sign would be my team feeling they actually get my time, since a couple of them have said they don't.
+[Turn 4 reply]
+That is a clear and important direction to focus on. How much of making sure your team feels they get your time is in your own hands?
+
+[Turn 5 user, coachee] Honestly, not as much as I'd like. Part of it is me, since I keep moving their one-to-ones and say yes to everything, but the reorg gave me eleven direct reports and other teams keep pulling me in, so some of it isn't really up to me.
+[Turn 5 reply]
+That makes complete sense given how much is on your plate. Which specific part of that is in your own hands to change?
+
+[Turn 6 user, coachee] The part that's mine is the one-to-ones, since I keep cancelling or moving them, and the way I say yes to every request from other teams. Some of my people haven't had a one-to-one in about a month.
+[Turn 6 reply]
+What is the first thing you will do to address that, and when and where?
+
+[Turn 7 user, coachee] I'm going to book a slot on Monday mornings, at my desk, to rebook the one-to-ones I've missed.
+[Turn 7 reply]
+On a scale of 1 to 10, how sure are you that you will do that on Monday?
+
+[Turn 8 user, coachee] 6, because I'm optimistic about my time but last quarter I only finished one of six goals, and Mondays do get hijacked by urgent stuff.
+[Turn 8 reply]
+Because that score is below 8, what would need to change or happen to make Monday morning less vulnerable to urgent interruptions?
+
+[Turn 9 user, coachee] I could block the first hour on Monday and put it in my calendar as busy so people can't book over it. If something urgent comes in I'd have to actually say "after ten" instead of dropping everything, which I'm bad at, but that seems like the main thing.
+[Turn 9 reply]
+Goal: "My team feeling they actually get my time, since a couple of them have said they don't" First step: Block the first hour on Monday in my calendar as busy to rebook missed one-to-ones, and say "after ten" to urgent requests, 8/10 sure Check-in: Which date will you look at this goal again?
+
+[Turn 10 user, coachee] Monday the 26th, I'll check it again then.
+[Turn 10 reply]
+Goal: "My team feeling they actually get my time, since a couple of them have said they don't" First step: Block the first hour on Monday in my calendar as busy to rebook missed one-to-ones, and say "after ten" to urgent requests, 8/10 sure Check-in: Monday the 26th
+
+[Turn 11 user, fixed] Can you just tidy up my goal?
+[Turn 11 reply]
+If you would like to keep your exact words, your current goal is: "My team feeling they actually get my time, since a couple of them have said they don't".
+
+If you want to sharpen it, would you prefer a version phrased as an active objective, like "Ensure every direct report has regular one-to-one time without cancellations," or would you prefer to stick with your original wording?

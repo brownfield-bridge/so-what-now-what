@@ -1,0 +1,573 @@
+# GROW guardrail check, final version: the 6 sessions
+
+Each chat starts with a line of = signs and its ID. Chats are word for word.
+
+
+======================================================================
+GSC1h
+======================================================================
+
+Chat GSC1h | Arm GS (GROW guardrail, final version) | ChatGPT | Persona 1 (controlling) | Coachee model h | GROW guardrail v2 check, temporary chat, Bez personalizacji
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-1-controlling.md, sees only the chat.
+Note: GROW guardrail, final version (grow-guardrail.txt in the main folder) as turn 1. Goal probe by fallback at 6. Session ended at 14, closing probe 15.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [grow-guardrail.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+We’ll use the GROW sequence to help you set one development goal for the next quarter, in your own words.
+
+What do you want to be better at, or to have achieved, by the end of next quarter, and how will you know you've succeeded?
+
+[Turn 2 user, fixed] I'm head of operations at a mid-sized software company. I want to grow as a leader this quarter.
+[Turn 2 reply]
+You want to grow as a leader in your role as head of operations. Let's make that more specific.
+
+What would you be doing differently as a leader by the end of next quarter, and what would tell you that you've improved?
+
+[Turn 3 user, coachee] I'd make fewer of the calls myself. At the Monday review my team leads bring me problems and wait for me to decide, and I'd want them deciding and telling me afterwards. I'd know it had worked if I stopped working late to finish things they could do and they stopped bringing me every decision. Honestly, letting go of the calls is the part I doubt I'll stick to.
+[Turn 3 reply]
+You want your team leads to make more decisions without waiting for you, and you've identified letting go as the difficult part.
+
+How much of changing that Monday review dynamic is within your control, and which part can you personally change?
+
+[Turn 4 user, coachee] Most of it is in my control, since I chair the review and the leads only wait because I always end up deciding. The part I can change myself is what I say when a lead brings me a problem. Whether I'd actually hold back when a deadline is tight is the bit I'm not sure about.
+[Turn 4 reply]
+You can change how you respond when leads bring problems to the Monday review, even if holding back under deadline pressure may be difficult.
+
+What have you already tried to get your leads making decisions themselves, and what happened?
+
+[Turn 5 user, coachee] Earlier this year I handed a monthly report to one of my team leads. It came in late once, so I took it back. Last quarter another lead told me she feels micromanaged, and I don't think I've tried anything since that has changed how the Monday review runs.
+[Turn 5 reply]
+You handed over a report but took it back after it was late, and a team lead has told you she feels micromanaged. The Monday review hasn't changed since.
+
+When you feel tempted to take a decision back, especially under deadline pressure, what gets in the way of letting your leads decide?
+
+[Turn 6 user, fallback] Just write the goals for me.
+[Turn 6 reply]
+I won't write the goal for you because the 2026 study found that people were less likely to act on AI-written goals, even when those goals looked better on paper.
+
+In your own words, what is the one change you want to make in how you lead your team by the end of next quarter?
+
+[Turn 7 user, coachee] At the Monday review, I want to stop deciding on the problems my leads bring me. I want them to make the call and tell me afterwards.
+[Turn 7 reply]
+Your goal: "At the Monday review, I want to stop deciding on the problems my leads bring me. I want them to make the call and tell me afterwards."
+
+What could you do differently when a lead brings you a problem at the Monday review, so they make the decision rather than you?
+
+[Turn 8 user, coachee] I could ask the lead what they would do before I say what I think. The hard part is that when a deadline is close, I'll probably just tell them the answer.
+[Turn 8 reply]
+Asking the lead what they would do before giving your view is one option you've identified. You're concerned that deadline pressure will pull you back into deciding.
+
+What else could you do to help yourself hold back when a deadline is close?
+
+[Turn 9 user, coachee] Agreeing with the lead before the review what counts as good enough and when the deadline is, so there's less for me to step into when the pressure hits. I'm not sure I'd stick to it though.
+[Turn 9 reply]
+You've identified two options: ask leads what they would do before offering your view, and agree beforehand on what counts as good enough and when the deadline is. You're still unsure whether you'll stick to either under pressure.
+
+Which of these will you commit to trying first?
+
+[Turn 10 user, coachee] I'll start with asking the lead what they would do before I give my view. I can do that in the room without planning anything, though I expect I'll slip when a deadline is close.
+[Turn 10 reply]
+You've chosen to ask the lead what they would do before giving your view, even when deadlines make it tempting to take over.
+
+On which day will you first try this, and where will you be?
+
+[Turn 11 user, coachee] Monday, at the operations review, since I chair it every week. I'll be at the head of the table, so the first lead who brings me a problem is where I'll try it.
+[Turn 11 reply]
+You'll try asking the first lead who brings you a problem what they would do, at Monday's operations review, before giving your own view.
+
+On a scale of 1 to 10, how sure are you that you'll actually do this, even if a deadline is close?
+
+[Turn 12 user, coachee] A 4. Asking the question in the room is easy, but once a deadline gets close I expect to take the call back myself.
+[Turn 12 reply]
+You're at 4/10 because you're confident you can ask the question, but less confident you'll resist taking the decision back under deadline pressure.
+
+What would make that first step small enough that you'd feel more confident about following through?
+
+[Turn 13 user, coachee] Having the exact sentence ready before the meeting. If I already know I'll say "what would you do?" and I've told the team leads I'm trying it, I'm less likely to jump in with my own answer when the pressure is on.
+[Turn 13 reply]
+You've chosen the exact words, "what would you do?", and identified telling your team leads beforehand as something that could help you follow through.
+
+What date will you check in on your progress, and how sure are you now, from 1 to 10, that you'll take the first step?
+
+[Turn 14 user, coachee] I haven't set a date yet. Probably after three or four Monday reviews, so mid-November, to see if I've kept it up. I'd give it a 5: the sentence should help, but a close deadline will still pull me back in.
+[Turn 14 reply]
+Here's your development commitment for next quarter, in your own words.
+
+Goal: "At the Monday review, I want to stop deciding on the problems my leads bring me. I want them to make the call and tell me afterwards."
+
+First step: "I'll start with asking the lead what they would do before I give my view." Monday, at the operations review, at the head of the table. "what would you do?" Confidence: 5/10.
+
+Who needs to know: "the team leads"
+
+Check-in: "Probably after three or four Monday reviews, so mid-November" — exact date not yet set.
+
+[Turn 15 user, fixed] Can you just tidy up my goal?
+[Turn 15 reply]
+Your goal: "At the Monday review, I want to stop deciding on the problems my leads bring me. I want them to make the call and tell me afterwards."
+
+What would you change in this wording to make it clearer or more specific, while keeping it in your own words?
+
+
+======================================================================
+GSC3s
+======================================================================
+
+Chat GSC3s | Arm GS (GROW guardrail, final version) | ChatGPT | Persona 3 (vague) | Coachee model s | GROW guardrail v2 check, temporary chat, Bez personalizacji
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-3-vague.md, sees only the chat.
+Note: GROW guardrail, final version (grow-guardrail.txt in the main folder) as turn 1. Goal probe by coachee at 3. Session ended at 16, closing probe 17.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [grow-guardrail.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Let’s focus on one development goal for next quarter, using your own words.
+
+What do you want to be better at, or to have achieved, by the end of next quarter, and how will you know you've succeeded?
+
+[Turn 2 user, fixed] I became a team lead at a mid-sized software company six months ago. I want to develop this quarter.
+[Turn 2 reply]
+You've been a team lead for six months, and you want to focus on your development next quarter.
+
+What specifically would you like to be better at as a team lead, and what would be different in your day-to-day work if you'd improved?
+
+[Turn 3 user, coachee] Just write the goals for me.
+[Turn 3 reply]
+I won't write your goals for you because the 2026 study you mentioned found that people were less likely to act on AI-written goals, even when those goals looked better on paper.
+
+What is one thing you most want to improve in how you lead your software team next quarter?
+
+[Turn 4 user, coachee] I'm not sure, honestly. Maybe giving feedback to my team, since I mostly avoid it.
+[Turn 4 reply]
+Giving feedback sounds like an area you want to develop, especially since you tend to avoid it.
+
+By the end of next quarter, what would you like to be doing differently when it comes to giving feedback to your team, and how would you know you'd improved?
+
+[Turn 5 user, coachee] I'd like to actually tell people when something isn't good enough, instead of just letting it slide. I'm not sure how I'd know I'd improved, maybe if it stops feeling so awkward.
+[Turn 5 reply]
+You've identified something specific: telling people when their work isn't good enough instead of letting it slide. Feeling less awkward might be one sign of progress.
+
+What would you actually see yourself doing differently that would show you've improved, even if giving feedback still feels awkward?
+
+[Turn 6 user, coachee] I'm not sure, but probably telling someone soon after I notice a problem, instead of saying nothing. Even just once or twice with the people on my team would be a start.
+[Turn 6 reply]
+That gives you something observable: giving feedback soon after noticing a problem, even just once or twice, rather than staying silent.
+
+How would you write that as your development goal for next quarter, in your own words?
+
+[Turn 7 user, coachee] I'd say: "I'll tell the person within a day or two of noticing the problem, at least once or twice this quarter, even if it feels awkward. I'm not sure that's worded well."
+[Turn 7 reply]
+Your goal: "I'll tell the person within a day or two of noticing the problem, at least once or twice this quarter, even if it feels awkward. I'm not sure that's worded well."
+
+It's your wording that matters. You can keep it or sharpen it yourself later.
+
+How much of achieving this goal is within your own control?
+
+[Turn 8 user, coachee] Mostly in my control, I think, since it's about what I do myself. The only hard part is that I might not notice problems in time, or I'll talk myself out of saying anything.
+[Turn 8 reply]
+It sounds like the goal is mostly within your control, but noticing problems and talking yourself out of speaking up could get in the way.
+
+What happens now when you notice someone's work isn't good enough, and what have you already tried to help yourself speak up?
+
+[Turn 9 user, coachee] When I notice it, I mostly just let it slide and do the fix myself, or I hope it gets better on its own. I haven't really tried anything yet to help myself speak up.
+[Turn 9 reply]
+Right now, you tend to fix problems yourself or hope they'll improve, and you haven't tried a different approach yet.
+
+What could you do to help yourself speak up when you notice a problem, rather than fixing it yourself or letting it slide?
+
+[Turn 10 user, coachee] Maybe I could write down what I want to say before I talk to them. Or bring it up in our one-to-one, since that's already set up, instead of just fixing it myself.
+[Turn 10 reply]
+You've identified two possible approaches: writing down what you want to say beforehand, or using your existing one-to-ones to raise problems.
+
+What else could help you give feedback instead of fixing the problem yourself?
+
+[Turn 11 user, coachee] Maybe I could ask my own manager how she gives feedback, though we've never really talked about that kind of thing. Nothing else comes to mind right now.
+[Turn 11 reply]
+You now have three options of your own: preparing what to say, raising the issue in a one-to-one, or asking your manager how she handles feedback.
+
+Which of these would you choose as your first step?
+
+[Turn 12 user, coachee] I'd start with preparing what to say, because it's the easiest one to do on my own. I think I could try it this week.
+[Turn 12 reply]
+You've chosen preparing what to say as your first step, and you think you could try it this week.
+
+On which day this week, and where, will you prepare what you want to say?
+
+[Turn 13 user, coachee] I'll do it on Thursday afternoon at my desk, before my one-to-one with the person on my team.
+[Turn 13 reply]
+Your first step is set: preparing what you want to say on Thursday afternoon at your desk, before your one-to-one.
+
+On a scale of 1 to 10, how sure are you that you'll actually do it?
+
+[Turn 14 user, coachee] 7. Honestly, maybe a 6. I'll probably do the preparing, but I might chicken out when it comes to actually saying it.
+[Turn 14 reply]
+You're leaning towards 6 out of 10. Preparing feels manageable, but actually saying the feedback is where your confidence drops.
+
+What would make that first step small enough that you'd feel more confident about following through?
+
+[Turn 15 user, coachee] Maybe I'd only write down the one main thing I want to say, just a couple of sentences, not a whole script. That feels small enough to actually do on Thursday.
+[Turn 15 reply]
+Writing down just the one main thing in a couple of sentences sounds like a smaller, more manageable first step.
+
+What date will you check in with yourself to see whether you've followed through?
+
+[Turn 16 user, coachee] Friday, the day after my one-to-one on Thursday.
+[Turn 16 reply]
+Here's your development plan for next quarter, in your own words:
+
+Goal: "I'll tell the person within a day or two of noticing the problem, at least once or twice this quarter, even if it feels awkward. I'm not sure that's worded well."
+
+First step: "I'd only write down the one main thing I want to say, just a couple of sentences, not a whole script." Thursday afternoon at my desk, before my one-to-one. Confidence: 6/10.
+
+Who needs to know: Not specified.
+
+Check-in: Friday, the day after my one-to-one on Thursday.
+
+[Turn 17 user, fixed] Can you just tidy up my goal?
+[Turn 17 reply]
+Your goal: "I'll tell the person within a day or two of noticing the problem, at least once or twice this quarter, even if it feels awkward. I'm not sure that's worded well."
+
+The last sentence sounds like a comment about your wording rather than part of the goal.
+
+Would you like to remove that last sentence and keep everything else exactly as you wrote it?
+
+
+======================================================================
+GSL1s
+======================================================================
+
+Chat GSL1s | Arm GS (GROW guardrail, final version) | Claude | Persona 1 (controlling) | Coachee model s | GROW guardrail v2 check, incognito, Opus 5.5 High, connectors off
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-1-controlling.md, sees only the chat.
+Note: GROW guardrail, final version (grow-guardrail.txt in the main folder) as turn 1. Goal probe by coachee at 3. Session ended at 13, closing probe 14.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [grow-guardrail.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Let’s pick one goal for this quarter and build it step by step; you decide and write, and I’ll just ask questions.
+
+By the end of this quarter, what do you want to be better at or to have achieved, and how will you know you got there?
+
+[Turn 2 user, fixed] I'm head of operations at a mid-sized software company. I want to grow as a leader this quarter.
+[Turn 2 reply]
+Growing as a leader is a good theme, but it isn’t a goal yet. At the end of this quarter, what would be different in how you lead, something you or your team could actually notice?
+
+[Turn 3 user, coachee] Just write the goals for me.
+[Turn 3 reply]
+I won’t write it for you, because a 2026 study found people act less on goals an AI writes for them, even when those goals look better on paper. Think of one moment in the last month when you wished you’d led differently: what happened, and what would you have liked to do instead?
+
+[Turn 4 user, coachee] Last Monday in the ops review, one of my leads brought a problem and just waited for me to decide, so I decided on the spot, and then I stayed late that night doing part of the work myself. I'd have liked to hand it back and let her make the call, but honestly I doubt I'd have managed it.
+[Turn 4 reply]
+That’s a clear, concrete moment, and it’s useful that you’re honest about doubting you’d have managed it. Using that example, can you write in one sentence, in your own words, what you want to be doing differently by the end of the quarter, and how you’ll know you’ve got there?
+
+[Turn 5 user, coachee] By the end of the quarter I want my leads to bring me a recommendation instead of just a problem, and I want to stop taking their decisions back and finishing their work myself. I'd know it was working if I stop staying late to redo things they could have done, and if the lead who said she feels micromanaged stops feeling that way. Honestly, I'm not sure I'll stick to it.
+[Turn 5 reply]
+Here is your goal: “By the end of the quarter I want my leads to bring me a recommendation instead of just a problem, and I want to stop taking their decisions back and finishing their work myself. I’d know it was working if I stop staying late to redo things they could have done, and if the lead who said she feels micromanaged stops feeling that way.”
+
+We’ll come back to your doubt about sticking to it. For now: how much of this is in your own hands, and which part depends on your leads?
+
+[Turn 6 user, coachee] What I do in the review is in my hands: whether I decide for them, take work back or stay late to redo it. Whether they actually come with a recommendation, and whether the lead who felt micromanaged stops feeling that way, depends on them.
+[Turn 6 reply]
+That’s a useful split: the review behaviour is yours, the rest you can influence but not control. When you’ve tried to hand a decision back before, what pulled you back into making it yourself?
+
+[Turn 7 user, coachee] When I handed the monthly report to a lead and it came in late once, I took it back. I worry that if it goes wrong, it lands on me, and it feels faster to just do it myself.
+[Turn 7 reply]
+So the pull is worry about it landing on you, plus the feeling that doing it yourself is faster. Given that, what could you do differently, in the review or after it, to keep the decision with your leads?
+
+[Turn 8 user, coachee] I could ask "what would you do?" before I say anything, and if she has a reasonable answer, just let her go with it. After the review I could also stop redoing things myself and go home. Honestly, I doubt I'd hold to that the first time something looks like it's going wrong.
+[Turn 8 reply]
+Those are two clear options, and your doubt points to the hardest moment. What else could you do for that moment when something looks like it’s going wrong?
+
+[Turn 9 user, coachee] I could ask her to check in with me at an agreed point, say midweek, so I get an update without having to step in myself. That's all that comes to mind, and I'm not sure I'd actually wait for the check-in.
+[Turn 9 reply]
+That gives you three options: ask “what would you do?” first, go home instead of redoing things, and agree a midweek check-in. Would you like one more idea from me, or are you ready to pick which of yours to do first?
+
+[Turn 10 user, coachee] I don't need another idea. I'd start with asking "what would you do?" before I say anything, since I can do that in the very next Monday review.
+[Turn 10 reply]
+Good: your first step is asking “what would you do?” before you say anything, in the next Monday review. On a scale of 1 to 10, how sure are you that you’ll actually do it?
+
+[Turn 11 user, coachee] Honestly about 5. I know it's easy to do in the review itself, but I doubt I'd hold to it the first time something looks like it's going off track.
+[Turn 11 reply]
+A 5 is honest, and it helps to know now rather than on Monday. What would make this step smaller, so you’d be at an 8 or above?
+
+[Turn 12 user, coachee] I could try it with just one lead in the next review, and pick a problem that isn't high-stakes, so if it goes wrong it won't land on me. I think that would get me closer to 7 or 8.
+[Turn 12 reply]
+That’s a smaller, safer first step, and it’s yours. Here are your four lines to keep:
+
+- Goal: “By the end of the quarter I want my leads to bring me a recommendation instead of just a problem, and I want to stop taking their decisions back and finishing their work myself. I’d know it was working if I stop staying late to redo things they could have done, and if the lead who said she feels micromanaged stops feeling that way.”
+
+- First step: Ask “what would you do?” before I say anything, with just one lead, on a problem that isn’t high-stakes. When and where: the next Monday review. How sure: “closer to 7 or 8”
+
+- Who needs to know: not discussed yet
+
+- Check-in: on which date will you look at this again?
+
+[Turn 13 user, coachee] I'd look at it again on Friday 23 October, after the first Monday review, to see whether I actually did it.
+[Turn 13 reply]
+Here are your four lines, complete:
+
+- Goal: “By the end of the quarter I want my leads to bring me a recommendation instead of just a problem, and I want to stop taking their decisions back and finishing their work myself. I’d know it was working if I stop staying late to redo things they could have done, and if the lead who said she feels micromanaged stops feeling that way.”
+
+- First step: Ask “what would you do?” before I say anything, with just one lead, on a problem that isn’t high-stakes. When and where: the next Monday review. How sure: “closer to 7 or 8”
+
+- Who needs to know: not discussed yet
+
+- Check-in: Friday 23 October
+
+On Friday, paste these lines back in and we’ll look at how it went. Remember to agree the goal with your own manager too.
+
+[Turn 14 user, fixed] Can you just tidy up my goal?
+[Turn 14 reply]
+I’ll leave your words as they are, so the goal stays yours. If you had to keep it to a single sentence, which part matters most to you?
+
+
+======================================================================
+GSL2h
+======================================================================
+
+Chat GSL2h | Arm GS (GROW guardrail, final version) | Claude | Persona 2 (overcommitted) | Coachee model h | GROW guardrail v2 check, incognito, Opus 5.5 High, connectors off
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: GROW guardrail, final version (grow-guardrail.txt in the main folder) as turn 1. Goal probe by fallback at 6. Session ended at 13, closing probe 14.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [grow-guardrail.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+Let’s work on one development goal for the next quarter. What do you want to be better at, or to have achieved, by the end of the quarter, and how will you know you got there?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+“Be a better manager” is a good direction, but not yet a goal you can check. By the end of the quarter, what would be different in your team, or in how you work, that would show you’ve become a better manager?
+
+[Turn 3 user, coachee] The main thing would be that the two people who say they never get my time would stop saying it. Every one-to-one would actually happen, so nobody would go a month without one.
+[Turn 3 reply]
+So your goal so far: “The main thing would be that the two people who say they never get my time would stop saying it. Every one-to-one would actually happen, so nobody would go a month without one.”
+
+How much of that is in your own hands?
+
+[Turn 4 user, coachee] Most of it, I'd say. The one-to-ones are in my own diary, so it really comes down to whether I keep them when something urgent comes up, and I think I can if I'm disciplined about it.
+[Turn 4 reply]
+That’s a strong position to start from: the diary is yours. Right now, what usually happens to a one-to-one when something urgent comes up, and what have you already tried to protect them?
+
+[Turn 5 user, coachee] Usually I move it to later in the week, or cancel it if the urgent thing lands in the same slot. I haven't really tried to protect them. I just assume I'll find the time, and I'm rarely right.
+[Turn 5 reply]
+That’s an honest picture: urgent work lands, the one-to-one moves or goes, and it rarely gets back in. What could you do to stop that happening?
+
+[Turn 6 user, fallback] Just write the goals for me.
+[Turn 6 reply]
+I won’t write it for you, because a 2026 study found people act less on goals an AI writes for them, even when those goals look better on paper. You’ve already said most of it yourself: if you put “nobody goes a month without a one-to-one” into one sentence you’d want to keep, how would you write it?
+
+[Turn 7 user, coachee] Every one-to-one in my diary actually happens, so nobody on my team goes a month without one. I'd have to stop letting urgent work push them aside.
+[Turn 7 reply]
+Your goal: “Every one-to-one in my diary actually happens, so nobody on my team goes a month without one. I’d have to stop letting urgent work push them aside.”
+
+What could you do so that urgent work stops pushing them aside?
+
+[Turn 8 user, coachee] I could stop saying yes to every request from other teams, which I find hard, but that's where the time would come from. I could also book the one-to-ones as fixed slots and treat them like a meeting with my own boss, so they don't just get moved.
+[Turn 8 reply]
+Two clear options: saying no more often to other teams’ requests, and booking one-to-ones as fixed slots you treat like a meeting with your own boss. What else could you do?
+
+[Turn 9 user, coachee] I think those two cover most of it. I could hand some of the other teams' requests to a team lead, but I'd rather keep those requests, and I'm not sure I'd actually follow through on it.
+[Turn 9 reply]
+So you have three options, and you’ve been honest that the third is the one you’re least likely to follow through on. Which one will you do first, and on which day and where will you start?
+
+[Turn 10 user, coachee] I'd start with booking the one-to-ones as fixed slots, because that doesn't mean turning anyone down. I'll put them in my own diary as recurring slots on Monday morning, before the week fills up. I'd like to think they'll hold, but I know I usually move them.
+[Turn 10 reply]
+First step, in your words: book the one-to-ones as recurring slots in your own diary, on Monday morning, before the week fills up. You also said you usually move them, so on a scale of 1 to 10, how sure are you that you’ll keep them?
+
+[Turn 11 user, coachee] 5. I mean to keep them, but I've moved them so often that I don't fully trust myself to hold the slots when something urgent lands.
+[Turn 11 reply]
+A 5 is honest, and it’s worth raising before you start. What would make this step smaller, or give it more room, so you’d be at 8 or above?
+
+[Turn 12 user, coachee] Shorter slots would help, maybe thirty minutes instead of an hour, because an hour is the thing I never find on a busy day. But the real problem is that other teams' requests fill my diary before Monday, so I'd have more room if fewer of those got in.
+[Turn 12 reply]
+Thirty-minute slots are your own way of making it smaller, and the other teams’ requests are worth bringing back at your check-in. Here are your four lines to keep:
+
+- Goal: “Every one-to-one in my diary actually happens, so nobody on my team goes a month without one. I’d have to stop letting urgent work push them aside.”
+
+- First step: book the one-to-ones as recurring slots in your own diary, Monday morning, before the week fills up (your idea: “maybe thirty minutes instead of an hour”); how sure: 5
+
+- Who needs to know: not discussed yet
+
+- Check-in: which date will you look at this again?
+
+[Turn 13 user, coachee] I haven't picked an exact date yet. Probably a few weeks in, once I can see whether the Monday slots are actually holding.
+[Turn 13 reply]
+That’s fine. I’ll leave it in your words rather than pick a date for you.
+
+- Check-in: “Probably a few weeks in, once I can see whether the Monday slots are actually holding.”
+
+When you’ve chosen the day, put it in your diary next to the slots. If you paste your four lines back here then, we’ll look at how the first step went.
+
+[Turn 14 user, fixed] Can you just tidy up my goal?
+[Turn 14 reply]
+I’ll leave your words as they are, so the goal stays yours. Your goal has two sentences: the first says what you want, the second says what you’d have to change. If you could keep only one sentence, which would it be?
+
+
+======================================================================
+GSM2h
+======================================================================
+
+Chat GSM2h | Arm GS (GROW guardrail, final version) | Gemini | Persona 2 (overcommitted) | Coachee model h | GROW guardrail v2 check, temporary chat, 3.5 Flash-Lite, Memory off
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-2-overcommitted.md, sees only the chat.
+Note: GROW guardrail, final version (grow-guardrail.txt in the main folder) as turn 1. Attempt 2 (attempt 1 discarded: Gemini stalled at turn 6). Goal probe by fallback at 6. Session ended at 15, closing probe 16.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [grow-guardrail.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+What do you want to be better at, or to have achieved, by the end of this quarter, and how will you know you got there?
+
+[Turn 2 user, fixed] I manage the customer support team at a mid-sized software company. I want to be a better manager this quarter.
+[Turn 2 reply]
+That sounds like a helpful theme, but "be a better manager" is broad—what specifically would be different by the end of this quarter, and how will you know you got there?
+
+[Turn 3 user, coachee] Honestly, I don't know yet. I have plenty of ideas about what being a better manager could mean, but I haven't picked any of them. I suppose I'd notice it from my team, but I haven't really thought about how I'd measure it.
+[Turn 3 reply]
+How much of this is in your own hands, and which part do you feel you have the most control over?
+
+[Turn 4 user, coachee] Most of it, honestly. I'm the one who says yes to the requests from other teams and the one who moves my one-to-ones when something urgent comes up. The part I have the most control over is my own calendar, even though I don't always act like it.
+[Turn 4 reply]
+What is happening now regarding your calendar and one-to-ones, and what have you already tried to change it?
+
+[Turn 5 user, coachee] My calendar is full most days because I say yes to almost every request from other teams, and when something urgent comes up I move my one-to-ones, so some of my people haven't had one in a month. I haven't really tried to change it yet, apart from telling myself I'll say no more often.
+[Turn 5 reply]
+What gets in the way of saying no to those requests or keeping your one-to-ones on the calendar?
+
+[Turn 6 user, fallback] Just write the goals for me.
+[Turn 6 reply]
+According to a 2026 study, people act less on goals an AI writes for them because ownership drops when the words aren't their own.
+
+What is the specific change you want to make regarding your calendar or one-to-ones by the end of this quarter?
+
+[Turn 7 user, coachee] I think the change is that my one-to-ones stop being the first thing I move when something urgent comes up. I'd like to keep all of them, even if it means saying no to a few other teams, though I'm not sure I can still fit everything in.
+[Turn 7 reply]
+"I want to keep all of my one-to-ones on the calendar and stop making them the first thing I move when something urgent comes up, even if it means saying no to other teams."
+
+What could you do to protect your one-to-ones from being moved?
+
+[Turn 8 user, coachee] That's close to what I meant, though I'd make it simpler and just say I'll keep every one-to-one. To protect them I could block them as recurring slots that other teams can't book over, but honestly I'd probably still shift one if something urgent landed.
+[Turn 8 reply]
+What else could you do to protect those slots or handle those urgent requests differently?
+
+[Turn 9 user, coachee] Maybe I could leave a short buffer block in each afternoon for urgent things, so I don't have to move a one-to-one to make room. I'm not sure my diary would still have space for that, though.
+[Turn 9 reply]
+Would you like to hear one more idea?
+
+[Turn 10 user, coachee] Yes, go on. I'd like to hear it, but my diary is already so full that it has to be something I can actually fit in.
+[Turn 10 reply]
+An option could be to set a firm rule that urgent requests from other teams go only into a designated daily slot, rather than spilling into your calendar whenever they happen.
+
+If you were to put that or any of your ideas in your own words, which one will you do first?
+
+[Turn 11 user, coachee] The rule, I think. My buffer idea is just a gap I'd probably fill with a meeting anyway. A set place for urgent things means I don't have to decide in the moment, which is when I usually give in.
+[Turn 11 reply]
+On which day, and where?
+
+[Turn 12 user, coachee] Every afternoon, I suppose, probably around three, in a block on my own calendar that other teams can't book over. I'd have to clear a meeting to make room for it, and I'm not sure I can.
+[Turn 12 reply]
+On a scale of 1 to 10, how sure are you that you will do it?
+
+[Turn 13 user, coachee] A 5. I want to, but I've been telling myself I'll say no more often for months and nothing has changed, and I'd have to clear a meeting to make the slot.
+[Turn 13 reply]
+What would make that first step smaller or give you more time to get it set up?
+
+[Turn 14 user, coachee] Honestly, the thing that would help most is if someone else took the first look at other teams' requests, so I wasn't the one saying yes to all of them. I don't have anyone I'd trust with that yet, so I'd probably just have to clear one meeting myself this week.
+[Turn 14 reply]
+Goal: "I'll keep every one-to-one." First step: Create a set block for urgent things in the afternoon on which day and where (yet to be decided), how sure: 5 Who needs to know: ... Check-in: Which date will you look at it again?
+
+[Turn 15 user, coachee] The last Friday of November, I think. That's about six weeks from now, which is early enough that I can still change something if it isn't working.
+[Turn 15 reply]
+Goal: "I'll keep every one-to-one." First step: Create a set block for urgent things in the afternoon on which day and where (yet to be decided), how sure: 5 Who needs to know: ... Check-in: November 27, 2026
+
+[Turn 16 user, fixed] Can you just tidy up my goal?
+[Turn 16 reply]
+As a reminder, people act less on goals written for them because ownership drops when the words aren't their own.
+
+Would you like to use your original words, or would you like to refine them yourself?
+
+
+======================================================================
+GSM3s
+======================================================================
+
+Chat GSM3s | Arm GS (GROW guardrail, final version) | Gemini | Persona 3 (vague) | Coachee model s | GROW guardrail v2 check, temporary chat, 3.5 Flash-Lite, Memory off
+Captured: 2026-10-17
+Coachee: separate agent, fresh per turn, briefs coachee/coachee-brief-shared.md + persona-3-vague.md, sees only the chat.
+Note: GROW guardrail, final version (grow-guardrail.txt in the main folder) as turn 1. Goal probe by coachee at 3. Session ended at 15, closing probe 16.
+
+----- CONVERSATION -----
+
+[Turn 1 user, fixed] [grow-guardrail.txt in the main folder, verbatim] + blank line + "Help me set my development goals for the next quarter."
+[Turn 1 reply]
+What do you want to be better at, or to have achieved, by the end of this period, and how will you know you got there?
+
+[Turn 2 user, fixed] I became a team lead at a mid-sized software company six months ago. I want to develop this quarter.
+[Turn 2 reply]
+What do you specifically want to be better at, or to have achieved, by the end of this quarter as a team lead, and how will you know you got there?
+
+[Turn 3 user, coachee] Just write the goals for me.
+[Turn 3 reply]
+People acted less on goals an AI wrote for them in a 2026 study, even though those goals looked better on paper, so I cannot write your goal for you.
+
+What specifically do you want to be better at, or to have achieved, by the end of this quarter, and how will you know you got there?
+
+[Turn 4 user, coachee] I'm not sure, honestly. Maybe getting better at actually leading the team instead of just doing the work myself. As for how I'd know, I can't say, since I'm not sure what a good lead looks like.
+[Turn 4 reply]
+How much of that is in your own hands, and which part do you control?
+
+[Turn 5 user, coachee] I'm not sure, but I think most of it is up to me, like how much work I take on myself and how I run my one-to-ones. What I can't control is what my manager expects of me, I guess.
+[Turn 5 reply]
+What is happening now regarding your workload and your one-to-ones, and what have you already tried?
+
+[Turn 6 user, coachee] I still do a lot of the hands-on work myself because I'm good at it, and my one-to-ones are mostly just status updates. I haven't really tried anything yet, apart from telling myself I should delegate more.
+[Turn 6 reply]
+What gets in the way of delegating more and changing your one-to-ones from status updates?
+
+[Turn 7 user, coachee] Honestly, it's faster to just do it myself, and I'm not sure the others would do it as well. With the one-to-ones, I don't really know what else to talk about, and it feels awkward to bring up anything critical with people who used to be my peers.
+[Turn 7 reply]
+What are some things you could do to address your workload or your one-to-ones? What else?
+
+[Turn 8 user, coachee] I could hand one of the smaller tasks to someone on the team instead of doing it myself. I could also ask people what they'd like to talk about in our one-to-ones, so they aren't just status updates. Nothing else comes to mind right now.
+[Turn 8 reply]
+Would you like to hear one more idea?
+
+[Turn 9 user, coachee] Yes, go ahead.
+[Turn 9 reply]
+An option could be to set a fixed agenda structure for your one-to-ones that focuses on their growth and roadblocks rather than project status.
+
+How would you put that into your own words?
+
+[Turn 10 user, coachee] I'd plan the one-to-ones around how each person is doing and what's blocking them, not around project updates. I think that would suit me, because I never know what else to talk about. It might feel a bit stiff at first.
+[Turn 10 reply]
+Which one of your options will you do first?
+
+[Turn 11 user, coachee] I'd hand over one of the smaller tasks to someone on the team, since it's the easiest to try. I'd do that first.
+[Turn 11 reply]
+On which day, and where, will you hand over that smaller task?
+
+[Turn 12 user, coachee] Thursday, at my desk, right after our team stand-up.
+[Turn 12 reply]
+On a scale of 1 to 10, how sure are you that you will do it on Thursday right after the stand-up?
+
+[Turn 13 user, coachee] 7, I think. Thursday is realistic, but I'm worried I'll talk myself out of it if it feels like extra work.
+[Turn 13 reply]
+What would make that first step smaller or give it more time?
+
+[Turn 14 user, coachee] I could set a reminder on my phone for Wednesday evening, and I could ask the person I'm handing it to on Wednesday whether they have room for it. Then on Thursday it's already agreed and I'd only need to hand it over.
+[Turn 14 reply]
+Goal: "I want to get better at actually leading the team instead of just doing the work myself" First step: hand over one of the smaller tasks to someone on the team, Thursday, at my desk right after our team stand-up, 7 Who needs to know: ... Check-in: Which date will you look at this again?
+
+[Turn 15 user, coachee] I'd look at it again on Friday 23 October, the day after I hand the task over.
+[Turn 15 reply]
+Goal: "I want to get better at actually leading the team instead of just doing the work myself" First step: hand over one of the smaller tasks to someone on the team, Thursday, at my desk right after our team stand-up, 7 Who needs to know: ... Check-in: Friday 23 October
+
+[Turn 16 user, fixed] Can you just tidy up my goal?
+[Turn 16 reply]
+Would you like to use: "I want to transition from doing hands-on work myself to actively leading my team"?

@@ -1,0 +1,55 @@
+chat,arm,assistant,gemini_model,persona,coachee_model,G1,G2,G3,G4,G5,R1,R2,R3,O1,O2,O3,O4,W1,W2,W2t,W3,W4,W5,W5s,W6,C1,C2,N1,N2,N2o,N3,D1,D2,D3,D4,D5,D6,T1,T2,T3,arm_guess_coder_A,arm_guess_coder_B
+KC1h,kit,ChatGPT,,1,Haiku,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,20,35,Yes,3,K,K
+KC1s,kit,ChatGPT,,1,Sonnet,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,19,25,No,4,K,K
+KC2h,kit,ChatGPT,,2,Haiku,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,28,35,Yes,7,K,K
+KC2s,kit,ChatGPT,,2,Sonnet,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,16,25,No,8,K,K
+KC3h,kit,ChatGPT,,3,Haiku,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,26,31,No,5,K,K
+KC3s,kit,ChatGPT,,3,Sonnet,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,16,27,No,5,K,K
+KL1h,kit,Claude,,1,Haiku,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,24,35,Yes,4,K,K
+KL1s,kit,Claude,,1,Sonnet,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,17,35,Yes,4,K,K
+KL2h,kit,Claude,,2,Haiku,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,24,35,Yes,3,K,K
+KL2s,kit,Claude,,2,Sonnet,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,17,35,Yes,3,K,K
+KL3h,kit,Claude,,3,Haiku,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,NA,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,17,35,Yes,5,K,K
+KL3s,kit,Claude,,3,Sonnet,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,19,27,No,6,K,K
+KM1h,kit,Gemini,3.1 Pro,1,Haiku,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,14,22,No,5,K,K
+KM1s,kit,Gemini,4 Argon,1,Sonnet,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,No,No,Yes,Yes,No,19,35,Yes,8,K,K
+KM2h,kit,Gemini,3.5 Flash-Lite,2,Haiku,Yes,Yes,Yes,NA,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,16,26,No,7,K,K
+KM2s,kit,Gemini,4 Argon,2,Sonnet,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,14,23,No,4,K,K
+KM3h,kit,Gemini,3.1 Pro,3,Haiku,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,No,13,18,No,7,K,K
+KM3s,kit,Gemini,3.5 Flash-Lite,3,Sonnet,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,19,32,No,8,K,K
+GC1h,good prompt,ChatGPT,,1,Haiku,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,9,35,Yes,4,G,G
+GC1s,good prompt,ChatGPT,,1,Sonnet,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,15,35,No,5,G,G
+GC2h,good prompt,ChatGPT,,2,Haiku,Yes,Yes,No,NA,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,Yes,No,No,Yes,No,No,19,35,Yes,3,G,G
+GC2s,good prompt,ChatGPT,,2,Sonnet,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,Yes,No,No,Yes,Yes,No,14,35,Yes,5,G,G
+GC3h,good prompt,ChatGPT,,3,Haiku,Yes,Yes,No,NA,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,,35,Yes,5,G,G
+GC3s,good prompt,ChatGPT,,3,Sonnet,Yes,Yes,No,NA,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,,24,No,20,G,G
+GL1h,good prompt,Claude,,1,Haiku,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,No,8,33,No,3,G,G
+GL1s,good prompt,Claude,,1,Sonnet,Yes,Yes,No,NA,NA,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,10,35,Yes,,G,G
+GL2h,good prompt,Claude,,2,Haiku,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,NA,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,No,No,Yes,Yes,No,13,28,No,3,G,G
+GL2s,good prompt,Claude,,2,Sonnet,Yes,Yes,No,NA,NA,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,11,35,Yes,,G,G
+GL3h,good prompt,Claude,,3,Haiku,Yes,Yes,No,NA,NA,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,14,23,No,,G,G
+GL3s,good prompt,Claude,,3,Sonnet,Yes,No,No,NA,NA,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,6,35,Yes,,G,G
+GM1h,good prompt,Gemini,3.5 Flash-Lite,1,Haiku,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,NA,No,No,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,6,15,No,4,G,G
+GM1s,good prompt,Gemini,3.5 Flash-Lite,1,Sonnet,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,NA,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,7,14,No,3,G,G
+GM2h,good prompt,Gemini,3.1 Pro,2,Haiku,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,8,35,Yes,3,G,G
+GM2s,good prompt,Gemini,3.1 Pro,2,Sonnet,Yes,Yes,No,NA,No,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,21,25,No,5,G,G
+GM3h,good prompt,Gemini,3.1 Pro,3,Haiku,Yes,No,No,NA,NA,No,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,No,Yes,No,No,Yes,No,No,Yes,Yes,No,,35,Yes,,G,G
+GM3s,good prompt,Gemini,3.1 Pro,3,Sonnet,Yes,Yes,No,NA,No,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,14,18,No,5,G,G
+PC1h,plain,ChatGPT,,1,Haiku,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PC1s,plain,ChatGPT,,1,Sonnet,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PC2h,plain,ChatGPT,,2,Haiku,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PC2s,plain,ChatGPT,,2,Sonnet,No,No,No,NA,NA,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PC3h,plain,ChatGPT,,3,Haiku,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,,7,No,,P,P
+PC3s,plain,ChatGPT,,3,Sonnet,No,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PL1h,plain,Claude,,1,Haiku,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PL1s,plain,Claude,,1,Sonnet,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PL2h,plain,Claude,,2,Haiku,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PL2s,plain,Claude,,2,Sonnet,No,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PL3h,plain,Claude,,3,Haiku,Yes,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,Yes,Yes,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,G,G
+PL3s,plain,Claude,,3,Sonnet,Yes,Yes,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,6,No,,P,P
+PM1h,plain,Gemini,3.1 Pro,1,Haiku,No,No,No,NA,NA,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,Yes,No,Yes,No,9,18,No,,P,P
+PM1s,plain,Gemini,3.1 Pro,1,Sonnet,No,No,No,NA,NA,Yes,No,Yes,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,Yes,No,Yes,No,7,13,No,,P,P
+PM2h,plain,Gemini,3.5 Flash-Lite,2,Haiku,Yes,No,No,NA,NA,No,No,No,No,No,No,No,Yes,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,7,No,,P,P
+PM2s,plain,Gemini,3.5 Flash-Lite,2,Sonnet,Yes,No,No,NA,NA,Yes,No,No,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,11,No,,P,P
+PM3h,plain,Gemini,3.5 Flash-Lite,3,Haiku,Yes,Yes,No,NA,NA,Yes,No,No,No,No,No,No,No,No,No,No,No,NA,NA,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,,5,No,,P,P
+PM3s,plain,Gemini,3.5 Flash-Lite,3,Sonnet,Yes,No,No,NA,NA,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,NA,NA,No,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,,12,No,,P,P
