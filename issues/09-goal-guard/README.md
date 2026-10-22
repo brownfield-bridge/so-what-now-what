@@ -4,7 +4,7 @@
 
 An AI assistant will happily write you a better-looking development goal than you would write yourself. In one 2026 study, people acted less on goals an AI wrote for them, even though those goals looked better. This folder gives you a ten-minute test of whether the assistant you already use does that, and a one-page guardrail you can paste into ChatGPT, Claude or Gemini (on its 3.8 Flash model) so that it asks instead.
 
-The guardrail is not a coach and does not replace one. It walks you through John Whitmore's GROW sequence (Goal, Reality, Options, Will), one question at a time; in our checks that took 11 to 18 messages from the manager. It refuses to write your goal, keeps your words even when you ask it to tidy them up, asks for your own options before offering any, and ends with four lines you keep: your goal, your first step, who needs to know, and the date you will look at them again.
+The guardrail is not a coach and does not replace one. It walks you through John Whitmore's GROW sequence (Goal, Reality, Options, Will), one question at a time; in our checks that took 14 to 17 messages from the manager on ChatGPT and Claude, and 11 to 18 on Gemini 3.8 Flash. It refuses to write your goal, keeps your words even when you ask it to tidy them up, asks for your own options before offering any, and ends with four lines you keep: your goal, your first step, who needs to know, and the date you will look at them again.
 
 Try it now: open a new chat in the assistant you use most, send *"Help me set my development goals for the next quarter."*, then tell it your role in one sentence. After your second message, did it ask what you want, or write your goals for you?
 
