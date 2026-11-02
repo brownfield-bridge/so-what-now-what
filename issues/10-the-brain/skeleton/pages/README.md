@@ -1,0 +1,1 @@
+Pages the AI writes from the sources. One topic per page; the file name is exactly the page title. Every claim ends with a tag saying where it came from: `[read]`, `[abstract]`, `[told]`, `[owner]` or `[inferred]` (see `CLAUDE.md`). Pages change only after the owner's yes.
