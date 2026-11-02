@@ -22,8 +22,8 @@ License: CC-BY 4.0. Use it, adapt it, ship it inside your own work. A credit bac
 - **[`when-to-split.md`](when-to-split.md)** - one brain per subject, when to split, and what to do when a job spans two brains.
 - **[`results/README.md`](results/README.md)** - the test run of 24 to 28 October 2026: every count, prediction by prediction, the misses, and what the kit changed afterwards.
 - **[`results/seed-and-questions.md`](results/seed-and-questions.md)** - the 12 free seed sources, the four intake items and the four test questions.
-- **[`visuals/obsidian-two-brains.png`](visuals/obsidian-two-brains.png)** - the two test brains in Obsidian, side by side (source: **`visuals/obsidian-two-brains.pptx`**).
-- **[`visuals/brain-architecture.png`](visuals/brain-architecture.png)** and **[`visuals/test-process.png`](visuals/test-process.png)** - how a brain is built, and how the test ran; **`visuals/brain-architecture.pptx`** and **`visuals/test-process.pptx`** are their editable PowerPoint sources.
+- **[`visuals/obsidian-two-brains.png`](visuals/obsidian-two-brains.png)** - the two test brains in Obsidian, side by side.
+- **[`visuals/brain-architecture.png`](visuals/brain-architecture.png)** and **[`visuals/test-process.png`](visuals/test-process.png)** - how a brain is built, and how the test ran.
 - **[`SOURCES.md`](SOURCES.md)** - everything the issue and the kit rest on.
 
 ## How to run it

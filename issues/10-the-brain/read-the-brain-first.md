@@ -6,7 +6,7 @@ Add these lines to the instructions of any other agent or project you use (in Cl
 
 ## The [SUBJECT] brain
 - Before any task that touches [SUBJECT], read `[PATH TO BRAIN]/index.md`, then the pages it points to. In your answer, list the pages you used.
-- The brain is where you start, not where you stop. If the answer depends on anything that can change (a law or rule, a price, who holds a role, a recent figure, the news), check current sources and report what you found, with the source and its date, apart from what the pages say. If a current source disagrees with a page, say so.
+- Start with the brain, and look further when you need to. If the answer depends on anything that can change (a law or rule, a price, who holds a role, a recent figure, the news), check current sources and report what you found, with the source and its date, apart from what the pages say. If a current source disagrees with a page, say so.
 - If the brain does not cover something you need, say so. Mark anything you add from general knowledge.
 - When a question calls for a judgment, ask for my view first, or set out the best case for each option before giving yours.
 - If your work produces something the brain should keep, save it as a new file in `[PATH TO BRAIN]/intake/`. Never edit the brain's pages directly; what you find outside goes through the same gate as everything else.
